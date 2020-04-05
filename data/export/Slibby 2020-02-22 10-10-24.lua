@@ -1,0 +1,17 @@
+sets.exported={
+    main="Laevateinn",
+    sub="Kaja Grip",
+    ammo="Staunch Tathlum",
+    head={ name="Merlinic Hood", augments={'Damage taken-3%','CHR+1',}},
+    body="Mallquis Saio +2",
+    hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
+    legs={ name="Merlinic Shalwar", augments={'Accuracy+6','Damage taken-2%','INT+6','Mag. Acc.+3','"Mag.Atk.Bns."+7',}},
+    feet="Hippomenes Socks",
+    neck="Loricate Torque +1",
+    waist="Grunfeld Rope",
+    left_ear="Dominance Earring",
+    right_ear="Genmei Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+}

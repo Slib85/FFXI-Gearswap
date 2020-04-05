@@ -1,0 +1,17 @@
+sets.exported={
+    main="Claustrum",
+    sub="Kaja Grip",
+    ammo="Amar Cluster",
+    head="Jhakri Coronal +1",
+    body="Jhakri Robe +2",
+    hands="Jhakri Cuffs +2",
+    legs="Jhakri Slops +2",
+    feet="Jhakri Pigaches +2",
+    neck="Sanctity Necklace",
+    waist="Fotia Belt",
+    left_ear="Steelflash Earring",
+    right_ear="Telos Earring",
+    left_ring="Rajas Ring",
+    right_ring="Petrov Ring",
+    back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Haste+10',}},
+}

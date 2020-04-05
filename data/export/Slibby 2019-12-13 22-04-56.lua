@@ -1,0 +1,17 @@
+sets.exported={
+    main="Apocalypse",
+    sub="Utu Grip",
+    ammo="Staunch Tathlum",
+    head="Flam. Zucchetto +2",
+    body="Sulevia's Plate. +2",
+    hands="Sulev. Gauntlets +2",
+    legs="Flamma Dirs +2",
+    feet="Flam. Gambieras +2",
+    neck="Asperity Necklace",
+    waist="Sarissapho. Belt",
+    left_ear="Telos Earring",
+    right_ear="Dedition Earring",
+    left_ring="Moonlight Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10',}},
+}

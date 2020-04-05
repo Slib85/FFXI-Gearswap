@@ -1,0 +1,17 @@
+sets.exported={
+    main="Burtgang",
+    sub="Aegis",
+    ammo="Staunch Tathlum",
+    head="Chev. Armet +1",
+    body="Rev. Surcoat +3",
+    hands="Rev. Gauntlets +3",
+    legs="Sulev. Cuisses +2",
+    feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    neck="Loricate Torque +1",
+    waist="Eschan Stone",
+    left_ear="Odnowa Earring",
+    right_ear="Odnowa Earring +1",
+    left_ring="Moonlight Ring",
+    right_ring="Defending Ring",
+    back="Moonlight Cape",
+}

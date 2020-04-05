@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Laevateinn", augments={'Path: A',}},
+    sub="Kaja Grip",
+    ammo="Pemphredo Tathlum",
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+24','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+4',}},
+    body="Spaekona's Coat +3",
+    hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
+    legs="Spae. Tonban +3",
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+30','"Drain" and "Aspir" potency +8','STR+7',}},
+    neck="Erra Pendant",
+    waist="Fucho-no-Obi",
+    left_ear="Friomisi Earring",
+    right_ear="Regal Earring",
+    left_ring="Evanescence Ring",
+    right_ring="Stikini Ring +1",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+}

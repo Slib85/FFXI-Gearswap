@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub="Genmei Shield",
+    ammo="Staunch Tathlum",
+    head="Befouled Crown",
+    body="Ebers Bliaud +1",
+    hands="Inyan. Dastanas +2",
+    legs="Inyanga Shalwar +2",
+    feet="Inyan. Crackows +2",
+    neck="Loricate Torque +1",
+    waist="Channeler's Stone",
+    left_ear="Telos Earring",
+    right_ear="Dedition Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}

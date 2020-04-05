@@ -1,0 +1,17 @@
+sets.exported={
+    main="Kaja Scythe",
+    sub="Kaja Grip",
+    ammo="Floestone",
+    head="Jhakri Coronal +2",
+    body="Jhakri Robe +2",
+    hands="Jhakri Cuffs +2",
+    legs="Jhakri Slops +2",
+    feet="Jhakri Pigaches +2",
+    neck={ name="Src. Stole +2", augments={'Path: A',}},
+    waist="Grunfeld Rope",
+    left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    right_ear="Ishvara Earring",
+    left_ring="Shiva Ring +1",
+    right_ring="Rufescent Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%',}},
+}

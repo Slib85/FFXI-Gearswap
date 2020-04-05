@@ -1,0 +1,17 @@
+sets.exported={
+    main="Laevateinn",
+    sub="Kaja Grip",
+    ammo="Seraphic Ampulla",
+    head="Mall. Chapeau +2",
+    body="Spaekona's Coat +3",
+    hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+3 "Mag.Atk.Bns."+3','"Occult Acumen"+11','MND+3','Mag. Acc.+3','"Mag.Atk.Bns."+8',}},
+    legs="Perdition Slops",
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Occult Acumen"+11','MND+1','Mag. Acc.+4','"Mag.Atk.Bns."+13',}},
+    neck="Asperity Necklace",
+    waist="Oneiros Rope",
+    left_ear="Telos Earring",
+    right_ear="Dedition Earring",
+    left_ring="Rajas Ring",
+    right_ring="Petrov Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Accuracy+20 Attack+20','INT+1','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}

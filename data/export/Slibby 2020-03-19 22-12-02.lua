@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub="Ammurapi Shield",
+    ammo="Amar Cluster",
+    head="Aya. Zucchetto +2",
+    body="Ayanmo Corazza +2",
+    hands="Aya. Manopolas +2",
+    legs="Aya. Cosciales +2",
+    feet="Hippomenes Socks",
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Ishvara Earring",
+    right_ear="Telos Earring",
+    left_ring="Petrov Ring",
+    right_ring="Ilabrat Ring",
+    back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','Accuracy+2','Weapon skill damage +10%',}},
+}

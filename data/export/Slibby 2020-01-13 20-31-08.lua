@@ -1,0 +1,17 @@
+sets.exported={
+    main="Mjollnir",
+    sub="Genmei Shield",
+    ammo="Amar Cluster",
+    head="Aya. Zucchetto +2",
+    body="Ayanmo Corazza +2",
+    hands="Aya. Manopolas +2",
+    legs="Aya. Cosciales +2",
+    feet="Aya. Gambieras +2",
+    neck="Asperity Necklace",
+    waist="Grunfeld Rope",
+    left_ear="Steelflash Earring",
+    right_ear="Bladeborn Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Defending Ring",
+    back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}

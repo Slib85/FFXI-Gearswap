@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub="Genmei Shield",
+    ammo="Staunch Tathlum",
+    head="Aya. Zucchetto +2",
+    body="Ayanmo Corazza +2",
+    hands="Aya. Manopolas +2",
+    legs="Aya. Cosciales +2",
+    feet="Hippomenes Socks",
+    neck="Loricate Torque +1",
+    waist="Channeler's Stone",
+    left_ear="Telos Earring",
+    right_ear="Dedition Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}

@@ -1,0 +1,16 @@
+sets.exported={
+    main="Laevateinn",
+    sub="Bloodrain Strap",
+    ammo="Staunch Tathlum",
+    head={ name="Merlinic Hood", augments={'Damage taken-3%','CHR+1',}},
+    body="Mallquis Saio +2",
+    legs={ name="Merlinic Shalwar", augments={'Potency of "Cure" effect received+1%','Pet: "Mag.Atk.Bns."+28','Phalanx +2',}},
+    feet={ name="Merlinic Crackows", augments={'INT+1','Enmity+4','Phalanx +2','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
+    neck="Loricate Torque +1",
+    waist="Grunfeld Rope",
+    left_ear="Dominance Earring",
+    right_ear="Genmei Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+}

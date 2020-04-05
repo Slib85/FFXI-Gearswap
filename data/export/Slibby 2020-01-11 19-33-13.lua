@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub="Genmei Shield",
+    ammo="Staunch Tathlum",
+    head="Nahtirah Hat",
+    body="Inyanga Jubbah +2",
+    hands="Gendewitha Gages",
+    legs="Aya. Cosciales +2",
+    feet="Hippomenes Socks",
+    neck="Orunmila's Torque",
+    waist="Witful Belt",
+    left_ear="Loquac. Earring",
+    right_ear="Genmei Earring",
+    left_ring="Kishar Ring",
+    right_ring="Rahab Ring",
+    back={ name="Alaunus's Cape", augments={'"Fast Cast"+10',}},
+}

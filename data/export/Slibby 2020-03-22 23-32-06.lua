@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Laevateinn", augments={'Path: A',}},
+    sub="Kaja Grip",
+    ammo="Pemphredo Tathlum",
+    head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic damage and magic burst damage',}},
+    body={ name="Arch. Coat +3", augments={'Enhances "Manafont" effect',}},
+    hands="Spae. Gloves +3",
+    legs={ name="Arch. Tonban +3", augments={'Increases Elemental Magic debuff time and potency',}},
+    feet={ name="Arch. Sabots +3", augments={'Increases Aspir absorption amount',}},
+    neck={ name="Src. Stole +2", augments={'Path: A',}},
+    waist="Rumination Sash",
+    left_ear="Friomisi Earring",
+    right_ear="Regal Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+}

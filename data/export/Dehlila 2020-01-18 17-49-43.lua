@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Kali", augments={'DMG:+15','CHR+15','Mag. Acc.+15',}},
+    sub="Ammurapi Shield",
+    range="Gjallarhorn",
+    head="Aya. Zucchetto +1",
+    body="Ayanmo Corazza +1",
+    hands="Aya. Manopolas +1",
+    legs="Aya. Cosciales +1",
+    feet="Fili Cothurnes +1",
+    neck="Loricate Torque",
+    waist="Porous Rope",
+    left_ear="Dominance Earring",
+    right_ear="Genmei Earring",
+    left_ring="Gelatinous Ring",
+    right_ring="Defending Ring",
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
+}

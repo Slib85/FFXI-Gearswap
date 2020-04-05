@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub="Genmei Shield",
+    ammo="Staunch Tathlum",
+    head="Aya. Zucchetto +2",
+    body="Inyanga Jubbah +2",
+    hands={ name="Fanatic Gloves", augments={'MP+30','Healing magic skill +5','"Conserve MP"+4',}},
+    legs="Aya. Cosciales +2",
+    feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
+    neck="Loricate Torque +1",
+    waist="Channeler's Stone",
+    left_ear="Telos Earring",
+    right_ear="Dedition Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}

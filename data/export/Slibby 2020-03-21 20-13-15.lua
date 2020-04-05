@@ -1,0 +1,17 @@
+sets.exported={
+    main="Burtgang",
+    sub="Aegis",
+    ammo="Amar Cluster",
+    head="Sulevia's Mask +2",
+    body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
+    hands="Sulev. Gauntlets +2",
+    legs="Sulev. Cuisses +2",
+    feet="Flam. Gambieras +2",
+    neck="Asperity Necklace",
+    waist="Sarissapho. Belt",
+    left_ear="Dedition Earring",
+    right_ear="Telos Earring",
+    left_ring="Moonlight Ring",
+    right_ring="Defending Ring",
+    back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Damage taken-5%',}},
+}

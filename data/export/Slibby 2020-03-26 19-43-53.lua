@@ -1,0 +1,17 @@
+sets.exported={
+    main="Burtgang",
+    sub="Aegis",
+    ammo="Pemphredo Tathlum",
+    head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
+    body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
+    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+    legs="Sulev. Cuisses +2",
+    feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
+    neck="Sanctity Necklace",
+    waist="Orpheus's Sash",
+    left_ear="Ishvara Earring",
+    right_ear="Friomisi Earring",
+    left_ring="Shiva Ring +1",
+    right_ring="Shiva Ring +1",
+    back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
+}

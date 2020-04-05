@@ -1,0 +1,17 @@
+sets.exported={
+    main="Bolelabunga",
+    sub="Ammurapi Shield",
+    ammo="Sapience Orb",
+    head={ name="Merlinic Hood", augments={'"Fast Cast"+5',}},
+    body="Mallquis Saio +2",
+    hands="Arbatel Bracers +1",
+    legs={ name="Merlinic Shalwar", augments={'"Fast Cast"+5',}},
+    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+6','CHR+3',}},
+    neck="Orunmila's Torque",
+    waist="Eschan Stone",
+    left_ear="Dominance Earring",
+    right_ear="Genmei Earring",
+    left_ring="Kishar Ring",
+    right_ring="Defending Ring",
+    back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
+}
