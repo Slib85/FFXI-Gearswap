@@ -58,17 +58,11 @@ function init_gear_sets()
 	---- Precast Sets ----
 	sets.precastGear = {
 		range="Gjallarhorn",
-		head="Nahtirah Hat",
+		head="Fili Calot +1",
 		body="Brioso Justau. +2",
-		hands="Fili Manchettes +1",
-		legs="Aya. Cosciales +1",
-		feet="Fili Cothurnes +1",
-		neck="Mnbw. Whistle +1",
-		waist="Porous Rope",
-		left_ear="Dominance Earring",
-		right_ear="Genmei Earring",
-		left_ring="Gelatinous Ring",
-		right_ring="Defending Ring",
+		neck="Orunmila's Torque",
+		left_ear="Etiolation Earring",
+		left_ring="Kishar Ring",
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
 	}
 

@@ -71,8 +71,8 @@ function init_gear_sets()
 	}
 
 	sets.lowTierNukeGear = {
-		main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-		sub="Niobid Strap",
+		main="Daybreak",
+		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
 		head="Mall. Chapeau +2",
 		body="Mallquis Saio +2",
@@ -88,8 +88,8 @@ function init_gear_sets()
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}},
 	}
 	sets.nukeGear = {
-		main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-		sub="Niobid Strap",
+		main="Daybreak",
+		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
 		head="Mall. Chapeau +2",
 		body="Jhakri Robe +2",

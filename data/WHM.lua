@@ -84,17 +84,17 @@ function init_gear_sets()
 		ammo="Pemphredo Tathlum",
 		head="Inyanga Tiara +2",
 		body="Inyanga Jubbah +2",
-		hands="Theophany Mitts +3",
-		legs="Aya. Cosciales +2",
+		hands="Regal Cuffs",
+		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
 		feet="Theo. Duckbills +3",
 		neck="Henic Torque",
-		waist="Eschan Stone",
+		waist="Luminary Sash",
 		left_ear="Regal Earring",
-		right_ear="Genmei Earring",
+		right_ear="Malignance Earring",
 		left_ring="Stikini Ring +1",
 		right_ring="Stikini Ring +1",
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Haste+10','Spell interruption rate down-10%',}},
-    }
+	}
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Mana Wall'] = {
@@ -241,7 +241,7 @@ function init_gear_sets()
     sets.midcast['Regen V'] = sets.regenGear
 	sets.midcast['Blink'] = sets.buffGear
 	sets.midcast['Stoneskin'] = sets.buffGear
-	sets.midcast['Aquaveil'] = set_combine(sets.buffGear, {hands="Regal Cuffs", head="Amalric Coif +1", waist="Emphatikos rope", feet="Amalric Nails +1"})
+	sets.midcast['Aquaveil'] = set_combine(sets.buffGear, {hands="Regal Cuffs", head="Chironic Hat", waist="Emphatikos rope", feet="Amalric Nails +1"})
 	sets.midcast['Refresh'] = set_combine(sets.buffGear, {head="Amalric Coif +1"})
 	sets.midcast['Auspice'] = sets.buffGear
 	sets.midcast['Phalanx'] = set_combine(sets.buffGear, {

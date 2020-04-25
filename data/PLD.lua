@@ -37,7 +37,7 @@ function init_gear_sets()
         hands="Sulev. Gauntlets +2",
         legs="Sulev. Cuisses +2",
         feet="Flam. Gambieras +2",
-        neck="Asperity Necklace",
+        neck="Lissome Necklace",
         waist="Sarissapho. Belt",
         left_ear="Dedition Earring",
         right_ear="Telos Earring",
@@ -69,7 +69,7 @@ function init_gear_sets()
         hands="Sulev. Gauntlets +2",
         legs="Sulev. Cuisses +2",
         feet="Hippomenes Socks",
-        neck="Asperity Necklace",
+        neck="Lissome Necklace",
         waist="Sarissapho. Belt",
         left_ear="Dedition Earring",
         right_ear="Telos Earring",
@@ -178,7 +178,13 @@ function init_gear_sets()
 	sets.midcast['Stoneskin'] = buffGear
 	sets.midcast['Aquaveil'] = buffGear
 	sets.midcast['Auspice'] = buffGear
-	sets.midcast['Phalanx'] = buffGear
+	sets.midcast['Phalanx'] = set_combine(sets.buffGear, {
+		head={ name="Odyssean Helm", augments={'AGI+5','Rng.Acc.+1 Rng.Atk.+1','Phalanx +4','Accuracy+16 Attack+16',}},
+		hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+		legs={ name="Odyssean Cuisses", augments={'MND+2','CHR+6','Phalanx +4',}},
+		feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+	});
+
 	sets.midcast['Blaze Spikes'] = buffGear
 	sets.midcast['Ice Spikes'] = buffGear
 	
@@ -300,6 +306,8 @@ function init_gear_sets()
 	sets.midcast['Frazzle'] = enfeebleGear
 	sets.midcast['Bio'] = enfeebleGear
 	sets.midcast['Bio II'] = enfeebleGear
+	
+
 	
 	sets.precast.FC.Cure = set_combine(
 		sets.precast.FC, {
