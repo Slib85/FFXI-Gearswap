@@ -41,6 +41,7 @@ function init_gear_sets()
 	    feet="Spaekona's Sabots +3",
 		neck="Sorcerer's Stole +2",
 		waist="Orpheus's Sash",
+		--waist="acuity belt +1",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
@@ -48,8 +49,9 @@ function init_gear_sets()
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 		
+	-- 437 = thunder 6
 	-- Occult: 90 + 50 (trait)
-	-- STP: 39
+	-- STP: 41 + 6 (strap) (Dream: +30)
 	sets.occultAcumenGear = {
 		ammo="Seraphic Ampulla", -- 7 occult
 		head="Mallquis Chapeau +2", -- 11 occult
@@ -61,7 +63,7 @@ function init_gear_sets()
 		waist="Oneiros Rope", --2 STP + 20 occult
 		ear1="Telos Earring", --5 STP
 		ear2="Dedition Earring", --8 STP
-		ring1="Chirich Ring +1", --5 STP
+		ring1="Chirich Ring +1", --6 STP
 		ring2="Chirich Ring +1", -- 6 STP
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
 	}
@@ -78,8 +80,11 @@ function init_gear_sets()
 		ring2="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 		waist = "Orpheus's Sash", 
+		--waist = "Acuity Belt +1",
 		legs="Amalric Slops +1",
-		feet={ name="Arch. Sabots +3", augments={'Reduces Ancient Magic II MP cost',}},
+		--feet={ name="Arch. Sabots +3", augments={'Reduces Ancient Magic II MP cost',}},
+		feet="Amalric Nails +1",
+		--body="Amalric Doublet +1",
 	}
 
 	sets.enfeebleGearINT = {
@@ -90,10 +95,10 @@ function init_gear_sets()
 		legs="Spaekona's Tonban +3",
 		feet="Spaekona's Sabots +3",
 		neck="Src. Stole +2",
-	    waist="Luminary Sash",
+	    waist="Acuity Belt +1",
 	    left_ear="Malignance Earring",
 	    right_ear="Regal Earring",
-	    left_ring="Stikini Ring +1",
+	    left_ring="Kishar Ring",
 	    right_ring="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
@@ -109,7 +114,7 @@ function init_gear_sets()
 	    waist="Luminary Sash",
 	    left_ear="Malignance Earring",
 	    right_ear="Regal Earring",
-	    left_ring="Stikini Ring +1",
+	    left_ring="Kishar Ring",
 	    right_ring="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
@@ -141,6 +146,7 @@ function init_gear_sets()
 		head="Befouled Crown",
 		neck="Melic Torque",
 		waist="Olympus Sash",
+		feet="Regal Pumps +1",
 		left_ear="Augment. Earring",
 		right_ear="Andoaa Earring",
 		left_ring="Stikini Ring +1",
@@ -163,7 +169,7 @@ function init_gear_sets()
 		hands="Jhakri Cuffs +2",
 		legs="Jhakri Slops +2",
 		feet="Jhakri Pigaches +2",
-		neck="Sanctity Necklace",
+		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Steelflash Earring",
 		right_ear="Telos Earring",
@@ -180,9 +186,9 @@ function init_gear_sets()
 		legs="Jhakri Slops +2",
 		feet="Jhakri Pigaches +2",
 		neck="Src. Stole +2",
-		waist="Fotia Belt",
-		left_ear="Regal Earring",
-		right_ear="Telos Earring",
+		waist="Acuity Belt +1",
+		left_ear="Malignance Earring",
+		right_ear="Regal Earring",
 		left_ring="Freke Ring",
 		right_ring="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -262,7 +268,7 @@ function init_gear_sets()
 	    body="Mallquis Saio +2",
 		hands={ name="Merlinic Dastanas", augments={'Enmity-2','Crit. hit damage +2%','Damage taken-5%',}},
 		legs={ name="Merlinic Shalwar", augments={'Accuracy+6','Damage taken-2%','INT+6','Mag. Acc.+3','"Mag.Atk.Bns."+7',}},
-	    feet="Hippomenes Socks",
+	    feet="Hippomenes Socks +1",
 	    neck="Loricate Torque +1",
 	    waist="Carrier's Sash",
 	    left_ear="Dominance Earring",
@@ -360,6 +366,10 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Cure = sets.cureGear
+
+	sets.midcast['Sneak'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Invisible'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Deodorize'] = set_combine(sets.buffGear, sets.buffGearDuration)
 
 	sets.midcast['Sandstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Sandstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
@@ -530,11 +540,17 @@ function init_gear_sets()
 	sets.midcast['Thundaga III'] = sets.nukeGear
 	sets.midcast['Thundaja'] = sets.nukeGear
 
+	sets.midcast['Quake'] = sets.nukeGear
 	sets.midcast['Quake II'] = sets.nukeGear
+	sets.midcast['Flood'] = sets.nukeGear
 	sets.midcast['Flood II'] = sets.nukeGear
+	sets.midcast['Tornado'] = sets.nukeGear
 	sets.midcast['Tornado II'] = sets.nukeGear
+	sets.midcast['Flare'] = sets.nukeGear
 	sets.midcast['Flare II'] = sets.nukeGear
+	sets.midcast['Freeze'] = sets.nukeGear
 	sets.midcast['Freeze II'] = sets.nukeGear
+	sets.midcast['Burst'] = sets.nukeGear
 	sets.midcast['Burst II'] = sets.nukeGear
 
 	sets.midcast['Poison'] = sets.enfeebleGearINT
@@ -549,12 +565,18 @@ function init_gear_sets()
 	sets.midcast['Slow'] = sets.enfeebleGearMND
 	sets.midcast['Paralyze'] = sets.enfeebleGearMND
 	sets.midcast['Silence'] = sets.enfeebleGearMND
-	sets.midcast['Blind'] = sets.enfeebleGearINT
+	sets.midcast['Blind'] = set_combine(sets.enfeebleGearINT, {
+		hands="Spaekona's Gloves +3",
+	})
 	sets.midcast['Gravity'] = sets.enfeebleGearINT
 	sets.midcast['Dispel'] = set_combine(sets.enfeebleGearINT, {
 		hands="Spaekona's Gloves +3",
 	})
+	sets.precast['Dispelga'] = {
+		main="Daybreak",
+	}
 	sets.midcast['Dispelga'] = set_combine(sets.enfeebleGearINT, {
+		main="Daybreak",
 		hands="Spaekona's Gloves +3",
 	})
 	sets.midcast['Sleep'] = sets.enfeebleGearINT
@@ -623,35 +645,31 @@ function init_gear_sets()
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
-	if spell.skill == 'Enfeebling Magic' then
-		equip({hands="Regal Cuffs"});
+	if spell.skill == 'Elemental Magic' and (buffactive['Manawell'] == 1 or buffactive['Manafont']) and not S{"Impact"}:contains(spell.english) then
+		equip({body="Amalric Doublet +1"})
 	end
 
-	if spell.skill == 'Elemental Magic' and (buffactive['Manawell'] == 1 or buffactive['Manafont']) then
-		equip({body="Amalric Doublet +1"})
+	if buffactive['Mana Wall'] == 1 then
+		equip(sets.manaWall)
 	end
 
 	if spell.skill == 'Elemental Magic' and (state.OffenseMode.value == 'MB' or state.OffenseMode.value == 'TP') then
 		equip(sets.magic_burst)
+
+		if buffactive['Mana Wall'] == 1 then
+			equip(sets.manaWall)
+		end
 	elseif state.OffenseMode.value == 'Occult' then
 		if spell.skill == 'Elemental Magic' then
 			equip(set_combine(sets.occultAcumenGear, {
 				body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+4','"Occult Acumen"+11','MND+6',}},
 			}))
 		end
-		
-		if buffactive['Mana Wall'] == 1 then
-			equip(sets.manaWall)
-		end
 	elseif state.OffenseMode.value == 'AOEOccult' then
 		if spell.skill == 'Elemental Magic' then
 			equip(sets.occultAcumenGear)
 		end
-
-		if buffactive['Mana Wall'] == 1 then
-			equip(sets.manaWall)
-		end
-	elseif state.OffenseMode.value == 'Normal' then
+		
 		if buffactive['Mana Wall'] == 1 then
 			equip(sets.manaWall)
 		end
@@ -662,7 +680,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		})
 	end
 
-	if S{"Breakga"}:contains(spell.english) then
+	if S{"Breakga"}:contains(spell.english) or S{"Diaga"}:contains(spell.english) then
 		equip({
 			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
 			waist="Chaac belt",

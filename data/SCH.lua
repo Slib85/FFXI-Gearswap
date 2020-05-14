@@ -24,7 +24,7 @@ end
 function user_setup()
 	-- Options: Override default values
     
-	state.OffenseMode:options('Normal', 'MB');
+	state.OffenseMode:options('Normal', 'MB', 'VagaryMBNoKill');
 	-- state.DefenseMode:options('PDT', 'DT')
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
@@ -533,6 +533,44 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		equip(sets.magic_burst)
 	end
 	
+	if spell.skill == 'Elemental Magic' and state.OffenseMode.value == 'VagaryMBNoKill' then 
+		equip({
+			main="Malignance Pole",
+			sub="Niobid Strap",
+			ammo="Pemphredo Tathlum",
+			head="Mall. Chapeau +2",
+			body="Mallquis Saio +2",
+			hands="Mallquis Cuffs +2",
+			legs="Jhakri Slops +1",
+			feet="Mallquis Clogs +2",
+			neck="Loricate Torque +1",
+			waist="Carrier's Sash",
+			left_ear="Dominance Earring",
+			right_ear="Genmei Earring",
+			left_ring="Gelatinous Ring",
+			right_ring="Defending Ring",
+			back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
+		})
+		
+		if buffactive['Immanence'] == 1 then
+			equip({
+				ammo="Pemphredo Tathlum",
+				head="Nahtirah Hat",
+				body="Arbatel Gown",
+				hands="Arbatel Bracers +1",
+				legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+26','Magic burst dmg.+8%','INT+10',}},
+				feet="Herald's Gaiters",
+				neck="Loricate Torque +1",
+				waist="Carrier's Sash",
+				left_ear="Dominance Earring",
+				right_ear="Genmei Earring",
+				left_ring="Gelatinous Ring",
+				right_ring="Defending Ring",
+				back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}},
+			})
+		end
+	end
+
 	if buffactive['Perpetuance'] == 1 then
 		equip({
 			hands="Arbatel bracers +1"

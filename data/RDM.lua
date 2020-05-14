@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('Nuke', 'Melee');
+	state.OffenseMode:options('Nuke', 'Melee', 'Refresh');
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -33,7 +33,25 @@ function init_gear_sets()
 	
 	sets.nukeGear = {
 		ammo="Pemphredo Tathlum",
-		head={ name="Amalric Coif +1", augments={'MP+80','INT+12','Enmity-6',}},
+		head="Ea Hat +1",
+		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		legs="Ea Slops +1",
+		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		neck="Mizu. Kubikazari",
+		waist="Orpheus's Sash",
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Freke Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Mujin Band",
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
+	}
+	
+	sets.lowTierNukeGear = {
+		ammo="Pemphredo Tathlum",
+		head="Ea Hat +1",
 		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
@@ -48,40 +66,44 @@ function init_gear_sets()
 	}
 
 	sets.enfeebleGear = {
-		ammo="Pemphredo Tathlum",
-		head={ name="Amalric Coif +1", augments={'MP+80','INT+12','Enmity-6',}},
+		ammo="Regal Gem",
+		head="Vitiation Chapeau +3",
 		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		hands="Regal Cuffs",
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		neck="Mizu. Kubikazari",
+		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
+		feet="Vitiation Boots +3",
+		neck="Dls. Torque +2",
 	    waist="Luminary Sash",
 	    left_ear="Malignance Earring",
 	    right_ear="Regal Earring",
-	    left_ring="Stikini Ring +1",
-	    right_ring="Metamorph Ring +1",
+	    left_ring="Kishar Ring",
+	    right_ring="Stikini Ring +1",
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
 	}
 
 	sets.meleeTP = {
-		ammo="Pemphredo Tathlum",
+		ammo="Ginsen",
 		head="Aya. Zucchetto +2",
 		body="Ayanmo Corazza +2",
-		hands="Aya. Manopolas +2",
+		hands="Malignance Gloves",
 		legs="Aya. Cosciales +2",
 		feet="Aya. Gambieras +2",
-		neck="Mizu. Kubikazari",
+		neck="Lissome Necklace",
 		waist="Sarissapho. Belt",
 		left_ear="Telos Earring",
-		right_ear="Sherida Earring",
+		right_ear="Eabani Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Chirich Ring +1",
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+		--back="Mecistopins Mantle",
 	}
 
 	sets.buffGear = {
-		ammo="Staunch Tathlum",
 		head="Befouled Crown",
+		body="Vitiation Tabard +3",
+		hands="Vitiation Gloves +3",
+		legs="Carmine Cuisses +1",
+		feet="Lethargy Houseaux +1",
 		neck="Melic Torque",
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
@@ -92,11 +114,13 @@ function init_gear_sets()
 	}
 
 	sets.buffGearDuration = {
+		neck="Dls. Torque +2",
 		head="Telchine Cap",
 		body="Telchine Chasuble",
-		hands="Telchine Gloves",
+		hands="Atrophy Gloves +3",
 		legs="Telchine Braconi",
-		feet="Telchine Pigaches",
+		feet="Lethargy Houseaux +1",
+		back="Sucellos's Cape",
 	}
 
 	sets.cureGear = {
@@ -115,26 +139,87 @@ function init_gear_sets()
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
-	sets.PDT = {
+	sets.refresh = {
 		ammo="Staunch Tathlum",
-		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
-		hands="Aya. Manopolas +2",
-		legs="Aya. Cosciales +2",
+		head="Vitiation Chapeau +3",
+		body="Jhakri Robe +2",
+		hands="Malignance Gloves",
+		legs="Carmine Cuisses +1",
 		feet="Aya. Gambieras +2",
 		neck="Loricate Torque +1",
 		waist="Sarissapho. Belt",
 		left_ear="Telos Earring",
 		right_ear="Sherida Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		--back="Mecistopins Mantle",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
+
+	sets.PDT = {
+		ammo="Staunch Tathlum",
+		head="Aya. Zucchetto +2",
+		body="Ayanmo Corazza +2",
+		hands="Malignance Gloves",
+		legs="Aya. Cosciales +2",
+		feet="Hippomenes Socks +1",
+		neck="Loricate Torque +1",
+		waist="Carrier's Sash",
+		left_ear="Telos Earring",
+		right_ear="Sherida Earring",
 		left_ring="Shneddick Ring",
 		right_ring="Defending Ring",
-		back="Mecistopins Mantle",
-		--back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+		--back="Mecistopins Mantle",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
+
+	sets.precastWSPhysical = {
+		ammo="Floestone",
+		head="Vitiation Chapeau +3",
+		body="Vitiation Tabard +3",
+		hands="Atrophy Gloves +3",
+		legs="Vitiation Tights +3",
+		feet="Jhakri Pigaches +2",
+		neck="Sanctity Necklace",
+		waist="Grunfeld Rope",
+		left_ear="Ishvara Earring",
+		right_ear="Sherida Earring",
+		left_ring="Ilabrat Ring",
+		right_ring="Rufescent Ring",
+		back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	}
+
+	sets.precastWSCritical = {
+
+	}
+
+	sets.precastWSMultiHit = {
+
+	}
+
+	sets.precastWSMagic = {
+		ammo="Pemphredo Tathlum",
+		head="Jhakri Coronal +2",
+		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Freke Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Chainspell'] = {
+		body="Vitiation Tabard +3",
+	}
 
+	sets.precast.JA['Saboteur'] = {
+		hands="Lethargy Gantherots +1",
 	}
 
 	sets.precast.JA['Composure'] = {
@@ -145,29 +230,56 @@ function init_gear_sets()
 
 	}
 
-	sets.buffGearDuration = {
-		head="Telchine Cap",
-		body="Telchine Chasuble",
-		hands="Telchine Gloves",
-		legs="Telchine Braconi",
-		feet="Telchine Pigaches",
-	}
+	sets.precast.WS = sets.precastWSPhysical
 
-	sets.precast.WS['Aeolian Edge'] = {
-		ammo="Pemphredo Tathlum",
-		head="Jhakri Coronal +2",
-		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		hands="Jhakri Cuffs +2",
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		neck="Sanctity Necklace",
-		waist="Orpheus's Sash",
-		left_ear="Malignance Earring",
-		right_ear="Regal Earring",
-		left_ring="Freke Ring",
-		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
-	}
+	-- #############
+	-- ### Sword ###
+	-- #############
+	sets.precast.WS['Fast Blade'] = set_combine(sets.precastWSPhysical, sets.precastWSMultiHit, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Burning Blade'] = set_combine(sets.precastWSMagic, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Red Lotus Blade'] = set_combine(sets.precastWSMagic, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Flat Blade'] = set_combine(sets.precastWSPhysical, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Shining Blade'] = set_combine(sets.precastWSMagic, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Seraph Blade'] = set_combine(sets.precastWSMagic, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Circle Blade'] = sets.precastWsPhysical
+	sets.precast.WS['Spirits Within'] = set_combine(sets.precastWSPhysical, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Vorpal Blade'] = set_combine(sets.precastWSPhysical, sets.precastWSCritical)
+	sets.precast.WS['Sanguine Blade'] = set_combine(sets.precastWSMagic, {
+		head="Pixie Hairpin +1",
+		ring2="Archon Ring",
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Requiescat'] = set_combine(sets.precastWSPhysical, sets.precastWSMultiHit, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+	sets.precast.WS['Knights Of Round'] = sets.precastWsPhysical
+	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precastWSPhysical, sets.precastWSCritical, {
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+	})
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precastWSPhysical, sets.precastWSMultiHit, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+
+
+	-- ##############
+	-- ### Dagger ###
+	-- ##############
+	sets.precast.WS['Aeolian Edge'] = sets.precastWSMagic
 	
 	--include('jobAbilities.lua')
 	--include('weaponSkills.lua')
@@ -175,6 +287,8 @@ function init_gear_sets()
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
+	disable('neck')
+	--enable('neck')
 	if state.OffenseMode.value == 'Melee' then
 		if spell.skill == 'Elemental Magic' then
 			equip(sets.magic_burst)
@@ -184,7 +298,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 
 	end
 
-	if S{"Breakga"}:contains(spell.english) then
+	if S{"Diaga"}:contains(spell.english) then
 		equip({
 			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
 			waist="Chaac belt",
@@ -200,22 +314,24 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			hands="Spaekona's Gloves +3"
 		}));
 	end
+
+	if buffactive['Saboteur'] and spell.skill == 'Enfeebling Magic' then
+		equip({
+			hands="Lethargy Gantherots +1",
+		})
+	end
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == "Melee" then
 		equip(sets.meleeTP)
+	elseif state.OffenseMode.value == "Refresh" then
+		equip (sets.refresh) 
 	else
 		equip(sets.PDT)
-	end
-
-	if buffactive['Mana Wall'] == 1 or spell.english == 'Mana Wall' then
-		equip(sets.manaWall)
 	end
 end
 
 function job_buff_change(buff, gain)
-	if buff == "Mana Wall" and not gain then
-		equip(sets.PDT)
-	end
+
 end
