@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('Nuke', 'Melee', 'Refresh');
+	state.OffenseMode:options('Nuke', 'Melee', 'MeleeHybrid', 'Refresh');
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -74,8 +74,8 @@ function init_gear_sets()
 		feet="Vitiation Boots +3",
 		neck="Dls. Torque +2",
 	    waist="Luminary Sash",
-	    left_ear="Malignance Earring",
-	    right_ear="Regal Earring",
+	    left_ear="Regal Earring",
+	    right_ear="Malignance Earring",
 	    left_ring="Kishar Ring",
 	    right_ring="Stikini Ring +1",
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
@@ -98,6 +98,22 @@ function init_gear_sets()
 		--back="Mecistopins Mantle",
 	}
 
+	sets.meleeTPHybrid = {
+		ammo="Staunch Tathlum",
+		head="Aya. Zucchetto +2",
+		body="Ayanmo Corazza +2",
+		hands="Malignance Gloves",
+		legs="Aya. Cosciales +2",
+		feet="Aya. Gambieras +2",
+		neck="Loricate Torque +1",
+		waist="Sarissapho. Belt",
+		left_ear="Telos Earring",
+		right_ear="Eabani Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Defending Ring",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
+
 	sets.buffGear = {
 		head="Befouled Crown",
 		body="Vitiation Tabard +3",
@@ -116,7 +132,7 @@ function init_gear_sets()
 	sets.buffGearDuration = {
 		neck="Dls. Torque +2",
 		head="Telchine Cap",
-		body="Telchine Chasuble",
+		body="Vitiation Tabard +3",
 		hands="Atrophy Gloves +3",
 		legs="Telchine Braconi",
 		feet="Lethargy Houseaux +1",
@@ -179,7 +195,7 @@ function init_gear_sets()
 		body="Vitiation Tabard +3",
 		hands="Atrophy Gloves +3",
 		legs="Vitiation Tights +3",
-		feet="Jhakri Pigaches +2",
+		feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
 		neck="Sanctity Necklace",
 		waist="Grunfeld Rope",
 		left_ear="Ishvara Earring",
@@ -201,7 +217,7 @@ function init_gear_sets()
 		ammo="Pemphredo Tathlum",
 		head="Jhakri Coronal +2",
 		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		hands="Jhakri Cuffs +2",
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		neck="Sanctity Necklace",
@@ -287,8 +303,8 @@ function init_gear_sets()
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
-	disable('neck')
-	--enable('neck')
+	--disable('neck')
+	enable('neck')
 	if state.OffenseMode.value == 'Melee' then
 		if spell.skill == 'Elemental Magic' then
 			equip(sets.magic_burst)
@@ -325,6 +341,8 @@ end
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == "Melee" then
 		equip(sets.meleeTP)
+	elseif state.OffenseMode.value == "MeleeHybrid" then
+		equip(sets.meleeTPHybrid)
 	elseif state.OffenseMode.value == "Refresh" then
 		equip (sets.refresh) 
 	else

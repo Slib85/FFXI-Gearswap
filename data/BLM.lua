@@ -85,6 +85,11 @@ function init_gear_sets()
 		--feet={ name="Arch. Sabots +3", augments={'Reduces Ancient Magic II MP cost',}},
 		feet="Amalric Nails +1",
 		--body="Amalric Doublet +1",
+
+		
+		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
+		legs={ name="Arch. Tonban +3", augments={'Increases Elemental Magic debuff time and potency',}},
+		feet={ name="Arch. Sabots +3", augments={'Increases Aspir absorption amount',}},
 	}
 
 	sets.enfeebleGearINT = {
@@ -151,7 +156,7 @@ function init_gear_sets()
 		right_ear="Andoaa Earring",
 		left_ring="Stikini Ring +1",
 		right_ring="Stikini Ring +1",
-		back="Perimede Cape",	
+		back="Fi Follet Cape",	
 	}
 
 	sets.buffGearDuration = {
@@ -253,11 +258,11 @@ function init_gear_sets()
 		hands="Telchine Gloves", -- 10
 		legs={ name="Vanya Slops", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 7
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10
-		neck="Nodens Gorget", -- 5
-		waist="Emphatikos rope",
+		neck="Phalaina Locket", -- 4
+		waist="Gishdubar Sash",
 		left_ear="Mendi. Earring", -- 5
 		right_ear="Nourishing Earring +1", -- 6-7
-		left_ring="Shneddick Ring",
+		left_ring="Kunaji Ring",
 		right_ring="Defending Ring",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
@@ -271,7 +276,7 @@ function init_gear_sets()
 	    feet="Hippomenes Socks +1",
 	    neck="Loricate Torque +1",
 	    waist="Carrier's Sash",
-	    left_ear="Dominance Earring",
+	    left_ear="Lugalbanda Earring",
 	    right_ear="Genmei Earring",
 	    left_ring="Shneddick Ring",
 	    right_ring="Defending Ring",
@@ -328,11 +333,11 @@ function init_gear_sets()
 		hands="Jhakri Cuffs +2",
 		legs="Jhakri Slops +2",
 		feet="Jhakri Pigaches +2",
-		neck="Fotia Gorget",
-		waist="Fotia Belt",
+		neck={ name="Src. Stole +2", augments={'Path: A',}},
+		waist={ name="Acuity Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 		right_ear="Ishvara Earring",
-		left_ring="Freke Ring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 		right_ring="Rufescent Ring",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%',}},
 	}
@@ -370,7 +375,7 @@ function init_gear_sets()
 	sets.midcast['Sneak'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Invisible'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Deodorize'] = set_combine(sets.buffGear, sets.buffGearDuration)
-
+	--send_command('input /console cancel 446')
 	sets.midcast['Sandstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Sandstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Rainstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
@@ -390,13 +395,17 @@ function init_gear_sets()
 
 	sets.midcast['Blink'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Aquaveil'] = set_combine(set_combine(sets.buffGearDuration, sets.buffGear), {hands="Regal Cuffs", head="Amalric Coif +1", waist="Emphatikos rope", feet="Amalric Nails +1"})
-	sets.midcast['Refresh'] = set_combine(sets.buffGear, sets.buffGearDuration, {head="Amalric Coif +1"})
+	sets.midcast['Refresh'] = set_combine(sets.buffGear, sets.buffGearDuration, {
+		head="Amalric Coif +1",
+		waist="Gishdubar Sash",
+	})
 	sets.midcast['Auspice'] = sets.buffGear
 	sets.midcast['Phalanx'] = set_combine(sets.buffGearDuration, sets.buffGear, {
-		body={ name="Merlinic Jubbah", augments={'"Dbl.Atk."+1','Attack+14','Phalanx +3','Accuracy+11 Attack+11','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
+		head={ name="Merlinic Hood", augments={'Weapon skill damage +3%','Pet: STR+10','Phalanx +1','Mag. Acc.+3 "Mag.Atk.Bns."+3',}},
+    	body={ name="Merlinic Jubbah", augments={'"Dbl.Atk."+1','Attack+14','Phalanx +3','Accuracy+11 Attack+11','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
 		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
 		legs={ name="Merlinic Shalwar", augments={'Potency of "Cure" effect received+1%','Pet: "Mag.Atk.Bns."+28','Phalanx +2',}},
-		feet={ name="Merlinic Crackows", augments={'INT+1','Enmity+4','Phalanx +2','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
+		feet={ name="Merlinic Crackows", augments={'Crit. hit damage +1%','"Conserve MP"+5','Phalanx +4','Accuracy+8 Attack+8',}},
 	})
 	sets.midcast['Blaze Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
 	sets.midcast['Ice Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
@@ -404,6 +413,12 @@ function init_gear_sets()
 
 	sets.midcast['Curaga'] = sets.cureGear
 	sets.midcast['Curaga II'] = sets.cureGear
+	
+	sets.midcast['Regen'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Regen II'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Regen III'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Regen IV'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Regen V'] = set_combine(sets.buffGear, sets.buffGearDuration)
 
 	sets.midcast['Barstonra'] = set_combine(sets.buffGearDuration, sets.buffGear)
 	sets.midcast['Barwatera'] = set_combine(sets.buffGearDuration, sets.buffGear)
@@ -556,12 +571,6 @@ function init_gear_sets()
 	sets.midcast['Poison'] = sets.enfeebleGearINT
 	sets.midcast['Poison II'] = sets.enfeebleGearINT
 
-	sets.midcast['Burn'] = sets.enfeebleGearINT
-	sets.midcast['Choke'] = sets.enfeebleGearINT
-	sets.midcast['Rasp'] = sets.enfeebleGearINT
-	sets.midcast['Frost'] = sets.enfeebleGearINT
-	sets.midcast['Shock'] = sets.enfeebleGearINT
-	sets.midcast['Drown'] = sets.enfeebleGearINT
 	sets.midcast['Slow'] = sets.enfeebleGearMND
 	sets.midcast['Paralyze'] = sets.enfeebleGearMND
 	sets.midcast['Silence'] = sets.enfeebleGearMND
@@ -688,12 +697,13 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 	end
 
 	if S{"Burn", "Choke", "Rasp", "Frost", "Shock", "Drown"}:contains(spell.english) then
-		equip(set_combine(sets.enfeebleGear, {
+		equip(set_combine(sets.enfeebleGearINT, {
 			head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic damage and magic burst damage',}},
 			body={ name="Arch. Coat +3", augments={'Enhances "Manafont" effect',}},
 			feet="Arch. sabots +3",
 			legs="Arch. tonban +3",
-			hands="Spaekona's Gloves +3"
+			hands="Spaekona's Gloves +3",
+			left_ring="Stikini Ring +1",
 		}));
 	end
 end

@@ -14,36 +14,37 @@ function user_unload()
 end
 
 function init_gear_sets()
+	-- 68%
 	sets.precastSpells = {
-		ammo="Sapience Orb",
-		head="Chev. Armet +1",
-		body="Rev. Surcoat +3",
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-		legs="Sulev. Cuisses +2",
-		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+24','"Fast Cast"+5','"Mag.Atk.Bns."+8',}},
-		neck="Orunmila's Torque",
-		waist="Goading Belt",
-		left_ear="Loquac. Earring",
-		right_ear="Etiolation Earring",
-		left_ring="Kishar Ring",
-		right_ring="Prolix Ring",
-		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10',}},
+		ammo="Sapience Orb", --2
+		head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, --14
+		body="Rev. Surcoat +3", --10
+		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8
+		legs="Sulev. Cuisses +2", --0
+		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+24','"Fast Cast"+5','"Mag.Atk.Bns."+8',}}, --10
+		neck="Orunmila's Torque", --5
+		waist="Goading Belt", --0
+		left_ear="Loquac. Earring", --2
+		right_ear="Etiolation Earring", --1
+		left_ring="Kishar Ring", --4
+		right_ring="Prolix Ring", --2
+		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10',}}, --10
 	}
     
 	sets.defense.PDT = {
-		ammo="Ginsen",
-        head="Sulevia's Mask +2",
-        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
-        hands="Sulev. Gauntlets +2",
-        legs="Sulev. Cuisses +2",
-        feet="Flam. Gambieras +2",
-        neck="Lissome Necklace",
-        waist="Sarissapho. Belt",
-        left_ear="Dedition Earring",
-        right_ear="Telos Earring",
-        left_ring="Moonlight Ring",
-        right_ring="Defending Ring",
-        back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Damage taken-5%',}},
+		ammo="Staunch Tathlum",
+		head="Hjarrandi Helm",
+		body="Chev. Cuirass +1",
+		hands="Chev. Gauntlets +1",
+		legs="Chev. Cuisses +1",
+		feet="Chev. Sabatons +1",
+		neck="Loricate Torque +1",
+		waist="Carrier's Sash",
+		left_ear="Genmei Earring",
+		right_ear="Cryptic Earring",
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
+		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
     }
     
     sets.SUPER = {
@@ -62,20 +63,20 @@ function init_gear_sets()
         back="Moonlight Cape",
 	}
 
-	sets.FLEE = {
+	sets.TP = {
 		ammo="Ginsen",
-        head="Sulevia's Mask +2",
-        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
-        hands="Sulev. Gauntlets +2",
-        legs="Sulev. Cuisses +2",
-        feet="Hippomenes Socks",
-        neck="Lissome Necklace",
-        waist="Sarissapho. Belt",
-        left_ear="Dedition Earring",
-        right_ear="Telos Earring",
-        left_ring="Moonlight Ring",
-        right_ring="Defending Ring",
-        back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Damage taken-5%',}},
+		head="Sulevia's Mask +2",
+		body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
+		hands="Sulev. Gauntlets +2",
+		legs="Sulev. Cuisses +2",
+		feet="Flam. Gambieras +2",
+		neck="Lissome Necklace",
+		waist="Sarissapho. Belt",
+		left_ear="Dedition Earring",
+		right_ear="Telos Earring",
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
+		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
     }
     
 	sets.precastWS = {
@@ -142,8 +143,36 @@ function init_gear_sets()
 		back="Moonlight Cape",
 	}
 	
-	sets.nukeGear = {
-		
+	sets.nukeGearINT = {
+		ammo="Pemphredo Tathlum",
+		head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
+		body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
+		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+		legs="Sulev. Cuisses +2",
+		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Ishvara Earring",
+		right_ear="Friomisi Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Stikini Ring +1",
+		back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
+	}
+
+	sets.nukeGearMND = {
+		ammo="Pemphredo Tathlum",
+		head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
+		body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
+		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+		legs="Sulev. Cuisses +2",
+		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Ishvara Earring",
+		right_ear="Friomisi Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Stikini Ring +1",
+		back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
 	}
 	
 	sets.buffGear = {
@@ -155,7 +184,11 @@ function init_gear_sets()
 
 	sets.precast.FC = sets.precastSpells
 	sets.precast.WS = sets.precastWS;
-	sets.precast.WS['Sanguine Blade'] = sets.magicPrecastWSGear;
+	sets.precast.WS['Sanguine Blade'] = set_combine(sets.magicPrecastWSGear, {
+		head="Pixie Hairpin +1",
+		ring2="Archon Ring"
+	});
+	sets.precast.WS['Aeolian Edge'] = sets.magicPrecastWSGear
 							
 	sets.midcast['Flash'] = sets.enmityGear;
 
@@ -174,138 +207,139 @@ function init_gear_sets()
 	sets.midcast['Cura II'] = sets.cureGear
 	sets.midcast['Cura III'] = sets.cureGear
 	
-	sets.midcast['Blink'] = buffGear
-	sets.midcast['Stoneskin'] = buffGear
-	sets.midcast['Aquaveil'] = buffGear
-	sets.midcast['Auspice'] = buffGear
+	sets.midcast['Blink'] = sets.buffGear
+	sets.midcast['Stoneskin'] = sets.buffGear
+	sets.midcast['Aquaveil'] = sets.buffGear
+	sets.midcast['Auspice'] = sets.buffGear
 	sets.midcast['Phalanx'] = set_combine(sets.buffGear, {
 		head={ name="Odyssean Helm", augments={'AGI+5','Rng.Acc.+1 Rng.Atk.+1','Phalanx +4','Accuracy+16 Attack+16',}},
 		hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
 		legs={ name="Odyssean Cuisses", augments={'MND+2','CHR+6','Phalanx +4',}},
 		feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
-	});
+		back={ name="Weard Mantle", augments={'VIT+1','DEX+2','Enmity+2','Phalanx +4',}},
+    });
 
-	sets.midcast['Blaze Spikes'] = buffGear
-	sets.midcast['Ice Spikes'] = buffGear
+	sets.midcast['Blaze Spikes'] = sets.buffGear
+	sets.midcast['Ice Spikes'] = sets.buffGear
 	
-	sets.midcast['Barstonra'] = buffGear
-	sets.midcast['Barwatera'] = buffGear     
-	sets.midcast['Baraera'] = buffGear
-	sets.midcast['Barfira'] = buffGear
-	sets.midcast['Barblizzara'] = buffGear
-	sets.midcast['Barthundra'] = buffGear
-	sets.midcast['Barsleepra'] = buffGear
-	sets.midcast['Barpoisonra'] = buffGear
-	sets.midcast['Barparalyzra'] = buffGear
-	sets.midcast['Barblindra'] = buffGear
-	sets.midcast['Barsilencera'] = buffGear
-	sets.midcast['Barpetra'] = buffGear
-	sets.midcast['Barvira'] = buffGear
-	sets.midcast['Baramnesra'] = buffGear
+	sets.midcast['Barstonra'] = sets.buffGear
+	sets.midcast['Barwatera'] = sets.buffGear     
+	sets.midcast['Baraera'] = sets.buffGear
+	sets.midcast['Barfira'] = sets.buffGear
+	sets.midcast['Barblizzara'] = sets.buffGear
+	sets.midcast['Barthundra'] = sets.buffGear
+	sets.midcast['Barsleepra'] = sets.buffGear
+	sets.midcast['Barpoisonra'] = sets.buffGear
+	sets.midcast['Barparalyzra'] = sets.buffGear
+	sets.midcast['Barblindra'] = sets.buffGear
+	sets.midcast['Barsilencera'] = sets.buffGear
+	sets.midcast['Barpetra'] = sets.buffGear
+	sets.midcast['Barvira'] = sets.buffGear
+	sets.midcast['Baramnesra'] = sets.buffGear
 	
-	sets.midcast['Boost-STR'] = buffGear
-	sets.midcast['Boost-DEX'] = buffGear
-	sets.midcast['Boost-VIT'] = buffGear
-	sets.midcast['Boost-AGI'] = buffGear
-	sets.midcast['Boost-INT'] = buffGear
-	sets.midcast['Boost-MND'] = buffGear
-	sets.midcast['Boost-CHR'] = buffGear
+	sets.midcast['Boost-STR'] = sets.buffGear
+	sets.midcast['Boost-DEX'] = sets.buffGear
+	sets.midcast['Boost-VIT'] = sets.buffGear
+	sets.midcast['Boost-AGI'] = sets.buffGear
+	sets.midcast['Boost-INT'] = sets.buffGear
+	sets.midcast['Boost-MND'] = sets.buffGear
+	sets.midcast['Boost-CHR'] = sets.buffGear
 	
-	sets.midcast['Banish'] = nukeGear
-	sets.midcast['Banish II'] = nukeGear
-	sets.midcast['Banish III'] = nukeGear
-	sets.midcast['Banishga'] = nukeGear
-	sets.midcast['Banishga II'] = nukeGear
-	sets.midcast['Holy'] = nukeGear
-	sets.midcast['Holy II'] = nukeGear
+	sets.midcast['Banish'] = sets.nukeGearMND
+	sets.midcast['Banish II'] = sets.nukeGearMND
+	sets.midcast['Banish III'] = sets.nukeGearMND
+	sets.midcast['Banishga'] = sets.nukeGearMND
+	sets.midcast['Banishga II'] = sets.nukeGearMND
+	sets.midcast['Holy'] = sets.nukeGearMND
+	sets.midcast['Holy II'] = sets.nukeGearMND
 	
-	sets.midcast['Repose'] = enfeebleGear
-	sets.midcast['Paralyze'] = enfeebleGear
-	sets.midcast['Slow'] = enfeebleGear
-	sets.midcast['Repose'] = enfeebleGear
-	sets.midcast['Silence'] = enfeebleGear
-	sets.midcast['Addle'] = enfeebleGear
+	sets.midcast['Repose'] = sets.enfeebleGear
+	sets.midcast['Paralyze'] = sets.enfeebleGear
+	sets.midcast['Slow'] = sets.enfeebleGear
+	sets.midcast['Repose'] = sets.enfeebleGear
+	sets.midcast['Silence'] = sets.enfeebleGear
+	sets.midcast['Addle'] = sets.enfeebleGear
 	
 	-- BLACK MAGIC
-	sets.midcast['Stone'] = nukeGear
-	sets.midcast['Stone II'] = nukeGear
-	sets.midcast['Stone III'] = nukeGear
-	sets.midcast['Stone IV'] = nukeGear
-	sets.midcast['Stone V'] = nukeGear
-	sets.midcast['Stone VI'] = nukeGear
-	sets.midcast['Stonega'] = nukeGear
-	sets.midcast['Stonega II'] = nukeGear
-	sets.midcast['Stonega III'] = nukeGear
-	sets.midcast['Stoneja'] = nukeGear
+	sets.midcast['Stone'] = sets.nukeGear
+	sets.midcast['Stone II'] = sets.nukeGear
+	sets.midcast['Stone III'] = sets.nukeGear
+	sets.midcast['Stone IV'] = sets.nukeGear
+	sets.midcast['Stone V'] = sets.nukeGear
+	sets.midcast['Stone VI'] = sets.nukeGear
+	sets.midcast['Stonega'] = sets.nukeGear
+	sets.midcast['Stonega II'] = sets.nukeGear
+	sets.midcast['Stonega III'] = sets.nukeGear
+	sets.midcast['Stoneja'] = sets.nukeGear
 	
-	sets.midcast['Water'] = nukeGear
-	sets.midcast['Water II'] = nukeGear
-	sets.midcast['Water III'] = nukeGear
-	sets.midcast['Water IV'] = nukeGear
-	sets.midcast['Water V'] = nukeGear
-	sets.midcast['Water VI'] = nukeGear
-	sets.midcast['Waterga'] = nukeGear
-	sets.midcast['Waterga II'] = nukeGear
-	sets.midcast['Waterga III'] = nukeGear
-	sets.midcast['Waterja'] = nukeGear
+	sets.midcast['Water'] = sets.nukeGear
+	sets.midcast['Water II'] = sets.nukeGear
+	sets.midcast['Water III'] = sets.nukeGear
+	sets.midcast['Water IV'] = sets.nukeGear
+	sets.midcast['Water V'] = sets.nukeGear
+	sets.midcast['Water VI'] = sets.nukeGear
+	sets.midcast['Waterga'] = sets.nukeGear
+	sets.midcast['Waterga II'] = sets.nukeGear
+	sets.midcast['Waterga III'] = sets.nukeGear
+	sets.midcast['Waterja'] = sets.nukeGear
 	
-	sets.midcast['Aero'] = nukeGear
-	sets.midcast['Aero II'] = nukeGear
-	sets.midcast['Aero III'] = nukeGear
-	sets.midcast['Aero IV'] = nukeGear
-	sets.midcast['Aero V'] = nukeGear
-	sets.midcast['Aero VI'] = nukeGear
-	sets.midcast['Aeroga'] = nukeGear
-	sets.midcast['Aeroga II'] = nukeGear
-	sets.midcast['Aeroga III'] = nukeGear
-	sets.midcast['Aeroja'] = nukeGear
+	sets.midcast['Aero'] = sets.nukeGear
+	sets.midcast['Aero II'] = sets.nukeGear
+	sets.midcast['Aero III'] = sets.nukeGear
+	sets.midcast['Aero IV'] = sets.nukeGear
+	sets.midcast['Aero V'] = sets.nukeGear
+	sets.midcast['Aero VI'] = sets.nukeGear
+	sets.midcast['Aeroga'] = sets.nukeGear
+	sets.midcast['Aeroga II'] = sets.nukeGear
+	sets.midcast['Aeroga III'] = sets.nukeGear
+	sets.midcast['Aeroja'] = sets.nukeGear
 	
-	sets.midcast['Fire'] = nukeGear
-	sets.midcast['Fire II'] = nukeGear
-	sets.midcast['Fire III'] = nukeGear
-	sets.midcast['Fire IV'] = nukeGear
-	sets.midcast['Fire V'] = nukeGear
-	sets.midcast['Fire VI'] = nukeGear
-	sets.midcast['Firaga'] = nukeGear
-	sets.midcast['Firaga II'] = nukeGear
-	sets.midcast['Firaga III'] = nukeGear
-	sets.midcast['Firaja'] = nukeGear
+	sets.midcast['Fire'] = sets.nukeGear
+	sets.midcast['Fire II'] = sets.nukeGear
+	sets.midcast['Fire III'] = sets.nukeGear
+	sets.midcast['Fire IV'] = sets.nukeGear
+	sets.midcast['Fire V'] = sets.nukeGear
+	sets.midcast['Fire VI'] = sets.nukeGear
+	sets.midcast['Firaga'] = sets.nukeGear
+	sets.midcast['Firaga II'] = sets.nukeGear
+	sets.midcast['Firaga III'] = sets.nukeGear
+	sets.midcast['Firaja'] = sets.nukeGear
 	
-	sets.midcast['Blizzard'] = nukeGear
-	sets.midcast['Blizzard II'] = nukeGear
-	sets.midcast['Blizzard III'] = nukeGear
-	sets.midcast['Blizzard IV'] = nukeGear
-	sets.midcast['Blizzard V'] = nukeGear
-	sets.midcast['Blizzard VI'] = nukeGear
-	sets.midcast['Blizzaga'] = nukeGear
-	sets.midcast['Blizzaga II'] = nukeGear
-	sets.midcast['Blizzaga III'] = nukeGear
-	sets.midcast['Blizzaja'] = nukeGear
+	sets.midcast['Blizzard'] = sets.nukeGear
+	sets.midcast['Blizzard II'] = sets.nukeGear
+	sets.midcast['Blizzard III'] = sets.nukeGear
+	sets.midcast['Blizzard IV'] = sets.nukeGear
+	sets.midcast['Blizzard V'] = sets.nukeGear
+	sets.midcast['Blizzard VI'] = sets.nukeGear
+	sets.midcast['Blizzaga'] = sets.nukeGear
+	sets.midcast['Blizzaga II'] = sets.nukeGear
+	sets.midcast['Blizzaga III'] = sets.nukeGear
+	sets.midcast['Blizzaja'] = sets.nukeGear
 	
-	sets.midcast['Thunder'] = nukeGear
-	sets.midcast['Thunder II'] = nukeGear
-	sets.midcast['Thunder III'] = nukeGear
-	sets.midcast['Thunder IV'] = nukeGear
-	sets.midcast['Thunder V'] = nukeGear
-	sets.midcast['Thunder VI'] = nukeGear
-	sets.midcast['Thundaga'] = nukeGear
-	sets.midcast['Thundaga II'] = nukeGear
-	sets.midcast['Thundaga III'] = nukeGear
-	sets.midcast['Thundaja'] = nukeGear
+	sets.midcast['Thunder'] = sets.nukeGear
+	sets.midcast['Thunder II'] = sets.nukeGear
+	sets.midcast['Thunder III'] = sets.nukeGear
+	sets.midcast['Thunder IV'] = sets.nukeGear
+	sets.midcast['Thunder V'] = sets.nukeGear
+	sets.midcast['Thunder VI'] = sets.nukeGear
+	sets.midcast['Thundaga'] = sets.nukeGear
+	sets.midcast['Thundaga II'] = sets.nukeGear
+	sets.midcast['Thundaga III'] = sets.nukeGear
+	sets.midcast['Thundaja'] = sets.nukeGear
 
-	sets.midcast['Sleep'] = enfeebleGear
-	sets.midcast['Sleep II'] = enfeebleGear
-	sets.midcast['Sleepga'] = enfeebleGear
-	sets.midcast['Blind'] = enfeebleGear
-	sets.midcast['Poison'] = enfeebleGear
-	sets.midcast['Poison II'] = enfeebleGear
-	sets.midcast['Bind'] = enfeebleGear
-	sets.midcast['Dispel'] = enfeebleGear
-	sets.midcast['Gravity'] = enfeebleGear
-	sets.midcast['Distract'] = enfeebleGear
-	sets.midcast['Frazzle'] = enfeebleGear
-	sets.midcast['Bio'] = enfeebleGear
-	sets.midcast['Bio II'] = enfeebleGear
+	sets.midcast['Sleep'] = sets.enfeebleGear
+	sets.midcast['Sleep II'] = sets.enfeebleGear
+	sets.midcast['Sleepga'] = sets.enfeebleGear
+	sets.midcast['Blind'] = sets.enfeebleGear
+	sets.midcast['Poison'] = sets.enfeebleGear
+	sets.midcast['Poison II'] = sets.enfeebleGear
+	sets.midcast['Bind'] = sets.enfeebleGear
+	sets.midcast['Dispel'] = sets.enfeebleGear
+	sets.midcast['Gravity'] = sets.enfeebleGear
+	sets.midcast['Distract'] = sets.enfeebleGear
+	sets.midcast['Frazzle'] = sets.enfeebleGear
+	sets.midcast['Bio'] = sets.enfeebleGear
+	sets.midcast['Bio II'] = sets.enfeebleGear
 	
 
 	
@@ -382,15 +416,15 @@ end
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == 'SUPER' then
         equip(sets.SUPER)
-    elseif state.OffenseMode.value == 'FLEE' then
-        equip(sets.FLEE)
+    elseif state.OffenseMode.value == 'TP' then
+        equip(sets.TP)
     else
 		equip(sets.defense.PDT)
     end
 end
 
 function user_setup()
-	state.OffenseMode:options('Normal', 'SUPER', 'FLEE')
+	state.OffenseMode:options('Normal', 'SUPER', 'TP')
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end

@@ -33,7 +33,7 @@ function init_gear_sets()
 	precastWS = {
 		ammo="Knobkierrie",
 		head="Sulevia's Mask +2",
-		body="Hjarrandi Breastplate",
+		body="Sulevia's Platemail +2",
 		hands="Sulev. Gauntlets +2",
 		legs="Sulev. Cuisses +2",
 		feet="Sulev. Leggings +2",
@@ -226,7 +226,7 @@ function init_gear_sets()
 	sets.precast.WS['Catastrophe'] = {
 		ammo="Knobkierrie",
 		head="Sulevia's Mask +2",
-		body="Hjarrandi Breastplate",
+		body="Sulevia's Platemail +2",
 		hands="Sulev. Gauntlets +2",
 		legs="Sulev. Cuisses +2",
 		feet="Sulev. Leggings +2",

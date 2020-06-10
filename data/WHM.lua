@@ -26,11 +26,11 @@ function init_gear_sets()
         body="Inyanga Jubbah +2",
         hands="Gendewitha Gages",
         legs="Aya. Cosciales +2",
-        feet="Hippomenes Socks",
+        feet="Hippomenes Socks +1",
         neck="Orunmila's Torque",
         waist="Witful Belt",
         left_ear="Loquac. Earring",
-        right_ear="Genmei Earring",
+        right_ear="Malignance Earring",
         left_ring="Kishar Ring",
         right_ring="Rahab Ring",
         back={ name="Alaunus's Cape", augments={'"Fast Cast"+10',}},
@@ -69,7 +69,19 @@ function init_gear_sets()
     }
 
 	sets.lowTierNukeGear = {
-        
+		ammo="Pemphredo Tathlum",
+		head={ name="Chironic Hat", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','INT+10','"Mag.Atk.Bns."+15',}},
+		body={ name="Chironic Doublet", augments={'"Mag.Atk.Bns."+30','MND+5','Mag. Acc.+15',}},
+		hands={ name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+1','"Mag.Atk.Bns."+10',}},
+		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
+		feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+30','"Conserve MP"+6','MND+13','Mag. Acc.+12',}},
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Freke Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Alaunus's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +5','"Mag.Atk.Bns."+10',}},
 	}
 		
 	sets.occultAcumenGear = {
@@ -77,7 +89,19 @@ function init_gear_sets()
 	}
 	
 	sets.nukeGear = {
-
+		ammo="Pemphredo Tathlum",
+		head={ name="Chironic Hat", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','INT+10','"Mag.Atk.Bns."+15',}},
+		body={ name="Chironic Doublet", augments={'"Mag.Atk.Bns."+30','MND+5','Mag. Acc.+15',}},
+		hands={ name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+1','"Mag.Atk.Bns."+10',}},
+		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
+		feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+30','"Conserve MP"+6','MND+13','Mag. Acc.+12',}},
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Freke Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Alaunus's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +5','"Mag.Atk.Bns."+10',}},
     }
 
 	sets.enfeebleGear = {
@@ -108,11 +132,11 @@ function init_gear_sets()
         hands="Aya. Manopolas +2",
         legs="Aya. Cosciales +2",
         feet="Aya. Gambieras +2",
-        neck="Asperity Necklace",
+        neck="Lissome Necklace",
         waist="Grunfeld Rope",
         left_ear="Steelflash Earring",
         right_ear="Bladeborn Earring",
-        left_ring="Ilabrat Ring",
+        left_ring="Chirich Ring +1",
         right_ring="Defending Ring",
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
@@ -134,7 +158,7 @@ function init_gear_sets()
     }
 	
 	sets.precastWS = {
-		ammo="Amar Cluster",
+		ammo="Floestone",
 		head="Aya. Zucchetto +2",
 		body="Ayanmo Corazza +2",
 		hands="Aya. Manopolas +2",
@@ -155,7 +179,7 @@ function init_gear_sets()
 
 	sets.magicPrecastWSGear = {
 		ammo="Pemphredo Tathlum",
-		head="Pixie Hairpin +1",
+		head={ name="Chironic Hat", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','INT+10','"Mag.Atk.Bns."+15',}},
 		body={ name="Chironic Doublet", augments={'"Mag.Atk.Bns."+30','MND+5','Mag. Acc.+15',}},
 		hands={ name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+1','"Mag.Atk.Bns."+10',}},
 		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
@@ -193,10 +217,16 @@ function init_gear_sets()
 	
 	sets.precast.WS['Rock Crusher'] = sets.magicPrecastWSGear
 	sets.precast.WS['Earth Crusher'] = sets.magicPrecastWSGear
-	sets.precast.WS['Starburst'] = sets.magicPrecastWSGear
-	sets.precast.WS['Sunburst'] = sets.magicPrecastWSGear
-	sets.precast.WS['Vidohunir'] = sets.magicPrecastWSGear
-	sets.precast.WS['Cataclysm'] = sets.magicPrecastWSGear
+	sets.precast.WS['Starburst'] = set_combine(sets.magicPrecastWSGear, {
+		head="Pixie Hairpin +1",
+	})
+	sets.precast.WS['Sunburst'] = set_combine(sets.magicPrecastWSGear, {
+		head="Pixie Hairpin +1",
+	})
+	sets.precast.WS['Cataclysm'] = set_combine(sets.magicPrecastWSGear, {
+		head="Pixie Hairpin +1",
+	})
+	sets.precast.WS['Flash Nova'] = sets.magicPrecastWSGear
 	sets.precast.WS['Myrkr'] = sets.maxMP
 	sets.precast.WS['Shattersoul'] = sets.precastWSIntGear
 	sets.precast.WS['Gate of Tartarus'] = sets.precastWSIntGear
@@ -315,6 +345,14 @@ function init_gear_sets()
 	
 	sets.midcast['Meteor'] = sets.nukeGear
 	sets.midcast['Drain'] = sets.enfeebleGear
+
+	sets.midcast['Banish'] = sets.lowTierNukeGear
+	sets.midcast['Banish II'] = sets.lowTierNukeGear
+	sets.midcast['Banish III'] = sets.lowTierNukeGear
+	sets.midcast['Banishga'] = sets.lowTierNukeGear
+	sets.midcast['Banishga II'] = sets.lowTierNukeGear
+	sets.midcast['Holy'] = sets.lowTierNukeGear
+	sets.midcast['Holy II'] = sets.lowTierNukeGear
 
 	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
 	sets.midcast['Stone II'] = sets.lowTierNukeGear

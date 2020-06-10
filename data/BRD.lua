@@ -239,6 +239,7 @@ function init_gear_sets()
 	sets.midcast["Warding Round"] = sets.songGear
 	sets.midcast["Advancing March"] = sets.songGear
 	sets.midcast["Victory March"] = sets.songGear
+	sets.midcast["Magic Finale"] = sets.songGear
 	sets.precast.FC['Honor March'] = set_combine(sets.precast.FC, {range="Marsyas"})
 	sets.midcast["Honor March"] = sets.songGear
 	sets.midcast["Battlefield Elegy"] = sets.songGear
@@ -248,6 +249,7 @@ function init_gear_sets()
 	sets.midcast["Vivacious Etude"] = sets.songGear
 	sets.midcast["Quick Etude"] = sets.songGear
 	sets.midcast["Learned Etude"] = sets.songGear
+	sets.midcast["Sage Etude"] = sets.songGear
 	sets.midcast["Spirited Etude"] = sets.songGear
 	sets.midcast["Enchanting Etude"] = sets.songGear
 	sets.midcast["Herculean Etude"] = sets.songGear
@@ -508,7 +510,7 @@ function init_gear_sets()
 
 	sets.PDT = {
 		head="Aya. Zucchetto +1",
-		body="Ayanmo Corazza +1",
+		body="Annointed Kalasiris",
 		hands="Aya. Manopolas +1",
 		legs="Aya. Cosciales +1",
 		feet="Fili Cothurnes +1",
@@ -538,7 +540,7 @@ end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == 'Extra Song' then
-		equip({range="Terpander"})
+		equip({range="Daurdabla"})
 	end
 end
 
