@@ -134,8 +134,8 @@ function init_gear_sets()
         feet="Aya. Gambieras +2",
         neck="Lissome Necklace",
         waist="Grunfeld Rope",
-        left_ear="Steelflash Earring",
-        right_ear="Bladeborn Earring",
+        left_ear="Telos Earring",
+        right_ear="Dedition Earring",
         left_ring="Chirich Ring +1",
         right_ring="Defending Ring",
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -186,10 +186,10 @@ function init_gear_sets()
 		feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+30','"Conserve MP"+6','MND+13','Mag. Acc.+12',}},
 		neck="Mizu. Kubikazari",
 		waist="Orpheus's Sash",
-		left_ear="Friomisi Earring",
+		left_ear="Malignance Earring",
 		right_ear="Ishvara Earring",
-		left_ring="Archon Ring",
-		right_ring="Shiva Ring +1",
+		left_ring="Freke Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 		back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','Accuracy+2','Weapon skill damage +10%',}},
     }
 	
@@ -226,6 +226,8 @@ function init_gear_sets()
 	sets.precast.WS['Cataclysm'] = set_combine(sets.magicPrecastWSGear, {
 		head="Pixie Hairpin +1",
 	})
+	sets.precast.WS['Shining Strike'] = sets.magicPrecastWSGear
+	sets.precast.WS['Seraph Strike'] = sets.magicPrecastWSGear
 	sets.precast.WS['Flash Nova'] = sets.magicPrecastWSGear
 	sets.precast.WS['Myrkr'] = sets.maxMP
 	sets.precast.WS['Shattersoul'] = sets.precastWSIntGear
@@ -512,7 +514,7 @@ function init_gear_sets()
         body="Ayanmo Corazza +2",
         hands="Aya. Manopolas +2",
         legs="Aya. Cosciales +2",
-        feet="Hippomenes Socks",
+        feet="Hippomenes Socks +1",
         neck="Loricate Torque +1",
         waist="Channeler's Stone",
         left_ear="Telos Earring",
@@ -521,6 +523,12 @@ function init_gear_sets()
 		right_ring="Defending Ring",
 		--back="Mecistopins mantle"
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		head="Inyanga Tiara +2",
+		body="Inyanga Jubbah +2",
+		hands="Volte Bracers",
+		legs="Inyanga Shalwar +2",
+		feet="Inyan. Crackows +2",
+		right_ear="Dominance earring",
 	}
 	
 	sets.manaWall = {

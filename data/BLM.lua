@@ -233,7 +233,7 @@ function init_gear_sets()
 	sets.aspirGear = {
 	    neck="Erra Pendant",
 		head={ name="Merlinic Hood", augments={'Mag. Acc.+24','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+4',}},
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+30','"Drain" and "Aspir" potency +8','STR+7',}},
+		feet={ name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+19','Accuracy+3 Attack+3','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
 		legs="Spaekona's Tonban +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
 		ring1="Evanescence Ring",
@@ -243,7 +243,7 @@ function init_gear_sets()
 	sets.drainGear = {
 	    neck="Erra Pendant",
 		head="Pixie Hairpin +1",
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+30','"Drain" and "Aspir" potency +8','STR+7',}},
+		feet={ name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+19','Accuracy+3 Attack+3','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
 		legs="Spaekona's Tonban +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
 		ring1="Evanescence Ring",
@@ -357,7 +357,6 @@ function init_gear_sets()
 
 	sets.midcast['Impact'] = {
 		ammo="Seraphic Ampulla", -- 7 occult
-		body="Twilight Cloak",
 		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+3 "Mag.Atk.Bns."+3','"Occult Acumen"+11','MND+3','Mag. Acc.+3','"Mag.Atk.Bns."+8',}}, -- 11 occult
 		legs="Perdition Slops", -- 30 occult
 		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Occult Acumen"+11','MND+1','Mag. Acc.+4','"Mag.Atk.Bns."+13',}}, -- 11 occult
@@ -368,6 +367,26 @@ function init_gear_sets()
 		ring1="Chirich Ring +1", --5 STP
 		ring2="Chirich Ring +1", -- 6 STP
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
+
+
+		
+		ammo="Pemphredo Tathlum",
+		neck="Sorcerer's Stole +2",
+		ear1="Malignance Earring",
+		ear2="Regal Earring",
+		body="Twilight Cloak",
+		hands="Spaekona's Gloves +3",
+		ring1="Freke Ring",
+		ring2="Metamorph Ring +1",
+		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+		--waist = "Orpheus's Sash", 
+		waist = "Acuity Belt +1",
+		legs="Spaekona's Tonban +3",
+	    feet="Spaekona's Sabots +3",
+		neck="Sorcerer's Stole +2",
+
+
+
 	}
 
 	sets.midcast.Cure = sets.cureGear
@@ -401,10 +420,10 @@ function init_gear_sets()
 	})
 	sets.midcast['Auspice'] = sets.buffGear
 	sets.midcast['Phalanx'] = set_combine(sets.buffGearDuration, sets.buffGear, {
-		head={ name="Merlinic Hood", augments={'Weapon skill damage +3%','Pet: STR+10','Phalanx +1','Mag. Acc.+3 "Mag.Atk.Bns."+3',}},
+		head={ name="Merlinic Hood", augments={'Rng.Acc.+24 Rng.Atk.+24','Pet: Accuracy+23 Pet: Rng. Acc.+23','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
     	body={ name="Merlinic Jubbah", augments={'"Dbl.Atk."+1','Attack+14','Phalanx +3','Accuracy+11 Attack+11','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
 		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
-		legs={ name="Merlinic Shalwar", augments={'Potency of "Cure" effect received+1%','Pet: "Mag.Atk.Bns."+28','Phalanx +2',}},
+		legs={ name="Merlinic Shalwar", augments={'Accuracy+13','Pet: Mag. Acc.+8','Phalanx +4','Accuracy+19 Attack+19','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
 		feet={ name="Merlinic Crackows", augments={'Crit. hit damage +1%','"Conserve MP"+5','Phalanx +4','Accuracy+8 Attack+8',}},
 	})
 	sets.midcast['Blaze Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
@@ -570,6 +589,8 @@ function init_gear_sets()
 
 	sets.midcast['Poison'] = sets.enfeebleGearINT
 	sets.midcast['Poison II'] = sets.enfeebleGearINT
+	sets.midcast['Distract'] = sets.enfeebleGearINT
+	sets.midcast['Frazzle'] = sets.enfeebleGearINT
 
 	sets.midcast['Slow'] = sets.enfeebleGearMND
 	sets.midcast['Paralyze'] = sets.enfeebleGearMND

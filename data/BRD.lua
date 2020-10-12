@@ -514,7 +514,7 @@ function init_gear_sets()
 		hands="Aya. Manopolas +1",
 		legs="Aya. Cosciales +1",
 		feet="Fili Cothurnes +1",
-		neck="Loricate Torque",
+		neck="Loricate Torque +1",
 		waist="Porous Rope",
 		left_ear="Dominance Earring",
 		right_ear="Genmei Earring",

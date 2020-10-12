@@ -238,6 +238,22 @@ function init_gear_sets()
 		right_ring="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
+	
+	sets.precast.WS['Cross Reaper'] = {
+		ammo="Knobkierrie",
+		head="Sulevia's Mask +2",
+		body="Sulevia's Platemail +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulev. Cuisses +2",
+		feet="Sulev. Leggings +2",
+		neck="Lissome Necklace",
+		waist="Grunfeld Rope",
+		left_ear="Moonshade Earring",
+		right_ear="Telos Earring",
+		left_ring="Regal Ring",
+		right_ring="Niqmaddu Ring",
+		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	}
 	sets.precast.WS['Cataclysm'] = magicPrecastWSGear
 	sets.precast.WS['Flash Nova'] = magicPrecastWSGear
 	sets.precast.WS['Shining Strike'] = magicPrecastWSGear

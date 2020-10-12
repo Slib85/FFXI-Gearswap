@@ -77,11 +77,11 @@ function init_gear_sets()
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
 		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
-    }
+	}
     
 	sets.precastWS = {
 		ammo="Ginsen",
-		head="Hjarrandi Helm",
+		head={ name="Valorous Mask", augments={'Pet: STR+2','Accuracy+25','Weapon skill damage +7%','Accuracy+4 Attack+4','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		body="Hjarrandi Breast.",
 		hands="Sulev. Gauntlets +2",
 		legs="Sulev. Cuisses +2",
@@ -92,7 +92,7 @@ function init_gear_sets()
 		right_ear="Telos Earring",
 		left_ring="Regal Ring",
 		right_ring="Petrov Ring",
-		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
+		back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
 	}
     
     sets.enmityGear = {
@@ -162,7 +162,7 @@ function init_gear_sets()
 	sets.nukeGearMND = {
 		ammo="Pemphredo Tathlum",
 		head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
-		body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
+		body="Sacro Breastplate",
 		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
 		legs="Sulev. Cuisses +2",
 		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
@@ -180,7 +180,10 @@ function init_gear_sets()
 	}
 	
 	sets.precast.JA = sets.enmityGear;
-	
+
+	sets.precast.JA['Fealty'] = {
+		body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
+	}
 
 	sets.precast.FC = sets.precastSpells
 	sets.precast.WS = sets.precastWS;
@@ -245,6 +248,14 @@ function init_gear_sets()
 	sets.midcast['Boost-MND'] = sets.buffGear
 	sets.midcast['Boost-CHR'] = sets.buffGear
 	
+	sets.midcast['Diaga'] = {
+		head={ name="Valorous Mask", augments={'Attack+20','CHR+10','"Treasure Hunter"+2','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
+		waist="Chaac Belt",
+	}
+	sets.midcast['Dia II'] = {
+		head={ name="Valorous Mask", augments={'Attack+20','CHR+10','"Treasure Hunter"+2','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
+		waist="Chaac Belt",
+	}
 	sets.midcast['Banish'] = sets.nukeGearMND
 	sets.midcast['Banish II'] = sets.nukeGearMND
 	sets.midcast['Banish III'] = sets.nukeGearMND

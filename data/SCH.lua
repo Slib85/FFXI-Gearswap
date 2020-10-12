@@ -106,20 +106,21 @@ function init_gear_sets()
 	}
 
 	sets.enfeebleGear = {
-		--main="Laevateinn",
+		main="Daybreak",
+		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-	    head="Spaekona's Petasos +3",
-	    body="Spaekona's Coat +3",
-		hands="Regal Cuffs",
-		legs="Spaekona's Tonban +3",
-	    feet="Spaekona's Sabots +3",
-	    neck="Erra Pendant",
-	    waist="Rumination Sash",
-	    left_ear="Friomisi Earring",
-	    right_ear="Regal Earring",
-	    left_ring="Stikini Ring +1",
-	    right_ring="Stikini Ring +1",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+		head="Mall. Chapeau +2",
+		body="Mallquis Saio +2",
+		hands="Mallquis Cuffs +2",
+		legs="Mallquis Trews +2",
+		feet="Mallquis Clogs +2",
+		neck="Mizu. Kubikazari",
+		waist="Eschan Stone",
+		left_ear="Malignance Earring",
+		right_ear="Regal Earring",
+		left_ring="Freke Ring",
+		right_ring="Mallquis Ring",
+		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}},
 	}
 
 	-- Precast sets to enhance JAs
