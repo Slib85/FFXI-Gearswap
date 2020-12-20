@@ -1,0 +1,17 @@
+sets.exported={
+    main="Akademos",
+    sub="Niobid Strap",
+    ammo="Seraphic Ampulla",
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+22','"Drain" and "Aspir" potency +3','MND+1','"Mag.Atk.Bns."+13',}},
+    body="Arbatel Gown",
+    hands={ name="Chironic Gloves", augments={'Mag. Acc.+29','Haste+1','"Mag.Atk.Bns."+12',}},
+    legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+14 "Mag.Atk.Bns."+14','Mag. crit. hit dmg. +6%','INT+10',}},
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+10 "Mag.Atk.Bns."+10','Damage taken-2%','DEX+2','Mag. Acc.+3','"Mag.Atk.Bns."+9',}},
+    neck="Saevus Pendant +1",
+    waist="Porous Rope",
+    left_ear="Friomisi Earring",
+    right_ear="Hecate's Earring",
+    left_ring="Wedding Ring",
+    right_ring="Adoulin Ring",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10',}},
+}

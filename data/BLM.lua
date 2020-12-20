@@ -16,19 +16,19 @@ end
 
 function init_gear_sets()
 	sets.precastGear = {
-		ammo = "Sapience Orb",
-    	head = { name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}},
-		neck = "Orunmila's Torque",
-		ear1 = "Malignance Earring",
-		ear2 = "Loquac. Earring",
-		body = { name="Merlinic Jubbah", augments={'Mag. Acc.+1','"Fast Cast"+6','"Mag.Atk.Bns."+11',}},
-		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+29','"Fast Cast"+7','CHR+9','"Mag.Atk.Bns."+5',}},
-    	ring1 = "Kishar Ring",
-		ring2 = "Prolix Ring",
-		waist = "Witful Belt",
-		legs = "Artsieq Hose",
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}},
-		back={ name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		ammo = "Sapience Orb", -- 2%
+    	head = { name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}}, -- 15%
+		neck = "Orunmila's Torque", -- 5%
+		ear1 = "Malignance Earring", -- 4%
+		ear2 = "Loquac. Earring", -- 2%
+		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --12%
+		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+29','"Fast Cast"+7','CHR+9','"Mag.Atk.Bns."+5',}}, -- 7%
+    	ring1 = "Kishar Ring", -- 4%
+		ring2 = "Prolix Ring", -- 2%
+		waist = "Witful Belt", -- 3%
+		legs = "Artsieq Hose", -- 5%
+		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}}, -- 9%
+		back={ name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10%
 	}
 
 	sets.lowTierNukeGear = {
@@ -136,6 +136,7 @@ function init_gear_sets()
 		body="Jhakri Robe +2",
 		hands="Jhakri Cuffs +2",
 		legs="Jhakri Slops +2",
+		--legs={ name="Merlinic Shalwar", augments={'Pet: VIT+6','Accuracy+19','Damage taken-4%','Accuracy+16 Attack+16',}},
 		feet={ name="Arch. Sabots +3", augments={'Reduces Ancient Magic II MP cost',}},
 		neck="Lissome Necklace",
 		waist="Goading Belt",
@@ -233,6 +234,7 @@ function init_gear_sets()
 	sets.aspirGear = {
 	    neck="Erra Pendant",
 		head={ name="Merlinic Hood", augments={'Mag. Acc.+24','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+4',}},
+		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		feet={ name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+19','Accuracy+3 Attack+3','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
 		legs="Spaekona's Tonban +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
@@ -243,6 +245,7 @@ function init_gear_sets()
 	sets.drainGear = {
 	    neck="Erra Pendant",
 		head="Pixie Hairpin +1",
+		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		feet={ name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+19','Accuracy+3 Attack+3','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
 		legs="Spaekona's Tonban +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
@@ -272,7 +275,7 @@ function init_gear_sets()
 		head={ name="Merlinic Hood", augments={'Damage taken-3%','CHR+1',}},
 	    body="Mallquis Saio +2",
 		hands={ name="Merlinic Dastanas", augments={'Enmity-2','Crit. hit damage +2%','Damage taken-5%',}},
-		legs={ name="Merlinic Shalwar", augments={'Accuracy+6','Damage taken-2%','INT+6','Mag. Acc.+3','"Mag.Atk.Bns."+7',}},
+		legs={ name="Merlinic Shalwar", augments={'Pet: VIT+6','Accuracy+19','Damage taken-4%','Accuracy+16 Attack+16',}},
 	    feet="Hippomenes Socks +1",
 	    neck="Loricate Torque +1",
 	    waist="Carrier's Sash",
@@ -419,13 +422,6 @@ function init_gear_sets()
 		waist="Gishdubar Sash",
 	})
 	sets.midcast['Auspice'] = sets.buffGear
-	sets.midcast['Phalanx'] = set_combine(sets.buffGearDuration, sets.buffGear, {
-		head={ name="Merlinic Hood", augments={'Rng.Acc.+24 Rng.Atk.+24','Pet: Accuracy+23 Pet: Rng. Acc.+23','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
-    	body={ name="Merlinic Jubbah", augments={'"Dbl.Atk."+1','Attack+14','Phalanx +3','Accuracy+11 Attack+11','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
-		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
-		legs={ name="Merlinic Shalwar", augments={'Accuracy+13','Pet: Mag. Acc.+8','Phalanx +4','Accuracy+19 Attack+19','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
-		feet={ name="Merlinic Crackows", augments={'Crit. hit damage +1%','"Conserve MP"+5','Phalanx +4','Accuracy+8 Attack+8',}},
-	})
 	sets.midcast['Blaze Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
 	sets.midcast['Ice Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
 	sets.midcast['Shock Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
@@ -727,6 +723,21 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			left_ring="Stikini Ring +1",
 		}));
 	end
+
+	if S{"Phalanx"}:contains(spell.english) then
+		oldMain = player.equipment.main
+		oldSub = player.equipment.sub
+		
+		equip(set_combine(sets.buffGearDuration, sets.buffGear, {
+			main={ name="Gada", augments={'AGI+9','"Mag.Atk.Bns."+24','Phalanx +3','DMG:+8',}},
+			sub="Ammurapi Shield",
+			head={ name="Merlinic Hood", augments={'Rng.Acc.+24 Rng.Atk.+24','Pet: Accuracy+23 Pet: Rng. Acc.+23','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
+			body={ name="Merlinic Jubbah", augments={'"Dbl.Atk."+1','Attack+14','Phalanx +3','Accuracy+11 Attack+11','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
+			hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
+			legs={ name="Merlinic Shalwar", augments={'Accuracy+13','Pet: Mag. Acc.+8','Phalanx +4','Accuracy+19 Attack+19','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+			feet={ name="Merlinic Crackows", augments={'Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','INT+3','Phalanx +5','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
+		}))
+	end
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
@@ -749,6 +760,22 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 
 	if buffactive['Mana Wall'] == 1 or spell.english == 'Mana Wall' then
 		equip(sets.manaWall)
+	end
+
+	if oldMain and oldMain ~= '' then
+		equip({
+			main=oldMain
+		})
+
+		oldMain = ''
+	end
+
+	if oldSub and oldSub ~= '' then
+		equip({
+			sub=oldSub
+		})
+
+		oldSub = ''
 	end
 end
 

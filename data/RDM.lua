@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('Nuke', 'Melee', 'MeleeHybrid', 'Refresh');
+	state.OffenseMode:options('Nuke', 'Melee', 'MeleeHybrid', 'MeleeEn', 'Refresh');
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -68,7 +68,7 @@ function init_gear_sets()
 	sets.enfeebleGear = {
 		ammo="Regal Gem",
 		head="Vitiation Chapeau +3",
-		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		body="Malignance Tabard",
 		hands="Regal Cuffs",
 		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
 		feet="Vitiation Boots +3",
@@ -84,12 +84,12 @@ function init_gear_sets()
 	sets.meleeTP = {
 		ammo="Ginsen",
 		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
+		body="Malignance Tabard",
 		hands="Malignance Gloves",
-		legs="Aya. Cosciales +2",
+		legs="Malignance Tights",
 		feet="Aya. Gambieras +2",
 		neck="Lissome Necklace",
-		waist="Sarissapho. Belt",
+		waist="Reiki Yotai",
 		left_ear="Telos Earring",
 		right_ear="Eabani Earring",
 		left_ring="Chirich Ring +1",
@@ -101,16 +101,32 @@ function init_gear_sets()
 	sets.meleeTPHybrid = {
 		ammo="Staunch Tathlum",
 		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
+		body="Malignance Tabard",
 		hands="Malignance Gloves",
-		legs="Aya. Cosciales +2",
+		legs="Malignance Tights",
 		feet="Aya. Gambieras +2",
 		neck="Loricate Torque +1",
-		waist="Sarissapho. Belt",
+		waist="Reiki Yotai",
 		left_ear="Telos Earring",
 		right_ear="Eabani Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Defending Ring",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
+
+	sets.meleeTPEn = {
+		ammo="Pemphredo Tathlum",
+		head="Aya. Zucchetto +2",
+		body="Malignance Tabard",
+		legs="Malignance Tights",
+		hands="Aya. Manopolas +2",
+		feet="Aya. Gambieras +2",
+		neck={ name="Dls. Torque +2", augments={'Path: A',}},
+		waist="Orpheus's Sash",
+		left_ear="Telos Earring",
+		right_ear="Eabani Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -175,17 +191,16 @@ function init_gear_sets()
 	sets.PDT = {
 		ammo="Staunch Tathlum",
 		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
+		body="Malignance Tabard",
 		hands="Malignance Gloves",
-		legs="Aya. Cosciales +2",
-		feet="Hippomenes Socks +1",
+		legs="Malignance Tights",
+		feet={ name="Hippo. Socks +1", augments={'Path: A',}},
 		neck="Loricate Torque +1",
 		waist="Carrier's Sash",
-		left_ear="Telos Earring",
-		right_ear="Sherida Earring",
+		left_ear="Genmei Earring",
+		right_ear="Dominance Earring",
 		left_ring="Shneddick Ring",
 		right_ring="Defending Ring",
-		--back="Mecistopins Mantle",
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -277,7 +292,6 @@ function init_gear_sets()
 	sets.precast.WS['Sanguine Blade'] = set_combine(sets.precastWSMagic, {
 		head="Pixie Hairpin +1",
 		ring2="Archon Ring",
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Requiescat'] = set_combine(sets.precastWSPhysical, sets.precastWSMultiHit, {
 		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
@@ -321,13 +335,21 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		})
 	end
 
-	if S{"Burn", "Choke", "Rasp", "Frost", "Shock", "Drown"}:contains(spell.english) then
+	if S{"Sleepga"}:contains(spell.english) then
 		equip(set_combine(sets.enfeebleGear, {
-			head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic damage and magic burst damage',}},
-			body={ name="Arch. Coat +3", augments={'Enhances "Manafont" effect',}},
-			feet="Arch. sabots +3",
-			legs="Arch. tonban +3",
-			hands="Spaekona's Gloves +3"
+			ammo="Staunch Tathlum",
+			head="Aya. Zucchetto +2",
+			body="Ayanmo Corazza +2",
+			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+			legs="Aya. Cosciales +2",
+			feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+			neck="Loricate Torque +1",
+			waist="Chaac Belt",
+			left_ear="Genmei Earring",
+			right_ear="Dominance Earring",
+			left_ring="Freke Ring",
+			right_ring="Defending Ring",
+			back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		}));
 	end
 
@@ -343,6 +365,8 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 		equip(sets.meleeTP)
 	elseif state.OffenseMode.value == "MeleeHybrid" then
 		equip(sets.meleeTPHybrid)
+	elseif state.OffenseMode.value == "MeleeEn" then
+		equip(sets.meleeTPEn)
 	elseif state.OffenseMode.value == "Refresh" then
 		equip (sets.refresh) 
 	else

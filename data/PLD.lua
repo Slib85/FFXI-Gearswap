@@ -49,8 +49,8 @@ function init_gear_sets()
     
     sets.SUPER = {
         ammo="Staunch Tathlum",
-        head="Sulevia's Mask +2",
-		body="Rev. Surcoat +3",
+		head="Hjarrandi Helm",
+		body="Hjarrandi Breast.",
         hands="Rev. Gauntlets +3",
         legs="Sulev. Cuisses +2",
         feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
@@ -146,7 +146,7 @@ function init_gear_sets()
 	sets.nukeGearINT = {
 		ammo="Pemphredo Tathlum",
 		head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
-		body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
+		body="Sacro Breastplate",
 		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
 		legs="Sulev. Cuisses +2",
 		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
@@ -194,6 +194,11 @@ function init_gear_sets()
 	sets.precast.WS['Aeolian Edge'] = sets.magicPrecastWSGear
 							
 	sets.midcast['Flash'] = sets.enmityGear;
+	sets.midcast['Jettatura'] = sets.enmityGear;
+	sets.midcast['Geist Wall'] = set_combine(sets.enmityGear, {
+		head={ name="Valorous Mask", augments={'Attack+20','CHR+10','"Treasure Hunter"+2','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
+		waist="Chaac Belt",
+	});
 
 	sets.midcast['Cure'] = sets.cureGear
 	sets.midcast['Cure II'] = sets.cureGear
@@ -259,7 +264,10 @@ function init_gear_sets()
 	sets.midcast['Banish'] = sets.nukeGearMND
 	sets.midcast['Banish II'] = sets.nukeGearMND
 	sets.midcast['Banish III'] = sets.nukeGearMND
-	sets.midcast['Banishga'] = sets.nukeGearMND
+	sets.midcast['Banishga'] = set_combine(sets.nukeGearMND, {
+		head={ name="Valorous Mask", augments={'Attack+20','CHR+10','"Treasure Hunter"+2','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
+		waist="Chaac Belt",
+	});
 	sets.midcast['Banishga II'] = sets.nukeGearMND
 	sets.midcast['Holy'] = sets.nukeGearMND
 	sets.midcast['Holy II'] = sets.nukeGearMND
@@ -272,71 +280,71 @@ function init_gear_sets()
 	sets.midcast['Addle'] = sets.enfeebleGear
 	
 	-- BLACK MAGIC
-	sets.midcast['Stone'] = sets.nukeGear
-	sets.midcast['Stone II'] = sets.nukeGear
-	sets.midcast['Stone III'] = sets.nukeGear
-	sets.midcast['Stone IV'] = sets.nukeGear
-	sets.midcast['Stone V'] = sets.nukeGear
-	sets.midcast['Stone VI'] = sets.nukeGear
-	sets.midcast['Stonega'] = sets.nukeGear
-	sets.midcast['Stonega II'] = sets.nukeGear
-	sets.midcast['Stonega III'] = sets.nukeGear
-	sets.midcast['Stoneja'] = sets.nukeGear
+	sets.midcast['Stone'] = sets.nukeGearINT
+	sets.midcast['Stone II'] = sets.nukeGearINT
+	sets.midcast['Stone III'] = sets.nukeGearINT
+	sets.midcast['Stone IV'] = sets.nukeGearINT
+	sets.midcast['Stone V'] = sets.nukeGearINT
+	sets.midcast['Stone VI'] = sets.nukeGearINT
+	sets.midcast['Stonega'] = sets.nukeGearINT
+	sets.midcast['Stonega II'] = sets.nukeGearINT
+	sets.midcast['Stonega III'] = sets.nukeGearINT
+	sets.midcast['Stoneja'] = sets.nukeGearINT
 	
-	sets.midcast['Water'] = sets.nukeGear
-	sets.midcast['Water II'] = sets.nukeGear
-	sets.midcast['Water III'] = sets.nukeGear
-	sets.midcast['Water IV'] = sets.nukeGear
-	sets.midcast['Water V'] = sets.nukeGear
-	sets.midcast['Water VI'] = sets.nukeGear
-	sets.midcast['Waterga'] = sets.nukeGear
-	sets.midcast['Waterga II'] = sets.nukeGear
-	sets.midcast['Waterga III'] = sets.nukeGear
-	sets.midcast['Waterja'] = sets.nukeGear
+	sets.midcast['Water'] = sets.nukeGearINT
+	sets.midcast['Water II'] = sets.nukeGearINT
+	sets.midcast['Water III'] = sets.nukeGearINT
+	sets.midcast['Water IV'] = sets.nukeGearINT
+	sets.midcast['Water V'] = sets.nukeGearINT
+	sets.midcast['Water VI'] = sets.nukeGearINT
+	sets.midcast['Waterga'] = sets.nukeGearINT
+	sets.midcast['Waterga II'] = sets.nukeGearINT
+	sets.midcast['Waterga III'] = sets.nukeGearINT
+	sets.midcast['Waterja'] = sets.nukeGearINT
 	
-	sets.midcast['Aero'] = sets.nukeGear
-	sets.midcast['Aero II'] = sets.nukeGear
-	sets.midcast['Aero III'] = sets.nukeGear
-	sets.midcast['Aero IV'] = sets.nukeGear
-	sets.midcast['Aero V'] = sets.nukeGear
-	sets.midcast['Aero VI'] = sets.nukeGear
-	sets.midcast['Aeroga'] = sets.nukeGear
-	sets.midcast['Aeroga II'] = sets.nukeGear
-	sets.midcast['Aeroga III'] = sets.nukeGear
-	sets.midcast['Aeroja'] = sets.nukeGear
+	sets.midcast['Aero'] = sets.nukeGearINT
+	sets.midcast['Aero II'] = sets.nukeGearINT
+	sets.midcast['Aero III'] = sets.nukeGearINT
+	sets.midcast['Aero IV'] = sets.nukeGearINT
+	sets.midcast['Aero V'] = sets.nukeGearINT
+	sets.midcast['Aero VI'] = sets.nukeGearINT
+	sets.midcast['Aeroga'] = sets.nukeGearINT
+	sets.midcast['Aeroga II'] = sets.nukeGearINT
+	sets.midcast['Aeroga III'] = sets.nukeGearINT
+	sets.midcast['Aeroja'] = sets.nukeGearINT
 	
-	sets.midcast['Fire'] = sets.nukeGear
-	sets.midcast['Fire II'] = sets.nukeGear
-	sets.midcast['Fire III'] = sets.nukeGear
-	sets.midcast['Fire IV'] = sets.nukeGear
-	sets.midcast['Fire V'] = sets.nukeGear
-	sets.midcast['Fire VI'] = sets.nukeGear
-	sets.midcast['Firaga'] = sets.nukeGear
-	sets.midcast['Firaga II'] = sets.nukeGear
-	sets.midcast['Firaga III'] = sets.nukeGear
-	sets.midcast['Firaja'] = sets.nukeGear
+	sets.midcast['Fire'] = sets.nukeGearINT
+	sets.midcast['Fire II'] = sets.nukeGearINT
+	sets.midcast['Fire III'] = sets.nukeGearINT
+	sets.midcast['Fire IV'] = sets.nukeGearINT
+	sets.midcast['Fire V'] = sets.nukeGearINT
+	sets.midcast['Fire VI'] = sets.nukeGearINT
+	sets.midcast['Firaga'] = sets.nukeGearINT
+	sets.midcast['Firaga II'] = sets.nukeGearINT
+	sets.midcast['Firaga III'] = sets.nukeGearINT
+	sets.midcast['Firaja'] = sets.nukeGearINT
 	
-	sets.midcast['Blizzard'] = sets.nukeGear
-	sets.midcast['Blizzard II'] = sets.nukeGear
-	sets.midcast['Blizzard III'] = sets.nukeGear
-	sets.midcast['Blizzard IV'] = sets.nukeGear
-	sets.midcast['Blizzard V'] = sets.nukeGear
-	sets.midcast['Blizzard VI'] = sets.nukeGear
-	sets.midcast['Blizzaga'] = sets.nukeGear
-	sets.midcast['Blizzaga II'] = sets.nukeGear
-	sets.midcast['Blizzaga III'] = sets.nukeGear
-	sets.midcast['Blizzaja'] = sets.nukeGear
+	sets.midcast['Blizzard'] = sets.nukeGearINT
+	sets.midcast['Blizzard II'] = sets.nukeGearINT
+	sets.midcast['Blizzard III'] = sets.nukeGearINT
+	sets.midcast['Blizzard IV'] = sets.nukeGearINT
+	sets.midcast['Blizzard V'] = sets.nukeGearINT
+	sets.midcast['Blizzard VI'] = sets.nukeGearINT
+	sets.midcast['Blizzaga'] = sets.nukeGearINT
+	sets.midcast['Blizzaga II'] = sets.nukeGearINT
+	sets.midcast['Blizzaga III'] = sets.nukeGearINT
+	sets.midcast['Blizzaja'] = sets.nukeGearINT
 	
-	sets.midcast['Thunder'] = sets.nukeGear
-	sets.midcast['Thunder II'] = sets.nukeGear
-	sets.midcast['Thunder III'] = sets.nukeGear
-	sets.midcast['Thunder IV'] = sets.nukeGear
-	sets.midcast['Thunder V'] = sets.nukeGear
-	sets.midcast['Thunder VI'] = sets.nukeGear
-	sets.midcast['Thundaga'] = sets.nukeGear
-	sets.midcast['Thundaga II'] = sets.nukeGear
-	sets.midcast['Thundaga III'] = sets.nukeGear
-	sets.midcast['Thundaja'] = sets.nukeGear
+	sets.midcast['Thunder'] = sets.nukeGearINT
+	sets.midcast['Thunder II'] = sets.nukeGearINT
+	sets.midcast['Thunder III'] = sets.nukeGearINT
+	sets.midcast['Thunder IV'] = sets.nukeGearINT
+	sets.midcast['Thunder V'] = sets.nukeGearINT
+	sets.midcast['Thunder VI'] = sets.nukeGearINT
+	sets.midcast['Thundaga'] = sets.nukeGearINT
+	sets.midcast['Thundaga II'] = sets.nukeGearINT
+	sets.midcast['Thundaga III'] = sets.nukeGearINT
+	sets.midcast['Thundaja'] = sets.nukeGearINT
 
 	sets.midcast['Sleep'] = sets.enfeebleGear
 	sets.midcast['Sleep II'] = sets.enfeebleGear

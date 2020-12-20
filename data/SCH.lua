@@ -147,8 +147,8 @@ function init_gear_sets()
 	sets.buffGear = {
 		ammo="Staunch Tathlum",
 		head="Befouled Crown",
-		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +4',}},
-		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
+		body="Pedagogy Gown +3",
+		hands="",
 		neck="Melic Torque",
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
@@ -156,6 +156,11 @@ function init_gear_sets()
 		left_ring="Stikini Ring +1",
 		right_ring="Stikini Ring +1",
 		back="Perimede Cape",	
+	}
+	sets.buffGearDuration = {
+		main="Musa",
+		body="Pedagogy Gown +3",
+		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
 	}
 	
 	sets.precastWS = {
@@ -237,6 +242,8 @@ function init_gear_sets()
 	}
 
 	sets.cureGear = {
+		main="Daybreak",
+		sub="Genmei shield",
 		ammo="Staunch Tathlum",
 		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
 		body="Mallquis Saio +2",
@@ -284,6 +291,16 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Cure = sets.cureGear
+	sets.midcast.Regen = set_combine(sets.buffGearDuration, {
+		main="Musa",
+		head="Arbatel Bonnet +1",
+		neck="Incanter's Torque",
+		body="Telchine Chasuble",
+		hands="Arbatel Bracers +1",
+		legs="Telchine Braconi",
+		feet="Telchine Pigaches",
+		back="Bookworm's Cape"
+	})
 
 	sets.midcast['Blink'] = sets.buffGear
 	sets.midcast['Stoneskin'] = sets.buffGear
@@ -479,6 +496,7 @@ function init_gear_sets()
 	sets.midcast['Ionohelix II'] = sets.lowTierNukeGear
 	sets.midcast['Noctohelix II'] = sets.lowTierNukeGear
 	sets.midcast['Luminohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Kaustra'] = sets.lowTierNukeGear
 	
 	
 	sets.midcast['Drain'] = set_combine(sets.enfeebleGear, sets.drainGear);
@@ -491,14 +509,16 @@ function init_gear_sets()
 	})
 
 	sets.PDT = {
-		main="Malignance Pole",
+		main={ name="Musa", augments={'Path: C',}},
+		-- main="Malignance Pole",
 		sub="Niobid Strap",
 		ammo="Staunch Tathlum",
 		head="Mall. Chapeau +2",
-		body="Annointed Kalasiris",
+		body="Zendik Robe",
 		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet="Herald's Gaiters",
-		neck="Loricate Torque +1",
+		neck={ name="Argute Stole +2", augments={'Path: A',}},
+		-- neck="Loricate Torque +1",
 		waist="Carrier's Sash",
 		left_ear="Dominance Earring",
 		right_ear="Genmei Earring",

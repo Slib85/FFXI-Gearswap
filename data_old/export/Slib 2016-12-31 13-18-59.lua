@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Serenity", augments={'MP+45','Enha.mag. skill +9','"Cure" potency +4%','"Cure" spellcasting time -8%',}},
+    sub="Willpower Grip",
+    ammo="Witchstone",
+    head="Befouled Crown",
+    body="Anhur Robe",
+    hands="Yaoyotl Gloves",
+    legs={ name="Artsieq Hose", augments={'"Mag.Atk.Bns."+21','Mag. Evasion+8','Phys. dmg. taken -3',}},
+    feet="Battlecast Gaiters",
+    neck="Melic Torque",
+    waist={ name="Tarutaru Sash", augments={'"Treasure Hunter"+1','HP+7','MND+2',}},
+    left_ear="Augment. Earring",
+    right_ear="Hecate's Earring",
+    left_ring={ name="Dark Ring", augments={'Breath dmg. taken -3%','Phys. dmg. taken -6%',}},
+    right_ring="Jelly Ring",
+    back="Fi Follet Cape",
+}
