@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Laevateinn", augments={'Path: A',}},
+    sub="Khonsu",
+    ammo="Staunch Tathlum",
+    head={ name="Merlinic Hood", augments={'Damage taken-3%','CHR+1',}},
+    body={ name="Merlinic Jubbah", augments={'Pet: "Mag.Atk.Bns."+25','INT+13','Weapon skill damage +5%','Accuracy+5 Attack+5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+    hands={ name="Merlinic Dastanas", augments={'Enmity-2','Crit. hit damage +2%','Damage taken-5%',}},
+    legs={ name="Merlinic Shalwar", augments={'Pet: VIT+6','Accuracy+19','Damage taken-4%','Accuracy+16 Attack+16',}},
+    feet={ name="Hippo. Socks +1", augments={'Path: A',}},
+    neck="Loricate Torque +1",
+    waist="Carrier's Sash",
+    left_ear="Lugalbanda Earring",
+    right_ear="Genmei Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},
+}

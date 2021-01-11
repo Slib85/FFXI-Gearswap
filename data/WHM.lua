@@ -26,7 +26,7 @@ function init_gear_sets()
         body="Inyanga Jubbah +2",
         hands="Gendewitha Gages",
         legs="Aya. Cosciales +2",
-        feet="Hippomenes Socks +1",
+        feet="Regal Pumps +1",
         neck="Orunmila's Torque",
         waist="Witful Belt",
         left_ear="Loquac. Earring",
@@ -37,12 +37,12 @@ function init_gear_sets()
     }
 
     sets.regenGear = {
-        ammo="Staunch Tathlum",        
+        ammo="Staunch Tathlum +1",        
         hands="Ebers Mitts",
     }
 
     sets.refresh = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Inyanga Tiara +2",
         body="Ebers Bliaud +1",
         hands="Inyan. Dastanas +2",
@@ -131,7 +131,7 @@ function init_gear_sets()
     }
 
 	sets.buffGear = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Befouled Crown",
         body="Ebers Bliaud +1",
         hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
@@ -207,7 +207,7 @@ function init_gear_sets()
     }
 
 	sets.cureGear = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
         body="Ebers Bliaud +1",
         hands="Theophany Mitts +3",
@@ -472,7 +472,7 @@ function init_gear_sets()
 	})
 
 	sets.midcast['Cursna'] = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Aya. Zucchetto +2",
         body="Inyanga Jubbah +2",
         hands={ name="Fanatic Gloves", augments={'MP+30','Healing magic skill +5','"Conserve MP"+4',}},
@@ -529,7 +529,7 @@ function init_gear_sets()
 	})
 
 	sets.PDT = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Aya. Zucchetto +2",
 		body="Ayanmo Corazza +2",
 		hands="Aya. Manopolas +2",
@@ -545,7 +545,7 @@ function init_gear_sets()
 	}
 
 	sets.MEVA = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Inyanga Tiara +2",
 		body="Inyanga Jubbah +2",
 		hands="Volte Bracers",

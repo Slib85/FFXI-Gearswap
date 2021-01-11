@@ -1,0 +1,17 @@
+sets.exported={
+    main="Kaja Scythe",
+    sub="Khonsu",
+    ammo="Staunch Tathlum",
+    head={ name="Merlinic Hood", augments={'Damage taken-3%','CHR+1',}},
+    body="Mallquis Saio +2",
+    hands="Volte Bracers",
+    legs={ name="Merlinic Shalwar", augments={'Pet: VIT+6','Accuracy+19','Damage taken-4%','Accuracy+16 Attack+16',}},
+    feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
+    neck="Loricate Torque +1",
+    waist="Carrier's Sash",
+    left_ear="Lugalbanda Earring",
+    right_ear="Genmei Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},
+}

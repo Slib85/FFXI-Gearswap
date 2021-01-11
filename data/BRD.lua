@@ -59,7 +59,7 @@ function init_gear_sets()
 	sets.precastGear = {
 		range="Gjallarhorn",
 		head="Fili Calot +1",
-		body="Brioso Justau. +2",
+		body="Zendik Robe",
 		neck="Orunmila's Torque",
 		left_ear="Etiolation Earring",
 		left_ring="Kishar Ring",
@@ -509,6 +509,7 @@ function init_gear_sets()
 	})
 
 	sets.PDT = {
+		ammo="Staunch Tathlum +1",
 		head="Aya. Zucchetto +1",
 		body="Ayanmo Corazza +2",
 		hands="Aya. Manopolas +1",

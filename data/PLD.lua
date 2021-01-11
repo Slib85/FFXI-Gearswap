@@ -32,7 +32,24 @@ function init_gear_sets()
 	}
     
 	sets.defense.PDT = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
+		head="Hjarrandi Helm",
+		body="Sacro Breastplate",
+		body="hjarrandi breastplate",
+		hands="Volte Bracers",
+		legs="Sulev. Cuisses +2",
+		feet="Hippomenes Socks +1",
+		neck="Loricate Torque +1",
+		waist="Carrier's Sash",
+		left_ear="Sanare Earring",
+		right_ear="Etiolation Earring",
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
+		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
+	}
+    
+    sets.SUPER = {	
+		ammo="Staunch Tathlum +1",
 		head="Hjarrandi Helm",
 		body="Chev. Cuirass +1",
 		hands="Chev. Gauntlets +1",
@@ -45,22 +62,6 @@ function init_gear_sets()
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
 		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
-    }
-    
-    sets.SUPER = {
-        ammo="Staunch Tathlum",
-		head="Hjarrandi Helm",
-		body="Hjarrandi Breast.",
-        hands="Rev. Gauntlets +3",
-        legs="Sulev. Cuisses +2",
-        feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
-        neck="Loricate Torque +1",
-        waist="Eschan Stone",
-        left_ear="Odnowa Earring",
-        right_ear="Odnowa Earring +1",
-        left_ring="Moonlight Ring",
-        right_ring="Defending Ring",
-        back="Moonlight Cape",
 	}
 
 	sets.TP = {
@@ -128,7 +129,7 @@ function init_gear_sets()
 	}
 	
 	sets.cureGear = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Sulevia's Mask +2",
 		body="Rev. Surcoat +3",
 		hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
@@ -433,8 +434,8 @@ end
 
 
 function job_aftercast(spell, action, spellMap, eventArgs)
-	if state.OffenseMode.value == 'SUPER' then
-        equip(sets.SUPER)
+	if state.OffenseMode.value == 'Absorb' then
+        equip(sets.Absorb)
     elseif state.OffenseMode.value == 'TP' then
         equip(sets.TP)
     else
@@ -443,7 +444,7 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 end
 
 function user_setup()
-	state.OffenseMode:options('Normal', 'SUPER', 'TP')
+	state.OffenseMode:options('Normal', 'TP', 'Absorb')
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end

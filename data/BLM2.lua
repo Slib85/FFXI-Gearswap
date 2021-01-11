@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('Normal', 'AOE', 'Occult', 'MB', 'TP');
+	state.OffenseMode:options('Normal', 'AOEOccult', 'Occult', 'MB', 'TP');
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -32,7 +32,7 @@ function init_gear_sets()
 		main="Lathi",
 		ammo="Pemphredo Tathlum",
 		head="Mallquis Chapeau +2",
-		body="Spaekona's coat +2",
+		body="Spaekona's Coat +3",
 		hands="Mallquis Cuffs +2",
 		legs="Mallquis Trews +2",
 	    feet="Mallquis Clogs +2",
@@ -49,7 +49,7 @@ function init_gear_sets()
 	sets.occultAcumenGear = {
 		ammo="Seraphic Ampulla",
 		head="Mallquis Chapeau +2",
-		body="Spaekona's coat +2",
+		body="Spaekona's Coat +3",
 		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+3 "Mag.Atk.Bns."+3','"Occult Acumen"+11','MND+3','Mag. Acc.+3','"Mag.Atk.Bns."+8',}},
 		legs="Perdition Slops",
 		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Occult Acumen"+11','MND+1','Mag. Acc.+4','"Mag.Atk.Bns."+13',}},
@@ -75,7 +75,7 @@ function init_gear_sets()
 		waist = "Acuity Belt +1",
 		--waist="Orpheus's Sash",
 		head="Mallquis Chapeau +2",
-		body="Spaekona's coat +2",
+		body="Spaekona's Coat +3",
 		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
@@ -83,17 +83,18 @@ function init_gear_sets()
 
 	sets.enfeebleGearINT = {
 		ammo="Pemphredo Tathlum",
-	    head="Spaekona's Petasos +3",
-	    body="Spaekona's Coat +3",
-		hands="Regal Cuffs",
-		legs="Spaekona's Tonban +3",
-		feet="Spaekona's Sabots +3",
-		neck="Src. Stole +2",
-	    waist="Luminary Sash",
-	    left_ear="Malignance Earring",
-	    right_ear="Regal Earring",
-	    left_ring="Stikini Ring +1",
-	    right_ring="Stikini Ring +1",
+		head="Mallquis Chapeau +2",
+		body="Spaekona's Coat +3",
+		hands="Mallquis Cuffs +2",
+		legs="Mallquis Trews +2",
+	    feet="Mallquis Clogs +2",
+		neck="Sorcerer's Stole +2",
+		--waist="Orpheus's Sash",
+		waist="Acuity Belt +1",
+		left_ear="Malignance Earring",
+		right_ear="Regal Earring",
+		left_ring="Freke Ring",
+		right_ring="Mallquis Ring",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -245,18 +246,19 @@ function init_gear_sets()
 	sets.PDT = {
 		main="Malignance Pole",
 		sub="Niobid Strap",
-		ammo="Staunch Tathlum",
-		head="Mall. Chapeau +2",
+		ammo="Staunch Tathlum +1",
+		head={ name="Merlinic Hood", augments={'Pet: "Dbl.Atk."+1 Pet: Crit.hit rate +1','Attack+5','Damage taken-3%','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
 		body="Mallquis Saio +2",
-		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet="Herald's Gaiters",
+		hands="Regal Cuffs",
+		legs={ name="Merlinic Shalwar", augments={'Pet: "Store TP"+4','Pet: Accuracy+3 Pet: Rng. Acc.+3','Damage taken-5%','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+		feet="Hippomenes Socks",
 		neck="Loricate Torque +1",
 		waist="Carrier's Sash",
-		left_ear="Dominance Earring",
-		right_ear="Genmei Earring",
-		left_ring="Gelatinous Ring",
+		left_ear="Etiolation Earring",
+		right_ear="Lugalbanda Earring",
+		left_ring="Shneddick Ring",
 		right_ring="Defending Ring",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+		back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.manaWall = {
@@ -359,287 +361,42 @@ function init_gear_sets()
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
 	}
 
-	sets.midcast.Cure = sets.cureGear
+	include('BLMspells.lua')
 
-	sets.midcast['Sandstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Sandstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Rainstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Rainstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Windstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Windstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Firestorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Firestorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Hailstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Hailstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Thunderstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Thunderstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Aurorastorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Aurorastorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Voidstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Voidstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
-
-	sets.midcast['Blink'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Aquaveil'] = set_combine(set_combine(sets.buffGearDuration, sets.buffGear), {hands="Regal Cuffs", head="Amalric Coif +1", waist="Emphatikos rope", feet="Amalric Nails +1"})
-	sets.midcast['Refresh'] = set_combine(sets.buffGear, sets.buffGearDuration, {head="Amalric Coif +1"})
-	sets.midcast['Auspice'] = sets.buffGear
-	sets.midcast['Phalanx'] = set_combine(sets.buffGearDuration, sets.buffGear, {
-		body={ name="Merlinic Jubbah", augments={'"Dbl.Atk."+1','Attack+14','Phalanx +3','Accuracy+11 Attack+11','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
-		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
-		legs={ name="Merlinic Shalwar", augments={'Potency of "Cure" effect received+1%','Pet: "Mag.Atk.Bns."+28','Phalanx +2',}},
-		feet={ name="Merlinic Crackows", augments={'INT+1','Enmity+4','Phalanx +2','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
-	})
-	sets.midcast['Blaze Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Ice Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Shock Spikes'] = set_combine(sets.buffGearDuration, sets.buffGear)
-
-	sets.midcast['Curaga'] = sets.cureGear
-	sets.midcast['Curaga II'] = sets.cureGear
-
-	sets.midcast['Barstonra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barwatera'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Baraera'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barfira'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barblizzara'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barthundra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barsleepra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barpoisonra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barparalyzra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barblindra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barsilencera'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barpetra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barvira'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Baramnesra'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barstone'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barwater'] = set_combine(sets.buffGearDuration, sets.buffGear)     
-	sets.midcast['Baraero'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barfire'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barblizzard'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barthunder'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barsleep'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barpoison'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barparalyze'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barblind'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barsilence'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barpetrify'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Barvirus'] = set_combine(sets.buffGearDuration, sets.buffGear)
-	sets.midcast['Baramnesia'] = set_combine(sets.buffGearDuration, sets.buffGear)
-
-	sets.midcast['Protect V'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shell V'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protectra V'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shellra V'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protect IV'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shell IV'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protectra IV'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shellra IV'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protect III'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shell III'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protectra III'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shellra III'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protect II'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shell II'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protectra II'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shellra II'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protect'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shell'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Protectra'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-	sets.midcast['Shellra'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
-
-	sets.midcast['Haste'] = set_combine(sets.buffGear, sets.buffGearDuration)
-
-	sets.midcast['Comet'] = set_combine(sets.nukeGear, {
-		head="Pixie Hairpin +1",
-		ring2="Archon Ring"
-	})
-
-	sets.midcast['Death'] = set_combine(sets.nukeGear, {
-		head="Pixie Hairpin +1",
-		body="Amalric Doublet +1",
-		feet="Amalric Nails +1",
-		ring1="Mephitas's Ring",
-		ring2="Archon Ring",
-	})
-
-	sets.midcast['Meteor'] = set_combine(sets.nukeGear, {
-		body="Amalric Doublet +1",
-		waist="Acuity Belt +1"
-	})
-
-	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Stone II'] = sets.lowTierNukeGear
-	sets.midcast['Stone III'] = sets.nukeGear
-	sets.midcast['Stone IV'] = sets.nukeGear
-	sets.midcast['Stone V'] = sets.nukeGear
-	sets.midcast['Stone VI'] = sets.nukeGear
-	sets.midcast['Stonega'] = sets.lowTierNukeGear
-	sets.midcast['Stonega II'] = sets.lowTierNukeGear
-	sets.midcast['Stonega III'] = sets.nukeGear
-	sets.midcast['Stoneja'] = sets.nukeGear
-
-	sets.midcast['Water'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Water II'] = sets.lowTierNukeGear
-	sets.midcast['Water III'] = sets.nukeGear
-	sets.midcast['Water IV'] = sets.nukeGear
-	sets.midcast['Water V'] = sets.nukeGear
-	sets.midcast['Water VI'] = sets.nukeGear
-	sets.midcast['Waterga'] = sets.lowTierNukeGear
-	sets.midcast['Waterga II'] = sets.lowTierNukeGear
-	sets.midcast['Waterga III'] = sets.nukeGear
-	sets.midcast['Waterja'] = sets.nukeGear
-
-	sets.midcast['Aero'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Aero II'] = sets.lowTierNukeGear
-	sets.midcast['Aero III'] = sets.nukeGear
-	sets.midcast['Aero IV'] = sets.nukeGear
-	sets.midcast['Aero V'] = sets.nukeGear
-	sets.midcast['Aero VI'] = sets.nukeGear
-	sets.midcast['Aeroga'] = sets.lowTierNukeGear
-	sets.midcast['Aeroga II'] = sets.lowTierNukeGear
-	sets.midcast['Aeroga III'] = sets.nukeGear
-	sets.midcast['Aeroja'] = sets.nukeGear
-
-	sets.midcast['Fire'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Fire II'] = sets.lowTierNukeGear
-	sets.midcast['Fire III'] = sets.nukeGear
-	sets.midcast['Fire IV'] = sets.nukeGear
-	sets.midcast['Fire V'] = sets.nukeGear
-	sets.midcast['Fire VI'] = sets.nukeGear
-	sets.midcast['Firaga'] = sets.lowTierNukeGear
-	sets.midcast['Firaga II'] = sets.lowTierNukeGear
-	sets.midcast['Firaga III'] = sets.nukeGear
-	sets.midcast['Firaja'] = sets.nukeGear
-
-	sets.midcast['Blizzard'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Blizzard II'] = sets.lowTierNukeGear
-	sets.midcast['Blizzard III'] = sets.nukeGear
-	sets.midcast['Blizzard IV'] = sets.nukeGear
-	sets.midcast['Blizzard V'] = sets.nukeGear
-	sets.midcast['Blizzard VI'] = sets.nukeGear
-	sets.midcast['Blizzaga'] = sets.lowTierNukeGear
-	sets.midcast['Blizzaga II'] = sets.lowTierNukeGear
-	sets.midcast['Blizzaga III'] = sets.nukeGear
-	sets.midcast['Blizzaja'] = sets.nukeGear
-
-	sets.midcast['Thunder'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Thunder II'] = sets.lowTierNukeGear
-	sets.midcast['Thunder III'] = sets.nukeGear
-	sets.midcast['Thunder IV'] = sets.nukeGear
-	sets.midcast['Thunder V'] = sets.nukeGear
-	sets.midcast['Thunder VI'] = sets.nukeGear
-	sets.midcast['Thundaga'] = sets.lowTierNukeGear
-	sets.midcast['Thundaga II'] = sets.lowTierNukeGear
-	sets.midcast['Thundaga III'] = sets.nukeGear
-	sets.midcast['Thundaja'] = sets.nukeGear
-
-	sets.midcast['Quake II'] = sets.nukeGear
-	sets.midcast['Flood II'] = sets.nukeGear
-	sets.midcast['Tornado II'] = sets.nukeGear
-	sets.midcast['Flare II'] = sets.nukeGear
-	sets.midcast['Freeze II'] = sets.nukeGear
-	sets.midcast['Burst II'] = sets.nukeGear
-
-	sets.midcast['Poison'] = sets.enfeebleGearINT
-	sets.midcast['Poison II'] = sets.enfeebleGearINT
-
-	sets.midcast['Burn'] = sets.enfeebleGearINT
-	sets.midcast['Choke'] = sets.enfeebleGearINT
-	sets.midcast['Rasp'] = sets.enfeebleGearINT
-	sets.midcast['Frost'] = sets.enfeebleGearINT
-	sets.midcast['Shock'] = sets.enfeebleGearINT
-	sets.midcast['Drown'] = sets.enfeebleGearINT
-	sets.midcast['Slow'] = sets.enfeebleGearMND
-	sets.midcast['Paralyze'] = sets.enfeebleGearMND
-	sets.midcast['Silence'] = sets.enfeebleGearMND
-	sets.midcast['Blind'] = sets.enfeebleGearINT
-	sets.midcast['Gravity'] = sets.enfeebleGearINT
-	sets.midcast['Dispel'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Dispelga'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Sleep'] = sets.enfeebleGearINT
-	sets.midcast['Sleep II'] = sets.enfeebleGearINT
-	sets.midcast['Sleepga'] = sets.enfeebleGearINT
-	sets.midcast['Sleepga II'] = sets.enfeebleGearINT
-	sets.midcast['Break'] = sets.enfeebleGearINT
-	sets.midcast['Breakga'] = sets.enfeebleGearINT
-	sets.midcast['Bind'] = sets.enfeebleGearINT
-	sets.midcast['Stun'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-
-	sets.midcast['Absorb-STR'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Absorb-DEX'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Absorb-VIT'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Absorb-INT'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Absorb-AGI'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Absorb-CHR'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Absorb-MND'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-	sets.midcast['Absorb-TP'] = set_combine(sets.enfeebleGearINT, {
-		hands="Spaekona's Gloves +3",
-	})
-
-
-	sets.midcast['Geohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Hydrohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Anemohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Pyrohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Cryohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Ionohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Noctohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Luminohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Geohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Hydrohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Anemohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Pyrohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Cryohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Ionohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Noctohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Luminohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-
-
-	sets.midcast['Drain'] = set_combine(sets.enfeebleGearINT, sets.drainGear);
-	sets.midcast['Aspir'] = set_combine(sets.enfeebleGearINT, sets.aspirGear);
-	sets.midcast['Aspir II'] = set_combine(sets.enfeebleGearINT, sets.aspirGear);
-	sets.midcast['Aspir III'] = set_combine(sets.enfeebleGearINT, sets.aspirGear);
-	sets.midcast['Stoneskin'] = set_combine(set_combine(sets.buffGearDuration, sets.buffGear), {
-		waist="Siegel Sash",
-		neck="Nodens Gorget"
+	-- Override spells below...
+	sets.midcast['Poisonga'] = set_combine(sets.enfeebleGearINT, {
+		hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+		waist="Chaac belt",
 	})
 end
 
+
 function job_post_midcast(spell, action, spellMap, eventArgs)
-	if spell.skill == 'Enfeebling Magic' then
-		equip({hands="Regal Cuffs"});
+	if spell.skill == 'Elemental Magic' and (buffactive['Manawell'] == 1 or buffactive['Manafont']) and not S{"Impact"}:contains(spell.english) then
+		equip({body="Amalric Doublet +1"})
 	end
 
-	if spell.skill == 'Elemental Magic' and (buffactive['Manawell'] == 1 or buffactive['Manafont']) then
-		equip({body="Amalric Doublet +1"})
+	if buffactive['Mana Wall'] == 1 then
+		equip(sets.manaWall)
 	end
 
 	if spell.skill == 'Elemental Magic' and (state.OffenseMode.value == 'MB' or state.OffenseMode.value == 'TP') then
 		equip(sets.magic_burst)
-	elseif spell.skill == 'Elemental Magic' and state.OffenseMode.value == 'Occult' then
-		equip(sets.occultAcumenGear)
+
 		if buffactive['Mana Wall'] == 1 then
 			equip(sets.manaWall)
 		end
-	elseif state.OffenseMode.value == 'AOE' then
+	elseif state.OffenseMode.value == 'Occult' then
+		if spell.skill == 'Elemental Magic' then
+			equip(set_combine(sets.occultAcumenGear, {
+				body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+4','"Occult Acumen"+11','MND+6',}},
+			}))
+		end
+	elseif state.OffenseMode.value == 'AOEOccult' then
+		if spell.skill == 'Elemental Magic' then
+			equip(sets.occultAcumenGear)
+		end
+		
 		if buffactive['Mana Wall'] == 1 then
 			equip(sets.manaWall)
 		end
@@ -650,7 +407,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		})
 	end
 
-	if S{"Breakga"}:contains(spell.english) then
+	if S{"Breakga"}:contains(spell.english) or S{"Diaga"}:contains(spell.english) then
 		equip({
 			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
 			waist="Chaac belt",
@@ -658,10 +415,27 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 	end
 
 	if S{"Burn", "Choke", "Rasp", "Frost", "Shock", "Drown"}:contains(spell.english) then
-		equip(set_combine(sets.enfeebleGear, {
+		equip(set_combine(sets.enfeebleGearINT, {
+			head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic damage and magic burst damage',}},
+			body={ name="Arch. Coat +3", augments={'Enhances "Manafont" effect',}},
 			feet="Arch. sabots +3",
-			legs="Arch. tonban +3"
+			legs="Arch. tonban +3",
+			hands="Spaekona's Gloves +3",
+			left_ring="Stikini Ring +1",
 		}));
+	end
+
+	if S{"Phalanx"}:contains(spell.english) then
+		oldMain = player.equipment.main
+		oldSub = player.equipment.sub
+		
+		equip(set_combine(sets.buffGearDuration, sets.buffGear, {
+			-- main={ name="Gada", augments={'AGI+9','"Mag.Atk.Bns."+24','Phalanx +3','DMG:+8',}},
+			-- sub="Ammurapi Shield",
+			body={ name="Merlinic Jubbah", augments={'Crit.hit rate+1','Pet: AGI+1','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
+			legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
+			feet={ name="Merlinic Crackows", augments={'"Cure" potency +3%','Pet: STR+7','Phalanx +4','Accuracy+8 Attack+8','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
+		}))
 	end
 end
 
@@ -676,6 +450,7 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 			--disable('back')	
 		end
 	end
+
 	if state.OffenseMode.value == "TP" then
 		equip(sets.meleeTP)
 	else
@@ -685,6 +460,22 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 	if buffactive['Mana Wall'] == 1 or spell.english == 'Mana Wall' then
 		equip(sets.manaWall)
 	end
+
+	if oldMain and oldMain ~= '' then
+		equip({
+			main=oldMain
+		})
+
+		oldMain = ''
+	end
+
+	if oldSub and oldSub ~= '' then
+		equip({
+			sub=oldSub
+		})
+
+		oldSub = ''
+	end
 end
 
 function job_buff_change(buff, gain)
@@ -692,3 +483,4 @@ function job_buff_change(buff, gain)
 		equip(sets.PDT)
 	end
 end
+

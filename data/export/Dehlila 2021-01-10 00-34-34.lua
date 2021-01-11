@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Lathi", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
+    sub="Niobid Strap",
+    ammo="Sapience Orb",
+    head={ name="Merlinic Hood", augments={'"Fast Cast"+5',}},
+    body={ name="Merlinic Jubbah", augments={'Crit.hit rate+1','Pet: AGI+1','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
+    hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+3','"Fast Cast"+5',}},
+    legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
+    feet={ name="Merlinic Crackows", augments={'"Cure" potency +3%','Pet: STR+7','Phalanx +4','Accuracy+8 Attack+8','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
+    neck="Orunmila's Torque",
+    waist="Acuity Belt +1",
+    left_ear="Etiolation Earring",
+    right_ear="Andoaa Earring",
+    left_ring="Kishar Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    back="Perimede Cape",
+}

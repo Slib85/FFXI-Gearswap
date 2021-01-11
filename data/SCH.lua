@@ -72,15 +72,16 @@ function init_gear_sets()
 
 	sets.lowTierNukeGear = {
 		main="Daybreak",
-		sub="Ammurapi Shield",
+		sub="Culminus",
 		ammo="Pemphredo Tathlum",
 		head="Mall. Chapeau +2",
 		body="Mallquis Saio +2",
 		hands="Mallquis Cuffs +2",
 		legs="Mallquis Trews +2",
 		feet="Mallquis Clogs +2",
-		neck="Mizu. Kubikazari",
-		waist="Eschan Stone",
+		neck={ name="Argute Stole +2", augments={'Path: A',}},
+		waist="Acuity Belt +1",
+		--waist="Orpheus's Sash",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
@@ -98,6 +99,7 @@ function init_gear_sets()
 		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		neck="Saevus Pendant +1",
 		waist="Acuity Belt +1",
+		waist="Orpheus's Sash",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
@@ -145,7 +147,7 @@ function init_gear_sets()
 		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Haste+10','Phys. dmg. taken-10%',}},
 	}
 	sets.buffGear = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Befouled Crown",
 		body="Pedagogy Gown +3",
 		hands="",
@@ -244,7 +246,7 @@ function init_gear_sets()
 	sets.cureGear = {
 		main="Daybreak",
 		sub="Genmei shield",
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
 		body="Mallquis Saio +2",
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
@@ -307,7 +309,7 @@ function init_gear_sets()
 	sets.midcast['Aquaveil'] = set_combine(sets.buffGear, {hands="Regal Cuffs", head="Amalric Coif +1", waist="Emphatikos rope", feet="Amalric Nails +1"})
 	sets.midcast['Refresh'] = set_combine(sets.buffGear, {head="Amalric Coif +1"})
 	sets.midcast['Auspice'] = sets.buffGear
-	sets.midcast['Phalanx'] = set_combine(sets.buffGear, {
+	sets.midcast['Phalanx'] = set_combine(sets.buffGearDuration, sets.buffGear, {
 		legs={ name="Merlinic Shalwar", augments={'Potency of "Cure" effect received+1%','Pet: "Mag.Atk.Bns."+28','Phalanx +2',}},
 		feet={ name="Merlinic Crackows", augments={'INT+1','Enmity+4','Phalanx +2','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
 	})
@@ -509,20 +511,18 @@ function init_gear_sets()
 	})
 
 	sets.PDT = {
-		main={ name="Musa", augments={'Path: C',}},
-		-- main="Malignance Pole",
+		main="Malignance Pole",
 		sub="Niobid Strap",
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Mall. Chapeau +2",
 		body="Zendik Robe",
 		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet="Herald's Gaiters",
-		neck={ name="Argute Stole +2", augments={'Path: A',}},
-		-- neck="Loricate Torque +1",
+		neck="Loricate Torque +1",
 		waist="Carrier's Sash",
 		left_ear="Dominance Earring",
 		right_ear="Genmei Earring",
-		left_ring="Gelatinous Ring",
+		left_ring="Shneddick Ring",
 		right_ring="Defending Ring",
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}}
 	}

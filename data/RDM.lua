@@ -75,7 +75,7 @@ function init_gear_sets()
 		neck="Dls. Torque +2",
 	    waist="Luminary Sash",
 	    left_ear="Regal Earring",
-	    right_ear="Malignance Earring",
+		right_ear="Snotra Earring",
 	    left_ring="Kishar Ring",
 	    right_ring="Stikini Ring +1",
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
@@ -99,7 +99,7 @@ function init_gear_sets()
 	}
 
 	sets.meleeTPHybrid = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Aya. Zucchetto +2",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
@@ -156,7 +156,7 @@ function init_gear_sets()
 	}
 
 	sets.cureGear = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 17
 		body="Mallquis Saio +2",
 		hands="Telchine Gloves", -- 10
@@ -172,7 +172,7 @@ function init_gear_sets()
 	}
 
 	sets.refresh = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Vitiation Chapeau +3",
 		body="Jhakri Robe +2",
 		hands="Malignance Gloves",
@@ -189,7 +189,7 @@ function init_gear_sets()
 	}
 
 	sets.PDT = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
 		head="Aya. Zucchetto +2",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
@@ -231,7 +231,7 @@ function init_gear_sets()
 	sets.precastWSMagic = {
 		ammo="Pemphredo Tathlum",
 		head="Jhakri Coronal +2",
-		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		body={ name="Merlinic Jubbah", augments={'Pet: "Mag.Atk.Bns."+25','INT+13','Weapon skill damage +5%','Accuracy+5 Attack+5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
 		hands="Jhakri Cuffs +2",
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
@@ -337,7 +337,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 
 	if S{"Sleepga"}:contains(spell.english) then
 		equip(set_combine(sets.enfeebleGear, {
-			ammo="Staunch Tathlum",
+			ammo="Staunch Tathlum +1",
 			head="Aya. Zucchetto +2",
 			body="Ayanmo Corazza +2",
 			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
