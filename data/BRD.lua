@@ -150,7 +150,6 @@ function init_gear_sets()
 	}
 
 	sets.cureGear = {
-		ammo="Staunch Tathlum",
 		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
 		body="Mallquis Saio +2",
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
@@ -509,7 +508,6 @@ function init_gear_sets()
 	})
 
 	sets.PDT = {
-		ammo="Staunch Tathlum +1",
 		head="Aya. Zucchetto +1",
 		body="Ayanmo Corazza +2",
 		hands="Aya. Manopolas +1",
@@ -517,6 +515,7 @@ function init_gear_sets()
 		--feet="Aya. Gambieras +1",
 		feet="Fili Cothurnes +1",
 		neck="Loricate Torque +1",
+		neck="Bard's Charm +2",
 		waist="Anguinus Belt",
 		left_ear="Dominance Earring",
 		right_ear="Genmei Earring",
@@ -525,19 +524,16 @@ function init_gear_sets()
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
-	sets.manaWall = {
-		--back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-		feet="Wicce Sabots +1"
-	}
-	
-	
-	sets.magic_burst = {
-		head="Ea Hat +1",
-		legs="Ea Slops +1",
-		hands="Amalric Gages +1",
-		ring1="Mujin Band"
+	sets.precast.JA['Nightingale'] = {
+		feet="Bihu Slippers +1",
 	}
 
+	sets.precast.JA['Troubadour'] = {
+		body="Bihu Jstcorps. +3",
+	}
+	sets.precast.JA['Soul Voice'] = {
+		legs="Bihu Cannions +1",
+	}
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)

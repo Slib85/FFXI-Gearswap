@@ -33,63 +33,104 @@ function init_gear_sets()
     
 	sets.defense.PDT = {
 		ammo="Staunch Tathlum +1",
-		head="Hjarrandi Helm",
-		body="Sacro Breastplate",
-		body="hjarrandi breastplate",
-		hands="Volte Bracers",
-		legs="Sulev. Cuisses +2",
-		feet="Hippomenes Socks +1",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		-- feet="Hippomenes Socks +1",
 		neck="Loricate Torque +1",
 		waist="Carrier's Sash",
 		left_ear="Sanare Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
-		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
+		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
 	}
-    
-    sets.SUPER = {	
+	
+	-- Total Counter: 39% (47% Monk Sub & 80% Counterstance)
+	sets.counterGear = {
 		ammo="Staunch Tathlum +1",
-		head="Hjarrandi Helm",
-		body="Chev. Cuirass +1",
-		hands="Chev. Gauntlets +1",
-		legs="Chev. Cuisses +1",
-		feet="Chev. Sabatons +1",
-		neck="Loricate Torque +1",
-		waist="Carrier's Sash",
-		left_ear="Genmei Earring",
-		right_ear="Cryptic Earring",
+		head="Sakpata's Helm",
+		body="Sacro Breastplate", -- 15
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		-- neck="Bathy Choker +1", -- 10
+		waist="Sailfi Belt +1",
+		left_ear="Genmei Earring", -- 1
+		right_ear="Cryptic Earring", -- 4
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
-		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
+		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','"System: 1 ID: 640 Val: 4"',}}, -- 10
+	}
+
+	-- Total Regen: 37 (67 w/ Excalibur)
+	sets.regenGear = {
+		ammo="Staunch Tathlum +1",
+		head="Loess Barbuta +1",
+		body="Sacro Breastplate", -- 13
+		-- hands="Regal Gauntlets", -- 10
+		hands="Sakpata's Gauntlets",
+		-- legs="Volte Brayettes" -- 3
+		legs="Sakpata's Cuisses",
+		feet="Volte Sollerets", -- 2
+		-- neck="Bathy Choker +1", -- 3
+		-- waist="Flume Belt",
+		left_ear="Odnowa Earring +1",
+		-- right_ear="Infused Earring", -- 1
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
+		-- back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Regen+5',}}, -- 5
+	}
+
+	sets.superTank = {
+		ammo="Staunch Tathlum +1",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		-- neck="Warder's Charm +1",
+		waist="Carrier's Sash",
+		left_ear="Sanare Earring",
+		-- right_ear="Arete Del Luna +1",
+		left_ring="Moonlight Ring",
+		right_ring="Moonlight Ring",
+		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
+	}
+	
+	sets.interruptDownGear = {
+		-- waist="Audumbla Sash",
+		
 	}
 
 	sets.TP = {
-		ammo="Ginsen",
-		head="Sulevia's Mask +2",
-		body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
-		hands="Sulev. Gauntlets +2",
-		legs="Sulev. Cuisses +2",
-		feet="Flam. Gambieras +2",
+		ammo="Coiste Bodhar",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 		neck="Lissome Necklace",
-		waist="Sarissapho. Belt",
+		waist="Sailfi Belt +1",
 		left_ear="Dedition Earring",
 		right_ear="Telos Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
-		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
+		right_ring="Moonlight Ring",
+		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','System: 1 ID: 640 Val: 4',}}, -- 10
 	}
     
 	sets.precastWS = {
-		ammo="Ginsen",
+		ammo="Coiste Bodhar",
 		head={ name="Valorous Mask", augments={'Pet: STR+2','Accuracy+25','Weapon skill damage +7%','Accuracy+4 Attack+4','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		body="Hjarrandi Breast.",
-		hands="Sulev. Gauntlets +2",
-		legs="Sulev. Cuisses +2",
-		feet="Sulev. Leggings +2",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 		neck="Fotia Gorget",
-		waist="Grunfeld Rope",
-		left_ear="Dominance Earring",
+		waist="Sailfi Belt +1",
+		left_ear="Ishvara Earring",
 		right_ear="Telos Earring",
 		left_ring="Regal Ring",
 		right_ring="Petrov Ring",
@@ -109,7 +150,7 @@ function init_gear_sets()
         right_ear="Cryptic Earring",
         left_ring="Petrov Ring",
         right_ring="Apeile Ring",
-        back={ name="Weard Mantle", augments={'VIT+1','DEX+2','Enmity+2','Phalanx +4',}},
+		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
     }
 	
 	sets.magicPrecastWSGear = {
@@ -193,6 +234,7 @@ function init_gear_sets()
 		ring2="Archon Ring"
 	});
 	sets.precast.WS['Aeolian Edge'] = sets.magicPrecastWSGear
+	--sets.precast.WS['Atonement'] = sets.enmityGear
 							
 	sets.midcast['Flash'] = sets.enmityGear;
 	sets.midcast['Jettatura'] = sets.enmityGear;
@@ -223,7 +265,7 @@ function init_gear_sets()
 	sets.midcast['Phalanx'] = set_combine(sets.buffGear, {
 		head={ name="Odyssean Helm", augments={'AGI+5','Rng.Acc.+1 Rng.Atk.+1','Phalanx +4','Accuracy+16 Attack+16',}},
 		hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
-		legs={ name="Odyssean Cuisses", augments={'MND+2','CHR+6','Phalanx +4',}},
+		legs="Sakpata's Cuisses",
 		feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
 		back={ name="Weard Mantle", augments={'VIT+1','DEX+2','Enmity+2','Phalanx +4',}},
     });

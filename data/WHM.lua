@@ -58,12 +58,12 @@ function init_gear_sets()
     }
 
 	sets.lowTierNukeGear = {
-		ammo="Pemphredo Tathlum",
-		head={ name="Chironic Hat", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','INT+10','"Mag.Atk.Bns."+15',}},
-		body={ name="Chironic Doublet", augments={'"Mag.Atk.Bns."+30','MND+5','Mag. Acc.+15',}},
-		hands={ name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+1','"Mag.Atk.Bns."+10',}},
-		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
-		feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+30','"Conserve MP"+6','MND+13','Mag. Acc.+12',}},
+		ammo="Ghastly Tathlum +1",
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",
+		feet="Bunzi's Sabots",
 		neck="Sanctity Necklace",
 		waist="Orpheus's Sash",
 		left_ear="Regal Earring",
@@ -78,12 +78,12 @@ function init_gear_sets()
 	}
 	
 	sets.nukeGear = {
-		ammo="Pemphredo Tathlum",
-		head={ name="Chironic Hat", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','INT+10','"Mag.Atk.Bns."+15',}},
-		body={ name="Chironic Doublet", augments={'"Mag.Atk.Bns."+30','MND+5','Mag. Acc.+15',}},
-		hands={ name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+1','"Mag.Atk.Bns."+10',}},
-		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
-		feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+30','"Conserve MP"+6','MND+13','Mag. Acc.+12',}},
+		ammo="Ghastly Tathlum +1",
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",
+		feet="Bunzi's Sabots",
 		neck="Sanctity Necklace",
 		waist="Orpheus's Sash",
 		left_ear="Regal Earring",
@@ -171,12 +171,12 @@ function init_gear_sets()
     }
 
 	sets.precastWSIntGear = {
-		ammo="Pemphredo Tathlum",
-		head={ name="Chironic Hat", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','INT+10','"Mag.Atk.Bns."+15',}},
-		body={ name="Chironic Doublet", augments={'"Mag.Atk.Bns."+30','MND+5','Mag. Acc.+15',}},
-		hands={ name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+1','"Mag.Atk.Bns."+10',}},
-		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
-		feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+30','"Conserve MP"+6','MND+13','Mag. Acc.+12',}},
+		ammo="Ghastly Tathlum +1",
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",
+		feet="Bunzi's Sabots",
 		neck="Mizu. Kubikazari",
 		waist="Orpheus's Sash",
 		left_ear="Malignance Earring",
@@ -187,12 +187,12 @@ function init_gear_sets()
 		back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','Accuracy+2','Weapon skill damage +10%',}},    }
 
 	sets.magicPrecastWSGear = {
-		ammo="Pemphredo Tathlum",
-		head={ name="Chironic Hat", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','INT+10','"Mag.Atk.Bns."+15',}},
-		body={ name="Chironic Doublet", augments={'"Mag.Atk.Bns."+30','MND+5','Mag. Acc.+15',}},
-		hands={ name="Chironic Gloves", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+1','"Mag.Atk.Bns."+10',}},
-		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
-		feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+30','"Conserve MP"+6','MND+13','Mag. Acc.+12',}},
+		ammo="Ghastly Tathlum +1",
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",
+		feet="Bunzi's Sabots",
 		neck="Mizu. Kubikazari",
 		waist="Orpheus's Sash",
 		left_ear="Malignance Earring",
@@ -376,7 +376,7 @@ function init_gear_sets()
 	sets.midcast['Holy'] = sets.lowTierNukeGear
 	sets.midcast['Holy II'] = sets.lowTierNukeGear
 
-	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Stone'] = sets.lowTierNukeGear
 	sets.midcast['Stone II'] = sets.lowTierNukeGear
 	sets.midcast['Stone III'] = sets.nukeGear
 	sets.midcast['Stone IV'] = sets.nukeGear
@@ -387,7 +387,7 @@ function init_gear_sets()
 	sets.midcast['Stonega III'] = sets.nukeGear
 	sets.midcast['Stoneja'] = sets.nukeGear
 	
-	sets.midcast['Water'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Water'] = sets.lowTierNukeGear
 	sets.midcast['Water II'] = sets.lowTierNukeGear
 	sets.midcast['Water III'] = sets.nukeGear
 	sets.midcast['Water IV'] = sets.nukeGear
@@ -398,7 +398,7 @@ function init_gear_sets()
 	sets.midcast['Waterga III'] = sets.nukeGear
 	sets.midcast['Waterja'] = sets.nukeGear
 	
-	sets.midcast['Aero'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Aero'] = sets.lowTierNukeGear
 	sets.midcast['Aero II'] = sets.lowTierNukeGear
 	sets.midcast['Aero III'] = sets.nukeGear
 	sets.midcast['Aero IV'] = sets.nukeGear
@@ -409,7 +409,7 @@ function init_gear_sets()
 	sets.midcast['Aeroga III'] = sets.nukeGear
 	sets.midcast['Aeroja'] = sets.nukeGear
 	
-	sets.midcast['Fire'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Fire'] = sets.lowTierNukeGear
 	sets.midcast['Fire II'] = sets.lowTierNukeGear
 	sets.midcast['Fire III'] = sets.nukeGear
 	sets.midcast['Fire IV'] = sets.nukeGear
@@ -420,7 +420,7 @@ function init_gear_sets()
 	sets.midcast['Firaga III'] = sets.nukeGear
 	sets.midcast['Firaja'] = sets.nukeGear
 	
-	sets.midcast['Blizzard'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Blizzard'] = sets.lowTierNukeGear
 	sets.midcast['Blizzard II'] = sets.lowTierNukeGear
 	sets.midcast['Blizzard III'] = sets.nukeGear
 	sets.midcast['Blizzard IV'] = sets.nukeGear
@@ -431,7 +431,7 @@ function init_gear_sets()
 	sets.midcast['Blizzaga III'] = sets.nukeGear
 	sets.midcast['Blizzaja'] = sets.nukeGear
 	
-	sets.midcast['Thunder'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Thunder'] = sets.lowTierNukeGear
 	sets.midcast['Thunder II'] = sets.lowTierNukeGear
 	sets.midcast['Thunder III'] = sets.nukeGear
 	sets.midcast['Thunder IV'] = sets.nukeGear
@@ -530,11 +530,11 @@ function init_gear_sets()
 
 	sets.PDT = {
 		ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
-		hands="Aya. Manopolas +2",
-		legs="Aya. Cosciales +2",
-		feet="Aya. Gambieras +2",
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",
+		feet="Bunzi's Sabots",
 		neck="Loricate Torque +1",
 		waist="Grunfeld Rope",
 		left_ear="Telos Earring",

@@ -21,7 +21,7 @@ function init_gear_sets()
 		neck = "Orunmila's Torque", -- 5%
 		ear1 = "Malignance Earring", -- 4%
 		ear2 = "Loquac. Earring", -- 2%
-		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --12%
+		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --13%
 		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+29','"Fast Cast"+7','CHR+9','"Mag.Atk.Bns."+5',}}, -- 7%
     	ring1 = "Kishar Ring", -- 4%
 		ring2 = "Prolix Ring", -- 2%
@@ -33,7 +33,7 @@ function init_gear_sets()
 
 	sets.lowTierNukeGear = {
 		--main="Laevateinn",
-		ammo="Pemphredo Tathlum",
+		ammo="Ghastly Tathlum +1",
 		head="Mallquis Chapeau +2",
 		body="Spaekona's Coat +3",
 		hands="Mallquis Cuffs +2",
@@ -69,7 +69,7 @@ function init_gear_sets()
 	}
 	
 	sets.nukeGear = {
-		ammo="Pemphredo Tathlum",
+		ammo="Ghastly Tathlum +1",
 		head="Archmage's Petasos +3",
 		neck="Sorcerer's Stole +2",
 		ear1="Malignance Earring",
@@ -176,7 +176,7 @@ function init_gear_sets()
 		legs="Jhakri Slops +2",
 		feet="Jhakri Pigaches +2",
 		neck="Fotia Gorget",
-		waist="Fotia Belt",
+		waist="Eschan Stone",
 		left_ear="Steelflash Earring",
 		right_ear="Telos Earring",
 		left_ring="Chirich Ring +1",
@@ -201,7 +201,7 @@ function init_gear_sets()
 	}
 
 	sets.magicPrecastWSGear = {
-		ammo="Pemphredo Tathlum",
+		ammo="Ghastly Tathlum +1",
 		head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic damage and magic burst damage',}},
 		body={ name="Merlinic Jubbah", augments={'Pet: "Mag.Atk.Bns."+25','INT+13','Weapon skill damage +5%','Accuracy+5 Attack+5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
 		hands="Jhakri Cuffs +2",
@@ -235,7 +235,7 @@ function init_gear_sets()
 	    neck="Erra Pendant",
 		head={ name="Merlinic Hood", augments={'Mag. Acc.+24','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+4',}},
 		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet={ name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+19','Accuracy+3 Attack+3','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
+		feet="Agwu's Pigaches",
 		legs="Spaekona's Tonban +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
 		ring1="Evanescence Ring",
@@ -246,7 +246,7 @@ function init_gear_sets()
 	    neck="Erra Pendant",
 		head="Pixie Hairpin +1",
 		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet={ name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+19','Accuracy+3 Attack+3','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
+		feet="Agwu's Pigaches",
 		legs="Spaekona's Tonban +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
 		ring1="Evanescence Ring",
@@ -302,6 +302,9 @@ function init_gear_sets()
 
 	sets.precast.WS['Shattersoul'] = sets.precastWSIntGear
 	sets.precast.WS['Rock Crusher'] = set_combine(sets.magicPrecastWSGear, {
+		left_ear="Moonshade Earring"
+	})
+	sets.precast.WS['Aeolian Edge'] = set_combine(sets.magicPrecastWSGear, {
 		left_ear="Moonshade Earring"
 	})
 	sets.precast.WS['Earth Crusher'] = set_combine(sets.magicPrecastWSGear, {
@@ -374,7 +377,7 @@ function init_gear_sets()
 
 
 		
-		ammo="Pemphredo Tathlum",
+		ammo="Ghastly Tathlum +1",
 		neck="Sorcerer's Stole +2",
 		ear1="Malignance Earring",
 		ear2="Regal Earring",
@@ -448,6 +451,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			body={ name="Arch. Coat +3", augments={'Enhances "Manafont" effect',}},
 			feet="Arch. sabots +3",
 			legs="Arch. tonban +3",
+			legs="Agwu's Slops",
 			hands="Spaekona's Gloves +3",
 			left_ring="Stikini Ring +1",
 		}));

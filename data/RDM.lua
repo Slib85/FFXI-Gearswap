@@ -83,7 +83,7 @@ function init_gear_sets()
 
 	sets.meleeTP = {
 		ammo="Ginsen",
-		head="Aya. Zucchetto +2",
+		head="Bunzi's Hat",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
@@ -100,7 +100,7 @@ function init_gear_sets()
 
 	sets.meleeTPHybrid = {
 		ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",
+		head="Bunzi's Hat",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
@@ -142,7 +142,7 @@ function init_gear_sets()
 		right_ear="Andoaa Earring",
 		left_ring="Stikini Ring +1",
 		right_ring="Stikini Ring +1",
-		back="Perimede Cape",	
+		back="Fi Follet Cape",	
 	}
 
 	sets.buffGearDuration = {
@@ -190,7 +190,7 @@ function init_gear_sets()
 
 	sets.PDT = {
 		ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",
+		head="Bunzi's Hat",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
@@ -314,6 +314,8 @@ function init_gear_sets()
 	--include('jobAbilities.lua')
 	--include('weaponSkills.lua')
 	include('spells.lua')
+
+
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
@@ -328,7 +330,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 
 	end
 
-	if S{"Diaga"}:contains(spell.english) then
+	if S{"Diaga", "Dia III"}:contains(spell.english) then
 		equip({
 			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
 			waist="Chaac belt",
