@@ -28,51 +28,51 @@ function init_gear_sets()
     }
 
     sets.pdt = {
-        ammo="Seki Shuriken",
-        head={ name="Nyame Helm", augments={'Path: B',}},
-        body="Mpaca's Doublet",
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-        legs="Mpaca's Hose",
-        feet={ name="Nyame Sollerets", augments={'Path: B',}},
-        neck="Ninja Nodowa +2",
-        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        left_ear="Telos Earring",
-        right_ear="Dedition Earring",
+        ammo="Yamarang",
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Malignance Gloves",
+        legs="Malignance Tights",
+        feet="Gleti's Boots",
+        neck={ name="Loricate Torque +1", augments={'Path: A',}},
+        waist="Twilight Belt",
+        left_ear="Sherida Earring",
+        right_ear="Telos Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Chirich Ring +1",
-        back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        right_ring="Defending Ring",
+        back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
 
 	sets.meleeTP = {
-        ammo="Seki Shuriken",
-        head={ name="Nyame Helm", augments={'Path: B',}},
-        body="Mpaca's Doublet",
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-        legs="Mpaca's Hose",
-        feet={ name="Nyame Sollerets", augments={'Path: B',}},
-        neck="Ninja Nodowa +2",
-        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        left_ear="Telos Earring",
-        right_ear="Dedition Earring",
+        ammo="Yamarang",
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Malignance Gloves",
+        legs="Malignance Tights",
+        feet="Gleti's Boots",
+        neck={ name="Loricate Torque +1", augments={'Path: A',}},
+        waist="Twilight Belt",
+        left_ear="Sherida Earring",
+        right_ear="Telos Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Chirich Ring +1",
-        back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        right_ring="Defending Ring",
+        back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
 
     sets.precastWSPhysical = {
         ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head={ name="Nyame Helm", augments={'Path: B',}},
-        body={ name="Nyame Mail", augments={'Path: B',}},
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-        legs={ name="Nyame Flanchard", augments={'Path: B',}},
-        feet={ name="Nyame Sollerets", augments={'Path: B',}},
-        neck="Fotia Gorget",
-        waist="Fotia Belt",
-        left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-        right_ear="Ishvara Earring",
-        left_ring="Epaminondas's Ring",
-        right_ring="Regal Ring",
-        back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntlets",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
+        neck="Sanctity Necklace",
+        waist="Anguinus Belt",
+        left_ear="Sherida Earring",
+        right_ear="Telos Earring",
+        left_ring="Regal Ring",
+        right_ring="Ilabrat Ring",
+        back={ name="Senuna's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
     }
 
 	sets.precastWSCritical = {
@@ -253,44 +253,6 @@ function init_gear_sets()
     -- ##############
 
     sets.precast.FC = sets.precastGear
-
-    sets.midcast['Tonko: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Utsusemi: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Katon: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Suiton: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Doton: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Hyoton: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Huton: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Raiton: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Kurayami: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Hojo: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Monomi: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Dokumori: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Jubaku: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Tonko: Ni'] = sets.highTierNukeGear
-    sets.midcast['Utsusemi: Ni'] = sets.highTierNukeGear
-    sets.midcast['Katon: Ni'] = sets.highTierNukeGear
-    sets.midcast['Suiton: Ni'] = sets.highTierNukeGear
-    sets.midcast['Doton: Ni'] = sets.highTierNukeGear
-    sets.midcast['Hyoton: Ni'] = sets.highTierNukeGear
-    sets.midcast['Huton: Ni'] = sets.highTierNukeGear
-    sets.midcast['Raiton: Ni'] = sets.highTierNukeGear
-    sets.midcast['Kurayami: Ni'] = sets.highTierNukeGear
-    sets.midcast['Hojo: Ni'] = sets.highTierNukeGear
-    sets.midcast['Katon: San'] = sets.highTierNukeGear
-    sets.midcast['Suiton: San'] = sets.highTierNukeGear
-    sets.midcast['Doton: San'] = sets.highTierNukeGear
-    sets.midcast['Hyoton: San'] = sets.highTierNukeGear
-    sets.midcast['Huton: San'] = sets.highTierNukeGear
-    sets.midcast['Raiton: San'] = sets.highTierNukeGear
-    sets.midcast['Aisha: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Yurin: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Myoshu: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Migawari: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Gekka: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Yain: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Kakka: Ichi'] = sets.highTierNukeGear
-    sets.midcast['Utsusemi: San'] = sets.highTierNukeGear
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)

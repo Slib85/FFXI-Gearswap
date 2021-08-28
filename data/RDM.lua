@@ -47,6 +47,22 @@ function init_gear_sets()
 		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 		right_ring="Mujin Band",
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
+
+
+		
+		ammo="Pemphredo Tathlum",
+		head="Ea Hat +1",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Ea Slops +1",
+		feet="Bunzi's Sabots",
+		neck={ name="Dls. Torque +2", augments={'Path: A',}},
+		waist={ name="Acuity Belt +1", augments={'Path: A',}},
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Freke Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.lowTierNukeGear = {
@@ -63,6 +79,22 @@ function init_gear_sets()
 		left_ring="Freke Ring",
 		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
+
+
+		
+		ammo="Pemphredo Tathlum",
+		head="Ea Hat +1",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Ea Slops +1",
+		feet="Bunzi's Sabots",
+		neck={ name="Dls. Torque +2", augments={'Path: A',}},
+		waist={ name="Acuity Belt +1", augments={'Path: A',}},
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Freke Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.enfeebleGear = {
@@ -82,12 +114,12 @@ function init_gear_sets()
 	}
 
 	sets.meleeTP = {
-		ammo="Ginsen",
+		ammo="Coiste Bodhar",
 		head="Bunzi's Hat",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
-		feet="Aya. Gambieras +2",
+		feet="Bunzi's Sabots",
 		neck="Lissome Necklace",
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
@@ -104,7 +136,7 @@ function init_gear_sets()
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
-		feet="Aya. Gambieras +2",
+		feet="Bunzi's Sabots",
 		neck="Loricate Torque +1",
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
@@ -116,11 +148,11 @@ function init_gear_sets()
 
 	sets.meleeTPEn = {
 		ammo="Pemphredo Tathlum",
-		head="Aya. Zucchetto +2",
+		head="Bunzi's Hat",
 		body="Malignance Tabard",
 		legs="Malignance Tights",
 		hands="Aya. Manopolas +2",
-		feet="Aya. Gambieras +2",
+		feet="Bunzi's Sabots",
 		neck={ name="Dls. Torque +2", augments={'Path: A',}},
 		waist="Orpheus's Sash",
 		left_ear="Telos Earring",
@@ -190,12 +222,12 @@ function init_gear_sets()
 
 	sets.PDT = {
 		ammo="Staunch Tathlum +1",
-		head="Bunzi's Hat",
-		body="Malignance Tabard",
-		hands="Malignance Gloves",
-		legs="Malignance Tights",
-		feet={ name="Hippo. Socks +1", augments={'Path: A',}},
-		neck="Loricate Torque +1",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck={ name="Loricate Torque +1", augments={'Path: A',}},
 		waist="Carrier's Sash",
 		left_ear="Genmei Earring",
 		right_ear="Dominance Earring",
@@ -206,16 +238,16 @@ function init_gear_sets()
 
 	sets.precastWSPhysical = {
 		ammo="Floestone",
-		head="Vitiation Chapeau +3",
-		body="Vitiation Tabard +3",
+		head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
+		body={ name="Nyame Mail", augments={'Path: B',}},
 		hands="Atrophy Gloves +3",
-		legs="Vitiation Tights +3",
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
-		neck="Sanctity Necklace",
-		waist="Grunfeld Rope",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
 		left_ear="Ishvara Earring",
-		right_ear="Sherida Earring",
-		left_ring="Ilabrat Ring",
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ring="Epaminondas's Ring",
 		right_ring="Rufescent Ring",
 		back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
@@ -335,24 +367,6 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
 			waist="Chaac belt",
 		})
-	end
-
-	if S{"Sleepga"}:contains(spell.english) then
-		equip(set_combine(sets.enfeebleGear, {
-			ammo="Staunch Tathlum +1",
-			head="Aya. Zucchetto +2",
-			body="Ayanmo Corazza +2",
-			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
-			legs="Aya. Cosciales +2",
-			feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-			neck="Loricate Torque +1",
-			waist="Chaac Belt",
-			left_ear="Genmei Earring",
-			right_ear="Dominance Earring",
-			left_ring="Freke Ring",
-			right_ring="Defending Ring",
-			back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-		}));
 	end
 
 	if buffactive['Saboteur'] and spell.skill == 'Enfeebling Magic' then

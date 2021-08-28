@@ -24,7 +24,7 @@ end
 function user_setup()
 	-- Options: Override default values
     
-	state.OffenseMode:options('Normal', 'Extra Song');
+	state.OffenseMode:options('Normal', 'Extra Song', 'TP');
 	-- state.DefenseMode:options('PDT', 'DT')
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
@@ -56,24 +56,31 @@ end
 -- Define sets and vars used by this job file.
 function init_gear_sets()
 	---- Precast Sets ----
-	sets.precastGear = {
+	sets.precastGear = { -- 78%
+		--main="Kali", --7
 		range="Gjallarhorn",
-		head="Fili Calot +1",
-		body="Zendik Robe",
-		neck="Orunmila's Torque",
-		left_ear="Etiolation Earring",
-		left_ring="Kishar Ring",
-		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
+		head="Fili Calot +1", --14
+		body="Zendik Robe", --13
+		hands="Leyline Gloves", --5
+		legs="Ayanmo Cosciales +2", --6
+		feet="Bihu Slippers +3", -- 10
+		neck="Orunmila's Torque", --5
+		waist="Witful Belt", --3
+		left_ear="Etiolation Earring", --1
+		left_ring="Kishar Ring", --4
+		right_ring = "Prolix Ring", -- 2%
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}}, --10
 	}
 
 	sets.songGear = {
-        -- main={ name="Kali", augments={'DMG:+15','CHR+15','Mag. Acc.+15',}},
-        -- sub="Ammurapi Shield",
+        --main="Carnwenhan",
+        --sub="Ammurapi Shield",
         head="Fili Calot +1",
         body="Fili Hongreline +1",
         hands="Fili Manchettes +1",
-        legs="Fili Rhingrave +1",
-        feet="Brioso Slippers +2",
+        --legs="Fili Rhingrave +1",
+        legs="Inyanga Shalwar +2",
+		feet="Brioso Slippers +2",
         neck="Mnbw. Whistle +1",
         waist="Porous Rope",
         left_ear="Dominance Earring",
@@ -97,7 +104,19 @@ function init_gear_sets()
 	}
 
 	sets.enfeebleGear = {
-		
+		ammo="Pemphredo Tathlum",
+		head={ name="Bihu Roundlet +3", augments={'Enhances "Con Anima" effect',}},
+		body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
+		hands="Nyame Gauntlets",
+		legs="Brioso Cannions +2",
+		feet="Brioso Slippers +2",
+		neck="Mnbw. Whistle +1",
+		waist="Luminary Sash",
+		left_ear="Regal Earring",
+		right_ear="Enfeebling Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
 	}
 
 	-- Precast sets to enhance JAs
@@ -106,19 +125,22 @@ function init_gear_sets()
 	}
 	
 	sets.meleeTP = {
-		ammo="Amar Cluster",
-		head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic II damage',}},
-		body="Jhakri Robe +2",
-		hands="Jhakri Cuffs +2",
-		legs="Jhakri Slops +2",
-		feet={ name="Arch. Sabots +3", augments={'Reduces Ancient Magic II MP cost',}},
-		neck="Asperity Necklace",
-		waist="Goading Belt",
+		-- main="Carnwenhan",
+		-- sub="Genmei Shield",
+		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+		head="Ayanmo Zucchetto +2",
+		body="Ayanmo Corazza +2",
+		hands="Aya. Manopolas +1",
+		legs="Aya. Cosciales +2",
+		feet="Nyame Sollerets",
+		neck={ name="Bard's Charm +2", augments={'Path: A',}},
+		waist="Reiki Yotai",
 		left_ear="Telos Earring",
-		right_ear="Dedition Earring",
-		left_ring="Rajas Ring",
-		right_ring="Petrov Ring",
-		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Haste+10',}},
+		right_ear="Genmei Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		right_ring = "Shneddick Ring",
+		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.buffGear = {
@@ -126,7 +148,34 @@ function init_gear_sets()
 	}
 	
 	sets.precastWS = {
-		
+		ammo="Coiste Bodhar",
+		head={ name="Bihu Roundlet +3", augments={'Enhances "Con Anima" effect',}},
+		body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Bihu Slippers +3",
+		neck={ name="Bard's Charm +2", augments={'Path: A',}},
+		waist="Anguinus Belt",
+		left_ear="Ishvara Earring",
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ring="Petrov Ring",
+		right_ring="Ilabrat Ring",
+		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	}
+
+	sets.songAccuracy= {
+		head={ name="Bihu Roundlet +3", augments={'Enhances "Con Anima" effect',}},
+		body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
+		hands="Aya. Manopolas +1",
+		legs="Brioso Cannions +2",
+		feet="Brioso Slippers +2",
+		neck="Mnbw. Whistle +1",
+		waist="Luminary Sash",
+		left_ear="Regal Earring",
+		right_ear="Genmei Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
 	}
 
 	sets.precastWSIntGear = {
@@ -181,6 +230,10 @@ function init_gear_sets()
 	
 	sets.precast.FC['Impact'] = set_combine(sets.precast.FC, {body="Twilight Cloak"})
 	
+	sets.precast.FC['Dispelga'] = set_combine(sets.precast.FC, {main="Daybreak"})
+	sets.midcast['Dispelga'] = sets.enfeebleGear
+
+
 	sets.midcast['Impact'] = {
 		ammo="Pemphredo Tathlum",
 		neck="Sanctity Necklace",
@@ -209,11 +262,14 @@ function init_gear_sets()
 	sets.midcast["Army's Paeon IV"] = sets.songGear
 	sets.midcast["Army's Paeon V"] = sets.songGear
 	sets.midcast["Army's Paeon VI"] = sets.songGear
-	sets.midcast["Horde Lullaby"] = sets.songGear
-	sets.midcast["Horde Lullaby II"] = sets.songGear
-	sets.midcast["Mage's Ballad"] = sets.songGear
-	sets.midcast["Mage's Ballad II"] = sets.songGear
-	sets.midcast["Mage's Ballad III"] = sets.songGear
+
+	sets.precast.FC['Horde Lullaby'] = set_combine(sets.precast.FC, {range="Blurred Harp +1"})
+	sets.precast.FC['Horde Lullaby II'] = set_combine(sets.precast.FC, {range="Blurred Harp +1"})
+	sets.midcast["Horde Lullaby"] = set_combine(sets.songGear, sets.songAccuracy)
+	sets.midcast["Horde Lullaby II"] = set_combine(sets.songGear, sets.songAccuracy)
+	sets.midcast["Mage's Ballad"] = set_combine(sets.songGear, {legs="Fili Rhingrave +1"})
+	sets.midcast["Mage's Ballad II"] = set_combine(sets.songGear, {legs="Fili Rhingrave +1"})
+	sets.midcast["Mage's Ballad III"] = set_combine(sets.songGear, {legs="Fili Rhingrave +1"})
 	sets.midcast["Knight's Minne"] = set_combine(sets.songGear, {legs="Mousai Seraweels"})
 	sets.midcast["Knight's Minne II"] = set_combine(sets.songGear, {legs="Mousai Seraweels"})
 	sets.midcast["Knight's Minne III"] = set_combine(sets.songGear, {legs="Mousai Seraweels"})
@@ -238,23 +294,51 @@ function init_gear_sets()
 	sets.midcast["Warding Round"] = sets.songGear
 	sets.midcast["Advancing March"] = sets.songGear
 	sets.midcast["Victory March"] = sets.songGear
-	sets.midcast["Magic Finale"] = sets.songGear
+	sets.midcast["Magic Finale"] = set_combine(sets.songGear, sets.songAccuracy)
+	sets.midcast["Adventurer's Dirge"] = sets.songGear
 	sets.precast.FC['Honor March'] = set_combine(sets.precast.FC, {range="Marsyas"})
 	sets.midcast["Honor March"] = sets.songGear
 	sets.midcast["Battlefield Elegy"] = sets.songGear
 	sets.midcast["Carnage Elegy"] = sets.songGear
-	sets.midcast["Sinewy Etude"] = sets.songGear
-	sets.midcast["Dextrous Etude"] = sets.songGear
-	sets.midcast["Vivacious Etude"] = sets.songGear
-	sets.midcast["Quick Etude"] = sets.songGear
-	sets.midcast["Learned Etude"] = sets.songGear
-	sets.midcast["Sage Etude"] = sets.songGear
-	sets.midcast["Spirited Etude"] = sets.songGear
-	sets.midcast["Enchanting Etude"] = sets.songGear
-	sets.midcast["Herculean Etude"] = sets.songGear
-	sets.midcast["Uncanny Etude"] = sets.songGear
-	sets.midcast["Vital Etude"] = sets.songGear
-	sets.midcast["Bewitching Etude"] = sets.songGear
+	sets.midcast["Sinewy Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Dextrous Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Vivacious Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Quick Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Learned Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Swift Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Sage Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Spirited Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Enchanting Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Herculean Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Uncanny Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Vital Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Bewitching Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
 	sets.midcast["Fire Carol"] = sets.songGear
 	sets.midcast["Fire Carol II"] = sets.songGear
 	sets.midcast["Ice Carol"] = sets.songGear
@@ -374,6 +458,7 @@ function init_gear_sets()
 	
 	sets.midcast['Meteor'] = sets.nukeGear
 	sets.midcast['Drain'] = sets.enfeebleGear
+	sets.midcast['Silence'] = sets.enfeebleGear
 
 	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
 	sets.midcast['Stone II'] = sets.lowTierNukeGear
@@ -508,37 +593,62 @@ function init_gear_sets()
 	})
 
 	sets.PDT = {
-		head="Aya. Zucchetto +1",
-		body="Ayanmo Corazza +2",
-		hands="Aya. Manopolas +1",
-		legs="Aya. Cosciales +2",
-		--feet="Aya. Gambieras +1",
-		feet="Fili Cothurnes +1",
-		neck="Loricate Torque +1",
+		--sub="Genmei Shield",
+		ammo="Coiste Bodhar",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Bard's Charm +2",
-		waist="Anguinus Belt",
-		left_ear="Dominance Earring",
+		waist="Reiki Yotai",
+		left_ear="Telos Earring",
 		right_ear="Genmei Earring",
-		left_ring="Fortified Ring",
-		right_ring="Defending Ring",
+		left_ring="Shneddick Ring",
+		right_ring="Ilabrat Ring",
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.precast.JA['Nightingale'] = {
-		feet="Bihu Slippers +1",
+		feet="Bihu Slippers +3",
 	}
 
 	sets.precast.JA['Troubadour'] = {
 		body="Bihu Jstcorps. +3",
 	}
 	sets.precast.JA['Soul Voice'] = {
-		legs="Bihu Cannions +1",
+		legs="Bihu Cannions +2",
 	}
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
+	if state.OffenseMode.value == 'Normal' then
+		oldMain = player.equipment.main
+		oldSub = player.equipment.sub
+		
+		equip({
+			main="Carnwenhan",
+		})
+	end
+	
 	if state.OffenseMode.value == 'Extra Song' then
-		equip({range="Daurdabla"})
+		oldMain = player.equipment.main
+		oldSub = player.equipment.sub
+		
+		equip({
+			main="Carnwenhan", 
+			range="Daurdabla",
+		})
+	end
+
+	if S{"Horde Lullaby II"}:contains(spell.english) or S{"Magic Finale"}:contains(spell.english) then
+		oldMain = player.equipment.main
+		oldSub = player.equipment.sub
+		
+		equip({
+			main="Carnwenhan", 
+			sub="Daybreak",
+		})
 	end
 end
 
@@ -562,6 +672,22 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 
 	if buffactive['Mana Wall'] == 1 or spell.english == 'Mana Wall' then
 		equip(sets.manaWall)
+	end
+
+	if oldMain and oldMain ~= '' then
+		equip({
+			main=oldMain
+		})
+
+		oldMain = ''
+	end
+
+	if oldSub and oldSub ~= '' then
+		equip({
+			sub=oldSub
+		})
+
+		oldSub = ''
 	end
 end
 --

@@ -77,8 +77,8 @@ function init_gear_sets()
 		head="Mall. Chapeau +2",
 		body="Mallquis Saio +2",
 		hands="Mallquis Cuffs +2",
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		legs="Mallquis Trews +2",
+		feet="Mallquis Clogs +2",
 		neck={ name="Argute Stole +2", augments={'Path: A',}},
 		waist="Acuity Belt +1",
 		--waist="Orpheus's Sash",
@@ -162,7 +162,6 @@ function init_gear_sets()
 		main="Musa",
 		body="Pedagogy Gown +3",
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
-		waist="Embla Sash",
 	}
 	
 	sets.precastWS = {
@@ -293,16 +292,6 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Cure = sets.cureGear
-
-	sets.midcast["Sandstorm II"] = sets.buffGearDuration;
-	sets.midcast["Rainstorm II"] = sets.buffGearDuration;
-	sets.midcast["Windstorm II"] = sets.buffGearDuration;
-	sets.midcast["Firestorm II"] = sets.buffGearDuration;
-	sets.midcast["Hailstorm II"] = sets.buffGearDuration;
-	sets.midcast["Thunderstorm II"] = sets.buffGearDuration;
-	sets.midcast["Voidstorm II"] = sets.buffGearDuration;
-	sets.midcast["Aurourastorm II"] = sets.buffGearDuration;
-
 	sets.midcast.Regen = set_combine(sets.buffGearDuration, {
 		main="Musa",
 		head="Arbatel Bonnet +1",
@@ -314,20 +303,14 @@ function init_gear_sets()
 		back="Bookworm's Cape"
 	})
 
-	sets.midcast["Rainstorm II"] = sets.buffGearDuration
-
 	sets.midcast['Blink'] = sets.buffGear
 	sets.midcast['Stoneskin'] = sets.buffGear
 	sets.midcast['Aquaveil'] = set_combine(sets.buffGear, {hands="Regal Cuffs", head="Amalric Coif +1", waist="Emphatikos rope", feet="Amalric Nails +1"})
 	sets.midcast['Refresh'] = set_combine(sets.buffGear, {head="Amalric Coif +1"})
 	sets.midcast['Auspice'] = sets.buffGear
 	sets.midcast['Phalanx'] = set_combine(sets.buffGearDuration, sets.buffGear, {
-		head={ name="Merlinic Hood", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Fast Cast"+1','Phalanx +3',}},
-		legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23','DEX+2','Phalanx +3','Accuracy+8 Attack+8',}},
-		hands={ name="Merlinic Dastanas", augments={'INT+2','"Dbl.Atk."+4','Phalanx +3','Accuracy+10 Attack+10',}},
-		body={ name="Merlinic Jubbah", augments={'Crit.hit rate+1','Pet: AGI+1','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
-		feet={ name="Merlinic Crackows", augments={'"Cure" potency +3%','Pet: STR+7','Phalanx +4','Accuracy+8 Attack+8','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
-		waist="Embla Sash",
+		legs={ name="Merlinic Shalwar", augments={'Potency of "Cure" effect received+1%','Pet: "Mag.Atk.Bns."+28','Phalanx +2',}},
+		feet={ name="Merlinic Crackows", augments={'INT+1','Enmity+4','Phalanx +2','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
 	})
 	sets.midcast['Blaze Spikes'] = sets.buffGear
 	sets.midcast['Ice Spikes'] = sets.buffGear
@@ -561,7 +544,10 @@ function init_gear_sets()
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
-	if spell.skill == 'Enfeebling Magic' then
+	disable('ammo')
+
+
+    if spell.skill == 'Enfeebling Magic' then
 		equip({hands="Regal Cuffs"});
 	end
 

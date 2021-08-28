@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options("MeleeHybrid", "Melee");
+	state.OffenseMode:options("Melee", "MeleeHybrid", "Subtle");
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -27,25 +27,75 @@ function init_gear_sets()
 		right_ear="Malignance Earring",
 		left_ring="Prolix Ring",
 		right_ring="Kishar Ring",
-		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10',}},
+		back={ name="Ankou's Mantle", augments={'"Fast Cast"+10',}},
 	}
 
 	sets.lowTierNukeGear = {
-	}
-		
-	-- 437 = thunder 6
-	-- Occult: 90 + 50 (trait)
-	-- STP: 41 + 6 (strap) (Dream: +30)
-	sets.occultAcumenGear = {
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Sacro Breastplate",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Malignance Earring",
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ring="Archon Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 	
 	sets.nukeGear = {
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Sacro Breastplate",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Malignance Earring",
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ring="Archon Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 
+	sets.occultAcumenGear = {
+	}
+	
+
 	sets.enfeebleGearINT = {
+		ammo="Pemphredo Tathlum",
+		head="Hjarrandi Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Sanctity Necklace",
+		waist="Eschan Stone",
+		left_ear="Loquac. Earring",
+		right_ear="Malignance Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Kishar Ring",
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.enfeebleGearMND = {
+		ammo="Pemphredo Tathlum",
+		head="Hjarrandi Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Sanctity Necklace",
+		waist="Eschan Stone",
+		left_ear="Loquac. Earring",
+		right_ear="Malignance Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Kishar Ring",
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 	-- Precast sets to enhance JAs
@@ -59,29 +109,50 @@ function init_gear_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck="Lissome Necklace",
+		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Dedition Earring",
 		right_ear="Telos Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Moonlight Ring",
-		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10',}},
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},	
 	}
 
-	sets.meleeTPHybrid = {
+
+	sets.subtle = {
 		ammo="Coiste Bodhar",
+		--ammo="Staunch tathlum +1",
 		head="Sakpata's Helm",
-		body="Sakpata's Plate",
+		body="Dagon Breastplate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck="Lissome Necklace",
+		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear="Dedition Earring",
+		right_ear="Telos Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Niqmaddu Ring",
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
+
+	sets.meleeTPHybrid = {
+		ammo="Staunch Tathlum +1",
+		head="Sakpata's Helm",
+		body="Sacro Breastplate",
+		body="Dagon Breastplate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Dedition Earring",
 		right_ear="Telos Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Moonlight Ring",
-		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10',}},
+		left_ring="Chirich Ring +1",
+		right_ring="Niqmaddu Ring",
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.buffGear = {
@@ -92,17 +163,17 @@ function init_gear_sets()
 	
 	sets.precastWS = {
 		ammo="Knobkierrie",
-		head={ name="Valorous Mask", augments={'Pet: STR+2','Accuracy+25','Weapon skill damage +7%','Accuracy+4 Attack+4','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		body={ name="Odyss. Chestplate", augments={'Mag. Acc.+12 "Mag.Atk.Bns."+12','Weapon skill damage +3%','VIT+3','Mag. Acc.+4','"Mag.Atk.Bns."+14',}},
+		head="Sakpata's Helm",
+		body="Ignominy Cuirass +3",
 		hands="Sakpata's Gauntlets",
 		legs="Fallen's Flanchard +3",
 		feet="Sulev. Leggings +2",
-		neck="Fotia Gorget",
+		neck="Abyssal Bead Necklace +2",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear="Ishvara Earring",
-		left_ring="Regal Ring",
-		right_ring="Niqmaddu Ring",
+		right_ear="Thrud Earring",
+		right_ring="Regal Ring",
+		left_ring="Epaminondas's Ring",
 		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 
@@ -110,6 +181,19 @@ function init_gear_sets()
 	}
 
 	sets.magicPrecastWSGear = {
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Sacro Breastplate",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Malignance Earring",
+		right_ear="Ishvara Earring",
+		left_ring="Archon Ring",
+		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 	
 	sets.maxMP = {
@@ -141,6 +225,7 @@ function init_gear_sets()
 		ammo="Coiste Bodhar",
 		head="Sakpata's Helm",
 		body="Sakpata's Plate",
+		body="Dagon Breastplate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
@@ -150,6 +235,8 @@ function init_gear_sets()
 		right_ear="Telos Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Moonlight Ring",
+		left_ring="Chirich Ring +1",
+		right_ring="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10',}},
 	}
 	
@@ -161,7 +248,40 @@ function init_gear_sets()
 
 	sets.precast.WS = sets.precastWS;
 
-	sets.precast.WS['Shattersoul'] = sets.precastWSIntGear
+	sets.precast.WS['Herculean Slash'] = set_combine(sets.magicPrecastWSGear, {
+
+	})
+	sets.precast.WS['Freezebite'] = set_combine(sets.magicPrecastWSGear, {
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+
+	sets.precast.WS['Infernal Scythe'] = set_combine(sets.magicPrecastWSGear, {
+		head="Pixie Hairpin +1",
+	})
+	sets.precast.WS['Shadow of Death'] = set_combine(sets.magicPrecastWSGear, {
+		head="Pixie Hairpin +1",
+		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	})
+
+	sets.precast.WS['Torcleaver'] = set_combine(sets.precastWS, {
+		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	})
+
+	sets.precast.WS['Full Break'] = {
+		ammo="Knobkierrie",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+		waist="Eschan Stone",
+		left_ear="Telos Earring",
+		right_ear="Steelflash Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Regal Ring",
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
 	sets.precast.WS['Rock Crusher'] = set_combine(sets.magicPrecastWSGear, {
 		left_ear="Moonshade Earring"
 	})
@@ -249,6 +369,8 @@ end
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == "MeleeHybrid" then
 		equip(sets.meleeTPHybrid)
+	elseif state.OffenseMode.value == "Subtle" then
+		equip(sets.subtle)
 	elseif state.OffenseMode.value == "Melee" then
 		equip (sets.meleeTP) 
 	else

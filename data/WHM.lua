@@ -25,7 +25,7 @@ function init_gear_sets()
         head="Nahtirah Hat",
         body="Inyanga Jubbah +2",
         hands="Gendewitha Gages",
-        legs="Aya. Cosciales +2",
+        legs="Artsieq Hose",
         feet="Regal Pumps +1",
         neck="Orunmila's Torque",
         waist="Witful Belt",
@@ -43,15 +43,15 @@ function init_gear_sets()
 
     sets.refresh = {
         ammo="Staunch Tathlum +1",
-        head="Inyanga Tiara +2",
-        body="Ebers Bliaud +1",
+        head="Befouled Crown",
+        body="Ebers Bliaut +1",
         hands="Inyan. Dastanas +2",
         legs="Inyanga Shalwar +2",
         feet="Inyan. Crackows +2",
         neck="Loricate Torque +1",
         waist="Channeler's Stone",
-        left_ear="Telos Earring",
-        right_ear="Dedition Earring",
+        left_ear="Genmei Earring",
+        right_ear="Sanare Earring",
         left_ring="Stikini Ring +1",
         right_ring="Stikini Ring +1",
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -111,18 +111,18 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Afflatus Solace'] = {
-		body="Ebers Bliaud +1",
+		body="Ebers Bliaut +1",
     }
 	
 	sets.meleeTP = {
         ammo="Amar Cluster",
-        head="Aya. Zucchetto +2",
-        body="Ayanmo Corazza +2",
-        hands="Aya. Manopolas +2",
-        legs="Aya. Cosciales +2",
-        feet="Aya. Gambieras +2",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
         neck="Lissome Necklace",
-        waist="Grunfeld Rope",
+        waist="Goading Belt",
         left_ear="Telos Earring",
         right_ear="Dedition Earring",
         left_ring="Chirich Ring +1",
@@ -131,19 +131,19 @@ function init_gear_sets()
     }
 
 	sets.buffGear = {
-        ammo="Staunch Tathlum +1",
-        head="Befouled Crown",
-        body="Ebers Bliaud +1",
-        hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
-        legs={ name="Piety Pantaln. +1", augments={'Enhances "Afflatus Misery" effect',}},
-        feet="Theo. Duckbills +3",
-        neck="Melic Torque",
-        waist="Channeler's Stone",
-        left_ear="Telos Earring",
-        right_ear="Dedition Earring",
-        left_ring="Stikini Ring +1",
-        right_ring="Stikini Ring +1",
-        back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		ammo="Staunch Tathlum +1",
+		head="Befouled Crown",
+		body="Inyanga Jubbah +2",
+		hands="Inyan. Dastanas +2",
+		legs={ name="Piety Pantaln. +1", augments={'Enhances "Afflatus Misery" effect',}},
+		feet="Theo. Duckbills +3",
+		neck="Melic Torque",
+		waist="Olympus Sash",
+		left_ear="Augment. Earring",
+		right_ear="Andoaa Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back="Fi Follet Cape",
     }
 	
 	sets.buffGearDuration = {
@@ -156,11 +156,11 @@ function init_gear_sets()
 
 	sets.precastWS = {
 		ammo="Floestone",
-		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
-		hands="Aya. Manopolas +2",
-		legs="Aya. Cosciales +2",
-		feet="Hippomenes Socks",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Ishvara Earring",
@@ -209,14 +209,14 @@ function init_gear_sets()
 	sets.cureGear = {
         ammo="Staunch Tathlum +1",
         head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-        body="Ebers Bliaud +1",
+        body="Ebers Bliaut +1",
         hands="Theophany Mitts +3",
         legs="Ebers Pant. +1",
         feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
         neck="Loricate Torque +1",
         waist="Emphatikos Rope",
         left_ear="Mendi. Earring",
-        right_ear="Genmei Earring",
+        right_ear="Nourishing Earring +1",
         left_ring="Warden's Ring",
         right_ring="Defending Ring",
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -330,6 +330,10 @@ function init_gear_sets()
 	sets.midcast['Barpetrify'] = set_combine(sets.buffGearDuration, sets.buffGear)
 	sets.midcast['Barvirus'] = set_combine(sets.buffGearDuration, sets.buffGear)
 	sets.midcast['Baramnesia'] = set_combine(sets.buffGearDuration, sets.buffGear)
+
+	sets.midcast['Erase'] = {
+		neck="Cleric's Torque +2",
+	}
 
 	sets.midcast['Protect V'] = set_combine(sets.buffGear, sets.buffGearDuration, {ring1 = "Sheltered Ring"})
 	sets.midcast['Shell V'] = set_combine(sets.buffGear, sets.buffGearDuration, {ring1 = "Sheltered Ring"})
@@ -529,16 +533,16 @@ function init_gear_sets()
 	})
 
 	sets.PDT = {
-		ammo="Staunch Tathlum +1",
-		head="Bunzi's Hat",
-		body="Bunzi's Robe",
-		hands="Bunzi's Gloves",
-		legs="Bunzi's Pants",
-		feet="Bunzi's Sabots",
-		neck="Loricate Torque +1",
-		waist="Grunfeld Rope",
-		left_ear="Telos Earring",
-		right_ear="Genmei Earring",
+	    ammo="Staunch Tathlum +1",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Warder's Charm +1",
+		waist="Carrier's Sash",
+		left_ear="Hearty Earring",
+		right_ear="Sanare Earring",
 		left_ring="Shneddick Ring",
 		right_ring="Defending Ring",
 		back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},

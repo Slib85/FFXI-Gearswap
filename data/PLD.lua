@@ -8,9 +8,10 @@ function job_setup()
 
 end
 
-function user_unload()
-	send_command('unbind ^`')
-	send_command('unbind @`')
+function user_setup()
+	state.OffenseMode:options('Normal', 'TP', 'Absorb')
+	state.CastingMode:options('Normal', 'Resistant', 'Proc')
+	state.IdleMode:options('Normal', 'PDT')
 end
 
 function init_gear_sets()
@@ -31,7 +32,7 @@ function init_gear_sets()
 		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10',}}, --10
 	}
     
-	sets.defense.PDT = {
+	sets.PDT = {
 		ammo="Staunch Tathlum +1",
 		head="Sakpata's Helm",
 		body="Sakpata's Plate",
@@ -39,13 +40,16 @@ function init_gear_sets()
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
 		-- feet="Hippomenes Socks +1",
-		neck="Loricate Torque +1",
+		neck="Warder's Charm +1",
 		waist="Carrier's Sash",
 		left_ear="Sanare Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
 		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
+		
+		--neck="Loricate Torque +1",
+		--hands="Rev. Gauntlets +3",
 	}
 	
 	-- Total Counter: 39% (47% Monk Sub & 80% Counterstance)
@@ -82,6 +86,22 @@ function init_gear_sets()
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
 		-- back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Regen+5',}}, -- 5
+	}
+
+	sets.enfeebleGear = {
+		ammo="Pemphredo Tathlum",
+		head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+		body="Rev. Surcoat +3",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		neck="Henic Torque",
+		waist="Luminary Sash",
+		left_ear="Sanare Earring",
+		right_ear="Etiolation Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
 	}
 
 	sets.superTank = {
@@ -122,19 +142,19 @@ function init_gear_sets()
 	}
     
 	sets.precastWS = {
-		ammo="Coiste Bodhar",
-		head={ name="Valorous Mask", augments={'Pet: STR+2','Accuracy+25','Weapon skill damage +7%','Accuracy+4 Attack+4','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		body="Sakpata's Plate",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
+		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Fotia Gorget",
-		waist="Sailfi Belt +1",
+		waist="Fotia Belt",
 		left_ear="Ishvara Earring",
-		right_ear="Telos Earring",
+		right_ear="Thrud Earring",
 		left_ring="Regal Ring",
-		right_ring="Petrov Ring",
-		back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
+		right_ring="Epaminondas's Ring",
+		back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
     
     sets.enmityGear = {
@@ -150,48 +170,48 @@ function init_gear_sets()
         right_ear="Cryptic Earring",
         left_ring="Petrov Ring",
         right_ring="Apeile Ring",
-		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
     }
 	
 	sets.magicPrecastWSGear = {
-		ammo="Pemphredo Tathlum",
-		head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
-		body={ name="Found. Breastplate", augments={'Accuracy+13','Mag. Acc.+14','Attack+13','"Mag.Atk.Bns."+13',}},
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-		legs="Sulev. Cuisses +2",
-		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Sanctity Necklace",
 		waist="Orpheus's Sash",
-		left_ear="Ishvara Earring",
-		right_ear="Friomisi Earring",
-		left_ring="Shiva Ring +1",
-		right_ring="Shiva Ring +1",
+		left_ear="Thrud Earring",
+		right_ear="Ishvara Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Defending Ring",
 		back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
 	}
 	
 	sets.cureGear = {
 		ammo="Staunch Tathlum +1",
-		head="Sulevia's Mask +2",
-		body="Rev. Surcoat +3",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
 		hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
-		legs="Sulev. Cuisses +2",
+		legs="Sakpata's Cuisses",
 		feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
 		neck="Loricate Torque +1",
-		waist="Eschan Stone",
+		waist="Gishdubar sash",
 		left_ear="Nourish. Earring +1",
 		right_ear="Mendi. Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
-		back="Moonlight Cape",
+		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
 	}
 	
 	sets.nukeGearINT = {
 		ammo="Pemphredo Tathlum",
-		head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
+		head="Nyame Helm",
 		body="Sacro Breastplate",
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-		legs="Sulev. Cuisses +2",
-		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Sanctity Necklace",
 		waist="Orpheus's Sash",
 		left_ear="Ishvara Earring",
@@ -203,11 +223,11 @@ function init_gear_sets()
 
 	sets.nukeGearMND = {
 		ammo="Pemphredo Tathlum",
-		head={ name="Jumalik Helm", augments={'MND+9','"Mag.Atk.Bns."+13','Magic burst dmg.+9%',}},
+		head="Nyame Helm",
 		body="Sacro Breastplate",
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-		legs="Sulev. Cuisses +2",
-		feet={ name="Odyssean Greaves", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Potency of "Cure" effect received+1%','MND+3','"Mag.Atk.Bns."+15',}},
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Sanctity Necklace",
 		waist="Orpheus's Sash",
 		left_ear="Ishvara Earring",
@@ -234,7 +254,7 @@ function init_gear_sets()
 		ring2="Archon Ring"
 	});
 	sets.precast.WS['Aeolian Edge'] = sets.magicPrecastWSGear
-	--sets.precast.WS['Atonement'] = sets.enmityGear
+	sets.precast.WS['Atonement'] = sets.enmityGear
 							
 	sets.midcast['Flash'] = sets.enmityGear;
 	sets.midcast['Jettatura'] = sets.enmityGear;
@@ -264,12 +284,31 @@ function init_gear_sets()
 	sets.midcast['Auspice'] = sets.buffGear
 	sets.midcast['Phalanx'] = set_combine(sets.buffGear, {
 		head={ name="Odyssean Helm", augments={'AGI+5','Rng.Acc.+1 Rng.Atk.+1','Phalanx +4','Accuracy+16 Attack+16',}},
+		body={ name="Valorous Mail", augments={'Crit.hit rate+1','AGI+1','Phalanx +3','Accuracy+18 Attack+18','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
 		hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
 		legs="Sakpata's Cuisses",
 		feet={ name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
 		back={ name="Weard Mantle", augments={'VIT+1','DEX+2','Enmity+2','Phalanx +4',}},
     });
 
+	sets.midcast['Crusade'] = {
+		
+		ammo="Staunch Tathlum +1",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		-- feet="Hippomenes Socks +1",
+		neck="Warder's Charm +1",
+		waist="Carrier's Sash",
+		left_ear="Sanare Earring",
+		right_ear="Etiolation Earring",
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
+		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
+		
+	}
 	sets.midcast['Blaze Spikes'] = sets.buffGear
 	sets.midcast['Ice Spikes'] = sets.buffGear
 	
@@ -308,8 +347,6 @@ function init_gear_sets()
 	sets.midcast['Banish II'] = sets.nukeGearMND
 	sets.midcast['Banish III'] = sets.nukeGearMND
 	sets.midcast['Banishga'] = set_combine(sets.nukeGearMND, {
-		head={ name="Valorous Mask", augments={'Attack+20','CHR+10','"Treasure Hunter"+2','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		waist="Chaac Belt",
 	});
 	sets.midcast['Banishga II'] = sets.nukeGearMND
 	sets.midcast['Holy'] = sets.nukeGearMND
@@ -472,21 +509,19 @@ function init_gear_sets()
 			ring2 = "Sheltered Ring"	
 		}
 	)
-end
 
+	-- include('ALLitems.lua')
+
+end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == 'Absorb' then
         equip(sets.Absorb)
     elseif state.OffenseMode.value == 'TP' then
+		-- windower.add_to_chat(160, "Equipping TP")
         equip(sets.TP)
     else
-		equip(sets.defense.PDT)
+		equip(sets.PDT)
     end
-end
 
-function user_setup()
-	state.OffenseMode:options('Normal', 'TP', 'Absorb')
-	state.CastingMode:options('Normal', 'Resistant', 'Proc')
-	state.IdleMode:options('Normal', 'PDT')
 end

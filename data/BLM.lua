@@ -19,12 +19,12 @@ function init_gear_sets()
 		ammo = "Sapience Orb", -- 2%
     	head = { name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}}, -- 15%
 		neck = "Orunmila's Torque", -- 5%
-		ear1 = "Malignance Earring", -- 4%
-		ear2 = "Loquac. Earring", -- 2%
+		left_ear = "Malignance Earring", -- 4%
+		right_ear = "Loquac. Earring", -- 2%
 		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --13%
-		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+29','"Fast Cast"+7','CHR+9','"Mag.Atk.Bns."+5',}}, -- 7%
-    	ring1 = "Kishar Ring", -- 4%
-		ring2 = "Prolix Ring", -- 2%
+		hands= "Agwu's Gages", --6%
+    	left_ring = "Kishar Ring", -- 4%
+		right_ring = "Prolix Ring", -- 2%
 		waist = "Witful Belt", -- 3%
 		legs = "Artsieq Hose", -- 5%
 		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}}, -- 9%
@@ -40,13 +40,15 @@ function init_gear_sets()
 		legs="Spaekona's Tonban +3",
 	    feet="Spaekona's Sabots +3",
 		neck="Sorcerer's Stole +2",
-		waist="Orpheus's Sash",
-		--waist="acuity belt +1",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
 		right_ring="Mallquis Ring",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+	
+		waist="Orpheus's Sash",
+--		waist="Dorin Obi",
+		--waist="Acuity belt +1",
 	}
 		
 	-- 437 = thunder 6
@@ -79,8 +81,6 @@ function init_gear_sets()
 		ring1="Freke Ring",
 		ring2="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-		waist = "Orpheus's Sash", 
-		--waist = "Acuity Belt +1",
 		legs="Amalric Slops +1",
 		--feet={ name="Arch. Sabots +3", augments={'Reduces Ancient Magic II MP cost',}},
 		feet="Amalric Nails +1",
@@ -90,6 +90,10 @@ function init_gear_sets()
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
 		legs={ name="Arch. Tonban +3", augments={'Increases Elemental Magic debuff time and potency',}},
 		feet={ name="Arch. Sabots +3", augments={'Increases Aspir absorption amount',}},
+		-- legs="Agwu's slops",
+		waist="Orpheus's Sash", 
+--		waist="Dorin Obi",
+		--waist="Acuity Belt +1",
 	}
 
 	sets.enfeebleGearINT = {
@@ -132,19 +136,18 @@ function init_gear_sets()
 	
 	sets.meleeTP = {
 		ammo="Amar Cluster",
-		head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic II damage',}},
-		body="Jhakri Robe +2",
-		hands="Jhakri Cuffs +2",
-		legs="Jhakri Slops +2",
-		--legs={ name="Merlinic Shalwar", augments={'Pet: VIT+6','Accuracy+19','Damage taken-4%','Accuracy+16 Attack+16',}},
-		feet={ name="Arch. Sabots +3", augments={'Reduces Ancient Magic II MP cost',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Lissome Necklace",
 		waist="Goading Belt",
 		left_ear="Telos Earring",
 		right_ear="Dedition Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Chirich Ring +1",
-		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
+		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.buffGear = {
@@ -272,17 +275,18 @@ function init_gear_sets()
 
 	sets.PDT = {
 	    ammo="Staunch Tathlum +1",
-		head={ name="Merlinic Hood", augments={'Damage taken-3%','CHR+1',}},
-	    body="Mallquis Saio +2",
-		hands="Volte Bracers",
-		legs={ name="Merlinic Shalwar", augments={'Pet: VIT+6','Accuracy+19','Damage taken-4%','Accuracy+16 Attack+16',}},
-	    feet="Hippomenes Socks +1",
-	    neck="Loricate Torque +1",
-	    waist="Carrier's Sash",
-	    left_ear="Lugalbanda Earring",
-	    right_ear="Genmei Earring",
-	    left_ring="Shneddick Ring",
-	    right_ring="Defending Ring",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		--feet="Hippomenes socks +1",
+		neck="Warder's Charm +1",
+		waist="Carrier's Sash",
+		left_ear="Lugalbanda Earring",
+		right_ear="Sanare Earring",
+		left_ring="Shneddick Ring",
+		right_ring="Defending Ring",
 		back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},
 	}
 	
@@ -294,6 +298,7 @@ function init_gear_sets()
 	sets.magic_burst = {
 		head="Ea Hat +1",
 		legs="Ea Slops +1",
+		--body="Amalric Doublet +1",
 		hands="Amalric Gages +1",
 		ring2="Mujin Band"
 	}
@@ -329,6 +334,24 @@ function init_gear_sets()
 		head="Pixie Hairpin +1",
 		ring2="Archon Ring"
 	})
+
+	sets.precast.WS['Gate of Tartarus'] = {
+		ammo="Floestone",
+		head="Jhakri Coronal +2",
+		body="Jhakri Robe +2",
+		body={ name="Merlinic Jubbah", augments={'Pet: "Mag.Atk.Bns."+25','INT+13','Weapon skill damage +5%','Accuracy+5 Attack+5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+		hands="Jhakri Cuffs +2",
+		legs="Jhakri Slops +2",
+		feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
+		neck={ name="Src. Stole +2", augments={'Path: A',}},
+		waist={ name="Acuity Belt +1", augments={'Path: A',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		right_ear="Ishvara Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Rufescent Ring",
+		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%',}},
+	}
+
 	sets.precast.WS['Myrkr'] = set_combine(sets.maxMP, {
 		right_ear="Moonshade Earring"
 	})
@@ -387,13 +410,30 @@ function init_gear_sets()
 		ring2="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 		--waist = "Orpheus's Sash", 
-		waist = "Acuity Belt +1",
+		waist="Acuity Belt +1",
 		legs="Spaekona's Tonban +3",
 	    feet="Spaekona's Sabots +3",
 		neck="Sorcerer's Stole +2",
 	}
+	
+	sets.precast.FC['Meteor'] = {
+		ammo = "Sapience Orb", -- 2%
+    	head = { name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}}, -- 15%
+		neck = "Orunmila's Torque", -- 5%
+		ear1 = "Malignance Earring", -- 4%
+		ear2 = "Loquac. Earring", -- 2%
+		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --13%
+		hands= "Agwu's Gages", --6%
+    	ring1 = "Kishar Ring", -- 4%
+		ring2 = "Prolix Ring", -- 2%
+		--waist = "Witful Belt", -- 3%
+		legs = "Artsieq Hose", -- 5%
+		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}}, -- 9%
+		back={ name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10%
+	}
 
 	include('BLMspells.lua')
+	include('ALLitems.lua')
 
 	-- Override spells below...
 	sets.midcast['Poisonga'] = set_combine(sets.enfeebleGearINT, {

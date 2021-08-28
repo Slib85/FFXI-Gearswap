@@ -29,8 +29,8 @@ function init_gear_sets()
 	}
 
 	sets.lowTierNukeGear = {
-		main="Daybreak",
-		sub="Culminus",
+		--main="Daybreak",
+		--sub="Culminus",
 		ammo="Pemphredo Tathlum",
 		head="Mallquis Chapeau +2",
 		body="Spaekona's Coat +3",
@@ -65,8 +65,8 @@ function init_gear_sets()
 	}
 	
 	sets.nukeGear = {
-		main="Daybreak",
-		sub="Ammurapi Shield",
+		--main="Daybreak",
+		--sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
 		neck="Sorcerer's Stole +2",
 		ear1="Malignance Earring",
@@ -80,12 +80,12 @@ function init_gear_sets()
 		body="Spaekona's Coat +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
 		feet="Arch. sabots +3",
-		legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+28','"Occult Acumen"+5','Accuracy+7 Attack+7','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+		legs="Arch. Tonban +3",
 	}
 
 	sets.enfeebleGearINT = {
-		main="Daybreak",
-		sub="Ammurapi Shield",
+		--main="Daybreak",
+		--sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
 		head="Mall. Chapeau +2",
 		body="Spaekona's Coat +3",
@@ -102,8 +102,8 @@ function init_gear_sets()
 	}
 
 	sets.enfeebleGearMND = {
-		main="Daybreak",
-		sub="Ammurapi Shield",
+		--main="Daybreak",
+		--sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
 		head="Mall. Chapeau +2",
 		body="Spaekona's Coat +3",
@@ -256,15 +256,15 @@ function init_gear_sets()
 	}
 
 	sets.PDT = {
-		main="Malignance Pole",
-		sub="Kaja Grip",
+		--main="Malignance Pole",
+		--sub="Kaja Grip",
 		ammo="Staunch Tathlum +1",
-		head={ name="Merlinic Hood", augments={'Pet: "Dbl.Atk."+1 Pet: Crit.hit rate +1','Attack+5','Damage taken-3%','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
-		body="Mallquis Saio +2",
-		hands="Regal Cuffs",
-		legs={ name="Merlinic Shalwar", augments={'Pet: "Store TP"+4','Pet: Accuracy+3 Pet: Rng. Acc.+3','Damage taken-5%','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
-		feet="Hippomenes Socks +1",
-		neck="Loricate Torque +1",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Warder's Charm",
 		waist="Carrier's Sash",
 		left_ear="Lugalbanda Earring",
 		right_ear="Etiolation Earring",
@@ -373,7 +373,25 @@ function init_gear_sets()
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
 	}
 
+	sets.precast.FC['Meteor'] = {
+		ammo="Sapience Orb",
+		head={ name="Merlinic Hood", augments={'"Fast Cast"+5',}},
+		body={ name="Merlinic Jubbah", augments={'Mag. Acc.+25','"Fast Cast"+5','MND+3','"Mag.Atk.Bns."+1',}},
+    	hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+3','"Fast Cast"+5',}},
+		legs={ name="Merlinic Shalwar", augments={'"Fast Cast"+5',}},
+		feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+6','CHR+3',}},
+		neck="Orunmila's Torque",
+		left_ear="Etiolation Earring",
+		left_ring="Kishar Ring",
+        back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	}
+
+
 	include('BLMspells.lua')
+
+	sets.midcast['Meteor'] = set_combine(sets.nukeGear, {
+		body="Arch. Coat +3",
+	})
 
 	-- Override spells below...
 	sets.midcast['Poisonga'] = set_combine(sets.enfeebleGearINT, {
@@ -444,9 +462,12 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		equip(set_combine(sets.buffGearDuration, sets.buffGear, {
 			-- main={ name="Gada", augments={'AGI+9','"Mag.Atk.Bns."+24','Phalanx +3','DMG:+8',}},
 			-- sub="Ammurapi Shield",
+			head={ name="Merlinic Hood", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Fast Cast"+1','Phalanx +3',}},
+			legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23','DEX+2','Phalanx +3','Accuracy+8 Attack+8',}},
+			hands={ name="Merlinic Dastanas", augments={'INT+2','"Dbl.Atk."+4','Phalanx +3','Accuracy+10 Attack+10',}},
 			body={ name="Merlinic Jubbah", augments={'Crit.hit rate+1','Pet: AGI+1','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
-			legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 			feet={ name="Merlinic Crackows", augments={'"Cure" potency +3%','Pet: STR+7','Phalanx +4','Accuracy+8 Attack+8','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
+			waist="Embla Sash",
 		}))
 	end
 end
