@@ -371,7 +371,21 @@ sets.midcast['Stoneja'] = sets.nukeGear
 sets.midcast['Stonera'] = sets.lowTierNukeGear
 sets.midcast['Stonera II'] = sets.nukeGear
 sets.midcast['Stonera III'] = sets.nukeGear
-sets.midcast['Stun'] = sets.enfeebleGear
+sets.midcast['Stun'] = set_combine(sets.enfeebleGear, {
+    ammo="Regal Gem",
+    head="Ea Hat +1",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
+    neck={ name="Dls. Torque +2", augments={'Path: A',}},
+    waist="Luminary Sash",
+    left_ear="Snotra Earring",
+    right_ear="Malignance Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+})
 sets.midcast['Thundaga'] = sets.lowTierNukeGear
 sets.midcast['Thundaga II'] = sets.nukeGear
 sets.midcast['Thundaga III'] = sets.nukeGear

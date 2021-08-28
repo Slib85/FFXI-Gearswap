@@ -93,6 +93,7 @@
 	sets.midcast['Shellra'] = set_combine(set_combine(sets.buffGear, sets.buffGearDuration), {ring1 = "Sheltered Ring"})
 
 	sets.midcast['Haste'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Flurry'] = set_combine(sets.buffGear, sets.buffGearDuration)
 
 	sets.midcast['Comet'] = set_combine(sets.nukeGear, {
 		head="Pixie Hairpin +1",
@@ -102,8 +103,10 @@
 	sets.midcast['Death'] = set_combine(sets.nukeGear, {
 		head="Pixie Hairpin +1",
 		body="Amalric Doublet +1",
+		legs="Amalric Slops +1",
 		feet="Amalric Nails +1",
 		ring2="Archon Ring",
+		waist="Orpheus's Sash",
 	})
 
 	sets.midcast['Meteor'] = set_combine(sets.nukeGear, {
