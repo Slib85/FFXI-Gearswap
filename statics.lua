@@ -92,7 +92,7 @@ for i,v in pairs(res.weapon_skills) do
     make_entry(v,i)
 end
 
-for i,v in pairs(res.monster_abilities) do
+for i,v in pairs(res.monster_skills) do
     v.type = 'MonsterSkill'
     make_entry(v,i)
 end
@@ -198,7 +198,7 @@ slot_map.back = 15
 
 
 
-gearswap_disabled = true
+gearswap_disabled = false
 seen_0x063_type9 = false
 delay_0x063_v9 = false
 not_sent_out_equip = {}

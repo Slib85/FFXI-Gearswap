@@ -114,6 +114,11 @@
 		waist="Acuity Belt +1"
 	})
 
+	sets.midcast['Banish'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Banish II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Banishga'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Banishga II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+
 	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
 	sets.midcast['Stone II'] = sets.lowTierNukeGear
 	sets.midcast['Stone III'] = sets.nukeGear

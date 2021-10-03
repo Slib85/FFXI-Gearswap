@@ -58,19 +58,19 @@ function init_gear_sets()
 	}
 
 	sets.meleeTPHybrid = {
-        ammo="Coiste Bodhar",
-        head="Sakpata's Helm",
-        body="Sakpata's Plate",
-        hands="Sakpata's Gauntlets",
-        legs="Sakpata's Cuisses",
-        feet="Sakpata's Leggings",
-        neck="War. Beads +2",
+		ammo="Staunch Tathlum +1",
+		head={ name="Sakpata's Helm", augments={'Path: A',}},
+		body="Dagon Breast.",
+		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+		legs="Sakpata's Cuisses",
+		feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+		neck={ name="Loricate Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        left_ear="Telos Earring",
-        right_ear="Dedition Earring",
-        left_ring="Chirich Ring +1",
-        right_ring="Chirich Ring +1",
-        back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+		left_ear="Telos Earring",
+		right_ear="Genmei Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.precastWS = {

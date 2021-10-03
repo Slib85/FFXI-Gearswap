@@ -54,7 +54,7 @@ sets.midcast['Barvirus'] = set_combine(sets.buffGearDuration, sets.buffGear)
 sets.midcast['Barwater'] = set_combine(sets.buffGearDuration, sets.buffGear)
 sets.midcast['Barwatera'] = set_combine(sets.buffGearDuration, sets.buffGear)
 sets.midcast['Blindna'] = sets.noInterruptGear
-sets.midcast['Blink'] = set_combine(sets.buffGearDuration, sets.buffGear)
+sets.midcast['Blink'] = set_combine(sets.buffGear, sets.buffGearDuration)
 sets.midcast['Boost-AGI'] = set_combine(sets.buffGearDuration, sets.buffGear)
 sets.midcast['Boost-CHR'] = set_combine(sets.buffGearDuration, sets.buffGear)
 sets.midcast['Boost-DEX'] = set_combine(sets.buffGearDuration, sets.buffGear)
@@ -227,16 +227,16 @@ sets.midcast['Windstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
 sets.precast.FC['Dispelga'] = set_combine(sets.precastGear, {body="Daybreak"})
 sets.precast.FC['Impact'] = set_combine(sets.precastGear, {head="", body="Twilight Cloak"})
 
-sets.midcast['Absorb-ACC'] = sets.enfeebleGear
-sets.midcast['Absorb-AGI'] = sets.enfeebleGear
-sets.midcast['Absorb-Attri'] = sets.enfeebleGear
-sets.midcast['Absorb-CHR'] = sets.enfeebleGear
-sets.midcast['Absorb-DEX'] = sets.enfeebleGear
-sets.midcast['Absorb-INT'] = sets.enfeebleGear
-sets.midcast['Absorb-MND'] = sets.enfeebleGear
-sets.midcast['Absorb-STR'] = sets.enfeebleGear
-sets.midcast['Absorb-TP'] = sets.enfeebleGear
-sets.midcast['Absorb-VIT'] = sets.enfeebleGear
+sets.midcast['Absorb-ACC'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-AGI'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-Attri'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-CHR'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-DEX'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-INT'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-MND'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-STR'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-TP'] = sets.magicAccNoDurationGear
+sets.midcast['Absorb-VIT'] = sets.magicAccNoDurationGear
 sets.midcast['Aera'] = sets.lowTierNukeGear
 sets.midcast['Aera II'] = sets.nukeGear
 sets.midcast['Aera III'] = sets.nukeGear
@@ -371,21 +371,7 @@ sets.midcast['Stoneja'] = sets.nukeGear
 sets.midcast['Stonera'] = sets.lowTierNukeGear
 sets.midcast['Stonera II'] = sets.nukeGear
 sets.midcast['Stonera III'] = sets.nukeGear
-sets.midcast['Stun'] = set_combine(sets.enfeebleGear, {
-    ammo="Regal Gem",
-    head="Ea Hat +1",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
-    neck={ name="Dls. Torque +2", augments={'Path: A',}},
-    waist="Luminary Sash",
-    left_ear="Snotra Earring",
-    right_ear="Malignance Earring",
-    left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
-    back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-})
+sets.midcast['Stun'] = sets.magicAccNoDurationGear
 sets.midcast['Thundaga'] = sets.lowTierNukeGear
 sets.midcast['Thundaga II'] = sets.nukeGear
 sets.midcast['Thundaga III'] = sets.nukeGear

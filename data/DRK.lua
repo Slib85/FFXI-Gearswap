@@ -139,8 +139,8 @@ function init_gear_sets()
 	sets.meleeTPHybrid = {
 		ammo="Staunch Tathlum +1",
 		head="Sakpata's Helm",
-		body="Sacro Breastplate",
-		body="Dagon Breastplate",
+		body="Sakpata's Plate",
+		--body="Dagon Breastplate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
@@ -151,7 +151,8 @@ function init_gear_sets()
 		left_ring="Moonlight Ring",
 		right_ring="Moonlight Ring",
 		left_ring="Chirich Ring +1",
-		right_ring="Niqmaddu Ring",
+		right_ring="Chirich Ring +1",
+		--right_ring="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 

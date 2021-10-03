@@ -74,8 +74,8 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Culminus",
 		ammo="Ghastly Tathlum +1",
-		head="Mall. Chapeau +2",
-		body="Mallquis Saio +2",
+		head="Agwu's Cap",
+		body="Agwu's Robe",
 		hands="Mallquis Cuffs +2",
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
@@ -92,8 +92,8 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
-		head="Mall. Chapeau +2",
-		body="Jhakri Robe +2",
+		head="Agwu's Cap",
+		body="Agwu's Robe",
 		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
@@ -405,7 +405,7 @@ function init_gear_sets()
 	sets.midcast['Meteor'] = sets.nukeGear
 	sets.midcast['Drain'] = sets.enfeebleGear
 
-	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Stone'] = sets.lowTierNukeGear
 	sets.midcast['Stone II'] = sets.lowTierNukeGear
 	sets.midcast['Stone III'] = sets.nukeGear
 	sets.midcast['Stone IV'] = sets.nukeGear
@@ -416,7 +416,7 @@ function init_gear_sets()
 	sets.midcast['Stonega III'] = sets.nukeGear
 	sets.midcast['Stoneja'] = sets.nukeGear
 	
-	sets.midcast['Water'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Water'] = sets.lowTierNukeGear
 	sets.midcast['Water II'] = sets.lowTierNukeGear
 	sets.midcast['Water III'] = sets.nukeGear
 	sets.midcast['Water IV'] = sets.nukeGear
@@ -427,7 +427,7 @@ function init_gear_sets()
 	sets.midcast['Waterga III'] = sets.nukeGear
 	sets.midcast['Waterja'] = sets.nukeGear
 	
-	sets.midcast['Aero'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Aero'] = sets.lowTierNukeGear
 	sets.midcast['Aero II'] = sets.lowTierNukeGear
 	sets.midcast['Aero III'] = sets.nukeGear
 	sets.midcast['Aero IV'] = sets.nukeGear
@@ -438,7 +438,7 @@ function init_gear_sets()
 	sets.midcast['Aeroga III'] = sets.nukeGear
 	sets.midcast['Aeroja'] = sets.nukeGear
 	
-	sets.midcast['Fire'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Fire'] = sets.lowTierNukeGear
 	sets.midcast['Fire II'] = sets.lowTierNukeGear
 	sets.midcast['Fire III'] = sets.nukeGear
 	sets.midcast['Fire IV'] = sets.nukeGear
@@ -449,7 +449,7 @@ function init_gear_sets()
 	sets.midcast['Firaga III'] = sets.nukeGear
 	sets.midcast['Firaja'] = sets.nukeGear
 	
-	sets.midcast['Blizzard'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Blizzard'] = sets.lowTierNukeGear
 	sets.midcast['Blizzard II'] = sets.lowTierNukeGear
 	sets.midcast['Blizzard III'] = sets.nukeGear
 	sets.midcast['Blizzard IV'] = sets.nukeGear
@@ -460,7 +460,7 @@ function init_gear_sets()
 	sets.midcast['Blizzaga III'] = sets.nukeGear
 	sets.midcast['Blizzaja'] = sets.nukeGear
 	
-	sets.midcast['Thunder'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Thunder'] = sets.lowTierNukeGear
 	sets.midcast['Thunder II'] = sets.lowTierNukeGear
 	sets.midcast['Thunder III'] = sets.nukeGear
 	sets.midcast['Thunder IV'] = sets.nukeGear

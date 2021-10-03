@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('Nuke', 'Melee', 'MeleeHybrid', 'MeleeEn', 'Refresh');
+	state.OffenseMode:options('Nuke', 'Melee', 'MeleeHybrid', 'MeleeEn', 'MeleeSub', 'Refresh');
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -32,32 +32,14 @@ function init_gear_sets()
 	}
 	
 	sets.nukeGear = {
-		ammo="Pemphredo Tathlum",
-		head="Ea Hat +1",
-		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		legs="Ea Slops +1",
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		neck="Mizu. Kubikazari",
-		waist="Orpheus's Sash",
-		left_ear="Regal Earring",
-		right_ear="Malignance Earring",
-		left_ring="Freke Ring",
-		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-		right_ring="Mujin Band",
-		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
-
-
-		
-		ammo="Pemphredo Tathlum",
-		head="Ea Hat +1",
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Bunzi's Hat",
 		body="Bunzi's Robe",
 		hands="Bunzi's Gloves",
-		legs="Ea Slops +1",
+		legs="Bunzi's Pants",
 		feet="Bunzi's Sabots",
-		neck={ name="Dls. Torque +2", augments={'Path: A',}},
-		waist={ name="Acuity Belt +1", augments={'Path: A',}},
+		neck="Mizu. Kubikazari",
+		waist="Orpheus's Sash",
 		left_ear="Regal Earring",
 		right_ear="Malignance Earring",
 		left_ring="Freke Ring",
@@ -66,34 +48,34 @@ function init_gear_sets()
 	}
 	
 	sets.lowTierNukeGear = {
-		ammo="Pemphredo Tathlum",
-		head="Ea Hat +1",
-		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Bunzi's Hat",
+		body="Bunzi's Robe",
+		hands="Bunzi's Gloves",
+		legs="Bunzi's Pants",
+		feet="Bunzi's Sabots",
 		neck="Mizu. Kubikazari",
 		waist="Orpheus's Sash",
 		left_ear="Regal Earring",
 		right_ear="Malignance Earring",
 		left_ring="Freke Ring",
 		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+	}
 
-
-		
-		ammo="Pemphredo Tathlum",
-		head="Ea Hat +1",
+	sets.magicAccNoDurationGear = {
+		ammo="Regal Gem",
+		head="Bunzi's Hat",
 		body="Bunzi's Robe",
-		hands="Bunzi's Gloves",
-		legs="Ea Slops +1",
+		hands="Regal Cuffs",
+		legs="Bunzi's Pants",
 		feet="Bunzi's Sabots",
 		neck={ name="Dls. Torque +2", augments={'Path: A',}},
 		waist={ name="Acuity Belt +1", augments={'Path: A',}},
 		left_ear="Regal Earring",
-		right_ear="Malignance Earring",
-		left_ring="Freke Ring",
-		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ear="Snotra Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -105,7 +87,7 @@ function init_gear_sets()
 		legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
 		feet="Vitiation Boots +3",
 		neck="Dls. Torque +2",
-	    waist="Luminary Sash",
+	    waist="Obstinate Sash",
 	    left_ear="Regal Earring",
 		right_ear="Snotra Earring",
 	    left_ring="Kishar Ring",
@@ -119,7 +101,7 @@ function init_gear_sets()
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
-		feet="Bunzi's Sabots",
+		feet="Malignance Boots",
 		neck="Lissome Necklace",
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
@@ -130,13 +112,29 @@ function init_gear_sets()
 		--back="Mecistopins Mantle",
 	}
 
+	sets.meleeSub = {
+		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+		head="Bunzi's Hat",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Lissome Necklace",
+		waist="Sarissapho. Belt",
+		left_ear="Telos Earring",
+		right_ear="Sherida Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
+
 	sets.meleeTPHybrid = {
 		ammo="Staunch Tathlum +1",
 		head="Bunzi's Hat",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
-		feet="Bunzi's Sabots",
+		feet="Malignance Boots",
 		neck="Loricate Torque +1",
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
@@ -152,7 +150,7 @@ function init_gear_sets()
 		body="Malignance Tabard",
 		legs="Malignance Tights",
 		hands="Aya. Manopolas +2",
-		feet="Bunzi's Sabots",
+		feet="Malignance Boots",
 		neck={ name="Dls. Torque +2", augments={'Path: A',}},
 		waist="Orpheus's Sash",
 		left_ear="Telos Earring",
@@ -185,6 +183,7 @@ function init_gear_sets()
 		legs="Telchine Braconi",
 		feet="Lethargy Houseaux +1",
 		back="Sucellos's Cape",
+		waist="Embla sash",
 	}
 
 	sets.cureGear = {
@@ -262,11 +261,11 @@ function init_gear_sets()
 
 	sets.precastWSMagic = {
 		ammo="Pemphredo Tathlum",
-		head="Jhakri Coronal +2",
-		body={ name="Merlinic Jubbah", augments={'Pet: "Mag.Atk.Bns."+25','INT+13','Weapon skill damage +5%','Accuracy+5 Attack+5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+		head="Nyame Helm",
+		body="Amalric Doublet +1",
 		hands="Jhakri Cuffs +2",
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
 		neck="Sanctity Necklace",
 		waist="Orpheus's Sash",
 		left_ear="Regal Earring",
@@ -384,7 +383,9 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 	elseif state.OffenseMode.value == "MeleeEn" then
 		equip(sets.meleeTPEn)
 	elseif state.OffenseMode.value == "Refresh" then
-		equip (sets.refresh) 
+		equip(sets.refresh) 
+	elseif state.OffenseMode.value == "MeleeSub" then
+		equip(sets.meleeSub)
 	else
 		equip(sets.PDT)
 	end

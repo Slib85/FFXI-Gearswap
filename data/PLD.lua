@@ -256,7 +256,8 @@ function init_gear_sets()
 	sets.precast.WS['Aeolian Edge'] = sets.magicPrecastWSGear
 	sets.precast.WS['Atonement'] = sets.enmityGear
 							
-	sets.midcast['Flash'] = sets.enmityGear;
+	sets.midcast['Flash'] = sets.enmityGear;	
+	sets.midcast['Reprisal'] = sets.enmityGear;
 	sets.midcast['Jettatura'] = sets.enmityGear;
 	sets.midcast['Geist Wall'] = set_combine(sets.enmityGear, {
 		head={ name="Valorous Mask", augments={'Attack+20','CHR+10','"Treasure Hunter"+2','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
