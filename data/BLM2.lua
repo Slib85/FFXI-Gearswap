@@ -32,18 +32,18 @@ function init_gear_sets()
 		--main="Daybreak",
 		--sub="Culminus",
 		ammo="Pemphredo Tathlum",
-		head="Mallquis Chapeau +2",
+		head="Agwu's Cap",
 		body="Spaekona's Coat +3",
-		hands="Mallquis Cuffs +2",
-		legs="Mallquis Trews +2",
-	    feet="Mallquis Clogs +2",
+		hands="Agwu's Gages",
+		legs="Agwu's Slops",
+		feet="Agwu's Pigaches",
 		neck="Sorcerer's Stole +2",
-		--waist="Orpheus's Sash",
-		waist="Acuity Belt +1",
+		waist="Orpheus's Sash",
+		--waist="Acuity Belt +1",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
-		right_ring="Mallquis Ring",
+		right_ring="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 		
@@ -74,8 +74,8 @@ function init_gear_sets()
 		ring1="Freke Ring",
 		ring2="Metamorph ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-		waist = "Acuity Belt +1",
-		--waist="Orpheus's Sash",
+		waist="Orpheus's Sash",
+		--waist = "Acuity Belt +1",
 		head="Arch. Petasos +3",
 		body="Spaekona's Coat +3",
 		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
@@ -149,25 +149,25 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
 		right_ear="Andoaa Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back="Perimede Cape",	
 	}
 	
 	sets.precastWS = {
 		ammo="Amar Cluster",
-		head="Jhakri Coronal +2",
-		body="Jhakri Robe +2",
-		hands="Jhakri Cuffs +2",
-		legs="Jhakri Slops +2",
-		feet="Jhakri Pigaches +2",
-		neck="Sanctity Necklace",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Fotia Gorget",
 		waist="Fotia Belt",
-		left_ear="Steelflash Earring",
+		left_ear="Ishvara Earring",
 		right_ear="Telos Earring",
-		left_ring="Rajas Ring",
-		right_ring="Petrov Ring",
-		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Haste+10','Phys. dmg. taken-10%',}},
+		left_ring="Epaminondas's ring",
+		right_ring="Metamorph Ring +1",
+		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.precastWSIntGear = {
@@ -368,8 +368,8 @@ function init_gear_sets()
 		waist="Oneiros Rope", --2 STP + 20 occult
 		ear1="Telos Earring", --5 STP
 		ear2="Dedition Earring", --8 STP
-		ring1="Chirich Ring +1", --5 STP
-		ring2="Chirich Ring +1", -- 6 STP
+		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"}, -- 6 STP
+		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"}, -- 6 STP
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
 	}
 
@@ -395,7 +395,7 @@ function init_gear_sets()
 
 	-- Override spells below...
 	sets.midcast['Poisonga'] = set_combine(sets.enfeebleGearINT, {
-		hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+		legs={ name="Merlinic Shalwar", augments={'MND+2','STR+8','"Treasure Hunter"+2',}},
 		waist="Chaac belt",
 	})
 end
@@ -439,7 +439,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 
 	if S{"Breakga"}:contains(spell.english) or S{"Diaga"}:contains(spell.english) then
 		equip({
-			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+			legs={ name="Merlinic Shalwar", augments={'MND+2','STR+8','"Treasure Hunter"+2',}},
 			waist="Chaac belt",
 		})
 	end

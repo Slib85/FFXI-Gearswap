@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options("Melee", "Subtle");
+	state.OffenseMode:options("Melee", "Tank");
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -45,7 +45,6 @@ function init_gear_sets()
         right_ring="Apeile Ring",
 		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
 	}
-
 	sets.meleeTP = {
         ammo="Coiste Bodhar",
         head="Sakpata's Helm",
@@ -60,22 +59,6 @@ function init_gear_sets()
 		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
 		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-	
-	sets.subtle = {
-		ammo="Coiste Bodhar",
-		head="Sakpata's Helm",
-		body="Dagon Breastplate",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
-		neck="War. Beads +2",
-		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Telos Earring",
-		right_ear="Dedition Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Niqmaddu Ring",
-		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.tank = {
@@ -97,15 +80,14 @@ function init_gear_sets()
 	sets.precastWS = {
 		ammo="Knobkierrie",
         head="Agoge Mask +3",
-        body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+        body="Pummeler's Lorica +2",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
         neck="War. Beads +2",
-		waist="Sailfi Belt +1",
-        left_ear="Schere Earring",
-		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear="Thrud Earring",
+        waist="Fotia Belt",
+        left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+        right_ear="Thrud Earring",
         left_ring="Epaminondas's Ring",
         right_ring="Regal Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
@@ -163,7 +145,7 @@ function init_gear_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck="Combatant's torque",
+		neck="Lissome Necklace",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Dedition Earring",
 		right_ear="Telos Earring",
@@ -181,7 +163,7 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
 	})
 	sets.precast.WS["Cloudsplitter"] = set_combine(sets.precastWS, {
-		ammo="Pemphredo Tathlum",
+		ammo="Knobkierrie",
 		head={ name="Nyame Helm", augments={'Path: B',}},
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
@@ -191,8 +173,8 @@ function init_gear_sets()
 		waist="Orpheus's Sash",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 		right_ear="Friomisi Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Metamorph Ring +1",
+		left_ring="Epaminondas's Ring",
+		right_ring="Niqmaddu Ring",
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},	
 	})
 	sets.precast.WS["Upheaval"] = set_combine(sets.precastWS, {
@@ -234,19 +216,13 @@ function init_gear_sets()
 	
 end
 
-function job_midcast(spell, action, spellMap, eventArgs)
-	if buffactive['Ancient Circle'] == 1 and S{"Savage Blade"}:contains(spell.english) then
-		equip({body="Founder's Breastplate"})
-	end
-end
-
 function job_post_midcast(spell, action, spellMap, eventArgs)
 
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
-	if state.OffenseMode.value == "Subtle" then
-		equip(sets.subtle)
+	if state.OffenseMode.value == "Tank" then
+		equip(sets.tank)
 	elseif state.OffenseMode.value == "Melee" then
 		equip (sets.meleeTP) 
 	else

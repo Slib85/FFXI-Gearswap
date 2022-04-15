@@ -73,20 +73,17 @@ function init_gear_sets()
 	}
 
 	sets.songGear = {
-        --main="Carnwenhan",
-        --sub="Ammurapi Shield",
         head="Fili Calot +1",
         body="Fili Hongreline +1",
         hands="Fili Manchettes +1",
-        --legs="Fili Rhingrave +1",
         legs="Inyanga Shalwar +2",
 		feet="Brioso Slippers +2",
         neck="Mnbw. Whistle +1",
         waist="Porous Rope",
         left_ear="Dominance Earring",
         right_ear="Genmei Earring",
-        left_ring="Gelatinous Ring",
-        right_ring="Defending Ring",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
         back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
     }
 		
@@ -114,8 +111,8 @@ function init_gear_sets()
 		waist="Luminary Sash",
 		left_ear="Regal Earring",
 		right_ear="Enfeebling Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
 	}
 
@@ -128,18 +125,17 @@ function init_gear_sets()
 		-- main="Carnwenhan",
 		-- sub="Genmei Shield",
 		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		head="Ayanmo Zucchetto +2",
-		body="Ayanmo Corazza +2",
-		hands="Aya. Manopolas +1",
-		legs="Aya. Cosciales +2",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
-		waist="Reiki Yotai",
+		waist="Sailfi Belt +1",
 		left_ear="Telos Earring",
-		right_ear="Genmei Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
-		right_ring = "Shneddick Ring",
+		right_ear="Dedition Earring",
+		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -149,11 +145,11 @@ function init_gear_sets()
 	
 	sets.precastWS = {
 		ammo="Coiste Bodhar",
-		head={ name="Bihu Roundlet +3", augments={'Enhances "Con Anima" effect',}},
-		body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Bihu Slippers +3",
+		feet="Nyame Sollerets",
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Anguinus Belt",
 		left_ear="Ishvara Earring",
@@ -173,8 +169,8 @@ function init_gear_sets()
 		waist="Luminary Sash",
 		left_ear="Regal Earring",
 		right_ear="Genmei Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
 	}
 
@@ -183,7 +179,19 @@ function init_gear_sets()
 	}
 
 	sets.magicPrecastWSGear = {
-		
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Sanctity Necklace",
+		waist="Orpheus's Sash",
+		left_ear="Thrud Earring",
+		right_ear="Friomisi Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Defending ring",
+		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.maxMP = {
@@ -200,8 +208,8 @@ function init_gear_sets()
 
 	sets.cureGear = {
 		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-		body="Mallquis Saio +2",
-		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
+		body="Annointed Kalasiris",
+		hands="Telchine Gloves",
 		legs={ name="Vanya Slops", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Nodens Gorget",
@@ -224,6 +232,8 @@ function init_gear_sets()
 	sets.precast.WS['Shattersoul'] = sets.precastWSIntGear
 	sets.precast.WS['Gate of Tartarus'] = sets.precastWSIntGear
 
+	
+	sets.precast.WS['Aeolian Edge'] = sets.magicPrecastWSGear
 	sets.precast.JA.Manafont = {body="Sorcerer's Coat +2"}
 	
 	sets.precast.FC = sets.precastGear
@@ -296,6 +306,7 @@ function init_gear_sets()
 	sets.midcast["Victory March"] = sets.songGear
 	sets.midcast["Magic Finale"] = set_combine(sets.songGear, sets.songAccuracy)
 	sets.midcast["Adventurer's Dirge"] = sets.songGear
+	sets.midcast["Foe Sirvente"] = sets.songGear
 	sets.precast.FC['Honor March'] = set_combine(sets.precast.FC, {range="Marsyas"})
 	sets.midcast["Honor March"] = sets.songGear
 	sets.midcast["Battlefield Elegy"] = sets.songGear
@@ -322,6 +333,9 @@ function init_gear_sets()
 		head="Mousai Turban +1",
 	})
 	sets.midcast["Spirited Etude"] = set_combine(sets.songGear, {
+		head="Mousai Turban +1",
+	})
+	sets.midcast["Logical Etude"] = set_combine(sets.songGear, {
 		head="Mousai Turban +1",
 	})
 	sets.midcast["Enchanting Etude"] = set_combine(sets.songGear, {

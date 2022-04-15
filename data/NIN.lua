@@ -29,34 +29,34 @@ function init_gear_sets()
 
     sets.pdt = {
         ammo="Seki Shuriken",
-        head={ name="Nyame Helm", augments={'Path: B',}},
+        head="Mpaca's Cap",
         body="Mpaca's Doublet",
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        hands="Mpaca's Gloves",
         legs="Mpaca's Hose",
-        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        feet="Mpaca's Boots",
         neck="Ninja Nodowa +2",
-        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        waist="Sailfi Belt +1",
         left_ear="Telos Earring",
         right_ear="Dedition Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Chirich Ring +1",
-        back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        right_ring="Defending Ring",
+        back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
     }
 
 	sets.meleeTP = {
         ammo="Seki Shuriken",
-        head={ name="Nyame Helm", augments={'Path: B',}},
+        head="Mpaca's Cap",
         body="Mpaca's Doublet",
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        hands="Mpaca's Gloves",
         legs="Mpaca's Hose",
-        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        feet="Mpaca's Boots",
         neck="Ninja Nodowa +2",
-        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        waist="Sailfi Belt +1",
         left_ear="Telos Earring",
         right_ear="Dedition Earring",
         left_ring="Chirich Ring +1",
-        right_ring="Chirich Ring +1",
-        back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        right_ring="Defending Ring",
+        back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
     }
 
     sets.precastWSPhysical = {
@@ -90,9 +90,7 @@ function init_gear_sets()
     sets.precastWSHybrid = {
         ammo="Pemphredo Tathlum",
         head={ name="Nyame Helm", augments={'Path: B',}},
-        
-    head={ name="Mochi. Hatsuburi +3", augments={'Enhances "Yonin" and "Innin" effect',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
+        body={ name="Nyame Mail", augments={'Path: B',}},
         hands={ name="Nyame Gauntlets", augments={'Path: B',}},
         legs={ name="Nyame Flanchard", augments={'Path: B',}},
         feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -143,7 +141,7 @@ function init_gear_sets()
     -- ##############
 
     sets.precast.WS['Blade: Rin'] = set_combine(sets.precastWSPhysical, sets.precastWSCritical, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
     sets.precast.WS['Blade: Retsu'] = set_combine(sets.precastWSPhysical, sets.recastWSMultiHit, {
@@ -151,29 +149,29 @@ function init_gear_sets()
     })
 
     sets.precast.WS['Blade: Teki'] = set_combine(sets.precastWSHybrid, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
     sets.precast.WS['Blade: To'] = set_combine(sets.precastWSHybrid, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
     sets.precast.WS['Blade: Chi'] = set_combine(sets.precastWSHybrid, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
     sets.precast.WS['Blade: Ei'] = set_combine(sets.precastWSHybrid, {
         head="Pixie Hairpin +1",
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ring1="Archon Ring",
     })
 
     sets.precast.WS['Blade: Jin'] = set_combine(sets.precastWSPhysical, sets.recastWSMultiHit, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
     sets.precast.WS['Blade: Ten'] = set_combine(sets.precastWSPhysical, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
     sets.precast.WS['Blade: Ku'] = set_combine(sets.precastWSPhysical, sets.recastWSMultiHit, {
@@ -185,7 +183,7 @@ function init_gear_sets()
     })
 
     sets.precast.WS['Blade: Shun'] = set_combine(sets.precastWSPhysical, sets.recastWSMultiHit, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
     sets.precast.WS['Blade: Metsu'] = set_combine(sets.precastWSPhysical, {
@@ -197,42 +195,42 @@ function init_gear_sets()
     })
 
     sets.precast.WS['Blade: Hi'] = set_combine(sets.precastWSPhysical, sets.precastWSCritical, {
-        right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
 	-- #############
 	-- ### Sword ###
 	-- #############
 	sets.precast.WS['Fast Blade'] = set_combine(sets.precastWSPhysical, sets.precastWSMultiHit, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Burning Blade'] = set_combine(sets.precastWSMagic, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Red Lotus Blade'] = set_combine(sets.precastWSMagic, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Flat Blade'] = set_combine(sets.precastWSPhysical, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Shining Blade'] = set_combine(sets.precastWSMagic, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Seraph Blade'] = set_combine(sets.precastWSMagic, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Circle Blade'] = sets.precastWsPhysical
 	sets.precast.WS['Spirits Within'] = set_combine(sets.precastWSPhysical, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Vorpal Blade'] = set_combine(sets.precastWSPhysical, sets.precastWSCritical)
 	sets.precast.WS['Sanguine Blade'] = set_combine(sets.precastWSMagic, {
 		head="Pixie Hairpin +1",
 		ring2="Archon Ring",
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Requiescat'] = set_combine(sets.precastWSPhysical, sets.precastWSMultiHit, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 	sets.precast.WS['Knights Of Round'] = sets.precastWsPhysical
 	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precastWSPhysical, sets.precastWSCritical, {
@@ -240,7 +238,7 @@ function init_gear_sets()
 		waist="Fotia Belt",
 	})
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precastWSPhysical, sets.precastWSMultiHit, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 	})
 
 

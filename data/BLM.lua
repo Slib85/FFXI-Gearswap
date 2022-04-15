@@ -15,290 +15,15 @@ function user_setup()
 end
 
 function init_gear_sets()
-	sets.precastGear = {
-		ammo = "Sapience Orb", -- 2%
-    	head = { name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}}, -- 15%
-		neck = "Orunmila's Torque", -- 5%
-		left_ear = "Malignance Earring", -- 4%
-		right_ear = "Loquac. Earring", -- 2%
-		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --13%
-		hands= "Agwu's Gages", --6%
-    	left_ring = "Kishar Ring", -- 4%
-		right_ring = "Prolix Ring", -- 2%
-		waist = "Witful Belt", -- 3%
-		legs = "Agwu's Slops", -- 7%
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}}, -- 9%
-		back={ name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10%
-	}
-
-	sets.lowTierNukeGear = {
-		--main="Laevateinn",
-		ammo="Ghastly Tathlum +1",
-		head="Mallquis Chapeau +2",
-		body="Spaekona's Coat +3",
-		hands="Mallquis Cuffs +2",
-		legs="Spaekona's Tonban +3",
-	    feet="Spaekona's Sabots +3",
-		neck="Sorcerer's Stole +2",
-		left_ear="Malignance Earring",
-		right_ear="Regal Earring",
-		left_ring="Freke Ring",
-		right_ring="Mallquis Ring",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+	if player.name == "Slibby" then
+		include('slib/BLM_gear.lua')	
+	elseif player.name == "Dehlila" then
+		include('dehlila/BLM_gear.lua')	
+	elseif player.name == "Lemia" then
+		include('lemia/BLM_gear.lua')	
+	end
 	
-		waist="Orpheus's Sash",
-		--waist="Dorin Obi",
-		--waist="Acuity belt +1",
-		hands="Agwu's Gages",
-		legs="Agwu's Slops",
-
-		
-	}
-		
-	-- 437 = thunder 6
-	-- Occult: 90 + 50 (trait)
-	-- STP: 41 + 6 (strap) (Dream: +30)
-	sets.occultAcumenGear = {
-		ammo="Seraphic Ampulla", -- 7 occult
-		head="Mallquis Chapeau +2", -- 11 occult
-		body="Spaekona's Coat +3", -- 0
-		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+3 "Mag.Atk.Bns."+3','"Occult Acumen"+11','MND+3','Mag. Acc.+3','"Mag.Atk.Bns."+8',}}, -- 11 occult
-		legs="Perdition Slops", -- 30 occult
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Occult Acumen"+11','MND+1','Mag. Acc.+4','"Mag.Atk.Bns."+13',}}, -- 11 occult
-		neck="Lissome Necklace", --4 STP
-		waist="Oneiros Rope", --2 STP + 20 occult
-		ear1="Telos Earring", --5 STP
-		ear2="Dedition Earring", --8 STP
-		ring1="Chirich Ring +1", --6 STP
-		ring2="Chirich Ring +1", -- 6 STP
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
-	}
-	
-	sets.nukeGear = {
-		ammo="Ghastly Tathlum +1",
-		head="Archmage's Petasos +3",
-		neck="Sorcerer's Stole +2",
-		ear1="Malignance Earring",
-		ear2="Regal Earring",
-		body="Spaekona's Coat +3",
-		hands="Agwu's Gages",
-		legs="Agwu's Slops",
-		ring1="Freke Ring",
-		ring2="Metamorph Ring +1",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-		feet={ name="Arch. Sabots +3", augments={'Increases Aspir absorption amount',}},
-		waist="Orpheus's Sash", 
-		waist="Dorin Obi",
-		--waist="Acuity Belt +1",
-	}
-
-	sets.enfeebleGearINT = {
-		ammo="Pemphredo Tathlum",
-	    head="Spaekona's Petasos +3",
-	    body="Spaekona's Coat +3",
-		hands="Regal Cuffs",
-		legs="Spaekona's Tonban +3",
-		feet="Spaekona's Sabots +3",
-		neck="Src. Stole +2",
-	    waist="Acuity Belt +1",
-	    left_ear="Malignance Earring",
-	    right_ear="Regal Earring",
-	    left_ring="Kishar Ring",
-	    right_ring="Metamorph Ring +1",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-	}
-
-	sets.enfeebleGearMND = {
-		ammo="Pemphredo Tathlum",
-	    head="Spaekona's Petasos +3",
-	    body="Spaekona's Coat +3",
-		hands="Regal Cuffs",
-		legs="Spaekona's Tonban +3",
-		feet="Spaekona's Sabots +3",
-		neck="Src. Stole +2",
-	    waist="Luminary Sash",
-	    left_ear="Malignance Earring",
-	    right_ear="Regal Earring",
-	    left_ring="Kishar Ring",
-	    right_ring="Metamorph Ring +1",
-		back={ name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
-	}
-
-	-- Precast sets to enhance JAs
-	sets.precast.JA['Mana Wall'] = {
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-		feet="Wicce Sabots +1"
-	}
-	
-	sets.meleeTP = {
-		ammo="Amar Cluster",
-		head="Nyame Helm",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		neck="Lissome Necklace",
-		waist="Goading Belt",
-		left_ear="Telos Earring",
-		right_ear="Dedition Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
-		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-
-	sets.buffGear = {
-		ammo="Staunch Tathlum +1",
-		head="Befouled Crown",
-		neck="Melic Torque",
-		waist="Olympus Sash",
-		feet="Regal Pumps +1",
-		left_ear="Augment. Earring",
-		right_ear="Andoaa Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
-		back="Fi Follet Cape",	
-	}
-
-	sets.buffGearDuration = {
-		head="Telchine Cap",
-		body="Telchine Chasuble",
-		hands="Telchine Gloves",
-		legs="Telchine Braconi",
-		feet="Telchine Pigaches",
-		waist="Embla Sash",
-	}
-	
-	sets.precastWS = {
-		ammo="Amar Cluster",
-		head="Nyame Helm",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		neck="Fotia Gorget",
-		waist="Fotia Belt",
-		left_ear="Ishvara Earring",
-		right_ear="Telos Earring",
-		left_ring="Epaminondas's ring",
-		right_ring="Metamorph Ring +1",
-		back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10','Phys. dmg. taken-10%',}},
-	}
-
-	sets.precastWSIntGear = {
-		ammo="Floestone",
-		head="Nyame Helm",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		neck="Src. Stole +2",
-		waist="Acuity Belt +1",
-		left_ear="Malignance Earring",
-		right_ear="Regal Earring",
-		left_ring="Freke Ring",
-		right_ring="Metamorph Ring +1",
-		back={ name="Taranus's Cape", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-	}
-
-	sets.magicPrecastWSGear = {
-		ammo="Ghastly Tathlum +1",
-		head={ name="Arch. Petasos +3", augments={'Increases Ancient Magic damage and magic burst damage',}},
-		body={ name="Merlinic Jubbah", augments={'Pet: "Mag.Atk.Bns."+25','INT+13','Weapon skill damage +5%','Accuracy+5 Attack+5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
-		hands="Jhakri Cuffs +2",
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		neck={ name="Src. Stole +2", augments={'Path: A',}},
-		waist="Orpheus's Sash",
-		left_ear="Malignance Earring",
-		right_ear="Regal Earring",
-		left_ring="Freke Ring",
-		right_ring="Metamorph Ring +1",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%',}},
-	}
-	
-	sets.maxMP = {
-		ammo="Strobilus",
-		head="Amalric Coif +1",
-		body="Amalric Doublet +1",
-		hands="Spaekona's Gloves +3",
-		legs="Amalric Slops +1",
-		feet={ name="Psycloth Boots", augments={'MP+50','INT+7','"Conserve MP"+6',}},
-		neck="Sanctity Necklace",
-		waist="Eschan Stone",
-		ring1="Mephitas's Ring",
-		ring2="Mephitas's Ring +1",
-		left_ear="Etiolation Earring",
-		right_ear="Regal Earring",
-	}
-
-	sets.aspirGear = {
-	    neck="Erra Pendant",
-		head={ name="Merlinic Hood", augments={'Mag. Acc.+24','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+4',}},
-		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet="Agwu's Pigaches",
-		legs="Spaekona's Tonban +3",
-		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
-		ring1="Evanescence Ring",
-		waist="Fucho-no-Obi"
-	}
-
-	sets.drainGear = {
-	    neck="Erra Pendant",
-		head="Pixie Hairpin +1",
-		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		feet="Agwu's Pigaches",
-		legs="Spaekona's Tonban +3",
-		hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
-		ring1="Evanescence Ring",
-		ring2="Archon Ring",
-		waist="Fucho-no-Obi"
-	}
-
-	sets.cureGear = {
-		ammo="Staunch Tathlum +1",
-		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 17
-		body="Mallquis Saio +2",
-		hands="Telchine Gloves", -- 10
-		legs={ name="Vanya Slops", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 7
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10
-		neck="Phalaina Locket", -- 4
-		waist="Gishdubar Sash",
-		left_ear="Mendi. Earring", -- 5
-		right_ear="Nourishing Earring +1", -- 6-7
-		left_ring="Kunaji Ring",
-		right_ring="Defending Ring",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-	}
-
-	sets.PDT = {
-	    ammo="Staunch Tathlum +1",
-		head="Nyame Helm",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		--feet="Hippomenes socks +1",
-		neck="Warder's Charm +1",
-		waist="Carrier's Sash",
-		left_ear="Lugalbanda Earring",
-		right_ear="Sanare Earring",
-		left_ring="Shneddick Ring",
-		right_ring="Defending Ring",
-		back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},
-	}
-	
-	sets.manaWall = {
-		--back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-		feet="Wicce Sabots +1"
-	}
-	
-	sets.magic_burst = {
-		head="Ea Hat +1",
-		legs="Ea Slops +1",
-		--body="Amalric Doublet +1",
-		hands="Amalric Gages +1",
-		ring2="Mujin Band"
-	}
+	-- windower.add_to_chat(123, player.TP)
 
 	sets.precast.WS = sets.precastWS;
 
@@ -338,7 +63,7 @@ function init_gear_sets()
 		body={ name="Nyame Mail", augments={'Path: A',}},
 		hands="Nyame Gauntlets",
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-		feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
+		feet="Nyame Sollerets",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Regal Earring",
@@ -384,20 +109,6 @@ function init_gear_sets()
 	sets.precast.FC['Impact'] = set_combine(sets.precast.FC, {body="Twilight Cloak"})
 
 	sets.midcast['Impact'] = {
-		ammo="Seraphic Ampulla", -- 7 occult
-		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+3 "Mag.Atk.Bns."+3','"Occult Acumen"+11','MND+3','Mag. Acc.+3','"Mag.Atk.Bns."+8',}}, -- 11 occult
-		legs="Perdition Slops", -- 30 occult
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Occult Acumen"+11','MND+1','Mag. Acc.+4','"Mag.Atk.Bns."+13',}}, -- 11 occult
-		neck="Lissome Necklace", --4 STP
-		waist="Oneiros Rope", --2 STP + 20 occult
-		ear1="Telos Earring", --5 STP
-		ear2="Dedition Earring", --8 STP
-		ring1="Chirich Ring +1", --5 STP
-		ring2="Chirich Ring +1", -- 6 STP
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
-
-
-		
 		ammo="Ghastly Tathlum +1",
 		neck="Sorcerer's Stole +2",
 		ear1="Malignance Earring",
@@ -413,31 +124,9 @@ function init_gear_sets()
 	    feet="Spaekona's Sabots +3",
 		neck="Sorcerer's Stole +2",
 	}
-	
-	sets.precast.FC['Meteor'] = {
-		ammo = "Sapience Orb", -- 2%
-    	head = { name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}}, -- 15%
-		neck = "Orunmila's Torque", -- 5%
-		ear1 = "Malignance Earring", -- 4%
-		ear2 = "Loquac. Earring", -- 2%
-		body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --13%
-		hands= "Agwu's Gages", --6%
-    	ring1 = "Kishar Ring", -- 4%
-		ring2 = "Prolix Ring", -- 2%
-		--waist = "Witful Belt", -- 3%
-		legs = "Artsieq Hose", -- 5%
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}}, -- 9%
-		back={ name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10%
-	}
 
 	include('BLMspells.lua')
 	include('ALLitems.lua')
-
-	-- Override spells below...
-	sets.midcast['Poisonga'] = set_combine(sets.enfeebleGearINT, {
-		hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
-		waist="Chaac belt",
-	})
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
@@ -445,11 +134,11 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		equip({body="Amalric Doublet +1"})
 	end
 
-	if buffactive['Mana Wall'] == 1 then
+	if buffactive['Mana Wall'] == 1 and not S{"Cataclysm"}:contains(spell.english) then
 		equip(sets.manaWall)
 	end
 
-	if spell.skill == 'Elemental Magic' and (state.OffenseMode.value == 'MB' or state.OffenseMode.value == 'TP') then
+	if spell.skill == 'Elemental Magic' and (state.OffenseMode.value == 'MB') then
 		equip(sets.magic_burst)
 
 		if buffactive['Mana Wall'] == 1 then
@@ -471,14 +160,16 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		end
 	elseif state.OffenseMode.value == 'TH' then
 		equip({
-			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+			ammo="Perfect Lucky Egg",
+			body="Volte Jupon",
 			waist="Chaac belt",
 		})
 	end
 
-	if S{"Breakga"}:contains(spell.english) or S{"Diaga"}:contains(spell.english) then
+	if S{"Breakga", "Diaga", "Dia II"}:contains(spell.english) then
 		equip({
-			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+			ammo="Perfect Lucky Egg",
+			body="Volte Jupon",
 			waist="Chaac belt",
 		})
 	end

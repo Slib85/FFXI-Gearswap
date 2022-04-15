@@ -135,8 +135,8 @@ function init_gear_sets()
 	    waist="Rumination Sash",
 	    left_ear="Friomisi Earring",
 	    right_ear="Regal Earring",
-	    left_ring="Stikini Ring +1",
-	    right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -170,8 +170,8 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
 		right_ear="Andoaa Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back="Perimede Cape",	
 	}
 	

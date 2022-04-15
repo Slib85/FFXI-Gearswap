@@ -102,11 +102,8 @@
 
 	sets.midcast['Death'] = set_combine(sets.nukeGear, {
 		head="Pixie Hairpin +1",
-		body="Amalric Doublet +1",
-		legs="Amalric Slops +1",
-		feet="Amalric Nails +1",
-		ring2="Archon Ring",
-		waist="Orpheus's Sash",
+		body="Archmage's Coat +3",
+		ring2="Archon Ring"
 	})
 
 	sets.midcast['Meteor'] = set_combine(sets.nukeGear, {
@@ -114,12 +111,12 @@
 		waist="Acuity Belt +1"
 	})
 
-	sets.midcast['Banish'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Banish II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Banishga'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Banishga II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Banish'] = sets.lowTierNukeGear
+	sets.midcast['Banish II'] = sets.lowTierNukeGear
+	sets.midcast['Banishga'] = sets.lowTierNukeGear
+	sets.midcast['Banishga II'] = sets.lowTierNukeGear
 
-	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Stone'] = sets.lowTierNukeGear
 	sets.midcast['Stone II'] = sets.lowTierNukeGear
 	sets.midcast['Stone III'] = sets.nukeGear
 	sets.midcast['Stone IV'] = sets.nukeGear
@@ -130,7 +127,7 @@
 	sets.midcast['Stonega III'] = sets.nukeGear
 	sets.midcast['Stoneja'] = sets.nukeGear
 
-	sets.midcast['Water'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Water'] = sets.lowTierNukeGear
 	sets.midcast['Water II'] = sets.lowTierNukeGear
 	sets.midcast['Water III'] = sets.nukeGear
 	sets.midcast['Water IV'] = sets.nukeGear
@@ -141,7 +138,7 @@
 	sets.midcast['Waterga III'] = sets.nukeGear
 	sets.midcast['Waterja'] = sets.nukeGear
 
-	sets.midcast['Aero'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Aero'] = sets.lowTierNukeGear
 	sets.midcast['Aero II'] = sets.lowTierNukeGear
 	sets.midcast['Aero III'] = sets.nukeGear
 	sets.midcast['Aero IV'] = sets.nukeGear
@@ -152,7 +149,7 @@
 	sets.midcast['Aeroga III'] = sets.nukeGear
 	sets.midcast['Aeroja'] = sets.nukeGear
 
-	sets.midcast['Fire'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Fire'] = sets.lowTierNukeGear
 	sets.midcast['Fire II'] = sets.lowTierNukeGear
 	sets.midcast['Fire III'] = sets.nukeGear
 	sets.midcast['Fire IV'] = sets.nukeGear
@@ -163,7 +160,7 @@
 	sets.midcast['Firaga III'] = sets.nukeGear
 	sets.midcast['Firaja'] = sets.nukeGear
 
-	sets.midcast['Blizzard'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Blizzard'] = sets.lowTierNukeGear
 	sets.midcast['Blizzard II'] = sets.lowTierNukeGear
 	sets.midcast['Blizzard III'] = sets.nukeGear
 	sets.midcast['Blizzard IV'] = sets.nukeGear
@@ -174,7 +171,7 @@
 	sets.midcast['Blizzaga III'] = sets.nukeGear
 	sets.midcast['Blizzaja'] = sets.nukeGear
 
-	sets.midcast['Thunder'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Thunder'] = sets.lowTierNukeGear
 	sets.midcast['Thunder II'] = sets.lowTierNukeGear
 	sets.midcast['Thunder III'] = sets.nukeGear
 	sets.midcast['Thunder IV'] = sets.nukeGear
@@ -259,22 +256,22 @@
 	})
 
 
-	sets.midcast['Geohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Hydrohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Anemohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Pyrohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Cryohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Ionohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Noctohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Luminohelix'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Geohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Hydrohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Anemohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Pyrohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Cryohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Ionohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Noctohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
-	sets.midcast['Luminohelix II'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
+	sets.midcast['Geohelix'] = sets.lowTierNukeGear
+	sets.midcast['Hydrohelix'] = sets.lowTierNukeGear
+	sets.midcast['Anemohelix'] = sets.lowTierNukeGear
+	sets.midcast['Pyrohelix'] = sets.lowTierNukeGear
+	sets.midcast['Cryohelix'] = sets.lowTierNukeGear
+	sets.midcast['Ionohelix'] = sets.lowTierNukeGear
+	sets.midcast['Noctohelix'] = sets.lowTierNukeGear
+	sets.midcast['Luminohelix'] = sets.lowTierNukeGear
+	sets.midcast['Geohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Hydrohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Anemohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Pyrohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Cryohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Ionohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Noctohelix II'] = sets.lowTierNukeGear
+	sets.midcast['Luminohelix II'] = sets.lowTierNukeGear
 
 
 	sets.midcast['Drain'] = set_combine(sets.enfeebleGearINT, sets.drainGear);

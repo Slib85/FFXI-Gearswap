@@ -26,8 +26,8 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
 		right_ear="Andoaa Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back="Perimede Cape",	
     }
     

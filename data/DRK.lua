@@ -111,10 +111,10 @@ function init_gear_sets()
 		feet="Sakpata's Leggings",
 		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Dedition Earring",
-		right_ear="Telos Earring",
-		left_ring="Moonlight Ring",
-		right_ring="Moonlight Ring",
+		left_ear="Telos Earring",
+		right_ear="Dedition Earring",
+		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},	
 	}
 
@@ -129,11 +129,13 @@ function init_gear_sets()
 		feet="Sakpata's Leggings",
 		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Dedition Earring",
-		right_ear="Telos Earring",
+		left_ear="Telos Earring",
+		right_ear="Dedition Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+
+		--neck="Bathy Choker +1",
 	}
 
 	sets.meleeTPHybrid = {
@@ -146,12 +148,12 @@ function init_gear_sets()
 		feet="Sakpata's Leggings",
 		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Dedition Earring",
-		right_ear="Telos Earring",
-		left_ring="Moonlight Ring",
-		right_ring="Moonlight Ring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		left_ear="Telos Earring",
+		right_ear="Dedition Earring",
+		left_ring={name="Moonlight Ring", bag="Wardrobe 1"},
+		right_ring={name="Moonlight Ring", bag="Wardrobe 2"},
+		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		--right_ring="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -164,11 +166,11 @@ function init_gear_sets()
 	
 	sets.precastWS = {
 		ammo="Knobkierrie",
-		head="Sakpata's Helm",
-		body="Ignominy Cuirass +3",
-		hands="Sakpata's Gauntlets",
-		legs="Fallen's Flanchard +3",
-		feet="Sulev. Leggings +2",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Abyssal Bead Necklace +2",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
@@ -176,7 +178,13 @@ function init_gear_sets()
 		right_ring="Regal Ring",
 		left_ring="Epaminondas's Ring",
 		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
+
+		--neck="Bathy Choker +1",
+		--ring1="Regal Ring",
+		--ring2="Niqqmadu ring",
+		--feet="Sakpata's Leggings",
+		--hands="Sakpata's Gauntlets"
+    }
 
 	sets.precastWSIntGear = {
 	}
@@ -212,8 +220,8 @@ function init_gear_sets()
 		feet="Ratri Sollerets",
 		neck="Erra Pendant",
 		waist="Orpheus's Sash",
-		left_ear="Malignance Earring",
-		right_ear="Telos Earring",
+		left_ear="Telos Earring",
+		right_ear="Malignance Earring",
 		left_ring="Archon Ring",
 		right_ring="Evanescence Ring",
 		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -232,10 +240,10 @@ function init_gear_sets()
 		feet="Sakpata's Leggings",
 		neck="Lissome Necklace",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Dedition Earring",
-		right_ear="Telos Earring",
-		left_ring="Moonlight Ring",
-		right_ring="Moonlight Ring",
+		left_ear="Telos Earring",
+		right_ear="Dedition Earring",
+		left_ring={name="Moonlight Ring", bag="Wardrobe 1"},
+		right_ring={name="Moonlight Ring", bag="Wardrobe 2"},
 		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Haste+10',}},
@@ -266,6 +274,26 @@ function init_gear_sets()
 
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precastWS, {
 		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	})
+
+	sets.precast.WS['Armor Break'] = set_combine(sets.precastWS, {
+		ammo="Pemphredo Tathlum",
+		head={ name="Nyame Helm", augments={'Path: B',}},
+		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+		waist="Eschan Stone",
+		left_ear="Telos Earring",
+		right_ear="Malignance Earring",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	})
+
+	sets.precast.WS['Catastrophe'] = set_combine(sets.precastWS, {
+		left_ear="Ishvara Earring",
 	})
 
 	sets.precast.WS['Full Break'] = {
@@ -340,7 +368,7 @@ function init_gear_sets()
 	sets.precast.FC = sets.precastGear
 
 	sets.precast.FC['Impact'] = set_combine(sets.precast.FC, {body="Twilight Cloak"})
-
+	sets.midcast["Absorb-ACC"] = sets.drainGear
 	include('BLMspells.lua')
 
 	-- Override spells below...
@@ -348,6 +376,13 @@ function init_gear_sets()
 		hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
 		waist="Chaac belt",
 	})
+end
+
+
+function job_midcast(spell, action, spellMap, eventArgs)
+	if buffactive['Killer Instinct'] == 1 and S{"Torcleaver"}:contains(spell.english) then
+		equip({body="Founder's Breastplate"})
+	end
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)

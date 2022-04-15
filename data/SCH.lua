@@ -37,7 +37,7 @@ function user_setup()
 --		'Stonega II', 'Waterga II', 'Aeroga II', 'Firaga II', 'Blizzaga II', 'Thundaga II'}
 --	
 --	gear.macc_hagondes = {name="Hagondes Cuffs", augments={'Phys. dmg. taken -3%','Mag. Acc.+29'}}
---	
+--	`
 --	-- Additional local binds
 	--send_command('bind NUM2 input /ma Stun <t>')
 	
@@ -71,25 +71,25 @@ function init_gear_sets()
 	}
 
 	sets.lowTierNukeGear = {
-		main="Daybreak",
+		main="Bunzi's Rod",
 		sub="Culminus",
 		ammo="Ghastly Tathlum +1",
 		head="Agwu's Cap",
 		body="Agwu's Robe",
-		hands="Mallquis Cuffs +2",
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		hands="Agwu's Gages",
+		legs="Agwu's Slops",
+		feet="Agwu's Pigaches",
 		neck={ name="Argute Stole +2", augments={'Path: A',}},
-		waist="Acuity Belt +1",
-		--waist="Orpheus's Sash",
+		--waist="Acuity Belt +1",
+		waist="Orpheus's Sash",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
-		right_ring="Mallquis Ring",
-		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}},
+		right_ring="Metamor. Ring +1",
+		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 	sets.nukeGear = {
-		main="Daybreak",
+		main="Bunzi's Rod",
 		sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
 		head="Agwu's Cap",
@@ -98,16 +98,17 @@ function init_gear_sets()
 		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 		neck={ name="Argute Stole +2", augments={'Path: A',}},
-		waist="Acuity Belt +1",
+		--waist="Acuity Belt +1",
+		waist="Orpheus's Sash",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
 		right_ring="Metamor. Ring +1",
-		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}},
+		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.enfeebleGear = {
-		main="Daybreak",
+		main="Bunzi's Rod",
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
 		head="Mall. Chapeau +2",
@@ -121,7 +122,7 @@ function init_gear_sets()
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
 		right_ring="Mallquis Ring",
-		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}},
+		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
 	-- Precast sets to enhance JAs
@@ -154,14 +155,17 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
 		right_ear="Andoaa Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back="Perimede Cape",	
 	}
 	sets.buffGearDuration = {
 		main="Musa",
 		body="Pedagogy Gown +3",
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
+		body="Telchine Chasuble",
+		legs="Telchine Braconi",
+		feet="Telchine Pigaches",
 		waist="Embla Sash",
 	}
 	
@@ -287,7 +291,7 @@ function init_gear_sets()
 		ring1="Shiva Ring +1",
 		ring2="Shiva Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-		waist="Orpheus's Sash",
+		waist="Acuity Belt +1",
 		legs="Amalric Slops +1",
     	feet="Arch. Sabots +3"
 	}
@@ -301,7 +305,12 @@ function init_gear_sets()
 	sets.midcast["Hailstorm II"] = sets.buffGearDuration;
 	sets.midcast["Thunderstorm II"] = sets.buffGearDuration;
 	sets.midcast["Voidstorm II"] = sets.buffGearDuration;
-	sets.midcast["Aurourastorm II"] = sets.buffGearDuration;
+	sets.midcast["Aurorastorm II"] = sets.buffGearDuration;
+
+	sets.midcast["Animus Minuo"] = sets.buffGearDuration;
+	sets.midcast["Animus Augeo"] = sets.buffGearDuration;
+
+
 
 	sets.midcast.Regen = set_combine(sets.buffGearDuration, {
 		main="Musa",
@@ -388,6 +397,7 @@ function init_gear_sets()
 
 
 	sets.midcast['Haste'] = sets.buffGearDuration
+	sets.midcast['Flurry'] = sets.buffGearDuration
 
 	sets.midcast['Comet'] = set_combine(sets.nukeGear, {
 		head="Pixie Hairpin +1",
@@ -404,6 +414,10 @@ function init_gear_sets()
 	
 	sets.midcast['Meteor'] = sets.nukeGear
 	sets.midcast['Drain'] = sets.enfeebleGear
+	sets.midcast['Silence'] = sets.enfeebleGear
+	sets.midcast['Holy'] = sets.lowTierNukeGear
+	sets.midcast['Banish'] = sets.lowTierNukeGear
+	sets.midcast['Banish II'] = sets.lowTierNukeGear
 
 	sets.midcast['Stone'] = sets.lowTierNukeGear
 	sets.midcast['Stone II'] = sets.lowTierNukeGear
@@ -506,17 +520,30 @@ function init_gear_sets()
 	sets.midcast['Pyrohelix'] = sets.lowTierNukeGear
 	sets.midcast['Cryohelix'] = sets.lowTierNukeGear
 	sets.midcast['Ionohelix'] = sets.lowTierNukeGear
-	sets.midcast['Noctohelix'] = sets.lowTierNukeGear
-	sets.midcast['Luminohelix'] = sets.lowTierNukeGear
+	sets.midcast['Noctohelix'] = set_combine(sets.lowTierNukeGear, {
+		head="Pixie Hairpin +1",
+		ring2="Archon Ring",
+	})
+	sets.midcast['Luminohelix'] = set_combine(sets.lowTierNukeGear, {
+		main="Daybreak",
+	})
 	sets.midcast['Geohelix II'] = sets.lowTierNukeGear
 	sets.midcast['Hydrohelix II'] = sets.lowTierNukeGear
 	sets.midcast['Anemohelix II'] = sets.lowTierNukeGear
 	sets.midcast['Pyrohelix II'] = sets.lowTierNukeGear
 	sets.midcast['Cryohelix II'] = sets.lowTierNukeGear
 	sets.midcast['Ionohelix II'] = sets.lowTierNukeGear
-	sets.midcast['Noctohelix II'] = sets.lowTierNukeGear
-	sets.midcast['Luminohelix II'] = sets.lowTierNukeGear
-	sets.midcast['Kaustra'] = sets.lowTierNukeGear
+	sets.midcast['Noctohelix II'] = set_combine(sets.lowTierNukeGear, {
+		head="Pixie Hairpin +1",
+		ring2="Archon Ring",
+	})
+	sets.midcast['Luminohelix II'] = set_combine(sets.lowTierNukeGear, {
+		main="Daybreak",
+	})
+	sets.midcast['Kaustra'] = set_combine(sets.lowTierNukeGear, {
+		head="Pixie Hairpin +1",
+		ring2="Archon Ring",
+	})
 	
 	
 	sets.midcast['Drain'] = set_combine(sets.enfeebleGear, sets.drainGear);
@@ -543,7 +570,7 @@ function init_gear_sets()
 		right_ear="Genmei Earring",
 		left_ring="Shneddick Ring",
 		right_ring="Defending Ring",
-		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}}
+		back={ name="Lugh's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Mag. Evasion+15',}},
 	}
 	
 	sets.manaWall = {
@@ -567,6 +594,10 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 
 	if spell.skill == 'Elemental Magic' and (buffactive['Manawell'] == 1 or buffactive['Manafont']) then
 		equip({body="Amalric Doublet +1"})
+	end
+
+	if spell.skill == 'Enhancing Magic' and (buffactive['Accession']) then
+		--equip(set_combine(sets.buffGearDuration, sets.buffGear))
 	end
 
 	if spell.skill == 'Elemental Magic' and (state.OffenseMode.value == 'MB') then
@@ -606,7 +637,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 				right_ear="Genmei Earring",
 				left_ring="Gelatinous Ring",
 				right_ring="Defending Ring",
-				back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Mag.Atk.Bns."+10','Damage taken-4%',}},
+				back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 			})
 		end
 	end

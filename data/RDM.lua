@@ -74,8 +74,8 @@ function init_gear_sets()
 		waist={ name="Acuity Belt +1", augments={'Path: A',}},
 		left_ear="Regal Earring",
 		right_ear="Snotra Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -97,19 +97,20 @@ function init_gear_sets()
 
 	sets.meleeTP = {
 		ammo="Coiste Bodhar",
-		head="Bunzi's Hat",
+		head="Nyame Helm",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
-		neck="Lissome Necklace",
+		neck="Combatant's torque",
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
 		right_ear="Eabani Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-		--back="Mecistopins Mantle",
+		right_ear="Sherida Earring",
+		waist="Sailfi Belt +1",
 	}
 
 	sets.meleeSub = {
@@ -119,18 +120,18 @@ function init_gear_sets()
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
-		neck="Lissome Necklace",
+		neck="Combatant's torque",
 		waist="Sarissapho. Belt",
 		left_ear="Telos Earring",
 		right_ear="Sherida Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.meleeTPHybrid = {
 		ammo="Staunch Tathlum +1",
-		head="Bunzi's Hat",
+		head="Nyame Helm",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
@@ -155,8 +156,8 @@ function init_gear_sets()
 		waist="Orpheus's Sash",
 		left_ear="Telos Earring",
 		right_ear="Eabani Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -170,8 +171,8 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
 		right_ear="Andoaa Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back="Fi Follet Cape",	
 	}
 
@@ -213,8 +214,8 @@ function init_gear_sets()
 		waist="Sarissapho. Belt",
 		left_ear="Telos Earring",
 		right_ear="Sherida Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		--back="Mecistopins Mantle",
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
@@ -237,11 +238,11 @@ function init_gear_sets()
 
 	sets.precastWSPhysical = {
 		ammo="Floestone",
-		head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-		body={ name="Nyame Mail", augments={'Path: B',}},
-		hands="Atrophy Gloves +3",
-		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-		feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Ishvara Earring",
@@ -262,10 +263,10 @@ function init_gear_sets()
 	sets.precastWSMagic = {
 		ammo="Pemphredo Tathlum",
 		head="Nyame Helm",
-		body="Amalric Doublet +1",
-		hands="Jhakri Cuffs +2",
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Merlinic Crackows", augments={'Attack+13','Magic dmg. taken -3%','Weapon skill damage +9%','Accuracy+19 Attack+19',}},
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Sanctity Necklace",
 		waist="Orpheus's Sash",
 		left_ear="Regal Earring",
@@ -350,7 +351,7 @@ function init_gear_sets()
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
-	--disable('neck')
+	disable('neck')
 	enable('neck')
 	if state.OffenseMode.value == 'Melee' then
 		if spell.skill == 'Elemental Magic' then
@@ -361,12 +362,14 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 
 	end
 
-	if S{"Diaga", "Dia III"}:contains(spell.english) then
+	if S{"Breakga", "Diaga", "Dia", "Dia II", "Dia III"}:contains(spell.english) then
 		equip({
-			hands={ name="Merlinic Dastanas", augments={'Potency of "Cure" effect received+3%','Accuracy+11','"Treasure Hunter"+2','Accuracy+16 Attack+16','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+			ammo="Perfect Lucky Egg",
+			body="Volte Jupon",
 			waist="Chaac belt",
 		})
 	end
+
 
 	if buffactive['Saboteur'] and spell.skill == 'Enfeebling Magic' then
 		equip({

@@ -22,10 +22,10 @@ end
 function init_gear_sets()
 	sets.precastGear = {
         ammo="Incantor Stone",
-        head="Nahtirah Hat",
+        head="Bunzi's Hat",
         body="Inyanga Jubbah +2",
         hands="Gendewitha Gages",
-        legs="Artsieq Hose",
+        legs="Vanya Slops",
         feet="Regal Pumps +1",
         neck="Orunmila's Torque",
         waist="Witful Belt",
@@ -52,8 +52,8 @@ function init_gear_sets()
         waist="Channeler's Stone",
         left_ear="Genmei Earring",
         right_ear="Sanare Earring",
-        left_ring="Stikini Ring +1",
-        right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
 
@@ -104,8 +104,8 @@ function init_gear_sets()
 		waist="Luminary Sash",
 		left_ear="Regal Earring",
 		right_ear="Malignance Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Haste+10','Spell interruption rate down-10%',}},
 	}
 
@@ -141,8 +141,8 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Augment. Earring",
 		right_ear="Andoaa Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 		back="Fi Follet Cape",
     }
 	
