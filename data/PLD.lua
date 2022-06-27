@@ -49,9 +49,7 @@ function init_gear_sets()
 		back={ name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Mag. Evasion+15',}},
 		
 		
-		neck="Loricate Torque +1",
-		hands="Rev. Gauntlets +3",
-		neck="Combatant's torque",
+		--neck="Loricate Torque +1", hands="Rev. Gauntlets +3",
 	}
 	
 	-- Total Counter: 39% (47% Monk Sub & 80% Counterstance)
@@ -190,8 +188,8 @@ function init_gear_sets()
 		right_ring="Defending ring",
 		back={ name="Rudianos's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','Weapon skill damage +10%',}},
 
-		right_ring="Stikini Ring +1",
-		waist="acuity belt +1",
+		--right_ring="Stikini Ring +1",
+		--waist="acuity belt +1",
 	}
 	
 	sets.cureGear = {

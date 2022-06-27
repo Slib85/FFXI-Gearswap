@@ -1,5 +1,3 @@
-set_macro_page(2, 1)
-
 -- Character Basics
 sets.precastGear = {
     ammo = "Sapience Orb", -- 2%
@@ -85,6 +83,9 @@ sets.precastWSIntGear = {
     left_ring="Freke Ring",
     right_ring="Metamorph Ring +1",
     back={ name="Taranus's Cape", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+
+    
+    --head="Agwu's Cap",hands="Agwu's Gages",legs="Agwu's Slops",feet="Agwu's Pigaches",
 }
 
 sets.magicPrecastWSGear = {
@@ -101,6 +102,9 @@ sets.magicPrecastWSGear = {
     left_ring="Freke Ring",
     right_ring="Metamorph Ring +1",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%',}},
+
+    
+    --head="Agwu's Cap",hands="Agwu's Gages",legs="Agwu's Slops",feet="Agwu's Pigaches",
 }
 
 sets.occultAcumenGear = {
@@ -120,7 +124,7 @@ sets.occultAcumenGear = {
 }
 
 sets.lowTierNukeGear = {
-    ammo="Ghastly Tathlum +1",
+    ammo="Sroda Tathlum",
     head="Agwu's Cap",
     body="Spaekona's Coat +3",
     hands="Agwu's Gages",
@@ -132,25 +136,24 @@ sets.lowTierNukeGear = {
     left_ring="Freke Ring",
     right_ring="Metamorph Ring +1",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-
     waist="Orpheus's Sash",
     --waist="Dorin Obi",
     --waist="Acuity belt +1",
 }
     
 sets.nukeGear = {
-    ammo="Ghastly Tathlum +1",
-    head="Agwu's Cap",
+    ammo="Sroda Tathlum",
     neck="Sorcerer's Stole +2",
     ear1="Malignance Earring",
     ear2="Regal Earring",
+    head="Agwu's Cap",
     body="Spaekona's Coat +3",
     hands="Agwu's Gages",
     legs="Agwu's Slops",
+    feet="Agwu's Pigaches",
     ring1="Freke Ring",
     ring2="Metamorph Ring +1",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-    feet="Agwu's Pigaches",
     waist="Orpheus's Sash", 
     --waist="Dorin Obi",
     --waist="Acuity Belt +1",
@@ -260,7 +263,7 @@ sets.PDT = {
     neck="Warder's Charm +1",
     waist="Carrier's Sash",
     left_ear="Lugalbanda Earring",
-    right_ear="Sanare Earring",
+    right_ear="Arete Del Luna +1",
     left_ring="Shneddick Ring",
     right_ring="Defending Ring",
     back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},

@@ -36,14 +36,23 @@ function init_gear_sets()
         right_ear="Sherida Earring",
         left_ring="Chirich Ring +1",
         right_ring="Defending Ring",
-        back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
-
-        
+        back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},        
     }
 
 	sets.tank = {
-
-        
+        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+        head="Nyame Helm",
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
+        legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
+        neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
+        waist="Moonbow Belt +1",
+        left_ear="Telos Earring",
+        right_ear="Sherida Earring",
+        left_ring="Chirich Ring +1",
+        right_ring="Defending Ring",
+        back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
     }
 
 	sets.precastWS = {

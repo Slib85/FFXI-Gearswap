@@ -23,7 +23,9 @@
 	sets.midcast['Voidstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
 
 	sets.midcast['Blink'] = set_combine(sets.buffGear, sets.buffGearDuration)
-	sets.midcast['Aquaveil'] = set_combine(set_combine(sets.buffGearDuration, sets.buffGear), {hands="Regal Cuffs", head="Amalric Coif +1", waist="Emphatikos rope", feet="Amalric Nails +1"})
+	sets.midcast['Aquaveil'] = set_combine(set_combine(sets.buffGearDuration, sets.buffGear), {
+		hands="Regal Cuffs", head="Amalric Coif +1", waist="Emphatikos rope", feet="Amalric Nails +1"
+	})
 	sets.midcast['Refresh'] = set_combine(sets.buffGear, sets.buffGearDuration, {
 		head="Amalric Coif +1",
 		waist="Gishdubar Sash",
@@ -102,13 +104,13 @@
 
 	sets.midcast['Death'] = set_combine(sets.nukeGear, {
 		head="Pixie Hairpin +1",
-		body="Archmage's Coat +3",
+		body="Agwu's Robe",
 		ring2="Archon Ring"
 	})
 
 	sets.midcast['Meteor'] = set_combine(sets.nukeGear, {
-		body="Amalric Doublet +1",
-		waist="Acuity Belt +1"
+		waist="Acuity Belt +1",
+		ammo="Ghastly Tathlum +1"
 	})
 
 	sets.midcast['Banish'] = sets.lowTierNukeGear

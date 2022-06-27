@@ -15,6 +15,8 @@ function user_setup()
 end
 
 function init_gear_sets()
+	set_macro_page(2, 19)
+
 	sets.precastGear = {
 
     }

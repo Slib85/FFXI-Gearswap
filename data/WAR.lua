@@ -15,6 +15,8 @@ function user_setup()
 end
 
 function init_gear_sets()
+	set_macro_page(2, 1)
+
 	sets.precastGear = {
 		ammo="Staunch Tathlum +1",
 		head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
@@ -203,6 +205,7 @@ function init_gear_sets()
 		feet="Sakpata's Leggings",
 		ring1="Niqmaddu ring",
 	})
+
 	sets.precast.WS["Resolution"] = {
 		ammo="Knobkierrie",
 		head={ name="Sakpata's Helm", augments={'Path: A',}},
@@ -223,12 +226,30 @@ function init_gear_sets()
 	sets.precast.JA['Berserk'] = {
 		body="Pummeler's Lorica +3",
 	}
+	sets.precast.JA['Defender'] = {
+		hands="Agoge Mufflers +3",
+	}
 	sets.precast.JA['Tomahawk'] = {
 		ammo="Throwing Tomahawk",
 	}
 	sets.precast.JA['Warcry'] = set_combine(sets.enmity, {
 		head="Agoge Mask +3",
 	})
+	sets.precast.JA["Aggressor"] = {
+		body="Agoge Lorica +3",
+	}
+	sets.precast.JA["Blood Rage"] = {
+		body="Boii Lorica +1",
+	}
+	sets.precast.JA["Retaliation"] = {
+		feet="Boii Calligae +1",
+	}
+	sets.precast.JA["Restraint"] = {
+		feet="Boii Mufflers +1",
+	}
+	sets.precast.JA["Mighty Strikes"] = {
+		hands="Agoge Mufflers +3",
+	}
 	sets.precast.JA["Blood Rage"] = sets.enmity
 	sets.precast.JA["Provoke"] = sets.enmity
 	

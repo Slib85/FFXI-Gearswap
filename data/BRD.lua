@@ -55,6 +55,8 @@ end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
+	set_macro_page(2, 10)
+
 	---- Precast Sets ----
 	sets.precastGear = { -- 78%
 		--main="Kali", --7

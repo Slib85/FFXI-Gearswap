@@ -15,13 +15,9 @@ function user_setup()
 end
 
 function init_gear_sets()
-	if player.name == "Slibby" then
-		include('slib/BLM_gear.lua')	
-	elseif player.name == "Dehlila" then
-		include('dehlila/BLM_gear.lua')	
-	elseif player.name == "Lemia" then
-		include('lemia/BLM_gear.lua')	
-	end
+	set_macro_page(2, 4)
+
+	include(player.name .. "/BLM_gear.lua")
 	
 	-- windower.add_to_chat(123, player.TP)
 
@@ -107,6 +103,7 @@ function init_gear_sets()
 	sets.precast.FC = sets.precastGear
 
 	sets.precast.FC['Impact'] = set_combine(sets.precast.FC, {body="Twilight Cloak"})
+	sets.precast.FC['Meteor'] = sets.PDT
 
 	sets.midcast['Impact'] = {
 		ammo="Ghastly Tathlum +1",
@@ -131,7 +128,7 @@ end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
 	if spell.skill == 'Elemental Magic' and (buffactive['Manawell'] == 1 or buffactive['Manafont']) and not S{"Impact"}:contains(spell.english) then
-		equip({body="Amalric Doublet +1"})
+		equip({body="Agwu's Robe"})
 	end
 
 	if buffactive['Mana Wall'] == 1 and not S{"Cataclysm"}:contains(spell.english) then

@@ -15,22 +15,30 @@ function user_setup()
 end
 
 function init_gear_sets()
-	set_macro_page(2, 16)
+	set_macro_page(2, 6)
 
-	include(player.name .. "/BLU_gear.lua")
-	
+	include(player.name .. "/THF_gear.lua")
+
 	sets.precast.FC = sets.gear_precast_spell;
 	sets.precast.WS = sets.gear_precast_ws;
 
-	sets.precast.WS['Savage Blade'] = set_combine(sets.gear_precast_ws, {
-		left_ear="Moonshade Earring"
-	})
-
 	include('BLU_spells.lua')
+	
+	sets.precast.WS['Aeolian Edge'] = sets.gear_precast_magicWS
+	-- sets.precast.WS['Rock Crusher'] = set_combine(sets.magicPrecastWSGear, {
+	--	left_ear="Moonshade Earring"
+	-- })
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
-
+	if S{"Cyclone"}:contains(spell.english) then
+		equip({
+			ammo="Perfect Lucky Egg",
+			hands="Plunderer's armlets +1",
+			feet="Skulker's poulaines +1",
+            waist="Chaac belt",
+		})
+	end
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)

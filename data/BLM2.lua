@@ -270,7 +270,7 @@ function init_gear_sets()
 		right_ear="Etiolation Earring",
 		left_ring="Shneddick Ring",
 		right_ring="Defending Ring",
-		back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.manaWall = {
@@ -281,7 +281,7 @@ function init_gear_sets()
 	sets.magic_burst = {
 		head="Ea Hat +1",
 		legs="Ea Slops +1",
-		hands="Amalric Gages +1",
+		hands="Agwu's Gages",
 		ring1="Mujin Band"
 	}
 
@@ -291,13 +291,6 @@ function init_gear_sets()
 		feet="Wicce Sabots +1"
 	}
 	
-	sets.magic_burst = {
-		head="Ea Hat +1",
-		legs="Ea Slops +1",
-		hands="Amalric Gages +1",
-		ring2="Mujin Band"
-	}
-
 	sets.precast.WS = sets.precastWS;
 
 	sets.precast.WS['Shattersoul'] = sets.precastWSIntGear
@@ -357,6 +350,7 @@ function init_gear_sets()
 	sets.precast.FC = sets.precastGear
 
 	sets.precast.FC['Impact'] = set_combine(sets.precast.FC, {body="Twilight Cloak"})
+	sets.precast.FC['Meteor'] = sets.PDT
 
 	sets.midcast['Impact'] = {
 		ammo="Seraphic Ampulla", -- 7 occult
@@ -373,24 +367,13 @@ function init_gear_sets()
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10 STP
 	}
 
-	sets.precast.FC['Meteor'] = {
-		ammo="Sapience Orb",
-		head={ name="Merlinic Hood", augments={'"Fast Cast"+5',}},
-		body={ name="Merlinic Jubbah", augments={'Mag. Acc.+25','"Fast Cast"+5','MND+3','"Mag.Atk.Bns."+1',}},
-    	hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+3','"Fast Cast"+5',}},
-		legs={ name="Merlinic Shalwar", augments={'"Fast Cast"+5',}},
-		feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+6','CHR+3',}},
-		neck="Orunmila's Torque",
-		left_ear="Etiolation Earring",
-		left_ring="Kishar Ring",
-        back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
-	}
-
 
 	include('BLMspells.lua')
 
 	sets.midcast['Meteor'] = set_combine(sets.nukeGear, {
 		body="Arch. Coat +3",
+		waist="Acuity Belt +1",
+		ammo="Ghastly Tathlum +1"
 	})
 
 	-- Override spells below...
@@ -439,6 +422,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 
 	if S{"Breakga"}:contains(spell.english) or S{"Diaga"}:contains(spell.english) then
 		equip({
+			ammo="Perfect Lucky Egg",
 			legs={ name="Merlinic Shalwar", augments={'MND+2','STR+8','"Treasure Hunter"+2',}},
 			waist="Chaac belt",
 		})

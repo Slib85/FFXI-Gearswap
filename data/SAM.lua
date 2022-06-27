@@ -15,6 +15,8 @@ function user_setup()
 end
 
 function init_gear_sets()
+	set_macro_page(2, 12)
+
 	sets.precastGear = {
 
     }
@@ -41,12 +43,12 @@ function init_gear_sets()
 
 	sets.tank = {
         ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head="Mpaca's Cap",
-        body="Mpaca's Doublet",
-        hands="Mpaca's Gloves",
-        legs="Mpaca's Hose",
-        feet="Mpaca's Boots",
-        neck="Bathy Choker +1",
+        head="Nyame Helm",
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
+        legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
+        neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
         waist="Sailfi Belt +1",
         left_ear="Telos Earring",
         right_ear="Dedition Earring",
@@ -58,6 +60,7 @@ function init_gear_sets()
 	sets.precastWS = {
         ammo="Knobkierrie",
         head="Nyame Helm",
+        head="Mpaca's Cap",
         body="Nyame Mail",
         hands="Nyame Gauntlets",
         legs="Nyame Flanchard",
