@@ -1,13 +1,12 @@
--- Character Basics
-
 Cape = {}
-Cape.SNAPSHOT_DT        = {name="Camulus's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10','Damage taken-5%',}}
-Cape.RANGED_TP          = {name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}}
-Cape.STR_PHYSICAL_WS    = {name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}}
-Cape.MELEE_TP           = {name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
-Cape.AGI_MAGIC_WS       = {name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}}
-Cape.RANGED_WS          = {name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}}
-Cape.INT_MAGIC_WS       = {name="Camulus's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+-- Cape.SNAPSHOT_DT        = {name="Belenus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10','Damage taken-5%',}}
+-- Cape.RANGED_TP          = {name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}}
+Cape.STR_PHYSICAL_WS    = {name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}}
+-- Cape.MELEE_TP           = {name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+Cape.MELEE_DW_TP        = {name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
+-- Cape.AGI_MAGIC_WS       = {name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}}
+-- Cape.RANGED_WS          = {name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}}
+Cape.INT_MAGIC_WS       = {name="Belenus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
 sets.precast_spell = {
 
@@ -36,17 +35,17 @@ sets.precast_ws = {
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
-    neck="Commodore Charm +2",
+    neck="Scout's Gorget +2",
     waist="Sailfi Belt +1",
-    left_ear="Telos Earring",
+    left_ear="Sherida Earring",
     right_ear="Ishvara Earring",
-    left_ring="Ilabrat ring",
+    left_ring="Epaminondas's Ring",
     right_ring="Regal Ring",
     back=Cape.STR_PHYSICAL_WS,
 }
 
 sets.precast_ra_ws = {
-    ammo=gear.WSbullet,
+    ammo="Stone Arrow",
     head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
@@ -62,17 +61,17 @@ sets.precast_ra_ws = {
 }
 
 sets.precast_magic_ws = {
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
-    legs="Nyame Flanchard",
-    feet="Lanun Bottes +3",
-    neck={ name="Commodore Charm +2", augments={'Path: A',}},
-    waist="Orpheus's Sash",
-    left_ear="Isvara Earring",
-    right_ear="Friomisi Earring",
-    left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
+    left_ear="Friomisi Earring",
+    right_ear="Ishvara Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Regal Ring",
     back=Cape.INT_MAGIC_WS,
 }
 
@@ -82,7 +81,7 @@ sets.precast_magic_ra_ws = {
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Lanun Bottes +3",
-    neck={ name="Commodore Charm +2", augments={'Path: A',}},
+    neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="Orpheus's Sash",
     left_ear="Isvara Earring",
     right_ear="Friomisi Earring",
@@ -107,22 +106,36 @@ sets.aftercast_dt = {
 }
 
 sets.aftercast_tp = {
-    head="Nyame Helm",
+    head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Iskur Gorget",
+    feet="Malignance Boots",
+    neck="Scout's Gorget +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",
     right_ear="Crepuscular Earring",
-    left_ring="Epona's Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Defending Ring",
-    back=Cape.MELEE_TP,
+    back=Cape.MELEE_DW_TP,
+}
+
+sets.aftercast_dw_tp = {
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Scout's Gorget +2", augments={'Path: A',}},
+    waist="Patentia Sash",
+    left_ear="Telos Earring",
+    right_ear="Eabani Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Defending Ring",
+    back=Cape.MELEE_DW_TP,
 }
 
 sets.precast_ra = {
-    ammo="Chrono Bullet",
     head="Ikenga's Hat",
     --head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}}, 
     body="Ikenga's Vest",
@@ -131,7 +144,7 @@ sets.precast_ra = {
     legs="Ikenga's Trousers",
     --legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
     feet="Meg. Jam. +2",
-    neck="Commodore charm +2",
+    neck="Scout's Gorget +2",
     --waist="Yemaya Belt",  -- Duke Vepar
     left_ear="Telos Earring",
     right_ear="Crepuscular Earring",
@@ -141,7 +154,6 @@ sets.precast_ra = {
 }
 
 sets.midcast_ra = {
-    ammo="Chrono Bullet",
     head="Ikenga's hat",
     body="Malignance Tabard",
     hands="Malignance Gloves",

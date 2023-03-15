@@ -35,10 +35,10 @@ function init_gear_sets()
         neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
         waist="Sailfi Belt +1",
         left_ear="Telos Earring",
-        right_ear="Dedition Earring",
+        right_ear="Crepuscular Earring",
         left_ring="Chirich Ring +1",
         right_ring="Defending Ring",
-        back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
+        back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Magic dmg. taken-10%',}},
     }
 
 	sets.tank = {
@@ -51,10 +51,10 @@ function init_gear_sets()
         neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
         waist="Sailfi Belt +1",
         left_ear="Telos Earring",
-        right_ear="Dedition Earring",
+        right_ear="Crepuscular Earring",
         left_ring="Chirich Ring +1",
         right_ring="Defending Ring",
-        back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
+        back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Magic dmg. taken-10%',}},
 	}
 
 	sets.precastWS = {
@@ -86,9 +86,9 @@ function init_gear_sets()
         legs={ name="Nyame Flanchard", augments={'Path: B',}},
         feet="Nyame Sollerets",
         neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-        waist="Sailfi Belt +1",
+        waist="Orpheus's Sash",
         left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-        right_ear="Ishvara Earring",
+        right_ear="Friomisi Earring",
         left_ring={ name="Beithir Ring", augments={'Path: A',}},
         right_ring="Regal Ring",
         back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-4%',}},
@@ -110,6 +110,8 @@ function init_gear_sets()
         hands="Sakonji Kote +3",
 		back="Smertrios's Mantle",
 	}
+
+    sets.precast.WS["Tachi: Jinpu"] = sets.magicPrecastWSGear
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)

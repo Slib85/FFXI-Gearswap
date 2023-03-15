@@ -109,10 +109,10 @@ function init_gear_sets()
 
 	sets.midcast.Regen = set_combine(sets.buffGearDuration, {
 		main="Musa",
-		head="Arbatel Bonnet +1",
+		head="Arbatel Bonnet +3",
 		neck="Incanter's Torque",
 		body="Telchine Chasuble",
-		hands="Arbatel Bracers +1",
+		hands="Arbatel Bracers +3",
 		legs="Telchine Braconi",
 		feet="Telchine Pigaches",
 		back="Bookworm's Cape"
@@ -391,9 +391,19 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		end
 	end
 
+	if buffactive['Accession'] == 1 and spell.name == "Phalanx" then
+		equip(sets.buffGearDuration)
+	end
+
 	if buffactive['Perpetuance'] == 1 then
 		equip({
-			hands="Arbatel bracers +1"
+			hands="Arbatel bracers +3"
+		})
+	end
+	
+	if buffactive['Ebullience'] == 1 then
+		equip({
+			head="Arbatel Bonnet +3"
 		})
 	end
 end

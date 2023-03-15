@@ -64,15 +64,15 @@ function init_gear_sets()
     
     })
 
-    sets.precast.WS['Blade: Teki'] = set_combine(sets.precast_ws_magic, {
+    sets.precast.WS['Blade: Teki'] = set_combine(sets.precast_ws_hybrid, {
         left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
-    sets.precast.WS['Blade: To'] = set_combine(sets.precast_ws_magic, {
+    sets.precast.WS['Blade: To'] = set_combine(sets.precast_ws_hybrid, {
         left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 
-    sets.precast.WS['Blade: Chi'] = set_combine(sets.precast_ws_magic, {
+    sets.precast.WS['Blade: Chi'] = set_combine(sets.precast_ws_hybrid, {
         left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     })
 

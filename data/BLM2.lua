@@ -446,7 +446,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		equip(set_combine(sets.buffGearDuration, sets.buffGear, {
 			-- main={ name="Gada", augments={'AGI+9','"Mag.Atk.Bns."+24','Phalanx +3','DMG:+8',}},
 			-- sub="Ammurapi Shield",
-			head={ name="Merlinic Hood", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Fast Cast"+1','Phalanx +3',}},
+    		head={ name="Merlinic Hood", augments={'INT+13','Mag. Acc.+10','Phalanx +4',}},
 			legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23','DEX+2','Phalanx +3','Accuracy+8 Attack+8',}},
 			hands={ name="Merlinic Dastanas", augments={'INT+2','"Dbl.Atk."+4','Phalanx +3','Accuracy+10 Attack+10',}},
 			body={ name="Merlinic Jubbah", augments={'Crit.hit rate+1','Pet: AGI+1','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},

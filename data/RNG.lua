@@ -9,15 +9,15 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('Normal', 'TP');
+	state.OffenseMode:options('Normal', 'TP', "DW");
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
 
 function init_gear_sets()
-	set_macro_page(2, 17)
+	set_macro_page(2, 11)
 
-	include(player.name .. "/COR_gear.lua")
+	include(player.name .. "/RNG_gear.lua")
 	
 	sets.precast.FC = sets.precast_spell;
 	sets.precast.WS = sets.precast_ws;
@@ -31,12 +31,21 @@ function init_gear_sets()
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast_ws, {
 		left_ear="Moonshade Earring"
 	})
+	sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast_magic_ws, {
+		left_ear="Moonshade Earring"
+	})
 
 
 
 	-- =================
 	-- === Ranged WS ===
 	-- =================
+
+    
+	sets.precast.WS['Blast Arrow'] = set_combine(sets.precast_ra_ws, {
+		--left_ear="Moonshade Earring"
+	})
+    
 	sets.precast.WS['Hot Shot'] = set_combine(sets.precast_magic_ra_ws, {
 		left_ear="Moonshade Earring"
 	})
@@ -119,11 +128,6 @@ function init_gear_sets()
 	}
 end
 
---if player.equipment.ammo == "Hauksbok Bullet" and (spell.action_type == "Ranged Attack" or spell.skill == "Archery" or spell.skill == "Markmanship") then
---	print("Trying to use your DI bullet, idiot.")
---	eventArgs.cancel = true
---	return
-
 function job_post_midcast(spell, action, spellMap, eventArgs)
 	if S{"Dream Flower"}:contains(spell.english) then
 		equip({
@@ -137,6 +141,8 @@ end
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == "TP" then
 		equip(sets.aftercast_tp)
+    elseif state.OffenseMode.value == "DW" then
+        equip(sets.aftercast_dw_tp)
 	else
 		equip(sets.aftercast_dt)
 	end

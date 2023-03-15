@@ -50,11 +50,11 @@ sets.gear_precast_magicWS = {
 
 sets.magic_accuracy = {
     ammo="Pemphredo Tathlum",
-    head="Assim. Keffiyeh +3",
-    body="Jhakri Robe +2",
-    hands="Malignance Gloves",
-    legs="Assim. Shalwar +2",
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    head="Hashishin Kavuk +3",
+    body="Hashishin Mintan +3",
+    hands="Hashishin Bazubands +3",
+    legs="Hashishin Tayt +2",
+    feet="Hashishin Basmak +3",
     neck={ name="Mirage Stole +2", augments={'Path: A',}},
     waist={ name="Acuity Belt +1", augments={'Path: A',}},
     left_ear="Regal Earring",
@@ -66,11 +66,11 @@ sets.magic_accuracy = {
     
 sets.gear_midcast_nuke = {
     ammo="Ghastly Tathlum +1",
-    head=empty,
-    body="Cohort Cloak +1",
-    hands="Jhakri Cuffs +2",
-    legs="Jhakri Slops +2",
-    feet="Jhakri Pigaches +2",
+    head="Hashishin Kavuk +3",
+    body="Hashishin Mintan +3",
+    hands="Hashishin Bazubands +3",
+    legs="Hashishin Tayt +2",
+    feet="Hashishin Basmak +3",
     neck="Sanctity Necklace",
     waist="Orpheus's Sash",
     left_ear="Regal Earring",
@@ -107,7 +107,7 @@ sets.gear_aftercast_dt = {
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",
     right_ear="Dedition Earring",
-    left_ring="Chirich Ring +1",
+    left_ring="Shneddick Ring",
     right_ring="Defending Ring",
     back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }

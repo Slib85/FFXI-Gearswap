@@ -1,5 +1,3 @@
--- Character Basics
-
 Cape = {}
 Cape.SNAPSHOT_DT        = {name="Camulus's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10','Damage taken-5%',}}
 Cape.RANGED_TP          = {name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}}

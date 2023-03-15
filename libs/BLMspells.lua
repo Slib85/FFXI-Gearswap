@@ -105,7 +105,7 @@
 	sets.midcast['Death'] = set_combine(sets.nukeGear, {
 		head="Pixie Hairpin +1",
 		body="Agwu's Robe",
-		ring2="Archon Ring"
+		ring2="Archon Ring",
 	})
 
 	sets.midcast['Meteor'] = set_combine(sets.nukeGear, {
@@ -117,6 +117,9 @@
 	sets.midcast['Banish II'] = sets.lowTierNukeGear
 	sets.midcast['Banishga'] = sets.lowTierNukeGear
 	sets.midcast['Banishga II'] = sets.lowTierNukeGear
+	
+	sets.midcast['Holy'] = sets.lowTierNukeGear
+	sets.midcast['Holy II'] = sets.lowTierNukeGear
 
 	sets.midcast['Stone'] = sets.lowTierNukeGear
 	sets.midcast['Stone II'] = sets.lowTierNukeGear

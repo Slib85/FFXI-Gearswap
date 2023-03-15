@@ -53,6 +53,48 @@ function user_unload()
 end
 
 
+--[[
+    Linos.MEVA    = { name="Linos", augments={'Mag. Evasion+15','Phys. dmg. taken -5%','HP+20'
+      X PDT: Leafslit +2
+      X MEVA: Any snow +2
+      X HP: Duskslit +2
+
+    Linos.EVA     = { name="Linos", augments={'Evasion+15','Phys. dmg. taken -5%','AGI+8
+      X PDT: Leafslit +2
+      X EVA: Any snow +2
+      X AGI: Duskslit +2
+
+    Linos.RUDRA   = { name="Linos", augments={'Attack+20','Weapon skill damage +3%','DEX+8',}}
+      X WSD: Leafslit +2
+      X ACC/ATK: Snowslit +2
+      X DEX: Dusktip +2
+
+    Linos.WSD     = { name="Linos", augments={'Accuracy+13 Attack+13','Weapon skill damage +3%','STR+8',}}
+      X WSD: Leafslit +2
+      X ACC/ATK: Snowslit +2
+      X STR/CHR: Duskslit +2
+  
+    Linos.TP      = { name="Linos", augments={'Accuracy+17','"Store TP"+4','Quadruple Attack +3',}}
+      X DA/STP: Leafslit +2
+      ACC: Snowslit +2
+      X QUAD: Dusktip +2
+
+    Linos.AEOLIAN = { name="Linos", augments={'"Mag.Atk.Bns."+15','Weapon skill damage +3%','INT+8',}}
+      WSD: Leafslit +2
+      X MAB: Snowdim +2
+      X INT: Duskdim +2
+
+Shopping list: Leafslit +1/+2
+               Snowslit +2, 
+               Snowdim +2,
+
+Learnings inconsistent with wiki: Dusktip gives str/chr augs.
+                                  Tons of stp 4's with both leafslit/leaftip
+
+]]--
+
+
+
 -- Define sets and vars used by this job file.
 function init_gear_sets()
 	set_macro_page(2, 10)
@@ -61,7 +103,7 @@ function init_gear_sets()
 	sets.precastGear = { -- 78%
 		--main="Kali", --7
 		range="Gjallarhorn",
-		head="Fili Calot +1", --14
+		head="Fili Calot +3", --14
 		body="Zendik Robe", --13
 		hands="Leyline Gloves", --5
 		legs="Ayanmo Cosciales +2", --6
@@ -75,9 +117,9 @@ function init_gear_sets()
 	}
 
 	sets.songGear = {
-        head="Fili Calot +1",
-        body="Fili Hongreline +1",
-        hands="Fili Manchettes +1",
+        head="Fili Calot +3",
+        body="Fili Hongreline +3",
+        hands="Fili Manchettes +3",
         legs="Inyanga Shalwar +2",
 		feet="Brioso Slippers +2",
         neck="Mnbw. Whistle +1",
@@ -153,7 +195,7 @@ function init_gear_sets()
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
-		waist="Anguinus Belt",
+		waist="Sailfi Belt +1",
 		left_ear="Ishvara Earring",
 		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 		left_ring="Petrov Ring",
@@ -279,9 +321,9 @@ function init_gear_sets()
 	sets.precast.FC['Horde Lullaby II'] = set_combine(sets.precast.FC, {range="Blurred Harp +1"})
 	sets.midcast["Horde Lullaby"] = set_combine(sets.songGear, sets.songAccuracy)
 	sets.midcast["Horde Lullaby II"] = set_combine(sets.songGear, sets.songAccuracy)
-	sets.midcast["Mage's Ballad"] = set_combine(sets.songGear, {legs="Fili Rhingrave +1"})
-	sets.midcast["Mage's Ballad II"] = set_combine(sets.songGear, {legs="Fili Rhingrave +1"})
-	sets.midcast["Mage's Ballad III"] = set_combine(sets.songGear, {legs="Fili Rhingrave +1"})
+	sets.midcast["Mage's Ballad"] = set_combine(sets.songGear, {legs="Fili Rhingrave +3"})
+	sets.midcast["Mage's Ballad II"] = set_combine(sets.songGear, {legs="Fili Rhingrave +3"})
+	sets.midcast["Mage's Ballad III"] = set_combine(sets.songGear, {legs="Fili Rhingrave +3"})
 	sets.midcast["Knight's Minne"] = set_combine(sets.songGear, {legs="Mousai Seraweels"})
 	sets.midcast["Knight's Minne II"] = set_combine(sets.songGear, {legs="Mousai Seraweels"})
 	sets.midcast["Knight's Minne III"] = set_combine(sets.songGear, {legs="Mousai Seraweels"})
@@ -658,13 +700,13 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 	end
 
 	if S{"Horde Lullaby II"}:contains(spell.english) or S{"Magic Finale"}:contains(spell.english) then
-		oldMain = player.equipment.main
-		oldSub = player.equipment.sub
+		--oldMain = player.equipment.main
+		--oldSub = player.equipment.sub
 		
-		equip({
-			main="Carnwenhan", 
-			sub="Daybreak",
-		})
+		--equip({
+		--	main="Carnwenhan", 
+		--	sub="Daybreak",
+		--})
 	end
 end
 

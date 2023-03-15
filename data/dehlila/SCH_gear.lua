@@ -1,7 +1,7 @@
 sets.precastGear = {
     ammo="Sapience Orb",
     head={ name="Merlinic Hood", augments={'"Fast Cast"+5',}},
-    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+25','"Fast Cast"+5','MND+3','"Mag.Atk.Bns."+1',}},
+    body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+1','AGI+1','"Fast Cast"+6','Accuracy+14 Attack+14','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
     hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+3','"Fast Cast"+5',}},
     legs={ name="Merlinic Shalwar", augments={'"Fast Cast"+5',}},
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+6','CHR+3',}},
@@ -12,36 +12,17 @@ sets.precastGear = {
     back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
 }
 
-sets.lowTierNukeGear = {
-    main="Bunzi's Rod",
-    sub="Culminus",
-    ammo="Ghastly Tathlum +1",
-    head="Agwu's Cap",
-    body="Agwu's Robe",
-    hands="Agwu's Gages",
-    legs="Agwu's Slops",
-    feet="Agwu's Pigaches",
-    neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Acuity Belt +1",
-    waist="Orpheus's Sash",
-    left_ear="Malignance Earring",
-    right_ear="Regal Earring",
-    left_ring="Freke Ring",
-    right_ring="Metamor. Ring +1",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-}
 sets.nukeGear = {
     main="Bunzi's Rod",
     sub="Ammurapi Shield",
     ammo="Ghastly Tathlum +1",
     head="Agwu's Cap",
-    body="Agwu's Robe",
+    body="Arbatel Gown +3",
     hands="Agwu's Gages",
     legs="Agwu's Slops",
-    feet="Agwu's Pigaches",
+    feet="Arbatel Loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
     waist="Acuity Belt +1",
-    waist="Orpheus's Sash",
     left_ear="Malignance Earring",
     right_ear="Regal Earring",
     left_ring="Freke Ring",
@@ -49,21 +30,23 @@ sets.nukeGear = {
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 }
 
+sets.lowTierNukeGear = sets.nukeGear
+
 sets.enfeebleGear = {
     main="Bunzi's Rod",
     sub="Ammurapi Shield",
-    ammo="Pemphredo Tathlum",
-    head="Mall. Chapeau +2",
-    body="Mallquis Saio +2",
-    hands="Mallquis Cuffs +2",
-    legs="Mallquis Trews +2",
-    feet="Mallquis Clogs +2",
-    neck="Mizu. Kubikazari",
-    waist="Eschan Stone",
+    ammo="Ghastly Tathlum +1",
+    head="Agwu's Cap",
+    body="Arbatel Gown +3",
+    hands="Agwu's Gages",
+    legs="Agwu's Slops",
+    feet="Arbatel Loafers +3",
+    neck={ name="Argute Stole +2", augments={'Path: A',}},
+    waist="Acuity Belt +1",
     left_ear="Malignance Earring",
     right_ear="Regal Earring",
     left_ring="Freke Ring",
-    right_ring="Mallquis Ring",
+    right_ring="Metamor. Ring +1",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 }
 
@@ -151,7 +134,7 @@ sets.magicPrecastWSGear = {
     legs="Amalric Slops +1",
     feet="Amalric Nails +1",
     neck="Src. Stole +2",
-    waist="Orpheus's Sash",
+    waist="Acuity Belt +1",
     ear1="Friomisi Earring",
     ear2="Regal Earring",
     ring1="Shiva Ring +1",
@@ -190,8 +173,6 @@ sets.drainGear = {
 }
 
 sets.cureGear = {
-    main="Daybreak",
-    sub="Genmei shield",
     ammo="Staunch Tathlum +1",
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     body="Mallquis Saio +2",
@@ -208,7 +189,7 @@ sets.cureGear = {
 }
 
 sets.phalanxGear = {
-    head={ name="Merlinic Hood", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Fast Cast"+1','Phalanx +3',}},
+    head={ name="Merlinic Hood", augments={'INT+13','Mag. Acc.+10','Phalanx +4',}},
     legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23','DEX+2','Phalanx +3','Accuracy+8 Attack+8',}},
     hands={ name="Merlinic Dastanas", augments={'INT+2','"Dbl.Atk."+4','Phalanx +3','Accuracy+10 Attack+10',}},
     body={ name="Merlinic Jubbah", augments={'Crit.hit rate+1','Pet: AGI+1','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
@@ -235,8 +216,6 @@ sets.vagaryMBNoKill = {
 }
 
 sets.PDT = {
-    main="Malignance Pole",
-    sub="Khonsu",
     ammo="Staunch Tathlum +1",
     head="Nyame Helm",
     body="Nyame Mail",
