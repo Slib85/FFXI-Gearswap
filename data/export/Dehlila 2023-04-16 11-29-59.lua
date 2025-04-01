@@ -1,0 +1,17 @@
+sets.exported={
+    main="Malignance Pole",
+    sub="Khonsu",
+    ammo="Oshasha's Treatise",
+    head="Arbatel Bonnet +3",
+    body="Arbatel Gown +3",
+    hands="Arbatel Bracers +3",
+    legs="Arbatel Pants +3",
+    feet="Arbatel Loafers +3",
+    neck="Warder's Charm",
+    waist="Eschan Stone",
+    left_ear="Telos Earring",
+    right_ear="Crep. Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
+    back={ name="Lugh's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+}

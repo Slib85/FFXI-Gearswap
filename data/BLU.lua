@@ -18,26 +18,27 @@ function init_gear_sets()
 	set_macro_page(2, 16)
 
 	include(player.name .. "/BLU_gear.lua")
-	
-	sets.precast.FC = sets.gear_precast_spell;
-	sets.precast.WS = sets.gear_precast_ws;
+ 	include("lib/all_lib.lua")
 
-	sets.precast.WS['Savage Blade'] = set_combine(sets.gear_precast_ws, {
-		left_ear="Moonshade Earring"
-	})
-
-	include('BLU_spells.lua')
+	--include('BLU_spells.lua')
 end
 
-function job_post_midcast(spell, action, spellMap, eventArgs)
+function job_precast(spell, action, spellMap, eventArgs)
+	global_precast(spell)
+end
+
+function job_midcast(spell, action, spellMap, eventArgs)
+	global_midcast(spell)
 
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
+	global_aftercast(spell)
+	
 	if state.OffenseMode.value == "TP" then
-		equip(sets.gear_aftercast_tp)
+		equip(sets.melee_tp)
 	else
-		equip(sets.gear_aftercast_dt)
+		equip(sets.idle_defense)
 	end
 end
 

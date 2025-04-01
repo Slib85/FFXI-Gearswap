@@ -62,19 +62,19 @@ function init_gear_sets()
     }
 
     sets.precastWSPhysical = {
-        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head="Gleti's Mask",
-        body="Gleti's Cuirass",
-        hands="Gleti's Gauntlets",
-        legs="Gleti's Breeches",
-        feet="Gleti's Boots",
-        neck="Sanctity Necklace",
-        waist="Anguinus Belt",
+        ammo="Oshasha's Treatise",
+        head={ name="Nyame Helm", augments={'Path: B',}},
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        neck="Rep. Plat. Medal",
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Sherida Earring",
-        right_ear="Telos Earring",
-        left_ring="Regal Ring",
-        right_ring="Ilabrat Ring",
-        back={ name="Senuna's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
+        right_ear="Ishvara Earring",
+        left_ring="Ilabrat Ring",
+        right_ring={ name="Beithir Ring", augments={'Path: A',}},
+        back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
     }
 
 	sets.precastWSCritical = {

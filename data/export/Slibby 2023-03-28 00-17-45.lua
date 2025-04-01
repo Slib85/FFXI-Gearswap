@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Apocalypse", augments={'Path: A',}},
+    sub="Utu Grip",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Heath. Bur. +3",
+    body="Ignominy Cuirass +3",
+    hands={ name="Nyame Gauntlets", augments={'Path: A',}},
+    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Bathy Choker +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Telos Earring",
+    right_ear="Crep. Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Ankou's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','"Fast Cast"+10','DEF+50',}},
+}

@@ -30,7 +30,7 @@ function init_gear_sets()
         head="Mpaca's Cap",
         body="Mpaca's Doublet",
         hands="Mpaca's Gloves",
-        legs="Mpaca's Hose",
+        legs="Kasuga Haidate +3",
         feet="Mpaca's Boots",
         neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
         waist="Sailfi Belt +1",
@@ -46,21 +46,20 @@ function init_gear_sets()
         head="Nyame Helm",
         body="Nyame Mail",
         hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
+        legs="Kasuga Haidate +3",
         feet="Nyame Sollerets",
         neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
         waist="Sailfi Belt +1",
         left_ear="Telos Earring",
-        right_ear="Crepuscular Earring",
-        left_ring="Chirich Ring +1",
-        right_ring="Defending Ring",
+        right_ear="Schere Earring",
+        left_ring={name="Chirich Ring +1", bag="Wardrobe 1"}, -- 6 STP
+        right_ring={name="Chirich Ring +1", bag="Wardrobe 2"}, -- 6 STP
         back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Magic dmg. taken-10%',}},
 	}
 
 	sets.precastWS = {
         ammo="Knobkierrie",
         head="Nyame Helm",
-        head="Mpaca's Cap",
         body="Nyame Mail",
         hands="Nyame Gauntlets",
         legs="Nyame Flanchard",

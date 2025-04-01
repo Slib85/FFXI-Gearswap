@@ -19,6 +19,8 @@ function init_gear_sets()
 
 	include(player.name .. "/RDM_gear.lua")
 	include("lib/all_lib.lua")
+
+    sets.precast.HolyWater = set_combine(sets.holy_water)
 end
 
 function job_precast(spell, action, spellMap, eventArgs)

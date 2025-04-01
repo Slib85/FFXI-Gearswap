@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub={ name="Bunzi's Rod", augments={'Path: A',}},
+    ammo="Staunch Tathlum +1",
+    head="Wicce Petasos +3",
+    body="Adamantite Armor",
+    hands="Wicce Gloves +3",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Wicce Sabots +3",
+    neck="Nicander's Necklace",
+    waist="Null Belt",
+    left_ear="Lugalbanda Earring",
+    right_ear="Arete del Luna +1",
+    left_ring="Blenmot's Ring +1",
+    right_ring="Blenmot's Ring +1",
+    back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},
+}

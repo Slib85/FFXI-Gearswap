@@ -75,7 +75,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = sets.midcast_magic_accuracy
+		midcast_set = sets.precast_magic
     },
     ["Absorb-VIT"] = {
         use_midcast_magic_affinity = 0,
@@ -270,10 +270,10 @@ magic = {
 		midcast_set = sets.idle_defense,
     },
     ["Blaze Spikes"] = {
-        use_midcast_magic_affinity = "unknown",
-        use_midcast_magic_damage = "unknown",
-        use_aftercast_magic_affinity = "unknown",
-        use_aftercast_magic_damage = "unknown"
+        use_midcast_magic_affinity = 0,
+        use_midcast_magic_damage = 0,
+        use_aftercast_magic_affinity = 0,
+        use_aftercast_magic_damage = 0
     },
     ["Blind"] = {
         use_midcast_magic_affinity = 0,
@@ -835,10 +835,10 @@ magic = {
 		midcast_set = sets.midcast_magic_damage,
     },
     ["Ice Spikes"] = {
-        use_midcast_magic_affinity = "unknown",
-        use_midcast_magic_damage = "unknown",
-        use_aftercast_magic_affinity = "unknown",
-        use_aftercast_magic_damage = "unknown",
+        use_midcast_magic_affinity = 0,
+        use_midcast_magic_damage = 0,
+        use_aftercast_magic_affinity = 0,
+        use_aftercast_magic_damage = 0,
     },
     ["Impact"] = {
         use_midcast_magic_affinity = 0,
@@ -847,21 +847,19 @@ magic = {
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
 		midcast_set = set_combine(sets.midcast_magic_accuracy, {
-            -- main=empty,
-            -- sub=empty,
             head=empty,
             body="Twilight Cloak",
-            ammo=empty,
-            hands=empty,
-            legs=empty,
-            feet=empty,
-            neck=empty,
-            waist="Sailfi Belt +1",
-            left_ear=empty,
-            right_ear=empty,
-            left_ring=empty,
-            right_ring=empty,
-            back=empty,
+            --ammo=empty,
+            --hands=empty,
+            --legs=empty,
+            --feet=empty,
+            --neck=empty,
+            --waist="Sailfi Belt +1",
+            --left_ear=empty,
+            --right_ear=empty,
+            --left_ring=empty,
+            --right_ring=empty,
+            --back=empty,
         })
     },
     ["Ionohelix"] = {
@@ -886,7 +884,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = sets.midcast_magic_damage,
+		midcast_set = set_combine(sets.midcast_magic_damage, sets.midcast_magic_affinity_dark)
     },
     ["Klimaform"] = {
         use_midcast_magic_affinity = 0,
@@ -1025,10 +1023,10 @@ magic = {
 		midcast_set = sets.midcast_elemental_debuff,
     },
     ["Shock Spikes"] = {
-        use_midcast_magic_affinity = "unknown",
-        use_midcast_magic_damage = "unknown",
-        use_aftercast_magic_affinity = "unknown",
-        use_aftercast_magic_damage = "unknown"
+        use_midcast_magic_affinity = 0,
+        use_midcast_magic_damage = 0,
+        use_aftercast_magic_affinity = 0,
+        use_aftercast_magic_damage = 0
     },
     ["Sleep"] = {
         use_midcast_magic_affinity = 0,
@@ -2004,7 +2002,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = set_combine(sets.recast, sets.midcast_curse),
+		midcast_set = set_combine(sets.recast, sets.cure_debuff, sets.midcast_curse),
     },
     ["Deodorize"] = {
         use_midcast_magic_affinity = 1,
@@ -2172,7 +2170,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = sets.recast,
+		midcast_set = set_combine(sets.recast, sets.cure_debuff)
     },
     ["Esuna"] = {
         use_midcast_magic_affinity = 0,
@@ -2951,7 +2949,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+		midcast_set = sets.idle_defense
     },
     ["Spectral Floe"] = {
         use_midcast_magic_affinity = 1,
@@ -2959,7 +2957,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["1000 Needles"] = {
         use_midcast_magic_affinity = 0,
@@ -2975,7 +2973,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+		midcast_set = sets.midcast_magic_damage,
     },
     ["Acrid Stream"] = {
         use_midcast_magic_affinity = 1,
@@ -3023,7 +3021,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Asuran Claws"] = {
         use_midcast_magic_affinity = 0,
@@ -3295,7 +3293,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Cruel Joke"] = {
         use_midcast_magic_affinity = 0,
@@ -3303,7 +3301,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Cursed Sphere"] = {
         use_midcast_magic_affinity = 1,
@@ -3359,7 +3357,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+		midcast_set = sets.idle_defense,
     },
     ["Diffusion Ray"] = {
         use_midcast_magic_affinity = 1,
@@ -3399,7 +3397,11 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+		midcast_set = set_combine(sets.midcast_magic_damage, {
+            ammo="Per. Lucky Egg",
+            feet={ name="Herculean Boots", augments={'"Fast Cast"+5','Accuracy+9','"Treasure Hunter"+2','Accuracy+14 Attack+14','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+            waist="Chaac Belt",
+        }),
     },
     ["Droning Whirlwind"] = {
         use_midcast_magic_affinity = 1,
@@ -3439,7 +3441,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Evryone. Grudge"] = {
         use_midcast_magic_affinity = 1,
@@ -3815,7 +3817,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+		midcast_set = sets.idle_defense,
     },
     ["Mind Blast"] = {
         use_midcast_magic_affinity = 1,
@@ -3922,8 +3924,8 @@ magic = {
 		midcast_set = {},
     },
     ["Plasma Charge"] = {
-        use_midcast_magic_affinity = "unknown",
-        use_midcast_magic_damage = "unknown",
+        use_midcast_magic_affinity = 0,
+        use_midcast_magic_damage = 0,
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
@@ -4026,8 +4028,8 @@ magic = {
 		midcast_set = {},
     },
     ["Reactor Cool"] = {
-        use_midcast_magic_affinity = "unknown",
-        use_midcast_magic_damage = "unknown",
+        use_midcast_magic_affinity = 0,
+        use_midcast_magic_damage = 0,
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
@@ -4255,7 +4257,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Subduction"] = {
         use_midcast_magic_affinity = 1,
@@ -4263,7 +4265,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Sudden Lunge"] = {
         use_midcast_magic_affinity = 0,
@@ -4271,7 +4273,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+		midcast_set = sets.midcast_hybrid_accuracy,
     },
     ["Sweeping Gouge"] = {
         use_midcast_magic_affinity = 0,
@@ -4295,7 +4297,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Tem. Upheaval"] = {
         use_midcast_magic_affinity = 1,
@@ -4391,7 +4393,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+        midcast_set = sets.midcast_magic_damage,
     },
     ["Vanity Dive"] = {
         use_midcast_magic_affinity = 0,
@@ -4463,7 +4465,7 @@ magic = {
         use_aftercast_magic_affinity = 0,
         use_aftercast_magic_damage = 0,
 		do_weapon_swap = 0,
-		midcast_set = {},
+		midcast_set = sets.midcast_cure,
     },
     ["Wild Carrot"] = {
         use_midcast_magic_affinity = 1,

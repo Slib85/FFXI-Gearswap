@@ -654,7 +654,11 @@ function get_precast_set(spell, spellMap)
             cat = (sets.precast[spell.type] and spell.type) or 'JA'
         end
     elseif spell.action_type == 'Item' then
-        cat = 'Item'
+        if spell.name == 'Holy Water' then
+            cat = 'HolyWater'
+        else
+            cat = 'Item'
+        end
     end
     
     -- If no proper sub-category is defined in the job file, bail out.

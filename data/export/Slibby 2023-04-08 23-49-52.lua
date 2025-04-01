@@ -1,0 +1,17 @@
+sets.exported={
+    main="Aern Dagger II",
+    sub="Aern Dagger",
+    ammo="Sroda Tathlum",
+    head="Malignance Chapeau",
+    body={ name="Nyame Mail", augments={'Path: A',}},
+    hands="Aya. Manopolas +2",
+    legs="Malignance Tights",
+    feet={ name="Nyame Sollerets", augments={'Path: A',}},
+    neck={ name="Dls. Torque +2", augments={'Path: A',}},
+    waist="Orpheus's Sash",
+    left_ear="Crep. Earring",
+    right_ear="Eabani Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
+    back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+}

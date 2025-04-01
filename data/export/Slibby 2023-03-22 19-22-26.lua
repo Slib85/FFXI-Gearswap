@@ -1,0 +1,17 @@
+sets.exported={
+    main="Naegling",
+    sub="Genmei Shield",
+    ammo="Staunch Tathlum +1",
+    head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
+    body={ name="Nyame Mail", augments={'Path: A',}},
+    hands="Atrophy Gloves +3",
+    legs={ name="Nyame Flanchard", augments={'Path: A',}},
+    feet="Leth. Houseaux +3",
+    neck="Warder's Charm +1",
+    waist="Carrier's Sash",
+    left_ear="Genmei Earring",
+    right_ear="Arete del Luna +1",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Sucellos's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','"Fast Cast"+10','DEF+50',}},
+}

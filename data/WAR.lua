@@ -57,8 +57,9 @@ function init_gear_sets()
         feet="Sakpata's Leggings",
 		neck="War. Beads +2",
 		waist="Sailfi Belt +1",
-		left_ear="Telos Earring",
-		right_ear="Schere Earring",
+		left_ear="Schere Earring",
+		--left_ear="Telos Earring",
+		right_ear="Boii Earring +2",
 		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
 		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
@@ -69,7 +70,7 @@ function init_gear_sets()
 	sets.subtle = {
 		ammo="Coiste Bodhar",
 		head="Sakpata's Helm",
-		body="Dagon Breastplate",
+		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
@@ -79,7 +80,7 @@ function init_gear_sets()
 		right_ear="Crepuscular Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
-		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.tank = {
@@ -109,8 +110,9 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 		right_ear="Thrud Earring",
-        left_ring="Epaminondas's Ring",
-        right_ring="Regal Ring",
+		--right_ear="Schere Earring",
+        left_ring="Beithir Ring",
+        right_ring="Cornelia's Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 

@@ -113,7 +113,7 @@ function init_gear_sets()
 		left_ear="Etiolation Earring", --1
 		left_ring="Kishar Ring", --4
 		right_ring = "Prolix Ring", -- 2%
-		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}}, --10
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}}, --10
 	}
 
 	sets.songGear = {
@@ -128,7 +128,7 @@ function init_gear_sets()
         right_ear="Genmei Earring",
 		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
 		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
-        back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
+        back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
     }
 		
 	
@@ -145,19 +145,18 @@ function init_gear_sets()
 	}
 
 	sets.enfeebleGear = {
-		ammo="Pemphredo Tathlum",
-		head={ name="Bihu Roundlet +3", augments={'Enhances "Con Anima" effect',}},
-		body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
-		hands="Nyame Gauntlets",
-		legs="Brioso Cannions +2",
-		feet="Brioso Slippers +2",
-		neck="Mnbw. Whistle +1",
-		waist="Luminary Sash",
-		left_ear="Regal Earring",
-		right_ear="Enfeebling Earring",
+        head="Fili Calot +3",
+        body="Fili Hongreline +3",
+        hands="Fili Manchettes +3",
+        legs="Fili Rhingrave +3",
+        feet="Fili Cothurnes +3",
+        neck="Null Loop",
+        waist={ name="Acuity Belt +1", augments={'Path: A',}},
+        left_ear="Crep. Earring",
+        right_ear="Regal Earring",
 		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
 		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
-		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
+        back={ name="Intarabus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 
 	-- Precast sets to enhance JAs
@@ -170,7 +169,7 @@ function init_gear_sets()
 		-- sub="Genmei Shield",
 		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 		head="Nyame Helm",
-		body="Nyame Mail",
+		body="Ashera Harness",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
@@ -204,18 +203,18 @@ function init_gear_sets()
 	}
 
 	sets.songAccuracy= {
-		head={ name="Bihu Roundlet +3", augments={'Enhances "Con Anima" effect',}},
-		body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
-		hands="Aya. Manopolas +1",
-		legs="Brioso Cannions +2",
-		feet="Brioso Slippers +2",
-		neck="Mnbw. Whistle +1",
-		waist="Luminary Sash",
-		left_ear="Regal Earring",
-		right_ear="Genmei Earring",
+        head="Fili Calot +3",
+        body="Fili Hongreline +3",
+        hands="Fili Manchettes +3",
+        legs="Fili Rhingrave +3",
+        feet="Fili Cothurnes +3",
+        neck="Null Loop",
+        waist={ name="Acuity Belt +1", augments={'Path: A',}},
+        left_ear="Crep. Earring",
+        right_ear="Regal Earring",
 		left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
 		right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
-		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
 	}
 
 	sets.precastWSIntGear = {
@@ -352,7 +351,9 @@ function init_gear_sets()
 	sets.midcast["Adventurer's Dirge"] = sets.songGear
 	sets.midcast["Foe Sirvente"] = sets.songGear
 	sets.precast.FC['Honor March'] = set_combine(sets.precast.FC, {range="Marsyas"})
+	sets.precast.FC['Aria of Passion'] = set_combine(sets.precast.FC, {range="Loughnashade"})
 	sets.midcast["Honor March"] = sets.songGear
+	sets.midcast["Aria of Passion"] = sets.songGear
 	sets.midcast["Battlefield Elegy"] = sets.songGear
 	sets.midcast["Carnage Elegy"] = sets.songGear
 	sets.midcast["Sinewy Etude"] = set_combine(sets.songGear, {
@@ -517,6 +518,7 @@ function init_gear_sets()
 	sets.midcast['Meteor'] = sets.nukeGear
 	sets.midcast['Drain'] = sets.enfeebleGear
 	sets.midcast['Silence'] = sets.enfeebleGear
+	sets.midcast['Absorb-TP'] = sets.enfeebleGear
 
 	sets.midcast['Stone'] = set_combine(sets.lowTierNukeGear, {body = "Mallquis Saio +2"})
 	sets.midcast['Stone II'] = sets.lowTierNukeGear

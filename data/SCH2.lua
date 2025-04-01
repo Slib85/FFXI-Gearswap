@@ -156,6 +156,7 @@ function init_gear_sets()
 		hands="Telchine Gloves",
 		legs="Telchine Braconi",
 		feet="Telchine Pigaches",
+		waist="Embla Sash",
 	}
 	
 	sets.precastWS = {
@@ -262,18 +263,18 @@ function init_gear_sets()
 
 	sets.PDT = {
 	    ammo="Staunch Tathlum +1",
-		head={ name="Merlinic Hood", augments={'Damage taken-3%','CHR+1',}},
-	    body="Mallquis Saio +2",
-		hands="Volte Bracers",
-		legs={ name="Merlinic Shalwar", augments={'Pet: VIT+6','Accuracy+19','Damage taken-4%','Accuracy+16 Attack+16',}},
-	    feet="Hippomenes Socks +1",
+		head="Nyame Helm",
+	    body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+	    feet="Nyame Sollerets",
 	    neck="Loricate Torque +1",
 	    waist="Carrier's Sash",
 	    left_ear="Lugalbanda Earring",
 	    right_ear="Genmei Earring",
 	    left_ring="Shneddick Ring",
 	    right_ring="Defending Ring",
-        back={ name="Mecisto. Mantle", augments={'Cap. Point+49%','MP+11','Rng.Acc.+1','DEF+11',}},
+        back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
 	
 	sets.manaWall = {
@@ -452,14 +453,14 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		oldSub = player.equipment.sub
 		
 		equip(set_combine(sets.buffGearDuration, sets.buffGear, {
-			-- main={ name="Gada", augments={'AGI+9','"Mag.Atk.Bns."+24','Phalanx +3','DMG:+8',}},
-			-- sub="Ammurapi Shield",
-			head={ name="Merlinic Hood", augments={'Rng.Acc.+24 Rng.Atk.+24','Pet: Accuracy+23 Pet: Rng. Acc.+23','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
-			body={ name="Merlinic Jubbah", augments={'"Dbl.Atk."+1','Attack+14','Phalanx +3','Accuracy+11 Attack+11','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
-			hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
-			legs={ name="Merlinic Shalwar", augments={'Accuracy+13','Pet: Mag. Acc.+8','Phalanx +4','Accuracy+19 Attack+19','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
-			feet={ name="Merlinic Crackows", augments={'Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','INT+3','Phalanx +5','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
 		}))
+	end
+
+	
+	if buffactive['Perpetuance'] == 1 then
+		equip({
+			hands="Arbatel bracers +3"
+		})
 	end
 end
 

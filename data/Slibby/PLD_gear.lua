@@ -17,14 +17,14 @@ cape.defense = { name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva
 -- BEGIN PRECAST SETS
 -- 72%
 sets.precast_magic = {
+    waist="Plat. Mog. Belt", --0
     ammo="Sapience Orb", --2
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, --14
     body="Rev. Surcoat +3", --10
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8
     legs={ name="Odyssean Cuisses", augments={'Mag. Acc.+13','"Fast Cast"+4','INT+1',}}, -- 4
-    feet="Chev. Sabatons +2", --10  /  13
+    feet="Chev. Sabatons +3", --10  /  13
     neck="Orunmila's Torque", --5
-    waist="Goading Belt", --0
     left_ear="Loquac. Earring", --2
     right_ear="Etiolation Earring", --1
     left_ring="Kishar Ring", --4
@@ -43,12 +43,9 @@ sets.precast_ws_physical = {
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
     right_ear="Thrud Earring",
-    left_ring="Regal Ring",
+    left_ring="Cornelia's Ring",
     right_ring="Epaminondas's Ring",
     back=cape.ws_physical_str,
-    
-    left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
-    right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 }
 
 sets.precast_ws_pdl = set_combine(sets.precast_ws_physical, {
@@ -97,10 +94,10 @@ sets.precast_ws_magic_dark = set_combine(sets.precast_ws_magic, {
 sets.midcast_magic_accuracy = {
     ammo="Pemphredo Tathlum",
     head="Chev. Armet +3",
-    body="Chev. Cuirass +3",
+    body="Adamantite Armor",
     hands="Chev. Gauntlets +3",
     legs="Chev. Cuisses +3",
-    feet="Chev. Sabatons +2",
+    feet="Chev. Sabatons +3",
     neck="Henic Torque",
     waist="Luminary Sash",
     left_ear="Crepuscular Earring",
@@ -116,10 +113,10 @@ sets.midcast_enfeeble_mnd = set_combine(sets.midcast_magic_accuracy, {
     back=cape.magic_mind
 })
 
-sets.midcast_enmity_gear = {
+sets.midcast_enmity = {
     ammo="Sapience Orb",
     head="Loess Barbuta +1",
-    body="Chev. Cuirass +3",
+    body="Adamantite Armor",
     hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
     legs={ name="Odyssean Cuisses", augments={'MND+2','CHR+6','Phalanx +4',}},
     feet={ name="Yorium Sabatons", augments={'Enmity+10',}},
@@ -143,7 +140,7 @@ sets.midcast_sird = {
 sets.midcast_cure = {
     ammo="Staunch Tathlum +1", -- 0% cure, 11% SIRD, 3% DT
     head={ name="Sakpata's Helm", augments={'Path: A',}}, -- 5% cure, 0% SIRD, 7% DT
-    body="Chev. Cuirass +3", -- 0% cure, 20% SIRD, Variable DT based on enmity
+    body="Adamantite Armor", -- 0% cure, 20% SIRD, Variable DT based on enmity
     hands="Chev. Gauntlets +3", -- 0% cure, 0% SIRD, 11% DT
     legs={ name="Carmine Cuisses +1", augments={'HP+80','STR+12','INT+12',}}, -- 0% cure, 20% SIRD, 0% DT
     feet={ name="Odyssean Greaves", augments={'Mag. Acc.+24','"Fast Cast"+5','"Mag.Atk.Bns."+8',}}, -- 7% cure, 20% SIRD, 0% DT (can augment more cure or self cure)
@@ -153,7 +150,7 @@ sets.midcast_cure = {
     right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}}, -- 11% cure, 0% SIRD, 3% DT
     left_ring="Moonlight Ring", -- 0% cure, 0% SIRD, 5% DT
     right_ring="Defending Ring", -- 0% cure, 0% SIRD, 10% DT
-    back=cape.defense, -- 0% cure, 0% SIRD, 0% DT (This needs till next month because used all ambu capes :X)
+    back=cape.melee_tp, -- 0% cure, 0% SIRD, 0% DT (This needs till next month because used all ambu capes :X)
 }
 
 sets.midcast_magic_damage = {
@@ -173,12 +170,24 @@ sets.midcast_magic_damage = {
 }
 
 sets.midcast_enhancing_skill = {
-    
+    ammo="Staunch Tathlum +1", -- 0% cure, 11% SIRD, 3% DT
+    head={ name="Sakpata's Helm", augments={'Path: A',}}, -- 5% cure, 0% SIRD, 7% DT
+    body="Adamantite Armor", -- 0% cure, 20% SIRD, Variable DT based on enmity
+    hands="Regal Gauntlets",
+    legs={ name="Carmine Cuisses +1", augments={'HP+80','STR+12','INT+12',}}, -- 0% cure, 20% SIRD, 0% DT
+    feet={ name="Odyssean Greaves", augments={'Mag. Acc.+24','"Fast Cast"+5','"Mag.Atk.Bns."+8',}}, -- 7% cure, 20% SIRD, 0% DT (can augment more cure or self cure)
+    neck={ name="Loricate Torque +1", augments={'Path: A',}}, -- 0% cure, 5% SIRD, 6% DT
+    waist="Sroda Belt", -- 35% cure, 0% SIRD, 0% DT
+    left_ear="Magnetic Earring", -- 0% cure, 8% SIRD, 0% DT
+    right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}}, -- 11% cure, 0% SIRD, 3% DT
+    left_ring="Moonlight Ring", -- 0% cure, 0% SIRD, 5% DT
+    right_ring="Defending Ring", -- 0% cure, 0% SIRD, 10% DT
+    back=cape.melee_tp, -- 0% cure, 0% SIRD, 0% DT (This needs till next month because used all ambu capes :X)
 }
 
-sets.midcast_enhancing_duration = {
-    hands="Regal Gauntlets",
-}
+sets.midcast_enhancing_duration = sets.midcast_enhancing_skill
+
+sets.midcast_stoneskin = sets.midcast_cure
 
 
 sets.midcast_phalanx = {
@@ -260,10 +269,10 @@ sets.melee_defense = {
 sets.melee_absorb = {
     ammo="Staunch Tathlum +1",
     head="Chev. Armet +3",
-    body="Chev. Cuirass +3",
+    body="Adamantite Armor",
     hands="Chev. Gauntlets +3",
     legs="Chev. Cuisses +3",
-    feet="Chev. Sabatons +2",
+    feet="Chev. Sabatons +3",
     neck="Warder's Charm +1",
     waist="Carrier's Sash",
     left_ear="Sanare Earring",
@@ -315,7 +324,7 @@ sets.recast = {
     body="Rev. Surcoat +3",
     hands="Regal Gauntlets",
     legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-    feet="Chev. Sabatons +2",
+    feet="Chev. Sabatons +3",
     neck="Orunmila's Torque",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Loquac. Earring", --2

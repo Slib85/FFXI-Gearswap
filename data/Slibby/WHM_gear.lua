@@ -25,7 +25,7 @@ sets.precast_magic = {
     right_ring = "Prolix Ring", -- 2%
     waist = "Witful Belt", -- 3%
     legs = "Aya. Cosciales +2", -- 6%
-    --feet="", -- 7%
+    feet="Vanya Clogs", -- 7%
     back=cape.fast_cast, -- 10%
 }
 
@@ -38,8 +38,8 @@ sets.precast_ws_physical = {
     feet="Nyame Sollerets",
     neck="Rep. Plat. Medal",
     waist="Grunfeld Rope",
-    left_ear="Ishvara Earring",
-    right_ear="Telos Earring",
+    right_ear="Ishvara Earring",
+    left_ear="Telos Earring",
     left_ring="Epaminondas's ring",
     right_ring="Rufescent Ring",
     back=cape.ws_physical_str,
@@ -138,20 +138,21 @@ sets.midcast_cure = {
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 17
     body="Ebers Bliaut +3",
     hands="Theophany Mitts +3", -- 10
-    legs="Ebers Pantaloons +1", -- 7
+    legs="Ebers Pantaloons +3", -- 7
     feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10
-    neck="Cleric's Torque +2", -- 4
+    neck="Cleric's Torque +2", -- 10
     waist="Gishdubar Sash",
     left_ear="Mendi. Earring", -- 5
     left_ring="Kunaji Ring",
     right_ring="Defending Ring",
-    back="",
+    back=cape.melee_stp,
 }
 
 sets.midcast_enhancing_skill = {
     ammo="Staunch Tathlum +1",
     head="Befouled Crown",
-    neck="Melic Torque",
+    neck="Incanter's Torque",
+    legs="Piety Pantaln. +1",
     waist="Olympus Sash",
     feet="Theophany Duckbill +3",
     left_ear="Augment. Earring",
@@ -191,12 +192,16 @@ sets.midcast_cursna = {
 sets.midcast_divine_caress = {
     back="Mending Cape"
 }
+
+sets.cure_debuff = {
+    neck="Cleric's Torque +2",
+}
 -- END MIDCAST SETS
 
 -- BEGIN MELEE SETS
 sets.melee_tp = {
     ammo="Amar Cluster",
-    head="Bunz's Hat",
+    head="Bunzi's Hat",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",

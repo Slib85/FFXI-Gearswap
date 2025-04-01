@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('TP', 'DW', 'Absorb', "Counter", "Regen", "Block")
+	state.OffenseMode:options('TP', 'DW', 'Absorb', "Counter", "Regen", "Block", "MDB")
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -44,6 +44,8 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 		equip(sets.melee_regen)
 	elseif state.OffenseMode.value == "Block" then
 		equip(sets.melee_block)
+	elseif state.OffenseMode.value == "MDB" then
+		equip(sets.magic_defense)
 	else
 		equip(sets.defense)
     end

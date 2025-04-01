@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Apocalypse", augments={'Path: A',}},
+    sub="Utu Grip",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Nyame Helm", augments={'Path: A',}},
+    body={ name="Nyame Mail", augments={'Path: A',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: A',}},
+    legs={ name="Nyame Flanchard", augments={'Path: A',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist="Oneiros Rope",
+    left_ear="Telos Earring",
+    right_ear="Dedition Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
+    back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+}

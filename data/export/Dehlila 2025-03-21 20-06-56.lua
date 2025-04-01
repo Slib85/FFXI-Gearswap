@@ -1,0 +1,17 @@
+sets.exported={
+    main="Carnwenhan",
+    sub="Ammurapi Shield",
+    range="Gjallarhorn",
+    head="Fili Calot +3",
+    body="Fili Hongreline +3",
+    hands="Fili Manchettes +3",
+    legs="Fili Rhingrave +3",
+    feet="Fili Cothurnes +3",
+    neck="Null Loop",
+    waist={ name="Acuity Belt +1", augments={'Path: A',}},
+    left_ear="Crep. Earring",
+    right_ear="Regal Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+7','"Fast Cast"+10',}},
+}

@@ -1,0 +1,17 @@
+sets.exported={
+    main="Naegling",
+    sub="Duban",
+    ammo="Staunch Tathlum +1",
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body={ name="Odyss. Chestplate", augments={'Mag. Acc.+25','"Fast Cast"+5','STR+4','"Mag.Atk.Bns."+15',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+    feet={ name="Odyssean Greaves", augments={'"Cure" potency +4%',}},
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Sroda Belt",
+    left_ear="Loquac. Earring",
+    right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
+    left_ring="Moonlight Ring",
+    right_ring="Defending Ring",
+    back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+}

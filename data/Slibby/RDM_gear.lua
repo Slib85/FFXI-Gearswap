@@ -1,6 +1,7 @@
 -- BEGIN AMBUSCADE CAPES
 cape = {}
 cape.melee_stp = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}
+cape.melee_dual_wield = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
 cape.ws_physical_str = { name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 --cape.ws_physical_int = { name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 cape.ws_multi_physical_mnd = {}
@@ -30,17 +31,17 @@ sets.precast_magic = {
 
 sets.precast_ws_physical = {
     ammo="Coist Bodhar",
-    head="Vitiation Chapeau +3",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+    head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
+    body={ name="Nyame Mail", augments={'Path: A',}},
+    hands="Atrophy Gloves +3",
+    legs={ name="Nyame Flanchard", augments={'Path: A',}},
+    feet="Leth. Houseaux +3",
     neck="Republican Platinum Medal",
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
     left_ring="Epaminondas's Ring",
-    right_ring="Rufescent Ring",
+    right_ring="Cornelia's Ring",
     back=cape.ws_physical_str,
 }
 
@@ -54,10 +55,10 @@ sets.precast_ws_multi_physical = set_combine(sets.precast_ws_physical_pdl, {
 
 sets.precast_ws_magic = {
     ammo="Ghastly Tathlum +1",
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
-    legs="Nyame Flanchard",
+    head="Leth. Chappel +3",
+    body="Lethargy Sayon +3",
+    hands="Leth. Ganth. +3",
+    legs="Leth. Fuseau +3",
     feet="Lethargy Houseaux +3",
     neck="Sibyl Scarf",
     waist="Orpheus's Sash",
@@ -95,7 +96,7 @@ sets.precast_ws_magic_dark = set_combine(sets.precast_ws_magic, {
 -- BEGIN MIDCAST SETS
 sets.midcast_magic_damage = {
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
-    head="Ea Hat +1",
+    head="Leth. Chappel +3",
     body="Lethargy Sayon +3",
     hands="Leth. Ganth. +3",
     legs="Leth. Fuseau +3",
@@ -121,8 +122,16 @@ sets.midcast_magic_accuracy = {
     left_ear="Regal Earring",
     right_ear="Snotra Earring",
     left_ring="Kishar Ring",
-    right_ring="Stikini Ring +1",
+    right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
     back=cape.magic_int,
+    
+    --left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
+    waist="Acuity Belt +1",
+    --head="Leth. Chappel +3",
+    body="Lethargy Sayon +3",
+    hands="Leth. Ganth. +3",
+    legs="Leth. Fuseau +3",
+    --feet="Leth. Houseaux +3",
 }
 
 sets.midcast_enfeeble_int = sets.midcast_magic_accuracy
@@ -152,7 +161,7 @@ sets.midcast_enhancing_skill = {
     hands="Vitiation Gloves +3",
     legs="Carmine Cuisses +1",
     feet="Lethargy Houseaux +3",
-    neck="Melic Torque",
+    neck="Incanter's Torque",
     waist="Olympus Sash",
     left_ear="Augment. Earring",
     right_ear="Andoaa Earring",
@@ -174,7 +183,7 @@ sets.midcast_enhancing_duration = {
 }
 
 sets.midcast_enhancing_duration_other = set_combine(sets.midcast_enhancing_duration, {
-    head="Leth. Chappel +2",
+    head="Leth. Chappel +3",
     body="Lethargy Sayon +3",
     --hands="Leth. Ganth. +3",
     legs="Leth. Fuseau +3",
@@ -182,8 +191,8 @@ sets.midcast_enhancing_duration_other = set_combine(sets.midcast_enhancing_durat
 })
 
 sets.midcast_magic_burst = {
-    head="Ea Hat +1",
-    hands="Bunzi's Gloves",
+    --head="Ea Hat +1",
+    --hands="Bunzi's Gloves",
 }
 
 sets.midcast_phalanx = {
@@ -199,16 +208,20 @@ sets.midcast_refresh = set_combine(sets.midcast_enhancing_duration, {
     legs="Leth. Fuseau +3",
     waist="Gishdubar Sash",
 })
+
+sets.midcast_regen = {
+    feet="Bunzi's Sabots",
+}
 -- END MIDCAST SETS
 
 -- BEGIN MELEE SETS
 sets.melee_tp = {
     ammo="Coiste Bodhar",
     head="Nyame Helm",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck="Anu Torque",
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
@@ -238,32 +251,32 @@ sets.melee_dual_wield = {
     ammo="Coiste Bodhar",
     head="Nyame Helm",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
+    hands="Nyame Gauntlets",
     legs="Malignance Tights",
-    feet="Malignance Boots",
+    feet="Nyame Sollerets",
     neck="Anu Torque",
-    waist="Reiki Yotai",
+    waist="Sailfi Belt +1",
     left_ear="Sherida Earring",
-    right_ear="Eabani Earring",
+    right_ear="Telos Earring",
     left_ring="Chirich Ring +1",
     right_ring="Defending Ring",
-    back=cape.melee_stp,
+    back=cape.melee_dual_wield,
 }
 
 sets.melee_en_spell = {
     ammo="Sroda Tathlum",
     head="Malignance Chapeau",
-    body="Malignance Tabard",
+    body="Nyame Mail",
     legs="Malignance Tights",
     hands="Aya. Manopolas +2",
-    feet="Malignance Boots",
+    feet="Nyame Sollerets",
     neck={ name="Dls. Torque +2", augments={'Path: A',}},
     waist="Orpheus's Sash",
     left_ear="Crepuscular Earring",
     right_ear="Eabani Earring",
     left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
     right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
-    back=cape.melee_stp,
+    back=cape.melee_dual_wield,
 }
 -- END MELEE SETS
 
@@ -284,3 +297,19 @@ sets.idle_defense = {
     back=cape.defense,
 }
 -- END IDLE SETS
+
+sets.holy_water = {
+    ammo="Staunch Tathlum +1",
+    head="Wicce Petasos +3",
+    body="Adamantite Armor",
+    hands="Wicce Gloves +3",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Wicce Sabots +3",
+    neck="Nicander's Necklace",
+    waist="Null Belt",
+    left_ear="Lugalbanda Earring",
+    right_ear="Arete del Luna +1",
+    left_ring={name="Blenmot's Ring +1", bag="Wardrobe 1"},
+    right_ring={name="Blenmot's Ring +1", bag="Wardrobe 1"},
+    back={ name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},
+}

@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub="Kraken Club",
+    ammo="Amar Cluster",
+    head={ name="Nyame Helm", augments={'Path: A',}},
+    body={ name="Nyame Mail", augments={'Path: A',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: A',}},
+    legs={ name="Merlinic Shalwar", augments={'STR+3','Pet: AGI+3','Weapon skill damage +10%','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
+    feet={ name="Nyame Sollerets", augments={'Path: A',}},
+    neck="Combatant's Torque",
+    waist="Goading Belt",
+    left_ear="Telos Earring",
+    right_ear="Crep. Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
+    back={ name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+}

@@ -32,7 +32,7 @@ function job_midcast(spell, action, spellMap, eventArgs)
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
-	global_aftercast()
+	global_aftercast(spell)
 	
 	if state.OffenseMode.value == "TP" then
 		equip(sets.melee_tp)

@@ -142,6 +142,10 @@ local waltz_tp_cost = {['Curing Waltz'] = 200, ['Curing Waltz II'] = 350, ['Curi
 -- Utility function for automatically adjusting the waltz spell being used to match HP needs and TP limits.
 -- Handle spell changes before attempting any precast stuff.
 function refine_waltz(spell, action, spellMap, eventArgs)
+    if 1 == 1 then
+        return
+    end
+    
     if spell.type ~= 'Waltz' then
         return
     end
@@ -524,7 +528,7 @@ function set_macro_page(set,book)
             return
         end
         if book < 1 or book > 40 then
-            add_to_chat(123,'Error setting macro page: Macro book ('..tostring(book)..') must be between 1 and 20.')
+            add_to_chat(123,'Error setting macro page: Macro book ('..tostring(book)..') must be between 1 and 40.')
             return
         end
         send_command('@input /macro book '..tostring(book)..';wait 1.1;input /macro set '..tostring(set))

@@ -21,6 +21,7 @@
 	sets.midcast['Aurorastorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Voidstorm'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Voidstorm II'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Embrava'] = set_combine(sets.buffGear, sets.buffGearDuration)
 
 	sets.midcast['Blink'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Aquaveil'] = set_combine(set_combine(sets.buffGearDuration, sets.buffGear), {
@@ -43,6 +44,7 @@
 	sets.midcast['Regen III'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Regen IV'] = set_combine(sets.buffGear, sets.buffGearDuration)
 	sets.midcast['Regen V'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Adloquium'] = set_combine(sets.buffGear, sets.buffGearDuration)
 
 	sets.midcast['Barstonra'] = set_combine(sets.buffGearDuration, sets.buffGear)
 	sets.midcast['Barwatera'] = set_combine(sets.buffGearDuration, sets.buffGear)
@@ -117,7 +119,9 @@
 	sets.midcast['Banish II'] = sets.lowTierNukeGear
 	sets.midcast['Banishga'] = sets.lowTierNukeGear
 	sets.midcast['Banishga II'] = sets.lowTierNukeGear
-	
+	sets.midcast['Animus Minuo'] = set_combine(sets.buffGear, sets.buffGearDuration)
+	sets.midcast['Animus Augeo'] = set_combine(sets.buffGear, sets.buffGearDuration)
+
 	sets.midcast['Holy'] = sets.lowTierNukeGear
 	sets.midcast['Holy II'] = sets.lowTierNukeGear
 

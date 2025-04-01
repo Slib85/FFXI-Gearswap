@@ -129,7 +129,7 @@ sets.buffGear = {
     hands="Regal Gauntlets",
     legs={ name="Carmine Cuisses +1", augments={'HP+80','STR+12','INT+12',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Melic Torque",
+    neck="Incanter's Torque",
     waist="Olympus Sash",
     left_ear="Andoaa Earring",
     right_ear="Augment. Earring",

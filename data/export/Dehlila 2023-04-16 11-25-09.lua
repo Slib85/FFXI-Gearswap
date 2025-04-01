@@ -1,0 +1,17 @@
+sets.exported={
+    main="Elder Staff",
+    sub="Khonsu",
+    ammo="Oshasha's Treatise",
+    head="Arbatel Bonnet +3",
+    body="Arbatel Gown +3",
+    hands="Arbatel Bracers +3",
+    legs="Arbatel Pants +3",
+    feet="Arbatel Loafers +3",
+    neck="Warder's Charm",
+    waist="Carrier's Sash",
+    left_ear="Telos Earring",
+    right_ear="Crep. Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
+    back={ name="Lugh's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Mag. Evasion+15',}},
+}

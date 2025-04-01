@@ -8,25 +8,8 @@ Cape.MELEE_DW_TP        = {name="Belenus's Cape", augments={'DEX+20','Accuracy+2
 -- Cape.RANGED_WS          = {name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}}
 Cape.INT_MAGIC_WS       = {name="Belenus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
-sets.precast_spell = {
+sets.precast_magic = {
 
-}
-
-sets.precast_roll = {
-    main={ name="Rostam", augments={'Path: C',}},
-    range="Compensator",
-    head={ name="Lanun Tricorne +3", augments={'Enhances "Winning Streak" effect',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Chasseur's Gants +1",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Regal Necklace",
-    waist="Carrier's Sash",
-    left_ear="Arete del Luna +1",
-    right_ear="Genmei Earring",
-    left_ring="Luzaf's Ring",
-    right_ring="Defending Ring",
-    back=Cape.RANGED_TP,
 }
 
 sets.precast_ws = {
@@ -45,7 +28,6 @@ sets.precast_ws = {
 }
 
 sets.precast_ra_ws = {
-    ammo="Stone Arrow",
     head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
@@ -55,23 +37,23 @@ sets.precast_ra_ws = {
     waist="Fotia Belt",
     left_ear="Telos EArring",
     right_ear="Ishvara Earring",
-    left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
+    left_ring="Epaminondas's ring",
+    right_ring="Cornelia's Ring",
     back=Cape.RANGED_WS
 }
 
 sets.precast_magic_ws = {
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
     right_ear="Ishvara Earring",
-    left_ring="Epaminondas's Ring",
-    right_ring="Regal Ring",
+    left_ring="Epaminondas's ring",
+    right_ring="Cornelia's Ring",
     back=Cape.INT_MAGIC_WS,
 }
 
@@ -80,14 +62,14 @@ sets.precast_magic_ra_ws = {
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
-    feet="Lanun Bottes +3",
-    neck={ name="Scout's Gorget +2", augments={'Path: A',}},
-    waist="Orpheus's Sash",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
     left_ear="Isvara Earring",
     right_ear="Friomisi Earring",
-    left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
-    back=Cape.AGI_MAGIC_WS,
+    left_ring="Epaminondas's ring",
+    right_ring="Medada's Ring",
+    back=Cape.INT_MAGIC_WS,
 }
 
 sets.aftercast_dt = {
@@ -133,6 +115,11 @@ sets.aftercast_dw_tp = {
     left_ring="Chirich Ring +1",
     right_ring="Defending Ring",
     back=Cape.MELEE_DW_TP,
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
 }
 
 sets.precast_ra = {

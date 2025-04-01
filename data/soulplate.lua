@@ -1,6 +1,6 @@
 function get_sets()
-    minWait = 35
-    maxWait = 38
+    minWait = 1
+    maxWait = 1
     randomWait = os.clock() + math.random(minWait,maxWait)
 
     windower.raw_register_event('prerender', function()

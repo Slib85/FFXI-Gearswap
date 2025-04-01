@@ -30,7 +30,7 @@ sets.precast_magic = {
 }
 
 sets.precast_ws_physical = {
-    ammo="Amar Cluster",
+    ammo="Oshasha's Treatise",
     head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
@@ -63,7 +63,7 @@ sets.precast_ws_magic = {
     neck={ name="Src. Stole +2", augments={'Path: A',}},
     waist="Acuity Belt +1",
     left_ear="Regal Earring",
-    right_ear="Wicce Earring +2",
+    right_ear="Malignance Earring",
     left_ring="Freke Ring",
     right_ring="Metamorph Ring +1",
     back=cape.ws_magic_int,
@@ -86,33 +86,33 @@ sets.precast_ws_magic_dark = set_combine(sets.precast_ws_magic, {
 -- BEGIN MIDCAST SETS
 sets.midcast_magic_damage = {
     ammo="Ghastly Tathlum +1",
-    head="Wicce Petasos +2",
-    neck="Sorcerer's Stole +2",
-    ear1="Malignance Earring",
-    ear2="Regal Earring",
+    head="Wicce Petasos +3",
     body="Spaekona's Coat +2",
-    hands="Wicce Gloves +2",
+    hands="Wicce Gloves +3",
     legs="Wicce Chausses +3",
-    ring1="Shiva Ring +1",
-    ring2="Metamorph Ring +1",
-    feet="Agwu's Pigaches",
-    waist="Acuity Belt +1",
+    feet="Wicce Sabots +3",
+    neck="Sorcerer's Stole +2",
+    waist="Acuity belt +1",
+    left_ear="Regal Earring",
+    right_ear="Malignance Earring",
+    left_ring="Freke Ring",
+    right_ring="Metamorph Ring +1",
     back=cape.magic_int,
 }
 
 sets.midcast_magic_accuracy = {
-    ammo="Ghastly Tathlum +1",
-    head="Agwu's Cap",
-    neck="Sorcerer's Stole +2",
-    ear1="Malignance Earring",
-    ear2="Regal Earring",
+    ammo="Pemphredo Tathlum",
+    head="Wicce Petasos +3",
     body="Spaekona's Coat +2",
-    hands="Agwu's Gages",
-    legs="Agwu's Slops",
-    ring1="Shiva Ring +1",
-    ring2="Metamorph Ring +1",
-    feet="Agwu's Pigaches",
+    hands="Wicce Gloves +3",
+    legs="Wicce Chausses +3",
+    feet="Wicce Sabots +3",
+    neck="Src. Stole +2",
     waist="Acuity Belt +1",
+    left_ear="Regal Earring",
+    right_ear="Malignance Earring",
+    left_ring="Kishar Ring",
+    right_ring="Metamorph Ring +1",
     back=cape.magic_int,
 }
 
@@ -214,7 +214,7 @@ sets.midcast_enhancing_duration = {
 }
 
 sets.midcast_magic_burst = {
-    head="Ea Hat +1",
+    --head="Ea Hat +1",
     hands="Agwu's Gages",
     body="Wicce Coat +3",
 }
@@ -228,7 +228,19 @@ sets.midcast_phalanx = {
 }
 
 sets.midcast_death = set_combine(sets.midcast_magic_damage, {
+    ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+    head={ name="Agwu's Cap", augments={'Path: A',}},
     body="Wicce Coat +3",
+    hands={ name="Agwu's Gages", augments={'Path: A',}},
+    legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+    neck={ name="Src. Stole +2", augments={'Path: A',}},
+    waist="Orpheus's Sash",
+    left_ear="Regal Earring",
+    right_ear="Malignance Earring",
+    left_ring="Mephitas's Ring +1",
+    right_ring="Mephitas's Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 })
 -- END MIDCAST SETS
 
@@ -270,6 +282,6 @@ sets.idle_defense = {
 
 -- BEGIN OTHER SETS
 sets.mana_wall = {
-    feet="Wicce Sabots +2"
+    feet="Wicce Sabots +3"
 }
 -- END OTHER SETS

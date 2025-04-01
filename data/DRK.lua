@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options("Normal", "Melee", "Melee Hybrid", "Dual Wield", "Subtle");
+	state.OffenseMode:options("Normal", "Melee", "Melee Hybrid", "Dual Wield", "Subtle", "Occult");
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -18,9 +18,7 @@ function init_gear_sets()
 	set_macro_page(2, 8)
 
 	include(player.name .. "/DRK_gear.lua")
-	include("lib/weapon_skills.lua")
-	include("lib/magic.lua")
-	include("lib/midcast.lua")
+	include("lib/all_lib.lua")
 
 	sets.precast.JA["Nether Void"] = {
 		legs="Heathen's Flanchard +3",
@@ -38,9 +36,28 @@ function job_midcast(spell, action, spellMap, eventArgs)
 			head="Fallen's Burgeonet +3"
 		})
 	end
+
+	if buffactive['Nether Void'] == 1 and S{"Drain III"}:contains(spell.name) then
+		equip({
+			legs="Heathen's Flanchard +3",
+		})
+	end
 	
 	if buffactive['Killer Instinct'] == 1 and S{"Torcleaver"}:contains(spell.english) then
 		equip({body="Founder's Breastplate"})
+	end
+
+	if state.OffenseMode.value == 'Occult' or S{"Freeze", "Tornado", "Quake", "Burst", "Flood"}:contains(spell.english) then
+		if spell.skill == 'Elemental Magic' then
+			if S{"Impact"}:contains(spell.english) then
+				equip(set_combine(sets.midcast_occult_acumen, {
+					head=empty,
+					body="Twilight Cloak"}
+				))
+			else
+				equip(sets.midcast_occult_acumen)
+			end
+		end
 	end
 end
 
