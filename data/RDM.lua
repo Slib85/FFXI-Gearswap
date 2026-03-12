@@ -9,7 +9,7 @@ function job_setup()
 end
 
 function user_setup()
-	state.OffenseMode:options('Normal', 'Melee', 'MeleeDW', 'MeleeEn', 'MeleeSubtle');
+	state.OffenseMode:options('Normal', 'Melee', 'MeleeDW', 'MeleeEn', 'Occult');
 	state.CastingMode:options('Normal', 'Resistant', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 end
@@ -35,6 +35,16 @@ function job_midcast(spell, action, spellMap, eventArgs)
 			equip(sets.midcast_magic_burst)
 		end
 	end
+
+	if state.OffenseMode.value == 'Occult' then
+		if spell.skill == 'Elemental Magic' then
+            if S{"Impact"}:contains(spell.english) then
+                equip(set_combine(sets.midcast_occult_acumen, {head=empty, body="Twilight Cloak"}))
+            else
+                equip(sets.midcast_occult_acumen)
+            end
+        end
+    end
 
 	if S{"Diaga", "Dia", "Dia II"}:contains(spell.english) then
 		equip({

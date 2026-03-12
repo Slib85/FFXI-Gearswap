@@ -483,5 +483,11 @@ pet_abilities = {
 		midcast_set = sets.midcast_blood_pact_recast,
 		midcast_pet_set = sets.midcast_summoning_skill
 	},
+
+    -- BST
+    ["Sweeping Gouge"] = {
+		midcast_set = sets.midcast_ready_recast,
+		--midcast_pet_set = sets.midcast_summoning_skill
+	},
 }
 

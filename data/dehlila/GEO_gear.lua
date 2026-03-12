@@ -1,15 +1,17 @@
 -- BEGIN AMBUSCADE CAPES
 cape = {}
-cape.fast_cast = { name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
-cape.melee_stp = { name="Taranus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Store TP"+10','Phys. dmg. taken-10%',}}
-cape.ws_physical_str = { name="Taranus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
-cape.ws_physical_int = { name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+cape.fast_cast = { name="Nantosuelta's Cape", augments={'"Fast Cast"+10',}}
+cape.melee_stp = "Null Shawl"
+cape.dual_wield_tp = "Null Shawl"
+cape.ws_physical_str = { name="Nantosuelta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+cape.ws_physical_int = {}
 cape.ws_multi_physical_mnd = {}
-cape.ws_magic_int = { name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
-cape.magic_int = { name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
-cape.magic_mnd = { name="Taranus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
-cape.magic_stp = { name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Store TP"+10','Phys. dmg. taken-10%',}}
+cape.ws_magic_int = {}
+cape.magic_int = { name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
+cape.magic_mnd = {}
+cape.magic_stp = {}
 cape.defense = { name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}}
+cape.pet_regen = { name="Nantosuelta's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}}
 -- END AMBUSCADE CAPES
 
 -- BEGIN PRECAST SETS
@@ -25,23 +27,22 @@ sets.precast_magic = {
     left_ring = "Kishar Ring", -- 4%
     waist = "Witful Belt", -- 3%
     back=cape.fast_cast, -- 10%
-    ammo = "Sapience Orb", -- 2%
     neck = "Orunmila's Torque", -- 5%
+    range = "Dunna",
 }
 
 sets.precast_ws_physical = {
-    ammo="Amar Cluster",
     head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
-    neck="Rep. Plat. Medal",
-    waist="Grunfeld Rope",
-    left_ear="Ishvara Earring",
-    right_ear="Telos Earring",
+    neck="Null Loop",
+    waist="Null Belt",
+    left_ear="Telos Earring",
+    right_ear="Ishvara Earring",
     left_ring="Epaminondas's ring",
-    right_ring="Rufescent Ring",
+    right_ring="Cornelia's Ring",
     back=cape.ws_physical_str,
 }
 
@@ -54,18 +55,17 @@ sets.precast_ws_multi_physical = set_combine(sets.precast_ws_physical_pdl, {
 })
 
 sets.precast_ws_magic = {
-    ammo="Ghastly Tathlum +1",
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Wicce Gloves +3",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
-    neck={ name="Src. Stole +2", augments={'Path: A',}},
+    head="Agwu's Cap",
+    body="Agwu's Robe",
+    hands="Agwu's Gages",
+    legs="Agwu's Slops",
+    feet="Agwu's Pigaches",
+    neck="Sibyl Scarf",
     waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Wicce Earring +2",
-    left_ring="Freke Ring",
-    right_ring="Metamorph Ring +1",
+    left_ring="Archon Ring",
+    right_ring="Cornelia's Ring",
     back=cape.ws_magic_int,
 }
 
@@ -85,35 +85,38 @@ sets.precast_ws_magic_dark = set_combine(sets.precast_ws_magic, {
 
 -- BEGIN MIDCAST SETS
 sets.midcast_magic_damage = {
-    ammo="Ghastly Tathlum +1",
-    head="Azimuth Hood +2",
-    body="Azimuth Coat +2",
-    hands="Azimuth Gloves +2",
-    legs="Azimuth Tights +2",
-    feet="Azimuth Gaiters +2",
+    head="Agwu's Cap",
+    body="Azimuth Coat +3",
+    hands="Agwu's Gages",
+    legs="Azimuth Tights +3",
+    feet="Agwu's Pigaches",
     neck="Sibyl Scarf",
     waist="Acuity belt +1",
-    left_ear="Regal Earring",
-    right_ear="Malignance Earring",
+    left_ear="Malignance Earring",
+    right_ear="Azimuth Earring +2",
     left_ring="Freke Ring",
     right_ring="Metamorph Ring +1",
     back=cape.magic_int,
 }
 
 sets.midcast_magic_accuracy = {
-    ammo="Pemphredo Tathlum",
-    head="Azimuth Hood +2",
-    body="Azimuth Coat +2",
-    hands="Azimuth Gloves +2",
-    legs="Azimuth Tights +2",
-    feet="Azimuth Gaiters +2",
-    neck="Bagua Charm +2",
+    head="Azimuth Hood +3",
+    body="Azimuth Coat +3",
+    hands="Azimuth Gloves +3",
+    legs="Azimuth Tights +3",
+    feet="Azimuth Gaiters +3",
+    neck="Null Loop",
     waist="Acuity Belt +1",
     left_ear="Regal Earring",
-    right_ear="Wicce Earring +2",
-    left_ring="Kishar Ring",
+    right_ear="Malignance Earring",
+    left_ring="Stikini Ring +1",
     right_ring="Metamorph Ring +1",
     back=cape.magic_int,
+    head="Agwu's Cap",
+    body="Agwu's Robe",
+    hands="Agwu's Gages",
+    legs="Agwu's Slops",
+    feet="Agwu's Pigaches",
 }
 
 sets.midcast_enfeeble_int = sets.midcast_magic_accuracy
@@ -122,8 +125,11 @@ sets.midcast_enfeeble_mnd = set_combine(sets.midcast_magic_accuracy, {
     back=cape.magic_mind
 })
 
+sets.midcast_enfeeble_duration = {
+    hands="Regal Cuffs",
+}
+
 sets.midcast_occult_acumen = {
-    ammo="Seraphic Ampulla", -- 7 occult
     head="Mallquis Chapeau +2", -- 11 occult   /   13 STP nyame
     body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+4','"Occult Acumen"+11','MND+6',}}, -- 0 or 11 occult / 15 stp nyame
     hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+3 "Mag.Atk.Bns."+3','"Occult Acumen"+11','MND+3','Mag. Acc.+3','"Mag.Atk.Bns."+8',}}, -- 11 occult / 13 stp nyame
@@ -139,10 +145,8 @@ sets.midcast_occult_acumen = {
 }
 
 sets.midcast_max_mp = {
-    ammo="Strobilus",
     head="Amalric Coif +1",
     body="Amalric Doublet +1",
-    hands="Azimuth Gloves +2",
     legs="Amalric Slops +1",
     feet={ name="Psycloth Boots", augments={'MP+50','INT+7','"Conserve MP"+6',}},
     neck="Sanctity Necklace",
@@ -154,11 +158,9 @@ sets.midcast_max_mp = {
 
 sets.midcast_aspir = set_combine(sets.midcast_magic_accuracy, {
     neck="Erra Pendant",
-    head="Bagua Galero +3",
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+24','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+4',}},
     body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
     feet="Agwu's Pigaches",
-    legs="Azimuth Tights +2",
-    hands="Azimuth Gloves +2",
     ring1="Evanescence Ring",
     waist="Fucho-no-Obi"
 })
@@ -168,15 +170,12 @@ sets.midcast_drain = set_combine(sets.midcast_magic_accuracy, {
     head="Pixie Hairpin +1",
     body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
     feet="Agwu's Pigaches",
-    legs="Azimuth Tights +2",
-    hands="Azimuth Gloves +2",
     ring1="Evanescence Ring",
     ring2="Archon Ring",
     waist="Fucho-no-Obi"
 })
 
 sets.midcast_cure = {
-    ammo="Staunch Tathlum +1",
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 17
     body="Nyame Mail",
     hands="Telchine Gloves", -- 10
@@ -191,9 +190,8 @@ sets.midcast_cure = {
 }
 
 sets.midcast_enhancing_skill = {
-    ammo="Staunch Tathlum +1",
     head="Befouled Crown",
-    neck="Melic Torque",
+    neck="Incanter's Torque",
     waist="Olympus Sash",
     feet="Regal Pumps +1",
     left_ear="Augment. Earring",
@@ -212,11 +210,6 @@ sets.midcast_enhancing_duration = {
     waist="Embla Sash",
 }
 
-sets.midcast_magic_burst = {
-    head="Ea Hat +1",
-    hands="Agwu's Gages",
-}
-
 sets.midcast_phalanx = {
     head={ name="Merlinic Hood", augments={'Rng.Acc.+24 Rng.Atk.+24','Pet: Accuracy+23 Pet: Rng. Acc.+23','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
     body={ name="Merlinic Jubbah", augments={'DEX+15','Accuracy+3','Phalanx +4','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
@@ -225,43 +218,21 @@ sets.midcast_phalanx = {
     feet={ name="Merlinic Crackows", augments={'Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','INT+3','Phalanx +5','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
 }
 
-sets.midcast_death = set_combine(sets.midcast_magic_damage, {
-    body="Wicce Coat +3",
-})
-
-sets.midcast_indicolure = {
-    range="Filiae Bell",
-    ammo=empty,
-    head="Azimuth Hood +2",
-    body={ name="Bagua Tunic +2", augments={'Enhances "Bolster" effect',}},
-    --hands="Azimuth Gloves +2",
-    legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},
-    feet="Azimuth Gaiters +2",
-    neck={ name="Bagua Charm +2", augments={'Path: A',}},
-    left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
+sets.midcast_geomancy = {
+    neck="Bagua Charm +2",
+    feet="Azimuth Gaiters +3",
 }
 
-sets.midcast_bubble = {
-    range="Filiae Bell",
-    ammo=empty,
-    neck={ name="Bagua Charm +2", augments={'Path: A',}},
-    head="Bagua Galero +3",
-    body={ name="Bagua Tunic +2", augments={'Enhances "Bolster" effect',}},
-    left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
-}
 -- END MIDCAST SETS
 
 -- BEGIN MELEE SETS
 sets.melee_tp = {
-    ammo="Amar Cluster",
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
-    neck="Combatant's Torque",
+    head="Azimuth Hood +3",
+    body="Azimuth Coat +3",
+    hands={ name="Agwu's Gages", augments={'Path: A',}},
+    legs="Azimuth Tights +3",
+    feet="Azimuth Gaiters +3",
+    neck="Bagua Charm +2",
     waist="Goading Belt",
     left_ear="Telos Earring",
     right_ear="Crepuscular Earring",
@@ -269,31 +240,31 @@ sets.melee_tp = {
     right_ring={name="Chirich Ring +1", bag="Wardrobe 2"}, -- 6 STP
     back=cape.melee_stp,
 }
+
+sets.melee_dual_wield = set_combine(sets.melee_tp, {
+    back=cape.dual_wield_tp
+})
 -- END MELEE SETS
 
 -- BEGIN IDLE SETS
 sets.idle_defense = {
-    range=empty,
-    ammo="Staunch Tathlum +1",
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
+    head="Azimuth Hood +3",
+    body="Adamantite Armor",
+    hands="Geomancy Mitaines +3",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
-    neck="Warder's Charm +1",
-    waist="Carrier's Sash",
+    neck="Bagua Charm +2",
+    waist="Null Belt",
     left_ear="Lugalbanda Earring",
     right_ear="Arete Del Luna +1",
     left_ring="Shneddick Ring",
     right_ring="Defending Ring",
-    back=cape.defense,
+    back=cape.pet_regen,
 }
 -- END IDLE SETS
 
 -- BEGIN OTHER SETS
-sets.bubble_defense = {
-    neck="Bagua Charm +2",
-    head="Azimuth hood +2",
-    feet="Bagua Sandals +3",
-}
+sets.midcast_stoneskin = set_combine(sets.idle_defense, {
+    legs="Shedir Seraweels"
+})
 -- END OTHER SETS

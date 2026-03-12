@@ -65,6 +65,7 @@ function init_gear_sets()
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 --		neck="Warder's Charm +1",
 --		left_ring="Shadow Ring",
+        left_ring="Shneddick Ring",
 	}
 	
 	sets.subtle = {
@@ -199,15 +200,6 @@ function init_gear_sets()
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 
-	sets.precast.WS["Upheaval"] = set_combine(sets.precastWS, {
-		head="Sakpata's Helm",
-		body="Sakpata's Plate",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
-		ring1="Niqmaddu ring",
-	})
-
 	sets.precast.WS["Resolution"] = {
 		ammo="Knobkierrie",
 		head={ name="Sakpata's Helm", augments={'Path: A',}},
@@ -231,7 +223,7 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Berserk'] = {
-		body="Pummeler's Lorica +3",
+		body="Pummeler's Lorica +4",
 	}
 	sets.precast.JA['Defender'] = {
 		hands="Agoge Mufflers +3",
@@ -240,8 +232,9 @@ function init_gear_sets()
 		ammo="Throwing Tomahawk",
 	}
 	sets.precast.JA['Warcry'] = set_combine(sets.enmity, {
-		head="Agoge Mask +3",
+		head="Agoge Mask +4",
 	})
+	sets.precast.JA['Sentinel'] = sets.enmity
 	sets.precast.JA["Aggressor"] = {
 		body="Agoge Lorica +3",
 	}

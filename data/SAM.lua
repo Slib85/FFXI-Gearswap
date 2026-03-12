@@ -17,113 +17,38 @@ end
 function init_gear_sets()
 	set_macro_page(2, 12)
 
-	sets.precastGear = {
+	include(player.name .. "/SAM_gear.lua")
+ 	include("lib/all_lib.lua")
 
-    }
-	
-	sets.enmity = {
-	
-    }
-
-	sets.meleeTP = {
-        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head="Mpaca's Cap",
-        body="Mpaca's Doublet",
-        hands="Mpaca's Gloves",
-        legs="Kasuga Haidate +3",
-        feet="Mpaca's Boots",
-        neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-        waist="Sailfi Belt +1",
-        left_ear="Telos Earring",
-        right_ear="Crepuscular Earring",
-        left_ring="Chirich Ring +1",
-        right_ring="Defending Ring",
-        back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Magic dmg. taken-10%',}},
-    }
-
-	sets.tank = {
-        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Kasuga Haidate +3",
-        feet="Nyame Sollerets",
-        neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-        waist="Sailfi Belt +1",
-        left_ear="Telos Earring",
-        right_ear="Schere Earring",
-        left_ring={name="Chirich Ring +1", bag="Wardrobe 1"}, -- 6 STP
-        right_ring={name="Chirich Ring +1", bag="Wardrobe 2"}, -- 6 STP
-        back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Magic dmg. taken-10%',}},
-	}
-
-	sets.precastWS = {
-        ammo="Knobkierrie",
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
-        neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-        waist="Sailfi Belt +1",
-        left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-        right_ear="Thrud Earring",
-        left_ring={ name="Beithir Ring", augments={'Path: A',}},
-        right_ring="Regal Ring",
-        back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-4%',}},
-	}
-
-	sets.precastWSIntGear = {
-
-	}
-
-	sets.magicPrecastWSGear = {
-        ammo="Knobkierrie",
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs={ name="Nyame Flanchard", augments={'Path: B',}},
-        feet="Nyame Sollerets",
-        neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-        waist="Orpheus's Sash",
-        left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-        right_ear="Friomisi Earring",
-        left_ring={ name="Beithir Ring", augments={'Path: A',}},
-        right_ring="Regal Ring",
-        back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-4%',}},
-	}
-	
-	sets.cureGear = {
-	}
-	
-	sets.precast.WS = sets.precastWS
-	sets.precast.FC = sets.precastGear
-
-	-- Precast sets to enhance JAs
+    -- Precast sets to enhance JAs
 	sets.precast.JA['Blade Bash'] = {
-        hands="Sakonji Kote +3",
+        hands="Sakonji Kote +4",
     }
 
 	sets.precast.JA['Meditate'] = {
-        head="Wakido Kabuto +3",
-        hands="Sakonji Kote +3",
+        head="Wakido Kabuto +4",
+        hands="Sakonji Kote +4",
 		back="Smertrios's Mantle",
 	}
-
-    sets.precast.WS["Tachi: Jinpu"] = sets.magicPrecastWSGear
 end
 
-function job_post_midcast(spell, action, spellMap, eventArgs)
+function job_precast(spell, action, spellMap, eventArgs)
+    global_precast(spell)
+end
 
+function job_midcast(spell, action, spellMap, eventArgs)
+	global_midcast(spell)
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
+    global_aftercast(spell)
+    
 	if state.OffenseMode.value == "Tank" then
-		equip(sets.tank)
+		equip(sets.idle_defense)
 	elseif state.OffenseMode.value == "Melee" then
-		equip (sets.meleeTP) 
+		equip (sets.melee_tp) 
 	else
-		equip(sets.meleeTP)
+		equip(sets.melee_tp)
 	end
 end
 

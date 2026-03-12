@@ -41,7 +41,7 @@ sets.precast_ws_physical = {
     right_ear="Ishvara Earring",
     left_ear="Telos Earring",
     left_ring="Epaminondas's ring",
-    right_ring="Rufescent Ring",
+    right_ring="Cornelia's Ring",
     back=cape.ws_physical_str,
 }
 
@@ -65,19 +65,25 @@ sets.precast_ws_int = set_combine(sets.precast_ws_physical, {
 })
 
 sets.precast_ws_magic = {
-    ammo="Ghastly Tathlum +1",
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Wicce Gloves +3",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+    ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Sibyl Scarf",
-    waist="Acuity Belt +1",
+    waist="Orpheus's Sash",
     left_ear="Regal Earring",
-    right_ear="Wicce Earring +2",
-    left_ring="Freke Ring",
-    right_ring="Metamorph Ring +1",
+    right_ear="Malignance Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring",
     back=cape.ws_magic_int,
+    head="Bunzi's Hat",
+    body="Bunzi's Robe",
+    hands="Bunzi's Gloves",
+    legs="Bunzi's Pants",
+    feet="Bunzi's Sabots",
+    
 }
 
 sets.precast_ws_magic_earth = set_combine(sets.precast_ws_magic, {
@@ -115,11 +121,11 @@ sets.midcast_magic_accuracy = {
     ammo="Pemphredo Tathlum",
     head="Bunzi's Hat",
     body="Bunzi's Robe",
-    hands="Bunzi's Gloves",
+    hands="Regal Cuffs",
     legs="Bunzi's Pants",
     feet="Bunzi's Sabots",
-    neck="Sanctity Necklace",
-    waist="Acuity Belt +1",
+    neck="Null Loop",
+    waist="Obstinate Sash",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Kishar Ring",
@@ -135,15 +141,16 @@ back=cape.magic_mind
 
 sets.midcast_cure = {
     ammo="Staunch Tathlum +1",
-    head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 17
+    head="Nyame Helm",
     body="Ebers Bliaut +3",
-    hands="Theophany Mitts +3", -- 10
-    legs="Ebers Pantaloons +3", -- 7
-    feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}}, -- 10
-    neck="Cleric's Torque +2", -- 10
+    hands="Theophany Mitts +3",
+    legs="Ebers Pant. +3",
+    feet="Nyame Sollerets",
+    neck={ name="Clr. Torque +2", augments={'Path: A',}},
     waist="Gishdubar Sash",
-    left_ear="Mendi. Earring", -- 5
-    left_ring="Kunaji Ring",
+    left_ear="Mendi. Earring",
+    right_ear="Nourish. Earring +1",
+    left_ring="Murky Ring",
     right_ring="Defending Ring",
     back=cape.melee_stp,
 }
@@ -169,6 +176,10 @@ sets.midcast_enhancing_duration = {
     legs="Telchine Braconi",
     feet="Telchine Pigaches",
     waist="Embla Sash",
+}
+
+sets.midcast_auspice = {
+    feet="Ebers Duckbills +3"
 }
 
 sets.midcast_magic_burst = {
@@ -209,7 +220,7 @@ sets.melee_tp = {
     neck="Combatant's Torque",
     waist="Goading Belt",
     left_ear="Telos Earring",
-    right_ear="Dedition Earring",
+    right_ear="Crepuscular Earring",
     left_ring={name="Chirich Ring +1", bag="Wardrobe 1"}, -- 6 STP
     right_ring={name="Chirich Ring +1", bag="Wardrobe 2"}, -- 6 STP
     back=cape.melee_stp,
@@ -232,8 +243,6 @@ sets.idle_defense = {
     right_ring="Defending Ring",
     back=cape.defense,
     body="Shamash Robe",
-    left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
-    right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
 }
 -- END IDLE SETS
 

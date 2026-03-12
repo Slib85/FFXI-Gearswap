@@ -22,10 +22,8 @@ function init_gear_sets()
 end
 
 function job_precast(spell, action, spellMap, eventArgs)
-	if not state.OffenseMode.value == "Death" then
-		equip(sets.precast_magic)
-		global_precast(spell)
-	end
+    equip(sets.precast_magic)
+    global_precast(spell)
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)

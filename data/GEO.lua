@@ -17,7 +17,7 @@ function user_setup()
 end
 
 function init_gear_sets()
-	set_macro_page(2, 4)
+	set_macro_page(2, 21)
 
 	include(player.name .. "/GEO_gear.lua")
  	include("lib/all_lib.lua")
@@ -33,13 +33,17 @@ function job_midcast(spell, action, spellMap, eventArgs)
 	if spell.skill == 'Elemental Magic' and (state.OffenseMode.value == 'MB') then
 		equip(sets.magic_burst)
 	elseif state.OffenseMode.value == 'Occult' then
-		if spell.skill == 'Elemental Magic' then
-			equip(sets.midcast_occult_acumen)
-		end
+		if spell.skill == 'Elemental Magic' or S{"Death"}:contains(spell.english) then
+            if S{"Impact"}:contains(spell.english) then
+                equip(set_combine(sets.midcast_occult_acumen, {head=empty, body="Twilight Cloak"}))
+            else
+                equip(sets.midcast_occult_acumen)
+            end
+        end
 	elseif state.OffenseMode.value == 'AOEOccult' then
 		if spell.skill == 'Elemental Magic' then
 			equip(set_combine(sets.midcast_occult_acumen, {
-				body="Seidr Coteharde",
+				body="Seidr Cotehardie",
 			}))
 		end
 	end
@@ -57,7 +61,7 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 	global_aftercast(spell)
 	
 	if state.OffenseMode.value == "TP" then
-		equip(sets.melee_tp)
+        equip(sets.melee_tp)
 	else
 		equip(sets.idle_defense)
 	end

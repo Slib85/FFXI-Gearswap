@@ -16,9 +16,9 @@ cape.defense = { name="Sucellos's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+
 sets.precast_magic = {
     ammo="Sapience Orb",
     head={ name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}},
-    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1','"Fast Cast"+6','"Mag.Atk.Bns."+11',}},
+    body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --13%
     hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+29','"Fast Cast"+7','CHR+9','"Mag.Atk.Bns."+5',}},
-    legs={ name="Artsieq Hose", augments={'"Mag.Atk.Bns."+21','Mag. Evasion+8','Phys. dmg. taken -3',}},
+    legs="Ayanmo Cosciales +2",
     feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}},
     neck="Orunmila's Torque",
     waist="Carrier's Sash",
@@ -30,12 +30,12 @@ sets.precast_magic = {
 }
 
 sets.precast_ws_physical = {
-    ammo="Coist Bodhar",
-    head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body={ name="Nyame Mail", augments={'Path: A',}},
-    hands="Atrophy Gloves +3",
-    legs={ name="Nyame Flanchard", augments={'Path: A',}},
-    feet="Leth. Houseaux +3",
+    ammo="Oshasha's Treatise",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck="Republican Platinum Medal",
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
@@ -112,27 +112,25 @@ sets.midcast_magic_damage = {
 
 sets.midcast_magic_accuracy = {
     ammo="Regal Gem",
-    head="Vitiation Chapeau +3",
+    head="Vitiation Chapeau +4",
     body="Lethargy Sayon +3",
-    hands="Regal Cuffs",
-    legs={ name="Chironic Hose", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Spell interruption rate down -10%','"Mag.Atk.Bns."+6',}},
+    hands="Leth. Ganth. +3",
+    legs="Leth. Fuseau +3",
     feet="Vitiation Boots +3",
     neck="Dls. Torque +2",
     waist="Obstinate Sash",
     left_ear="Regal Earring",
-    right_ear="Snotra Earring",
-    left_ring="Kishar Ring",
+    right_ear="Malignance Earring",
+    left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
     right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
     back=cape.magic_int,
-    
-    --left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
-    waist="Acuity Belt +1",
-    --head="Leth. Chappel +3",
-    body="Lethargy Sayon +3",
-    hands="Leth. Ganth. +3",
-    legs="Leth. Fuseau +3",
-    --feet="Leth. Houseaux +3",
 }
+
+sets.midcast_enfeeble_duration = set_combine(sets.midcast_magic_accuracy, {
+    right_ear="Snotra Earring",
+    left_ring="Kishar Ring",
+})
+
 
 sets.midcast_enfeeble_int = sets.midcast_magic_accuracy
 
@@ -170,6 +168,22 @@ sets.midcast_enhancing_skill = {
     back="Ghostfyre Cape",	
 }
 
+sets.midcast_occult_acumen = {
+    ammo="Coiste Bodhar",
+    head="Mallquis Chapeau +2", -- 11 occult   /   13 STP nyame
+    body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+4','"Occult Acumen"+11','MND+6',}}, -- 0 or 11 occult / 15 stp nyame
+    hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+3 "Mag.Atk.Bns."+3','"Occult Acumen"+11','MND+3','Mag. Acc.+3','"Mag.Atk.Bns."+8',}}, -- 11 occult / 13 stp nyame
+    legs="Perdition Slops", -- 30 occult
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Occult Acumen"+11','MND+1','Mag. Acc.+4','"Mag.Atk.Bns."+13',}}, -- 11 occult  / 13 stp nyame
+    neck="Combatant's Torque", --4 STP
+    waist="Oneiros Rope", --2 STP + 20 occult
+    ear1="Telos Earring", --5 STP
+    ear2="Dedition Earring", --8 STP
+    left_ring={name="Chirich Ring +1", bag="Wardrobe 1"}, -- 6 STP
+    right_ring={name="Chirich Ring +1", bag="Wardrobe 2"}, -- 6 STP
+    back=cape.melee_stp, --10 STP
+}
+
 sets.midcast_enhancing_duration = {
     neck="Dls. Torque +2",
     head="Telchine Cap",
@@ -179,7 +193,7 @@ sets.midcast_enhancing_duration = {
     feet="Lethargy Houseaux +3",
     back="Sucellos's Cape",
     waist="Embla sash",
-    right_ear="Lethargy Earring",
+    right_ear="Lethargy Earring +1",
 }
 
 sets.midcast_enhancing_duration_other = set_combine(sets.midcast_enhancing_duration, {
@@ -203,6 +217,11 @@ sets.midcast_phalanx = {
     feet={ name="Merlinic Crackows", augments={'Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','INT+3','Phalanx +5','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
 }
 
+sets.midcast_absorb_tp = {
+    head={ name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}},
+    body="Vitiation Tabard +3",
+}
+
 sets.midcast_refresh = set_combine(sets.midcast_enhancing_duration, {
     head="Amalric Coif +1",
     legs="Leth. Fuseau +3",
@@ -217,11 +236,11 @@ sets.midcast_regen = {
 -- BEGIN MELEE SETS
 sets.melee_tp = {
     ammo="Coiste Bodhar",
-    head="Nyame Helm",
+    head="Malignance Chapeau",
     body="Nyame Mail",
-    hands="Nyame Gauntlets",
+    hands="Malignance Gloves",
     legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+    feet="Malignance Boots",
     neck="Anu Torque",
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
@@ -249,11 +268,11 @@ sets.melee_subtle_blow = {
 
 sets.melee_dual_wield = {
     ammo="Coiste Bodhar",
-    head="Nyame Helm",
-    body="Malignance Tabard",
-    hands="Nyame Gauntlets",
-    legs="Malignance Tights",
-    feet="Nyame Sollerets",
+    head="Malignance Chapeau",
+    body="Nyame Mail",
+    hands="Malignance Gloves",
+    legs="Nyame Flanchard",
+    feet="Malignance Boots",
     neck="Anu Torque",
     waist="Sailfi Belt +1",
     left_ear="Sherida Earring",

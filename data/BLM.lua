@@ -21,8 +21,6 @@ function init_gear_sets()
 
 	include(player.name .. "/BLM_gear.lua")
  	include("lib/all_lib.lua")
-
-    sets.precast.HolyWater = set_combine(sets.holy_water)
 end
 
 function job_precast(spell, action, spellMap, eventArgs)
@@ -35,9 +33,9 @@ end
 function job_midcast(spell, action, spellMap, eventArgs)
 	global_midcast(spell)
 	
-	if state.OffenseMode.value == "Death" then
-		equip(sets.midcast_death)
-	else
+	--if state.OffenseMode.value == "Death" then
+	--	equip(sets.midcast_death)
+	--else
 		if spell.skill == 'Elemental Magic' and ((buffactive['Manawell'] == 1 or buffactive['Manafont']) and not S{"Impact"}:contains(spell.english)) or S{"Meteor"}:contains(spell.english) then
 			equip({body="Wicce Coat +3"})
 		end
@@ -53,13 +51,17 @@ function job_midcast(spell, action, spellMap, eventArgs)
 				equip(sets.mana_wall)
 			end
 		elseif state.OffenseMode.value == 'Occult' then
-			if spell.skill == 'Elemental Magic' then
-				equip(sets.midcast_occult_acumen)
+			if spell.skill == 'Elemental Magic' or S{"Death"}:contains(spell.english) then
+                if S{"Impact"}:contains(spell.english) then
+                    equip(set_combine(sets.midcast_occult_acumen, {head=empty, body="Twilight Cloak"}))
+                else
+				    equip(sets.midcast_occult_acumen)
+                end
 			end
 		elseif state.OffenseMode.value == 'AOEOccult' then
 			if spell.skill == 'Elemental Magic' then
 				equip(set_combine(sets.midcast_occult_acumen, {
-					body="Spaekona's Coat +3",
+					body="Spaekona's Coat +4",
 				}))
 			end
 			
@@ -78,20 +80,18 @@ function job_midcast(spell, action, spellMap, eventArgs)
 	
 		if S{"Burn", "Choke", "Rasp", "Frost", "Shock", "Drown"}:contains(spell.english) then
 			equip(set_combine(sets.midcast_enfeeble_int, {
-				body={ name="Arch. Coat +3", augments={'Enhances "Manafont" effect',}},
-				feet="Arch. sabots +3",
-				legs="Arch. tonban +3",
-				hands="Spaekona's Gloves +3",
+				feet="Arch. sabots +4",
+				legs="Arch. tonban +4",
 				left_ring="Stikini Ring +1",
 			}));
 		end
-	end
+	--end
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
 	global_aftercast(spell)
 	
-	if state.OffenseMode.value == "TP" then
+	if state.OffenseMode.value == "TP" or state.OffenseMode.value == "MB" then
 		if (player.sub_job == 'NIN' or player.sub_job == 'DNC') and not player.equipment.sub:contains('Shield') and not player.equipment.sub:contains("Khonsu") then
 			equip(sets.melee_dual_wield)
 		else 

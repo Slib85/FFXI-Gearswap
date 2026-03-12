@@ -29,11 +29,11 @@ sets.precast_magic = {
 
 sets.precast_ws_physical = {
     ammo="Knobkierrie",
-    head="Heath. Bur. +3",
+    head="Nyame Helm",
     body="Ignominy Cuirass +3",
-    hands={ name="Nyame Gauntlets", augments={'Path: A',}},
-    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
-    feet="Heath. Sollerets +3",
+    hands="Nyame Gauntlets",
+    legs="Fallen's Flanchard +3",
+    feet="Nyame Sollerets",
     neck="Abyssal Bead Necklace +2",
     waist="Sailfi Belt +1",
     left_ear="Thrud Earring",
@@ -118,10 +118,10 @@ sets.midcast_magic_accuracy = {
 
 sets.midcast_occult_acumen = {
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head={ name="Nyame Helm", augments={'Path: A',}},
-    body={ name="Nyame Mail", augments={'Path: A',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: A',}},
-    legs={ name="Nyame Flanchard", augments={'Path: A',}},
+    head="Hjarrandi Helm",
+    body="Hjarrandi Breast.",
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs={ name="Odyssean Cuisses", augments={'Mag. Acc.+13','"Fast Cast"+4','INT+1',}},
     feet="Heath. Sollerets +3",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist="Oneiros Rope",
@@ -135,10 +135,10 @@ sets.midcast_occult_acumen = {
 sets.midcast_enfeeble_int = {
     ammo="Pemphredo Tathlum",
     head="Heathen's Burgeonet +3",
-    body="Heathen's Cuirass +2",
+    body="Heathen's Cuirass +3",
     hands="Heathen's Gauntlets +3",
     legs="Heathen's Flanchard +3",
-    feet="Heathen's Sollerets +2",
+    feet="Heathen's Sollerets +3",
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     left_ear="Malignance Earring",
@@ -151,10 +151,10 @@ sets.midcast_enfeeble_int = {
 sets.midcast_enfeeble_mnd = {
     ammo="Pemphredo Tathlum",
     head="Heathen's Burgeonet +3",
-    body="Heathen's Cuirass +2",
+    body="Heathen's Cuirass +3",
     hands="Heathen's Gauntlets +3",
     legs="Heathen's Flanchard +3",
-    feet="Heathen's Sollerets +2",
+    feet="Heathen's Sollerets +3",
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     left_ear="Malignance Earring",
@@ -217,13 +217,10 @@ sets.midcast_magic_burst = {
 sets.melee_tp = {
     ammo="Coiste Bodhar",
     head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
-    legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-    head="Nyame Helm",
     body="Nyame Mail",
-    feet="Nyame Sollerets",
+    hands="Sakpata's Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Sakpata's Leggings",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",
@@ -233,6 +230,7 @@ sets.melee_tp = {
     left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
     right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
     back=cape.melee_double_attack,
+    left_ring="Shneddick ring",
 }
 
 sets.melee_dual_wield = {

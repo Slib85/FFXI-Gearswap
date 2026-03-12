@@ -74,8 +74,8 @@ sets.precast_ws_magic = {
     right_ring="Cornelia's Ring",
     back=cape.ws_magic_int,
 
-    neck="Null Loop",
-    waist="Acuity Belt +1"
+    --neck="Null Loop",
+    --waist="Acuity Belt +1"
 }
 
 sets.precast_ws_magic_earth = set_combine(sets.precast_ws_magic, {
@@ -103,7 +103,7 @@ sets.midcast_magic_accuracy = {
     neck="Henic Torque",
     waist="Luminary Sash",
     left_ear="Crepuscular Earring",
-    right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}}, -- 11% cure, 0% SIRD, 3% DT
+    right_ear="Chev. Earring +2", -- 12% cure, 0% SIRD, 3% DT
     left_ring={name="Stikini Ring +1", bag="Wardrobe 1"},
     right_ring={name="Stikini Ring +1", bag="Wardrobe 2"},
     back=cape.magic_int,
@@ -143,16 +143,15 @@ sets.midcast_cure = {
     ammo="Staunch Tathlum +1", -- 0% cure, 11% SIRD, 3% DT
     head="Loess Barbuta +1", -- 5% cure, 0% SIRD, 7% DT
     body="Souveran Cuirass +1", -- 0% cure, 20% SIRD, Variable DT based on enmity
-    --hands="Chev. Gauntlets +3", -- 0% cure, 0% SIRD, 11% DT
-    hands="Regal Gauntlets", -- 0% cure, 0% SIRD, 11% DT
+    hands="Regal Gauntlets", -- 0% cure, 20% SIRD, 0% DT
     legs="Carmine Cuisses +1", -- 0% cure, 20% SIRD, 0% DT
     feet={ name="Odyssean Greaves", augments={'"Cure" potency +4%',}},
     neck="Moonlight Necklace", -- 0% cure, 5% SIRD, 6% DT
-    waist="Sroda Belt", -- 35% cure, 0% SIRD, 0% DT
+    waist="Gishdubar Sash", -- 35% cure, 0% SIRD, 0% DT
     left_ear="Magnetic Earring", -- 0% cure, 8% SIRD, 0% DT
-    right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}}, -- 11% cure, 0% SIRD, 3% DT
+    right_ear="Chev. Earring +2", -- 12% cure, 0% SIRD, 3% DT
     left_ring="Moonlight Ring", -- 0% cure, 0% SIRD, 5% DT
-    right_ring="Defending Ring", -- 0% cure, 0% SIRD, 10% DT
+    right_ring="Murky Ring", -- 0% cure, 0% SIRD, 10% DT
     back=cape.cure, -- 0% cure, 0% SIRD, 0% DT (This needs till next month because used all ambu capes :X)
 }
 
@@ -182,7 +181,7 @@ sets.midcast_enhancing_skill = {
     neck={ name="Loricate Torque +1", augments={'Path: A',}}, -- 0% cure, 5% SIRD, 6% DT
     waist="Sroda Belt", -- 35% cure, 0% SIRD, 0% DT
     left_ear="Magnetic Earring", -- 0% cure, 8% SIRD, 0% DT
-    right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}}, -- 11% cure, 0% SIRD, 3% DT
+    right_ear="Chev. Earring +2", -- 11% cure, 0% SIRD, 3% DT
     left_ring="Moonlight Ring", -- 0% cure, 0% SIRD, 5% DT
     right_ring="Defending Ring", -- 0% cure, 0% SIRD, 10% DT
     back=cape.melee_tp, -- 0% cure, 0% SIRD, 0% DT (This needs till next month because used all ambu capes :X)
@@ -194,11 +193,19 @@ sets.midcast_stoneskin = sets.midcast_enhancing_skill
 
 
 sets.midcast_phalanx = {
+    ammo="Staunch Tathlum +1",
     head={ name="Valorous Mask", augments={'Phys. dmg. taken -2%','Mag. Acc.+20','Phalanx +4','Accuracy+17 Attack+17',}},
+    body={ name="Valorous Mail", augments={'STR+10','Magic Damage +12','Phalanx +4','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
     hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
-    legs="Sakpata's Cuisses",
-    feet="Souveran Schuhs +1",
-    back="Weard Mantle",
+    legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Plat. Mog. Belt",
+    left_ear="Genmei Earring",
+    right_ear="Chev. Earring +2",
+    left_ring="Moonlight Ring",
+    right_ring="Defending Ring",
+    back={ name="Weard Mantle", augments={'VIT+2','DEX+2','Enmity+1','Phalanx +5',}},
 }
 -- END MIDCAST SETS
 
@@ -209,7 +216,7 @@ sets.melee_tp = {
     body="Sakpata's Plate",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
+    feet="Sworn Sabatons",
     neck="Null Loop",
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
@@ -225,7 +232,7 @@ sets.melee_tp_dw = {
     body="Sakpata's Plate",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
+    feet="Sworn Sabatons",
     neck="Null Loop",
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
@@ -271,11 +278,11 @@ sets.melee_defense = {
 sets.magic_defense = {
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head={ name="Sakpata's Helm", augments={'Path: A',}},
-    body="Sacro Breastplate",
+    body="Adamantite Armor",
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
     feet={ name="Sakpata's Leggings", augments={'Path: A',}},
-    neck="Null Loop",
+    neck="Moonlight Necklace",
     waist="Creed Baudrier",
     left_ear="Sanare Earring",
     right_ear="Eabani Earring",
@@ -287,16 +294,16 @@ sets.magic_defense = {
 sets.melee_absorb = {
     ammo="Staunch Tathlum +1",
     head="Chev. Armet +3",
-    body="Adamantite Armor",
+    body="Chev. Cuirass +3",
     hands="Chev. Gauntlets +3",
     legs="Chev. Cuisses +3",
     feet="Chev. Sabatons +3",
     neck="Warder's Charm +1",
-    waist="Carrier's Sash",
+    waist="Null Belt",
     left_ear="Sanare Earring",
     right_ear="Arete Del Luna +1",
     left_ring={name="Moonlight Ring", bag="Wardrobe 1"},
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     back=cape.defense,
 }
 
@@ -325,7 +332,7 @@ sets.melee_block = {
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands="Rev. Gauntlets +3",
     legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-    feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+    feet="Sworn Sabatons",
     neck="Null Loop",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",

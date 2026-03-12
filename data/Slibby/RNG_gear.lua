@@ -68,7 +68,7 @@ sets.precast_magic_ra_ws = {
     left_ear="Isvara Earring",
     right_ear="Friomisi Earring",
     left_ring="Epaminondas's ring",
-    right_ring="Medada's Ring",
+    right_ring="Cornelia's Ring",
     back=Cape.INT_MAGIC_WS,
 }
 
@@ -126,7 +126,6 @@ sets.precast_ra = {
     head="Ikenga's Hat",
     --head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}}, 
     body="Ikenga's Vest",
-    --body="Laksa. Frac +3",
     hands="Lanun Gants +3", 
     legs="Ikenga's Trousers",
     --legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
@@ -138,6 +137,20 @@ sets.precast_ra = {
     left_ring="Crepuscular Ring",
     right_ring="Defending Ring",
     back=Cape.SNAPSHOT_DT,
+
+    
+    head="Ikenga's Hat",
+    body="Ikenga's Vest",
+    hands="Ikenga's Gloves",
+    legs="Ikenga's Trousers",
+    feet="Ikenga's Clogs",
+    neck={ name="Scout's Gorget +2", augments={'Path: A',}},
+    waist="Tellen Belt",
+    left_ear="Telos Earring",
+    right_ear="Crep. Earring",
+    left_ring="Crepuscular Ring",
+    right_ring="Defending Ring",
+    back="Null Shawl",
 }
 
 sets.midcast_ra = {
@@ -156,4 +169,18 @@ sets.midcast_ra = {
     left_ring="Dingir Ring",
     right_ring="Ilabrat Ring",
     back=Cape.RANGED_TP,
+
+    head="Ikenga's Hat",
+    body="Ikenga's Vest",
+    hands="Ikenga's Gloves",
+    legs="Ikenga's Trousers",
+    feet="Ikenga's Clogs",
+    neck={ name="Scout's Gorget +2", augments={'Path: A',}},
+    waist="Tellen Belt",
+    left_ear="Telos Earring",
+    right_ear="Crep. Earring",
+    left_ring="Crepuscular Ring",
+    right_ring="Defending Ring",
+    back="Null Shawl",
+
 }

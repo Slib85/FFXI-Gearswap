@@ -15,102 +15,12 @@ function user_setup()
 end
 
 function init_gear_sets()
-	sets.precastGear = {
+	set_macro_page(2, 2)
 
-    }
-	
-	sets.enmity = {
-	
-    }
+	include(player.name .. "/MNK_gear.lua")
+ 	include("lib/all_lib.lua")
 
-	sets.meleeTP = {
-        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head="Mpaca's Cap",
-        body="Mpaca's Doublet",
-        hands="Mpaca's Gloves",
-        legs="Mpaca's Hose",
-        feet="Mpaca's Boots",
-        neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
-        waist="Moonbow Belt +1",
-        left_ear="Telos Earring",
-        right_ear="Sherida Earring",
-        left_ring="Chirich Ring +1",
-        right_ring="Defending Ring",
-        back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},        
-    }
-
-	sets.tank = {
-        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
-        neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
-        waist="Moonbow Belt +1",
-        left_ear="Telos Earring",
-        right_ear="Sherida Earring",
-        left_ring="Chirich Ring +1",
-        right_ring="Defending Ring",
-        back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
-    }
-
-	sets.precastWS = {
-        ammo="Knobkierrie",
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
-        neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
-        waist="Moonbow Belt +1",
-        left_ear="Moonshade Earring",
-        right_ear="Sherida Earring",
-        left_ring="Epaminondas's Ring",
-        right_ring="Niqmaddu ring",
-        back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-
-        
-        head="Mpaca's Cap",
-        body="Mpaca's Doublet",
-	}
-
-	sets.precastWSIntGear = {
-
-	}
-
-	sets.magicPrecastWSGear = {
-        ammo="Knobkierrie",
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
-        neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
-        waist="Moonbow Belt +1",
-        left_ear="Schere Earring",
-        right_ear="Sherida Earring",
-        left_ring="Epaminondas's Ring",
-        right_ring="Niqmaddu ring",
-        back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-	}
-	
-	sets.cureGear = {
-	}
-	
-	sets.precast.WS = sets.precastWS
-	sets.precast.FC = sets.precastGear
-
-	-- Precast sets to enhance JAs
-	sets.precast.JA['Blade Bash'] = {
-        hands="Sakonji Kote +3",
-    }
-
-	sets.precast.JA['Meditate'] = {
-        head="Wakido Kabuto +3",
-        hands="Sakonji Kote +3",
-		back="Smertrios's Mantle",
-	}
+    -- Precast sets to enhance JAs
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
@@ -119,11 +29,11 @@ end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if state.OffenseMode.value == "Tank" then
-		equip(sets.tank)
+		equip(sets.idle_defense)
 	elseif state.OffenseMode.value == "Melee" then
-		equip (sets.meleeTP) 
+		equip (sets.melee_tp) 
 	else
-		equip(sets.meleeTP)
+		equip(sets.melee_tp)
 	end
 end
 

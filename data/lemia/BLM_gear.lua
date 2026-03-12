@@ -41,7 +41,7 @@ sets.precast_ws_physical = {
     left_ear="Telos Earring",
     right_ear="Ishvara Earring",
     left_ring="Epaminondas's ring",
-    right_ring="Rufescent Ring",
+    right_ring="Cornelia's Ring",
     back=cape.ws_physical_str,
 }
 
@@ -87,7 +87,7 @@ sets.precast_ws_magic_dark = set_combine(sets.precast_ws_magic, {
 sets.midcast_magic_damage = {
     ammo="Ghastly Tathlum +1",
     head="Wicce Petasos +3",
-    body="Spaekona's Coat +2",
+    body="Spaekona's Coat +4",
     hands="Wicce Gloves +3",
     legs="Wicce Chausses +3",
     feet="Wicce Sabots +3",
@@ -103,7 +103,7 @@ sets.midcast_magic_damage = {
 sets.midcast_magic_accuracy = {
     ammo="Pemphredo Tathlum",
     head="Wicce Petasos +3",
-    body="Spaekona's Coat +2",
+    body="Spaekona's Coat +4",
     hands="Wicce Gloves +3",
     legs="Wicce Chausses +3",
     feet="Wicce Sabots +3",

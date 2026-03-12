@@ -33,7 +33,7 @@ function job_midcast(spell, action, spellMap, eventArgs)
 
 	if buffactive['Dark Seal'] == 1 and S{"Drain III"}:contains(spell.name) then
 		equip({
-			head="Fallen's Burgeonet +3"
+			head="Fallen's Burgeonet +4"
 		})
 	end
 
@@ -73,4 +73,8 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 	else
 		equip(sets.idle_defense)
 	end
+end
+
+local function schedule(func, delay)
+    table.insert(queue, { func = func, time = os.clock() + delay })
 end

@@ -18,6 +18,7 @@ function init_gear_sets()
 	set_macro_page(2, 22)
 	
 	include(player.name .. "/RUN_gear.lua")
+    include("lib/items.lua")
 	
 	-- Base Settings
 	sets.precast.FC = sets.precastSpells

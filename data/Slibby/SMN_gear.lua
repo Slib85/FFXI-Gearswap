@@ -16,8 +16,8 @@ cape.defense = { name="Taranus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+2
 -- BEGIN PRECAST SETS
 sets.precast_magic = {
     right_ring = "Prolix Ring", -- 2%
-    hands= "Agwu's Gages", --6%
-    legs = "Agwu's Slops", -- 7%
+    --hands= "Agwu's Gages", --6%
+    --legs = "Agwu's Slops", -- 7%
     head = { name="Merlinic Hood", augments={'Attack+15','"Fast Cast"+7',}}, -- 15%
     body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}, --13%
     feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+4','CHR+7','"Mag.Atk.Bns."+1',}}, -- 9%
@@ -56,15 +56,15 @@ sets.precast_ws_multi_physical = set_combine(sets.precast_ws_physical_pdl, {
 
 sets.precast_ws_magic = {
     ammo="Ghastly Tathlum +1",
-    head="Wicce Petasos +3",
-    body="Wicce Coat +3",
-    hands="Wicce Gloves +3",
-    legs="Wicce Chausses +3",
-    feet="Wicce Sabots +3",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck={ name="Src. Stole +2", augments={'Path: A',}},
     waist="Acuity Belt +1",
     left_ear="Regal Earring",
-    right_ear="Wicce Earring +2",
+    right_ear="Malignance Earring",
     left_ring="Archon Ring",
     right_ring="Cornelia's Ring",
     back=cape.ws_magic_int,
@@ -87,15 +87,15 @@ sets.precast_ws_magic_dark = set_combine(sets.precast_ws_magic, {
 -- BEGIN MIDCAST SETS
 sets.midcast_magic_damage = {
     ammo="Ghastly Tathlum +1",
-    head="Wicce Petasos +3",
-    body="Spaekona's Coat +3",
-    hands="Wicce Gloves +3",
-    legs="Wicce Chausses +3",
-    feet="Wicce Sabots +3",
+    head="Bunzi's Hat",
+    body="Bunzi's Robe",
+    hands="Bunzi's Gloves",
+    legs="Bunzi's Pants",
+    feet="Bunzi's Sabots",
     neck="Sorcerer's Stole +2",
     waist="Acuity belt +1",
     left_ear="Regal Earring",
-    right_ear="Wicce Earring +2",
+    right_ear="Malignance Earring",
     left_ring="Freke Ring",
     right_ring="Metamorph Ring +1",
     --right_ring="Mephitas's Ring +1",
@@ -104,15 +104,15 @@ sets.midcast_magic_damage = {
 
 sets.midcast_magic_accuracy = {
     ammo="Pemphredo Tathlum",
-    head="Wicce Petasos +3",
-    body="Spaekona's Coat +3",
-    hands="Wicce Gloves +3",
-    legs="Wicce Chausses +3",
-    feet="Wicce Sabots +3",
+    head="Bunzi's Hat",
+    body="Bunzi's Robe",
+    hands="Bunzi's Gloves",
+    legs="Bunzi's Pants",
+    feet="Bunzi's Sabots",
     neck="Src. Stole +2",
     waist="Acuity Belt +1",
     left_ear="Regal Earring",
-    right_ear="Wicce Earring +2",
+    right_ear="Malignance Earring",
     left_ring="Kishar Ring",
     right_ring="Metamorph Ring +1",
     back=cape.magic_int,
@@ -144,7 +144,7 @@ sets.midcast_max_mp = {
     ammo="Strobilus",
     head="Amalric Coif +1",
     body="Amalric Doublet +1",
-    hands="Spaekona's Gloves +3",
+    hands="Bunzi's Gloves",
     legs="Amalric Slops +1",
     feet={ name="Psycloth Boots", augments={'MP+50','INT+7','"Conserve MP"+6',}},
     neck="Sanctity Necklace",
@@ -158,9 +158,8 @@ sets.midcast_aspir = set_combine(sets.midcast_magic_accuracy, {
     neck="Erra Pendant",
     head={ name="Merlinic Hood", augments={'Mag. Acc.+24','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+4',}},
     body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-    feet="Agwu's Pigaches",
-    legs="Spaekona's Tonban +3",
-    hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
+    legs="Bunzi's Pants",
+    feet="Bunzi's Sabots",
     ring1="Evanescence Ring",
     waist="Fucho-no-Obi"
 })
@@ -169,9 +168,8 @@ sets.midcast_drain = set_combine(sets.midcast_magic_accuracy, {
     neck="Erra Pendant",
     head="Pixie Hairpin +1",
     body={ name="Merlinic Jubbah", augments={'AGI+1','"Drain" and "Aspir" potency +8','"Fast Cast"+6','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-    feet="Agwu's Pigaches",
-    legs="Spaekona's Tonban +3",
-    hands={ name="Arch. Gloves +3", augments={'Increases Elemental Magic accuracy',}},
+    legs="Bunzi's Pants",
+    feet="Bunzi's Sabots",
     ring1="Evanescence Ring",
     ring2="Archon Ring",
     waist="Fucho-no-Obi"
@@ -217,7 +215,7 @@ sets.midcast_enhancing_duration = {
 sets.midcast_phalanx = {
     head={ name="Merlinic Hood", augments={'Rng.Acc.+24 Rng.Atk.+24','Pet: Accuracy+23 Pet: Rng. Acc.+23','Phalanx +4','Accuracy+13 Attack+13','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
     body={ name="Merlinic Jubbah", augments={'DEX+15','Accuracy+3','Phalanx +4','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
-    hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+13','"Store TP"+2','Phalanx +4','Accuracy+16 Attack+16',}},
+    hands={ name="Merlinic Dastanas", augments={'INT+5','STR+9','Phalanx +5',}},
     legs={ name="Merlinic Shalwar", augments={'Accuracy+13','Pet: Mag. Acc.+8','Phalanx +4','Accuracy+19 Attack+19','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
     feet={ name="Merlinic Crackows", augments={'Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','INT+3','Phalanx +5','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
 }
@@ -228,52 +226,68 @@ sets.midcast_blood_pact_recast = {
     neck="Incanter's Torque",
     ear1="Cath Palug Earring",
     ear2="Lodurr Earring",
-    body="Convoker's Doublet",
-    hands="Baayami Cuffs +1",
-    --ring1={name="Stikini Ring +1", bag="wardrobe2"},
-    --ring2="Evoker's Ring",
+    body="Convoker's Doublet +4",
+    hands="Beckoner's bracers +3", 
+    feet="Beckoner's Pigaches +3", 
+    ring1={name="Stikini Ring +1", bag="wardrobe2"},
+    ring2="Evoker's Ring",
     back="Conveyance Cape",
-    waist="Kobo Obi",
-    legs="Baayami Slops +1",
-    feet="Baayami Sabots +1"
+    waist="Kobo Obi", -- smn skill
 }
 
 sets.midcast_physical_blood_pact = {
     ammo="Epitaph",
     head={ name="Helios Band", augments={'Pet: Attack+30 Pet: Rng.Atk.+30','Pet: "Dbl. Atk."+8','Blood Pact Dmg.+7',}},
-    body="Beckoner's Doublet +3",
-    hands="Beckoner's bracers +3",
+    body="Convoker's Doublet +4",
+    hands="Beckoner's bracers +3", -- Merlinic hands?
     legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},
-    feet="Beckoner's Pigaches +3",
+    feet="Beckoner's Pigaches +3", -- Helios boots
     neck="Summoner's Collar +2",
-    waist="Regal Belt",
+    waist="Regal Belt", -- Incarnation Sash
     ear1="Lugalbanda Earring",
     ear2="Beckoner's Earring +1",
-    ring1="Cath Palug Ring",
+    ring1="Cath Palug Ring", -- 2 varar?
+    ring2="Varar Ring +1",
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+}
+
+
+sets.midcast_magical_blood_pact = {
+    ammo="Epitaph",
+    head={ name="Helios Band", augments={'Pet: Attack+30 Pet: Rng.Atk.+30','Pet: "Dbl. Atk."+8','Blood Pact Dmg.+7',}},
+    body="Convoker's Doublet +4",
+    hands="Beckoner's bracers +3", -- Merlinic hands?
+    legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},
+    feet="Beckoner's Pigaches +3", -- Helios boots
+    neck="Summoner's Collar +2",
+    waist="Regal Belt", -- Incarnation Sash
+    ear1="Lugalbanda Earring",
+    ear2="Beckoner's Earring +1",
+    ring1="Cath Palug Ring", -- 2 varar?
     ring2="Varar Ring +1",
     back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 }
 
 sets.midcast_summoning_skill = {
     ammo="Epitaph",
-    head="Baayami Hat +1",
+    head="Beckoner's Horn +3",
     neck="Incanter's Torque",
     ear1="Cath Palug Earring",
     ear2="Lodurr Earring",
-    body="Baayami Robe +1",
-    hands="Baayami Cuffs +1",
+    legs="Beckoner's spats +3",
+    hands="Beckoner's bracers +3", 
     ring1={name="Stikini Ring +1", bag="wardrobe2"},
     ring2="Evoker's Ring",
     back="Conveyance Cape",
     waist="Kobo Obi",
-    legs="Baayami Slops +1",
-    feet="Baayami Sabots +1"
+    feet="Beckoner's Pigaches +3", 
+    body="Beckoner's Doublet +3",
 }
 -- END MIDCAST SETS
 
 -- BEGIN MELEE SETS
 sets.melee_tp = {
-    ammo="Amar Cluster",
+    ammo="Epitaph",
     head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
@@ -295,12 +309,12 @@ sets.melee_dual_wield = set_combine(sets.melee_tp, {
 
 -- BEGIN IDLE SETS
 sets.idle_defense = {
-    ammo="Staunch Tathlum +1",
-    head="Nyame Helm",
-    body="Nyame Mail",
+    ammo="Epitaph",
+    head="Beckoner's Horn +3",
+    body="Beck. Doublet +3",
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+    feet="Beck. Pigaches +3",
     neck="Warder's Charm +1",
     waist="Null Belt",
     left_ear="Lugalbanda Earring",

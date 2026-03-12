@@ -17,7 +17,7 @@ function user_setup()
 end
 
 function init_gear_sets()
-	set_macro_page(2, 4)
+	set_macro_page(2, 15)
 
 	include(player.name .. "/SMN_gear.lua")
  	include("lib/all_lib.lua")

@@ -1,3 +1,5 @@
+sets.midcast.RA = sets.midcast_ra;
+
 function global_midcast(spell)
     --windower.add_to_chat(123, spell.name);
 
@@ -35,11 +37,11 @@ function global_midcast(spell)
         end
     end
 
-    if items[spell.name] ~= nil then
-        if items[spell.name].midcast_set ~= nil then
-            equip(items[spell.name].midcast_set)
-        end
-    end
+    --if items[spell.name] ~= nil then
+    --    if items[spell.name].midcast_set ~= nil then
+    --        equip(items[spell.name].midcast_set)
+    --    end
+    --end
 
     if buffactive['Accession'] == 1 and spell.name == "Phalanx" then
 		equip(sets.midcast_enhancing_duration)
@@ -57,20 +59,25 @@ function global_midcast(spell)
 end
 
 function affinity_logic(spell, action_map)
+    local waist = nil;
     -- Matching double weather (w/o day conflict).
-    if spell.element == world.weather_element and (get_weather_intensity() == 2 and spell.element ~= elements.weak_to[world.day_element]) and action_map[spell.name].use_midcast_magic_affinity == 1 then
-        equip({waist="Hachirin-no-Obi"})
+    if spell.element == world.weather_element and (get_weather_intensity() == 2 and spell.element ~= elements.weak_to[world.day_element]) and action_map[spell.name].use_weather_effects == 1 then
+        waist = "Hachirin-no-Obi"
     -- Target distance under 1.7 yalms.
     elseif spell.target.distance < (1.7 + spell.target.model_size) and action_map[spell.name].use_midcast_magic_damage == 1 then
-        equip({waist="Orpheus's Sash"})
+        waist = "Orpheus's Sash"
     -- Matching day and weather.
-    elseif spell.element == world.day_element and spell.element == world.weather_element and action_map[spell.name].use_midcast_magic_affinity == 1 then
-        equip({waist="Hachirin-no-Obi"})
+    elseif spell.element == world.day_element and spell.element == world.weather_element and action_map[spell.name].use_weather_effects == 1 then
+        waist = "Hachirin-no-Obi"
     -- Target distance under 8 yalms.
     elseif spell.target.distance < (8 + spell.target.model_size) and action_map[spell.name].use_midcast_magic_damage == 1 then
-        equip({waist="Orpheus's Sash"})
+        waist = "Orpheus's Sash"
     -- Match day or weather.
-    elseif (spell.element == world.day_element or spell.element == world.weather_element) and action_map[spell.name].use_midcast_magic_affinity == 1 then
-        equip({waist="Hachirin-no-Obi"})
+    elseif (spell.element == world.day_element or spell.element == world.weather_element) and action_map[spell.name].use_weather_effects == 1 then
+        waist = "Hachirin-no-Obi"
+    end
+
+    if waist ~= nil and item_exists(waist) then
+        equip({waist=waist})
     end
 end

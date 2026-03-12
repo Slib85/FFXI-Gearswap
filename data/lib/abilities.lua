@@ -4,7 +4,7 @@ abilities = {
         use_aftercast = 0,
         active = 0,
 		midcast_set = {
-            body="Archmage's Coat +3"
+            body="Arch. Coat +4"
         },
     },
     ["Manawall"] = {
@@ -13,6 +13,52 @@ abilities = {
 		midcast_set = {
             feet="Wicce Sabots +3"
         },
+    },
+    -- DNC
+    ["Curing Waltz"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Curing Waltz II"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Curing Waltz III"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Curing Waltz IV"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Curing Waltz V"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Divine Waltz"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Divine Waltz II"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Healing Waltz"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_waltz,
+    },
+    ["Animated Flourish"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_enmity,
     },
 
     -- RDM
@@ -79,7 +125,9 @@ abilities = {
     ["Invincible"] = {
         use_aftercast = 0,
         active = 0,
-		midcast_set = sets.midcast_enmity,
+		midcast_set =  set_combine(sets.midcast_enmity, {
+            legs="Caballarius Breeches +4"
+        })
     },
     ["Shield Bash"] = {
         use_aftercast = 0,
@@ -94,7 +142,9 @@ abilities = {
     ["Sentinel"] = {
         use_aftercast = 0,
         active = 0,
-		midcast_set = sets.midcast_enmity,
+		midcast_set =  set_combine(sets.midcast_enmity, {
+            feet="Caballarius Leggings +4"
+        })
     },
     ["Cover"] = {
         use_aftercast = 0,
@@ -104,19 +154,23 @@ abilities = {
     ["Rampart"] = {
         use_aftercast = 0,
         active = 0,
-		midcast_set = sets.midcast_enmity,
+		midcast_set =  set_combine(sets.midcast_enmity, {
+            head="Caballarius Coronet +4"
+        })
     },
     ["Fealty"] = {
         use_aftercast = 0,
         active = 0,
 		midcast_set = set_combine(sets.midcast_enmity, {
-            body="Caballarius Surcoat +3"
+            body="Caballarius Surcoat +4"
         })
     },
     ["Chivalry"] = {
         use_aftercast = 0,
         active = 0,
-		midcast_set = sets.midcast_enmity,
+		midcast_set =  set_combine(sets.midcast_enmity, {
+            hands="Caballarius Gauntlets +4"
+        })
     },
     ["Divine Emblem"] = {
         use_aftercast = 0,
@@ -138,6 +192,19 @@ abilities = {
         active = 0,
 		midcast_set = sets.midcast_enmity,
     },
+
+    -- SAM
+    ["Hasso"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_enmity,
+    },
+    ["Seigan"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = sets.midcast_enmity,
+    },
+    
 
     -- RUN
     ["Elemental Sforzo"] = {
@@ -214,5 +281,31 @@ abilities = {
         use_aftercast = 0,
         active = 0,
 		midcast_set = sets.midcast_enmity,
+    },
+    -- BST
+    ["Call Beast"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = {
+            hands="Ankusa Gloves +1"
+        },
+    },
+    ["Bestial Loyalty"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = {
+            hands="Ankusa Gloves +1"
+        },
+    },
+
+    -- SAM
+    ["Meditate"] = {
+        use_aftercast = 0,
+        active = 0,
+		midcast_set = {
+            head="Wakido Kabuto +3",
+            hands="Sakonji Kote +3",
+            back="Smertrios's Mantle",
+        },
     },
 }

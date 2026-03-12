@@ -107,7 +107,7 @@ function init_gear_sets()
 		body="Zendik Robe", --13
 		hands="Leyline Gloves", --5
 		legs="Ayanmo Cosciales +2", --6
-		feet="Bihu Slippers +3", -- 10
+		feet="Bihu Slippers +4", -- 10
 		neck="Orunmila's Torque", --5
 		waist="Witful Belt", --3
 		left_ear="Etiolation Earring", --1
@@ -121,7 +121,7 @@ function init_gear_sets()
         body="Fili Hongreline +3",
         hands="Fili Manchettes +3",
         legs="Inyanga Shalwar +2",
-		feet="Brioso Slippers +2",
+		feet="Brioso Slippers +4",
         neck="Mnbw. Whistle +1",
         waist="Porous Rope",
         left_ear="Dominance Earring",
@@ -167,19 +167,20 @@ function init_gear_sets()
 	sets.meleeTP = {
 		-- main="Carnwenhan",
 		-- sub="Genmei Shield",
-		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		head="Nyame Helm",
-		body="Ashera Harness",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		neck={ name="Bard's Charm +2", augments={'Path: A',}},
-		waist="Sailfi Belt +1",
-		left_ear="Telos Earring",
-		right_ear="Dedition Earring",
-		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
-		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
-		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+        head={ name="Bunzi's Hat", augments={'Path: A',}},
+        body="Ashera Harness",
+        hands={ name="Bunzi's Gloves", augments={'Path: A',}},
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        neck={ name="Bard's Charm +2", augments={'Path: A',}},
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        left_ear="Telos Earring",
+        right_ear="Crep. Earring",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
+        --back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.buffGear = {
@@ -187,19 +188,19 @@ function init_gear_sets()
 	}
 	
 	sets.precastWS = {
-		ammo="Coiste Bodhar",
-		head="Nyame Helm",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		neck={ name="Bard's Charm +2", augments={'Path: A',}},
-		waist="Sailfi Belt +1",
-		left_ear="Ishvara Earring",
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		left_ring="Petrov Ring",
-		right_ring="Ilabrat Ring",
-		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+        ammo="Oshasha's Treatise",
+        head={ name="Nyame Helm", augments={'Path: B',}},
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        neck={ name="Bard's Charm +2", augments={'Path: A',}},
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        left_ear="Ishvara Earring",
+        right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+        left_ring="Epaminondas's Ring",
+        right_ring="Cornelia's Ring",
+        back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
 	sets.songAccuracy= {
@@ -309,8 +310,14 @@ function init_gear_sets()
 	sets.midcast["Foe Requiem IV"] = sets.songGear
 	sets.midcast["Foe Requiem V"] = sets.songGear
 	sets.midcast["Foe Requiem VI"] = sets.songGear
-	sets.midcast["Army's Paeon"] = sets.songGear
-	sets.midcast["Army's Paeon II"] = sets.songGear
+	sets.midcast["Army's Paeon"] = {
+        main="Carnwenhan", 
+        range="Daurdabla",
+    }
+	sets.midcast["Army's Paeon II"] =  {
+        main="Carnwenhan", 
+        range="Daurdabla",
+    }
 	sets.midcast["Army's Paeon III"] = sets.songGear
 	sets.midcast["Army's Paeon IV"] = sets.songGear
 	sets.midcast["Army's Paeon V"] = sets.songGear
@@ -318,8 +325,12 @@ function init_gear_sets()
 
 	sets.precast.FC['Horde Lullaby'] = set_combine(sets.precast.FC, {range="Blurred Harp +1"})
 	sets.precast.FC['Horde Lullaby II'] = set_combine(sets.precast.FC, {range="Blurred Harp +1"})
+	sets.precast.FC['Foe Lullaby'] = set_combine(sets.precast.FC, {range="Marsyas"})
+	sets.precast.FC['Foe Lullaby II'] = set_combine(sets.precast.FC, {range="Marsyas"})
 	sets.midcast["Horde Lullaby"] = set_combine(sets.songGear, sets.songAccuracy)
 	sets.midcast["Horde Lullaby II"] = set_combine(sets.songGear, sets.songAccuracy)
+	sets.midcast["Foe Lullaby"] = set_combine(sets.songGear, sets.songAccuracy)
+	sets.midcast["Foe Lullaby II"] = set_combine(sets.songGear, sets.songAccuracy)
 	sets.midcast["Mage's Ballad"] = set_combine(sets.songGear, {legs="Fili Rhingrave +3"})
 	sets.midcast["Mage's Ballad II"] = set_combine(sets.songGear, {legs="Fili Rhingrave +3"})
 	sets.midcast["Mage's Ballad III"] = set_combine(sets.songGear, {legs="Fili Rhingrave +3"})
@@ -670,7 +681,7 @@ function init_gear_sets()
 	}
 	
 	sets.precast.JA['Nightingale'] = {
-		feet="Bihu Slippers +3",
+		feet="Bihu Slippers +4",
 	}
 
 	sets.precast.JA['Troubadour'] = {

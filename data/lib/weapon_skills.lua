@@ -78,7 +78,7 @@ weapon_skills = {
 		use_midcast_magic_affinity = 0,
 		use_midcast_magic_damage = 0,
 		use_tp_bonus = 1,
-		midcast_set = sets.precast_ws_physical_vit,
+		midcast_set = set_combine(sets.precast_ws_phyiscal, sets.precast_ws_physical_vit),
 	},
 	["Dimidiation"] = {
 		use_midcast_magic_affinity = 0,
@@ -468,7 +468,7 @@ weapon_skills = {
 		use_midcast_magic_affinity = 0,
 		use_midcast_magic_damage = 0,
 		use_tp_bonus = 1,
-		midcast_set = set_combine(sets.precast_ws_physical_vit, sets.precast_ws_pdl),
+		midcast_set = set_combine(sets.precast_ws_phyiscal, sets.precast_ws_physical_vit, sets.precast_ws_pdl),
 	},
 	["Metatron Torment"] = {
 		use_midcast_magic_affinity = 0,
@@ -636,7 +636,7 @@ weapon_skills = {
 		use_midcast_magic_affinity = 1,
 		use_midcast_magic_damage = 1,
 		use_tp_bonus = 1,
-		midcast_set = sets.precast_ws_magic_dark,
+		midcast_set = set_combine(sets.precast_ws_magic, sets.precast_ws_magic_dark),
 	},
 	["Shattersoul"] = {
 		use_midcast_magic_affinity = 0,
@@ -954,4 +954,13 @@ weapon_skills = {
 		midcast_set = sets.precast_ra_ws,
 	},
 	-- END ARCHERY
+
+    -- BEGIN GREAT KATANA
+    ["Tachi: Jinpu"] = {
+		use_midcast_magic_affinity = 1,
+		use_midcast_magic_damage = 1,
+		use_tp_bonus = 1,
+        midcast_set = sets.precast_ws_hybrid,
+    },
+    -- END GREAT KATANA
 }

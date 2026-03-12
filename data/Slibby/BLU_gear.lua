@@ -15,7 +15,7 @@ sets.precast_magic = {
     back={ name="Rosmerta's Cape", augments={'"Fast Cast"+10'}}, -- 10%
 }
 sets.precast_ws_physical = {
-    ammo="Crepuscular Pebble",
+    ammo="Oshasha's Treatise",
     head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
@@ -26,7 +26,7 @@ sets.precast_ws_physical = {
     left_ear="Ishvara Earring",
     --right_ear="Telos Earring",
     left_ring="Epaminondas's ring",
-    right_ring="Cornelia's ring",
+    right_ring="Ilabrat Ring",
     back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+7','Weapon skill damage +10%','Phys. dmg. taken-6%',}},
     --ammo=empty,head=empty,body=empty,hands=empty,legs=empty,feet=empty,neck=empty,waist=empty,left_ear=empty,right_ear=empty,left_ring=empty,right_ring="Defending Ring",back=empty
 }
@@ -103,7 +103,7 @@ sets.midcast_cure = {
     hands={ name="Telchine Gloves", augments={'"Cure" potency +7%',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Elite Royal Collar",
+    neck="Null Loop",
     waist="Plat. Mog. Belt",
     left_ear="Telos Earring",
     right_ear="Etiolation Earring",

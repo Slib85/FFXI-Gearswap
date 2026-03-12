@@ -50,11 +50,11 @@ function init_gear_sets()
 
 	sets.meleeTP = {
         ammo="Coiste Bodhar",
-        head="Nyame Helm",
+        head="Sakpata's Helm",
         body="Nyame Mail",
         hands="Sakpata's Gauntlets",
-        legs="Sakpata's Cuisses",
-        feet="Nyame Sollerets",
+		legs="Nyame Flanchard",
+        feet="Sakpata's Leggings",
 		neck="War. Beads +2",
 		waist="Sailfi Belt +1",
 		left_ear="Telos Earring",
@@ -62,8 +62,7 @@ function init_gear_sets()
 		left_ring={name="Chirich Ring +1", bag="Wardrobe 1"},
 		right_ring={name="Chirich Ring +1", bag="Wardrobe 2"},
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
---		neck="Warder's Charm +1",
---		left_ring="Shadow Ring",
+        left_ring="Shneddick ring",
 	}
 	
 	sets.subtle = {
@@ -100,8 +99,8 @@ function init_gear_sets()
 
 	sets.precastWS = {
 		ammo="Knobkierrie",
-        head="Agoge Mask +3",
-        body="Pummeler's Lorica +3",
+		head={ name="Nyame Helm", augments={'Path: B',}},
+		body="Sakpata's breastplate",
 		hands="Boii Mufflers +3",
 		legs="Boii Cuisses +3",
 		feet="Nyame Sollerets",
@@ -112,7 +111,6 @@ function init_gear_sets()
         left_ring="Epaminondas's Ring",
         right_ring="Cornelia's Ring",
         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-        
 	}
 
 	sets.precastWSIntGear = {
@@ -122,7 +120,6 @@ function init_gear_sets()
 	sets.magicPrecastWSGear = {
 		ammo="Knobkierrie",
 		head={ name="Nyame Helm", augments={'Path: B',}},
-		--body="Sacro Breastplate",
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs="Nyame Flanchard",
@@ -235,7 +232,7 @@ function init_gear_sets()
 		ammo="Throwing Tomahawk",
 	}
 	sets.precast.JA['Warcry'] = set_combine(sets.enmity, {
-		head="Agoge Mask +3",
+		head="Agoge Mask +4",
 	})
 	sets.precast.JA["Aggressor"] = {
 		body="Agoge Lorica +3",

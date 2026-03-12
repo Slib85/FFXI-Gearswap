@@ -96,10 +96,14 @@ sets.aftercast_tp = {
     legs="Mpaca's Hose",
     feet="Mpaca's Boots",
     neck="Ninja Nodowa +2",
-    waist="Reiki Yotai",
+    waist="Sailfi Belt +1",
     left_ear="Telos Earring",
-    right_ear="Crepuscular Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Defending Ring",
+    left_ring={name="Chirich Ring +1", bag="Wardrobe 1"}, -- 6 STP
+    right_ring={name="Chirich Ring +1", bag="Wardrobe 2"}, -- 6 STP
     back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Magic dmg. taken-10%',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
 }
